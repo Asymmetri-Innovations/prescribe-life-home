@@ -1,20 +1,41 @@
 @import "tailwindcss";
-
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  /* --foreground: #171717; */
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-theme: #d557ad;
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --animate-marquee: marquee var(--duration) infinite linear;
+  --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(-100% - var(--gap)));
+    }
+  }
+  @keyframes marquee-vertical {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(calc(-100% - var(--gap)));
+    }
+  }
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #000000;
     --foreground: #ededed;
   }
 }
@@ -23,4 +44,86 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+@keyframes subtleRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.rotate-animation {
+  animation: subtleRotate 10s linear infinite;
+}
+
+.rotate-animation-slow {
+  animation: subtleRotate 120s linear infinite;
+}
+
+@keyframes textGradient {
+  from {
+    background-position: 0% center;
+  }
+
+  to {
+    background-position: -200% center;
+  }
+}
+
+.text-gradient {
+  position: relative;
+  animation: textGradient 5s linear infinite;
+  animation-delay: 1s;
+  background: linear-gradient(90.67deg, #ffffff, #f17eb4, #e70a69, #ffffff);
+  background-size: 200%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* transition: cubic-bezier(0.175, 0.885, 0.32, 1.275); */
+}
+
+.font {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+.floating {
+  font-size: 1.7em;
+  font-weight: 300;
+  text-align: center;
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+}
+
+@keyframes breathing {
+  0% {
+    transform: scale(1) translateY(0);
+  }
+  50% {
+    transform: scale(1.5) translateY(-30px);
+  }
+  100% {
+    transform: scale(1) translateY(0);
+  }
+}
+
+.breathing-animation {
+  animation: breathing 6s ease-in-out infinite;
+}
+
+/* A slower version for more subtle effect */
+.breathing-animation-slow {
+  animation: breathing 6s ease-in-out infinite;
 }
