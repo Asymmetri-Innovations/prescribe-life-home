@@ -94,7 +94,7 @@ export default function Explain() {
             animation: `rotateBG ${5}s linear infinite`,
             animationDelay: 6 + "s",
             zIndex: 4,
-            opacity: useTransform(textProgress, [0.56, 0.57, 0.7], [0, 1, 0]),
+            opacity: useTransform(textProgress, [0.56, 0.57, 0.6], [0, 1, 0]),
           }}
           className="floating text-white w-full  absolute text-center text-4xl font-medium"
         >
@@ -107,7 +107,7 @@ export default function Explain() {
             animation: `rotateBG ${5}s linear infinite`,
             animationDelay: 6 + "s",
             zIndex: 4,
-            opacity: useTransform(textProgress, [0.7, 0.71, 0.84], [0, 1, 0]),
+            opacity: useTransform(textProgress, [0.6, 0.61, 0.74], [0, 1, 0]),
           }}
           className="floating text-white w-full  absolute text-center text-4xl font-medium"
         >
@@ -120,7 +120,7 @@ export default function Explain() {
             animation: `rotateBG ${5}s linear infinite`,
             animationDelay: 6 + "s",
             zIndex: 4,
-            opacity: useTransform(textProgress, [0.8, 0.81, 0.9], [0, 1, 0]),
+            opacity: useTransform(textProgress, [0.7, 0.71, 0.8], [0, 1, 0]),
           }}
           className="floating text-white w-full  absolute text-center text-4xl font-medium"
         >
@@ -132,7 +132,7 @@ export default function Explain() {
             animation: `rotateBG ${5}s linear infinite`,
             animationDelay: 6 + "s",
             zIndex: 4,
-            opacity: useTransform(textProgress, [0.9, 0.95, 1], [0, 1, 1]),
+            opacity: useTransform(textProgress, [0.8, 0.85, 95], [0, 1, 1]),
           }}
           className="floating text-white w-full  absolute text-center text-4xl font-medium"
         >
@@ -141,6 +141,18 @@ export default function Explain() {
             Coaches. <br /> We’re Building It to{" "}
             <span className="text-theme">Make You More Human</span>.
           </div>
+        </motion.div>
+        <motion.div
+          style={{
+            animation: `rotateBG ${5}s linear infinite`,
+            animationDelay: 6 + "s",
+            zIndex: 4,
+            opacity: useTransform(textProgress, [0.9, 0.95, 1], [0, 0, 0]),
+          }}
+          className="floating text-white w-full  absolute text-center text-4xl font-medium "
+        >
+          It gives you the insights to make your connections deeper and your
+          impact undeniable.
         </motion.div>
       </div>
       <div className="min-h-[300vh]"></div>

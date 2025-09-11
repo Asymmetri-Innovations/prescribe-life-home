@@ -122,14 +122,12 @@ export default function Home() {
       </section>
 
       {/* TRUSTED */}
-      <section className="flex flex-col items-center min-h-[50vh] space-y-10 text-center">
+      {/* <section className="flex flex-col items-center min-h-[50vh] space-y-10 text-center">
         <FadeRise>
           <Title text="Trusted by Performance Coaches Behind Today's Most Influential Leaders" />
         </FadeRise>
-        <FadeRise delay={0.12}>
-          <Image src="/security.png" width={500} height={500} alt="security" />
-        </FadeRise>
-      </section>
+        
+      </section> */}
 
       {/* STEPS */}
       <section className="flex flex-col items-center space-y-8">
@@ -158,6 +156,9 @@ export default function Home() {
           ))}
         </div>
       </section>
+      <FadeRise className="flex justify-center items-center" delay={0.12}>
+        <Image src="/security.png" width={500} height={500} alt="security" />
+      </FadeRise>
 
       <Explain />
 
@@ -173,7 +174,7 @@ export default function Home() {
             <FadeRise delay={0.05}>
               <img
                 className="rounded-xl shadow-lg ring-1 ring-white/10"
-                src="/gavin.png"
+                src="/gavin.jpg"
                 alt="coach context"
               />
             </FadeRise>
@@ -211,7 +212,7 @@ export default function Home() {
         <div className="grid md:grid-cols-2 gap-12 items-start">
           <FadeRise>
             <div className="space-y-6">
-              <h3 className="text-lg md:text-xl font-semibold">
+              <h3 className="text-lg md:text-3xl font-semibold text">
                 <span className="text-theme/80">PrescribeLife.ai</span> closes
                 that gap.
               </h3>
@@ -245,35 +246,34 @@ export default function Home() {
       </section>
 
       {/* Comparison Illustration (new section) */}
-      <section className="relative mx-auto max-w-7xl px-6 md:px-12 py-32 rounded-[48px] bg-gradient-to-b from-white via-pink-50/70 to-pink-200/40 dark:from-white/10 dark:via-white/5 dark:to-pink-500/10 border border-white/20 shadow-[0_8px_40px_-12px_rgba(236,72,153,0.25)] overflow-hidden">
+      <section className="relative mx-auto max-w-7xl px-6 md:px-12 py-32 rounded-[48px] bg-gradient-to-b from-white via-pink-50/70 to-pink-200/40 dark:from-white/10 dark:via-white/5 dark:to-pink-500/10 border border-white/20 shadow-[0_8px_40px_-12px_rgba(236,72,153,0.25)] overflow-hidden flex justify-start items-start">
         <div className="pointer-events-none absolute -top-32 -left-32 w-[420px] h-[420px] bg-gradient-to-br from-theme/30 to-pink-500/30 blur-3xl opacity-40" />
         <div className="pointer-events-none absolute bottom-0 -right-20 w-[360px] h-[360px] bg-gradient-to-br from-pink-400/40 to-blue-400/40 blur-3xl opacity-40" />
-        <div className="relative space-y-10 text-center max-w-3xl mx-auto">
+        <div className="relative space-y-10 w-1/2 text-left">
           <FadeRise>
-            <h2 className="text-3xl md:text-5xl font-bold leading-tight">
+            <h2 className="text-3xl md:text-4xl font-bold leading-tight">
               Amplify Your Human Touch with Evidence‑Based AI Insights and
               Signals
             </h2>
-          </FadeRise>
-          <FadeRise delay={0.1}>
-            <p className="text-zinc-600 dark:text-zinc-300 text-lg md:text-xl leading-relaxed">
-              The platform provides a window into your client’s world, revealing
-              the invisible patterns of stress, recovery and behavioral change.
+            <p className="text-lg text-zinc-600 dark:text-zinc-400 max-w-xl leading-relaxed mt-6">
+              Where your coaching genius meets real-time data intelligence.
             </p>
+            <FadeRise delay={0.4} className="flex justify-left mt-24">
+              <button className="group relative px-10 md:px-14 py-4 text-base md:text-lg font-semibold rounded-full overflow-hidden">
+                <span className="absolute inset-0 rounded-full bg-gradient-to-r from-pink-500 via-theme to-pink-600 opacity-90 group-hover:opacity-100 transition-opacity" />
+                <span className="absolute inset-0 rounded-full ring-2 ring-white/60 group-hover:ring-white/90 transition-all" />
+                <span className="relative z-10">Request a Demo Call</span>
+              </button>
+            </FadeRise>
           </FadeRise>
         </div>
-        <div className="relative mt-24 grid md:grid-cols-2 gap-24 items-start">
-          <FadeRise className="space-y-10" delay={0.15}>
+        <div className="relative  w-1/2 space-y-10 pl-16">
+          <FadeRise className="space-y-4" delay={0.15}>
             <h3 className="text-xl md:text-2xl font-semibold">
               Without Prescribelife.ai
             </h3>
-            <div className="flex flex-col items-center gap-10">
-              {/* <img
-                src="/without-prescribe.png"
-                alt="Limited insight rings"
-                className="w-72 md:w-96"
-              /> */}
-              <ul className="space-y-5 text-sm md:text-base font-medium text-zinc-700 dark:text-zinc-300 max-w-xs">
+            <div className="flex flex-col items-start gap-10 ">
+              <ul className="space-y-5 text-sm md:text-base font-medium text-zinc-700 dark:text-zinc-300 ">
                 {["Clients Self Reporting", "Your Expertise & Guidance"].map(
                   (item, i) => (
                     <li key={i} className="relative pl-5">
@@ -285,42 +285,28 @@ export default function Home() {
               </ul>
             </div>
           </FadeRise>
-          <FadeRise className="space-y-10" delay={0.25}>
+          <FadeRise className="space-y-4" delay={0.15}>
             <h3 className="text-xl md:text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-theme to-pink-600">
-              With Prescribelife.ai
+              Without Prescribelife.ai
             </h3>
-            <div className="flex flex-col items-center gap-10">
-              {/* <img
-                src="/with.png"
-                alt="Expanded multi-layer insight spiral"
-                className="w-72 md:w-80"
-              /> */}
-              <ul className="space-y-4 text-xs md:text-sm font-medium text-zinc-700 dark:text-zinc-200 max-w-sm tracking-tight">
-                {[
-                  "Client Reporting with Prompts on Automation",
-                  "Real-Time Recovery & Stress Levels",
-                  "Daily Patterns of Action & Inaction",
-                  "Early Burnout & Fatigue Warnings",
-                  "Hidden Mindset & Motivation Blockers",
-                  "AI-Generated Evidence Based Topics for Your Next Session",
-                  "Your Expertise & Guidance",
-                ].map((item, i) => (
-                  <li key={i} className="relative pl-6 leading-snug">
-                    <span className="absolute left-0 top-2 w-4 h-[2px] bg-gradient-to-r from-theme via-pink-500 to-blue-500" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
+            <ul className="space-y-4 text-xs md:text-sm font-medium text-zinc-700 dark:text-zinc-200  tracking-tight">
+              {[
+                "Client Reporting with Prompts on Automation",
+                "Real-Time Recovery & Stress Levels",
+                "Daily Patterns of Action & Inaction",
+                "Early Burnout & Fatigue Warnings",
+                "Hidden Mindset & Motivation Blockers",
+                "AI-Generated Evidence Based Topics for Your Next Session",
+                "Your Expertise & Guidance",
+              ].map((item, i) => (
+                <li key={i} className="relative pl-6 leading-snug">
+                  <span className="absolute left-0 top-2 w-4 h-[2px] bg-gradient-to-r from-theme via-pink-500 to-blue-500" />
+                  {item}
+                </li>
+              ))}
+            </ul>
           </FadeRise>
         </div>
-        <FadeRise delay={0.4} className="flex justify-center mt-24">
-          <button className="group relative px-10 md:px-14 py-4 text-base md:text-lg font-semibold rounded-full overflow-hidden">
-            <span className="absolute inset-0 rounded-full bg-gradient-to-r from-pink-500 via-theme to-pink-600 opacity-90 group-hover:opacity-100 transition-opacity" />
-            <span className="absolute inset-0 rounded-full ring-2 ring-white/60 group-hover:ring-white/90 transition-all" />
-            <span className="relative z-10">Request a Demo Call</span>
-          </button>
-        </FadeRise>
       </section>
 
       {/* PHONE / DASHBOARD */}
