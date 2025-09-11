@@ -25,12 +25,6 @@ export default function Explain() {
   ];
   return (
     <section ref={textRef}>
-      <div className="text-3xl text-center">
-        They’re <span className="text-theme">Building AI</span> to Replace
-        Coaches. <br /> We’re Building It to{" "}
-        <span className="text-theme">Make You More Human</span>.
-      </div>
-
       <div className="sticky top-0 w-full flex flex-col justify-center items-center max-md:hidden min-h-screen">
         <img
           className="rotate-90 w-full -left-3/5  absolute breathing-animation"
@@ -50,7 +44,7 @@ export default function Explain() {
             opacity: useTransform(
               textProgress,
               [0, 0.01, 0.13, 0.14],
-              [0, 1, 1, 0]
+              [1, 1, 1, 0]
             ),
           }}
           className="floating text-white w-full  absolute text-center text-4xl font-medium"
@@ -126,15 +120,30 @@ export default function Explain() {
             animation: `rotateBG ${5}s linear infinite`,
             animationDelay: 6 + "s",
             zIndex: 4,
-            opacity: useTransform(textProgress, [0.84, 0.85, 1], [0, 1, 1]),
+            opacity: useTransform(textProgress, [0.8, 0.81, 0.9], [0, 1, 0]),
           }}
           className="floating text-white w-full  absolute text-center text-4xl font-medium"
         >
           It gives you the insights to make your connections deeper and your
           impact undeniable.
         </motion.div>
+        <motion.div
+          style={{
+            animation: `rotateBG ${5}s linear infinite`,
+            animationDelay: 6 + "s",
+            zIndex: 4,
+            opacity: useTransform(textProgress, [0.9, 0.95, 1], [0, 1, 1]),
+          }}
+          className="floating text-white w-full  absolute text-center text-4xl font-medium"
+        >
+          <div className="text-3xl text-center">
+            They’re <span className="text-theme">Building AI</span> to Replace
+            Coaches. <br /> We’re Building It to{" "}
+            <span className="text-theme">Make You More Human</span>.
+          </div>
+        </motion.div>
       </div>
-      <div className="min-h-[500vh]"></div>
+      <div className="min-h-[300vh]"></div>
     </section>
   );
 }
