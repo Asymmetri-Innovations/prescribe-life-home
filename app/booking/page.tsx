@@ -24,26 +24,16 @@ export default function BookingPage() {
             <span className="text-theme">Extension of You</span>
           </div>
         </FadeRise>
-        <motion.div
-          initial={{
-            y: 100,
-            opacity: 0,
-          }}
-          animate={{
-            y: 1,
-            opacity: 1,
-          }}
-          className="h-84 w-1/3 bg-white/40 rounded-3xl"
-        ></motion.div>
+        <FadeRise className="flex justify-center items-center mb-6">
+          <img className="w-2/5 rounded-3xl" src="/book.png" alt="" />
+        </FadeRise>
 
         <FadeRise delay={0.15}>
-          <button className="cursor-pointer bg-white/16 backdrop-blur-lg px-6 py-3 rounded-full border border-white/30 text-sm">
+          <button className="cursor-pointer bg-white/16 backdrop-blur-lg px-6 py-3 rounded-full border border-white/30 text-sm hover:scale-110 hover:bg-theme hover:text-white duration-200 ">
             See Your 5x Revenue Path
           </button>
         </FadeRise>
-        <FadeRise delay={0.2}>
-          <div>Pick a Date and Time</div>
-        </FadeRise>
+
         <FadeRise delay={0.25}>
           <div className="relative flex flex-col justify-center items-center  space-y-10 text-center px-6">
             <div className="absolute inset-0 pointer-events-none  " />
@@ -113,10 +103,12 @@ export default function BookingPage() {
             </p>
           </div>
         </FadeRise>
-        <div className="h-96 w-2/4 bg-white/40 rounded-3xl"></div>
+        <FadeRise className="flex justify-center items-center">
+          <img className="rounded-3xl w-3/5" src="/book2.png" alt="" />
+        </FadeRise>
       </section>
       <section>
-        <div className="relative mx-auto max-w-7xl px-6 md:px-12 py-16 md:py-24">
+        <div className="relative mx-auto max-w-7xl px-6 md:px-12 py-16 md:py-24 md:pb-0">
           <FadeRise>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-white">
               In Your Personalized Demo,{" "}

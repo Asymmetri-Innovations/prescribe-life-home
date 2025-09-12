@@ -85,7 +85,7 @@ export default function Home() {
           should not be the cost of performance.
         </motion.p>
         <motion.button
-          className="bg-white/16 backdrop-blur-lg px-6 py-3 rounded-full border border-white/30 text-sm"
+          className="bg-white/16 hover:scale-110 hover:bg-theme hover:text-white duration-200 cursor-pointer backdrop-blur-lg px-6 py-3 rounded-full border border-white/30 text-sm"
           initial={{ y: 20, filter: "blur(4px)", opacity: 0 }}
           animate={{ y: 0, filter: "blur(0px)", opacity: 1 }}
           transition={{ duration: 0.7, delay: 0.3 }}
@@ -269,7 +269,7 @@ export default function Home() {
               Where your coaching genius meets real-time data intelligence.
             </p>
             <FadeRise delay={0.4} className="flex justify-left mt-24">
-              <button className="group relative px-10 md:px-14 py-4 text-base md:text-lg font-semibold rounded-full overflow-hidden">
+              <button className="group relative px-10 md:px-14 py-4 text-base md:text-lg font-semibold rounded-full overflow-hidden hover:scale-110 hover:bg-theme hover:text-white duration-200 cursor-pointer">
                 <span className="absolute inset-0 rounded-full bg-gradient-to-r from-pink-500 via-theme to-pink-600 opacity-90 group-hover:opacity-100 transition-opacity" />
                 <span className="absolute inset-0 rounded-full ring-2 ring-white/60 group-hover:ring-white/90 transition-all" />
                 <span className="relative z-10">Request a Demo Call</span>
