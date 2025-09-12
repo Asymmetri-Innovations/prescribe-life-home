@@ -71,7 +71,8 @@ export default function Home() {
           animate={{ y: 0, filter: "blur(0px)", opacity: 1 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          Amplify Your <span className="text-gradient">Coaching Genius.</span>
+          Set the new standard in <br />
+          <span className="text-gradient">performance coaching</span>
         </motion.h1>
         <motion.p
           className="max-w-3xl mx-auto"
@@ -79,9 +80,9 @@ export default function Home() {
           animate={{ y: 0, filter: "blur(0px)", opacity: 1 }}
           transition={{ duration: 0.75, delay: 0.15, ease: "easeOut" }}
         >
-          You provide the genius. We provide the real-time data and behavioral
-          analysis tools—together scaling your unique method for deeper, lasting
-          client transformation.
+          Resilience coaching that adapts in real time to evolving client needs,
+          powered by behavioral science and biometric precision—because burnout
+          should not be the cost of performance.
         </motion.p>
         <motion.button
           className="bg-white/16 backdrop-blur-lg px-6 py-3 rounded-full border border-white/30 text-sm"
@@ -100,6 +101,34 @@ export default function Home() {
         >
           <Image src="/hero.png" width={700} height={700} alt="platform" />
         </motion.div>
+      </section>
+
+      <section className="relative max-w-5xl mx-auto px-6 text-center space-y-4 sm:space-y-6">
+        <FadeRise>
+          <p className="text-white/80 text-base sm:text-lg">
+            The International Coach Federation (ICF) reports that 85% of coaches
+            are hearing increased demand for mental well-being support.
+          </p>
+        </FadeRise>
+        <FadeRise delay={0.06}>
+          <p className="text-white/80 text-base sm:text-lg">
+            Mercer’s Global Talent Trends report shares that 80% of
+            professionals are at risk of burnout.
+          </p>
+        </FadeRise>
+        <FadeRise delay={0.12}>
+          <p className="text-theme text-lg sm:text-2xl md:text-4xl font-semibold">
+            “PrescribeLife.Ai was built to help coaches meet this urgent need
+            head on.”
+          </p>
+        </FadeRise>
+        <FadeRise delay={0.18}>
+          <p className="text-white/80 text-base sm:text-lg">
+            Whether you coach executives, leaders, founders or already focus on
+            resilience, mental fitness and burnout — PrescribeLife.AI is
+            designed for you.
+          </p>
+        </FadeRise>
       </section>
 
       {/* TRUSTED */}
@@ -213,7 +242,7 @@ export default function Home() {
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(236,72,153,0.18),transparent_65%)]" />
               <div className="space-y-6 relative z-10">
                 <img
-                  src="/second.png"
+                  src="/second.jpg"
                   alt="fusion"
                   className="rounded-lg ring-1 ring-white/10"
                 />
@@ -227,16 +256,16 @@ export default function Home() {
       </section>
 
       {/* Comparison Illustration (new section) */}
-      <section className="relative mx-auto max-w-7xl px-6 md:px-12 py-32 rounded-[48px] bg-gradient-to-b from-white via-pink-50/70 to-pink-200/40 dark:from-white/10 dark:via-white/5 dark:to-pink-500/10 border border-white/20 shadow-[0_8px_40px_-12px_rgba(236,72,153,0.25)] overflow-hidden flex justify-start items-start">
+      <section className="relative mx-auto max-w-7xl px-6 md:px-12 py-32 rounded-[48px] bg-gradient-to-b from-white/10 via-white/5 to-pink-500/10 border border-white/20 shadow-[0_8px_40px_-12px_rgba(236,72,153,0.25)] overflow-hidden flex justify-start items-start">
         <div className="pointer-events-none absolute -top-32 -left-32 w-[420px] h-[420px] bg-gradient-to-br from-theme/30 to-pink-500/30 blur-3xl opacity-40" />
         <div className="pointer-events-none absolute bottom-0 -right-20 w-[360px] h-[360px] bg-gradient-to-br from-pink-400/40 to-blue-400/40 blur-3xl opacity-40" />
         <div className="relative space-y-10 w-1/2 text-left">
           <FadeRise>
             <h2 className="text-3xl md:text-4xl font-bold leading-tight">
-              Amplify Your Human Touch with Evidence‑Based AI Insights and
-              Signals
+              Set the New Standard in Coaching with Evidence-Based AI Insights &
+              Signals:
             </h2>
-            <p className="text-lg text-zinc-600 dark:text-zinc-400 max-w-xl leading-relaxed mt-6">
+            <p className="text-lg text-zinc-600 max-w-xl leading-relaxed mt-6">
               Where your coaching genius meets real-time data intelligence.
             </p>
             <FadeRise delay={0.4} className="flex justify-left mt-24">
@@ -254,7 +283,7 @@ export default function Home() {
               Without Prescribelife.ai
             </h3>
             <div className="flex flex-col items-start gap-10 ">
-              <ul className="space-y-5 text-sm md:text-base font-medium text-zinc-700 dark:text-zinc-300 ">
+              <ul className="space-y-5 text-sm md:text-base font-medium text-zinc-200 ">
                 {["Clients Self Reporting", "Your Expertise & Guidance"].map(
                   (item, i) => (
                     <li key={i} className="relative pl-5">
@@ -268,9 +297,9 @@ export default function Home() {
           </FadeRise>
           <FadeRise className="space-y-4" delay={0.15}>
             <h3 className="text-xl md:text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-theme to-pink-600">
-              Without Prescribelife.ai
+              With Prescribelife.ai
             </h3>
-            <ul className="space-y-4 text-xs md:text-sm font-medium text-zinc-700 dark:text-zinc-200  tracking-tight">
+            <ul className="space-y-4 text-xs md:text-sm font-medium  text-zinc-200  tracking-tight">
               {[
                 "Client Reporting with Prompts on Automation",
                 "Real-Time Recovery & Stress Levels",
@@ -541,7 +570,7 @@ export default function Home() {
       <section className="relative flex flex-col md:flex-row items-center justify-start gap-16 md:pl-0 px-6 md:px-12">
         <FadeRise className="bg-white text-black rounded-none md:rounded-r-[300px] p-16 flex flex-col items-center justify-center relative overflow-hidden min-h-[400px] max-w-4xl">
           <h2 className="text-4xl md:text-5xl font-bold text-center leading-tight mb-6 max-w-2xl">
-            Turn Your Expertise into a 5x to 10x Return
+            Turn Your Expertise into a potential 5x to 10x Return
           </h2>
           <button className="bg-gradient-to-r from-theme to-pink-600 text-white font-semibold px-12 py-5 rounded-full text-lg shadow-xl hover:shadow-2xl transition-all mb-8">
             Book a Personalized Demo Call

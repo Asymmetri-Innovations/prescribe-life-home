@@ -30,13 +30,9 @@ const faqData: FAQItem[] = [
   {
     question: "What kind of coaches can benefit from your platform?",
     answer:
-      "Performance coaches, life coaches, executive coaches, wellness coaches, and any coaching professional who wants to use objective data to enhance their practice. Whether you work with athletes, executives, or individuals seeking personal growth, our platform adapts to your coaching methodology.",
+      "The platform supports executive and leadership coaches, burnout and resilience coaches, mental fitness and wellbeing coaches, and any practitioner who wants to add resilience-building and burnout-preventative support to their practice. It can be adapted to fit your coaching methodology.",
   },
-  {
-    question: "Can I integrate the platform with my existing tools?",
-    answer:
-      "Yes! We offer seamless integrations with popular coaching platforms, CRM systems, scheduling tools, and communication apps. Our API also allows for custom integrations if you have specific requirements for your coaching practice.",
-  },
+
   {
     question: "What kind of support do you offer?",
     answer:
