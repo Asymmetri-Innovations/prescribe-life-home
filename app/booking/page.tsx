@@ -159,13 +159,18 @@ export default function BookingPage() {
           </FadeRise>
           <FadeRise delay={0.08}>
             <div className="mt-8 sm:mt-10 flex justify-center">
-              <button className="group relative inline-flex items-center justify-center px-8 sm:px-10 md:px-12 py-4 rounded-full font-semibold text-white text-base sm:text-lg shadow-[0_10px_30px_-10px_rgba(236,72,153,0.6)]">
+              <a
+                href="https://calendly.com/d/cswq-pmr-xzn/discovery-call"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative inline-flex items-center justify-center px-8 sm:px-10 md:px-12 py-4 rounded-full font-semibold text-white text-base sm:text-lg shadow-[0_10px_30px_-10px_rgba(236,72,153,0.6)]"
+              >
                 <span className="absolute inset-0 rounded-full bg-gradient-to-r from-pink-500 via-theme to-pink-600 opacity-95 group-hover:opacity-100 transition-opacity" />
                 <span className="absolute inset-0 rounded-full ring-2 ring-white/80" />
                 <span className="relative z-10">
                   Book a Personalized Demo Call
                 </span>
-              </button>
+              </a>
             </div>
           </FadeRise>
           <FadeRise delay={0.16}>

@@ -84,7 +84,10 @@ export default function Home() {
           powered by behavioral science and biometric precision—because burnout
           should not be the cost of performance.
         </motion.p>
-        <motion.button
+        <motion.a
+          href="https://calendly.com/d/cswq-pmr-xzn/discovery-call"
+          target="_blank"
+          rel="noopener noreferrer"
           className="bg-white/16 hover:scale-110 hover:bg-theme hover:text-white duration-200 cursor-pointer backdrop-blur-lg px-6 py-3 rounded-full border border-white/30 text-sm"
           initial={{ y: 20, filter: "blur(4px)", opacity: 0 }}
           animate={{ y: 0, filter: "blur(0px)", opacity: 1 }}
@@ -93,7 +96,7 @@ export default function Home() {
           whileTap={{ scale: 0.94 }}
         >
           Request a Demo Call
-        </motion.button>
+        </motion.a>
         <motion.div
           initial={{ y: 32, filter: "blur(6px)", opacity: 0 }}
           animate={{ y: 0, filter: "blur(0px)", opacity: 1 }}
@@ -231,10 +234,15 @@ export default function Home() {
                 and behavior patterns—fuel for your intuition to drive lasting
                 change.
               </p>
-              <button className="relative group bg-gradient-to-r from-theme to-pink-600 text-white font-medium px-8 py-3 rounded-full shadow-lg hover:shadow-theme/30 transition-all">
+              <a
+                href="https://calendly.com/d/cswq-pmr-xzn/discovery-call"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="relative group bg-gradient-to-r from-theme to-pink-600 text-white font-medium px-8 py-3 rounded-full shadow-lg hover:shadow-theme/30 transition-all"
+              >
                 <span className="relative z-10">Request a Demo Call</span>
                 <span className="absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition-opacity bg-white/10" />
-              </button>
+              </a>
             </div>
           </FadeRise>
           <FadeRise delay={0.1}>
@@ -269,11 +277,16 @@ export default function Home() {
               Where your coaching genius meets real-time data intelligence.
             </p>
             <FadeRise delay={0.4} className="flex justify-left mt-24">
-              <button className="group relative px-10 md:px-14 py-4 text-base md:text-lg font-semibold rounded-full overflow-hidden hover:scale-110 hover:bg-theme hover:text-white duration-200 cursor-pointer">
+              <a
+                href="https://calendly.com/d/cswq-pmr-xzn/discovery-call"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative px-10 md:px-14 py-4 text-base md:text-lg font-semibold rounded-full overflow-hidden hover:scale-110 hover:bg-theme hover:text-white duration-200 cursor-pointer"
+              >
                 <span className="absolute inset-0 rounded-full bg-gradient-to-r from-pink-500 via-theme to-pink-600 opacity-90 group-hover:opacity-100 transition-opacity" />
                 <span className="absolute inset-0 rounded-full ring-2 ring-white/60 group-hover:ring-white/90 transition-all" />
                 <span className="relative z-10">Request a Demo Call</span>
-              </button>
+              </a>
             </FadeRise>
           </FadeRise>
         </div>
@@ -572,9 +585,14 @@ export default function Home() {
           <h2 className="text-4xl md:text-5xl font-bold text-center leading-tight mb-6 max-w-2xl">
             Turn Your Expertise into a potential 5x to 10x Return
           </h2>
-          <button className="bg-gradient-to-r from-theme to-pink-600 text-white font-semibold px-12 py-5 rounded-full text-lg shadow-xl hover:shadow-2xl transition-all mb-8">
+          <a
+            href="https://calendly.com/d/cswq-pmr-xzn/discovery-call"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-gradient-to-r from-theme to-pink-600 text-white font-semibold px-12 py-5 rounded-full text-lg shadow-xl hover:shadow-2xl transition-all mb-8"
+          >
             Book a Personalized Demo Call
-          </button>
+          </a>
           <p className="text-base text-zinc-600 text-center max-w-lg">
             Let us show you how to multiply your revenue, not your workload.
           </p>
@@ -706,9 +724,14 @@ export default function Home() {
           </div>
         </FadeRise>
         <FadeRise delay={0.5}>
-          <button className="bg-theme text-white px-8 py-4 rounded-full border-4 border-white text-xl">
+          <a
+            href="https://calendly.com/d/cswq-pmr-xzn/discovery-call"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-theme text-white px-8 py-4 rounded-full border-4 border-white text-xl"
+          >
             Book a Personalized Demo Call
-          </button>
+          </a>
         </FadeRise>
         <FadeRise delay={0.6}>
           <div className="text-xl text-center">

@@ -97,14 +97,17 @@ export default function Navbar() {
         animate={{ y: 0, filter: "blur(0px)", opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.3, ease: "easeOut" }}
       >
-        <motion.button
+        <motion.a
+          href="https://calendly.com/d/cswq-pmr-xzn/discovery-call"
+          target="_blank"
+          rel="noopener noreferrer"
           className="bg-white rounded-full p-2 px-4 text-black text-sm cursor-pointer"
           whileHover={{ scale: 1.05, y: -2 }}
           whileTap={{ scale: 0.95 }}
           transition={{ duration: 0.2 }}
         >
           Request a Demo
-        </motion.button>
+        </motion.a>
       </motion.div>
     </motion.div>
   );
