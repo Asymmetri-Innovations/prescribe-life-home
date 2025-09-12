@@ -74,6 +74,17 @@ export default function Navbar() {
           whileHover={{ y: -2 }}
           transition={{ duration: 0.2 }}
         >
+          <Link href={"/booking"}>
+            <motion.span className="inline-block cursor-pointer">
+              Book a demo
+            </motion.span>
+          </Link>
+        </motion.div>
+        <motion.div
+          className="inline"
+          whileHover={{ y: -2 }}
+          transition={{ duration: 0.2 }}
+        >
           <Link href={"/"}>
             <motion.span className="inline-block cursor-pointer">
               Our Team
