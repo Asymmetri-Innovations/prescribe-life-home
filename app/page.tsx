@@ -51,7 +51,7 @@ export default function Home() {
   ];
 
   return (
-    <main className="space-y-32 relative">
+    <main className="space-y-32 relative max-w-screen overflow-x-hidden">
       <Image
         className="w-[150vw] h-[150vh] absolute rotate-30 rotate-animation-slow scale-110 z-[-1]"
         src="/bggradient.png"
