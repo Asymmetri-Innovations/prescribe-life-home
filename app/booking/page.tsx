@@ -6,7 +6,7 @@ import { FadeRise } from "@/components/FadeRise";
 import { motion } from "motion/react";
 export default function BookingPage() {
   return (
-    <main className="space-y-32 relative pt-16">
+    <main className="space-y-32 relative max-w-screen overflow-hidden pt-16">
       <Image
         className="w-[150vw] h-[150vh] absolute rotate-30 rotate-animation-slow scale-110 z-[-1]"
         src="/bggradient.png"
