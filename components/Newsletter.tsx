@@ -2,7 +2,7 @@ import { FadeRise } from "./FadeRise";
 
 export function Newsletter() {
   return (
-    <section className="bg-gradient-to-br from-pink-300 to-theme rounded-3xl p-12 mx-4 md:mx-16 ">
+    <section className="bg-gradient-to-br from-pink-300 to-theme rounded-3xl p-12 mx-4 md:mx-16 overflow-x-hidden">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         <FadeRise>
           <div className="space-y-8">

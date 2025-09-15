@@ -53,7 +53,7 @@ export default function FAQ() {
   const rightColumnItems = faqData.slice(3, 6);
 
   return (
-    <section className="flex flex-col justify-center items-center gap-12 px-4 md:px-16">
+    <section className="flex flex-col justify-center items-center gap-12 px-4 md:px-16 overflow-x-hidden">
       <div className="text-3xl font-medium">FAQs</div>
       <div className="w-full max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-6">
         {/* Left Column */}
