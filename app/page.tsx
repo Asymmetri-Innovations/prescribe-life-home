@@ -19,8 +19,20 @@ import React from "react";
 import { Title } from "@/components/Title";
 import { Newsletter } from "@/components/Newsletter";
 import { FadeRise } from "@/components/FadeRise";
+//@ts-expect-error: JS COMPATIBILITY
+import { Splide, SplideSlide } from "@splidejs/react-splide";
+import "@splidejs/react-splide/css";
 
 // Mild, performant animation helper
+const list = [
+  "Let's be honest.",
+  "The rise of AI has many coaches wondering about their future.",
+  "But most tech solutions are designed to remove the human element, not enhance it.",
+  "We believe that’s a flawed approach.",
+  "Your intuition, empathy, and connection are the most powerful assets in coaching and technology should serve them, not sideline them.",
+  "PrescribeLife.ai is the first platform designed not as a replacement, but as an amplifier for your humanity.",
+  "It gives you the insights to make your connections deeper and your impact undeniable.",
+];
 
 export default function Home() {
   const steps = [
@@ -176,7 +188,55 @@ export default function Home() {
       <div className="max-md:hidden">
         <Explain />
       </div>
-      <div className="hidden max-md:block"></div>
+      <div className="hidden max-md:block">
+        <div className="w-full flex-col justify-center items-center hidden max-md:flex mb-16">
+          <Splide
+            options={{
+              type: "loop",
+              focus: "center",
+              interval: 2000,
+              direction: "ttb",
+              autoplay: true,
+              height: "30rem",
+              perPage: 3,
+              arrows: false,
+              pagination: false,
+              gap: "0px",
+              pauseOnHover: false,
+              wheel: false,
+              drag: false,
+            }}
+          >
+            {list.map((x, i) => (
+              <SplideSlide key={i}>
+                <motion.div
+                  style={{
+                    animation: `rotateBG 5s linear infinite`,
+                    animationDelay: "6s",
+                  }}
+                  className="text-center text-lg text-white w-full bg-black"
+                >
+                  {x}
+                </motion.div>
+              </SplideSlide>
+            ))}
+          </Splide>
+
+          <motion.div
+            whileInView={{
+              opacity: 1,
+            }}
+            initial={{
+              opacity: 0.2,
+            }}
+            style={{
+              animation: `rotateBG 4s linear infinite`,
+              fontSize: "3em",
+            }}
+            className="floatingText red-text floating-main z-[9]"
+          ></motion.div>
+        </div>
+      </div>
 
       {/* GAP NARRATIVE */}
       <section className="max-w-6xl mx-auto px-8 max-md:px-4 space-y-20 max-md:space-y-12">
@@ -715,9 +775,9 @@ export default function Home() {
             <FadeRise
               delay={0.15 + i * 0.1}
               key={i}
-              className="bg-[#1a1a1a] border border-white/20 rounded-3xl px-10 max-md:px-8 py-8 max-md:py-6 relative"
+              className="bg-[#1a1a1a] border border-white/20 rounded-3xl px-8 max-md:px-6 py-6 max-md:py-4 relative"
             >
-              <div className="absolute left-6 top-6 w-[3px] h-16 bg-theme rounded-full" />
+              <div className="absolute left-6 top-6 w-[3px] h-16 bg-theme rounded-full max-md:hidden" />
               <p className="pl-10 text-lg max-md:text-base leading-relaxed text-white">
                 <span className="text-pink-400 font-semibold">
                   {t.split(" ")[0]}
