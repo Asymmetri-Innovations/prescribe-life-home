@@ -4,6 +4,7 @@ import FAQ from "@/components/FAQ";
 import { MagicCard } from "@/components/MagicCard";
 import { Marquee } from "@/components/Marquee";
 import { NumberTicker } from "@/components/NumberTicker";
+import { Activity, Cog, Heart } from "lucide-react";
 import {
   Crown,
   Eye,
@@ -22,6 +23,8 @@ import { FadeRise } from "@/components/FadeRise";
 //@ts-expect-error: JS COMPATIBILITY
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
+import CTA from "@/components/CTA";
+import TestimonialsSection from "@/components/Testimonials";
 
 // Mild, performant animation helper
 const list = [
@@ -86,6 +89,7 @@ export default function Home() {
           Set the new standard in <br />
           <span className="text-gradient">performance coaching</span>
         </motion.h1>
+
         <motion.p
           className="max-w-3xl mx-auto text-lg max-md:text-base"
           initial={{ y: 24, filter: "blur(4px)", opacity: 0 }}
@@ -107,42 +111,58 @@ export default function Home() {
           whileHover={{ scale: 1.06 }}
           whileTap={{ scale: 0.94 }}
         >
-          Request a Demo Call
+          Request a demo call
         </motion.a>
         <motion.div
           initial={{ y: 32, filter: "blur(6px)", opacity: 0 }}
           animate={{ y: 0, filter: "blur(0px)", opacity: 1 }}
           transition={{ duration: 1, delay: 0.45 }}
         >
-          <Image src="/hero.png" width={500} height={500} alt="platform" />
-        </motion.div>
-      </section>
+          {/* Two-column grid: text left, image right */}
+          <div className="grid grid-cols-1 md:grid-cols-[1fr_600px] gap-10 max-w-7xl mx-auto items-center text-center mt-6">
+            <section className="space-y-6 max-md:space-y-4 px-6 max-md:px-4 text-left">
+              <FadeRise>
+                <p className="text-white/80 text-lg max-md:text-base">
+                  The International Coach Federation (ICF) reports that 85% of
+                  coaches are hearing increased demand for mental well-being
+                  support.
+                </p>
+              </FadeRise>
+              <FadeRise delay={0.06}>
+                <p className="text-white/80 text-lg max-md:text-base">
+                  Mercer’s Global Talent Trends report shares that 80% of
+                  professionals are at risk of burnout.
+                </p>
+              </FadeRise>
+              <FadeRise delay={0.12}>
+                <p className="text-theme text-4xl max-md:text-xl font-semibold">
+                  “PrescribeLife.Ai was built to help coaches meet this urgent
+                  need head on.”
+                </p>
+              </FadeRise>
+              <FadeRise delay={0.18}>
+                <p className="text-white/80 text-lg max-md:text-base">
+                  Whether you coach executives, leaders, founders or already
+                  focus on resilience, mental fitness and burnout —
+                  PrescribeLife.AI is designed for you.
+                </p>
+              </FadeRise>
+            </section>
 
-      <section className="relative max-w-5xl mx-auto px-6 max-md:px-4 text-center space-y-6 max-md:space-y-4">
-        <FadeRise>
-          <p className="text-white/80 text-lg max-md:text-base">
-            The International Coach Federation (ICF) reports that 85% of coaches
-            are hearing increased demand for mental well-being support.
-          </p>
-        </FadeRise>
-        <FadeRise delay={0.06}>
-          <p className="text-white/80 text-lg max-md:text-base">
-            Mercer’s Global Talent Trends report shares that 80% of
-            professionals are at risk of burnout.
-          </p>
-        </FadeRise>
-        <FadeRise delay={0.12}>
-          <p className="text-theme text-4xl max-md:text-xl font-semibold">
-            “PrescribeLife.Ai was built to help coaches meet this urgent need
-            head on.”
-          </p>
-        </FadeRise>
-        <FadeRise delay={0.18}>
-          <p className="text-white/80 text-lg max-md:text-base">
-            Whether you coach executives, leaders, founders or already focus on
-            resilience, mental fitness and burnout — PrescribeLife.AI is
-            designed for you.
-          </p>
+            {/* Right-side image */}
+            <div className="flex items-center justify-center">
+              <Image
+                src="/result.png"
+                width={700}
+                height={800}
+                alt="platform"
+                className="w-full h-auto max-w-[700px]"
+              />
+            </div>
+          </div>
+        </motion.div>
+        <FadeRise className="flex justify-center items-center" delay={0.12}>
+          <Image src="/security.png" width={400} height={400} alt="security" />
         </FadeRise>
       </section>
 
@@ -163,7 +183,7 @@ export default function Home() {
           {steps.map((step, i) => (
             <FadeRise key={step.id} delay={i * 0.12}>
               <MagicCard>
-                <div className="h-full rounded-2xl p-8 border border-white/10 relative overflow-hidden space-y-6 max-md:space-y-4">
+                <div className="h-[400px] rounded-2xl p-8 border border-white/10 relative overflow-hidden space-y-6 max-md:space-y-4">
                   <div className="absolute top-6 right-6 text-6xl max-md:text-4xl font-bold text-white/30 opacity-50">
                     {step.id}
                   </div>
@@ -181,9 +201,6 @@ export default function Home() {
           ))}
         </div>
       </section>
-      <FadeRise className="flex justify-center items-center" delay={0.12}>
-        <Image src="/security.png" width={400} height={400} alt="security" />
-      </FadeRise>
 
       <div className="max-md:hidden"></div>
       <div className="hidden max-md:block">
@@ -295,15 +312,7 @@ export default function Home() {
                 and behavior patterns—fuel for your intuition to drive lasting
                 change.
               </p>
-              <a
-                href="https://calendly.com/d/cswq-pmr-xzn/discovery-call"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="relative group bg-gradient-to-r from-theme to-pink-600 text-white font-medium px-8 py-3 rounded-full shadow-lg hover:shadow-theme/30 transition-all"
-              >
-                <span className="relative z-10">Request a Demo Call</span>
-                <span className="absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition-opacity bg-white/10" />
-              </a>
+              <CTA />
             </div>
           </FadeRise>
           <FadeRise delay={0.1}>
@@ -341,16 +350,7 @@ export default function Home() {
               delay={0.4}
               className="flex justify-start max-md:justify-center mt-24 max-md:mt-12"
             >
-              <a
-                href="https://calendly.com/d/cswq-pmr-xzn/discovery-call"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group relative px-14 max-md:px-10 py-4 text-lg max-md:text-base font-semibold rounded-full overflow-hidden hover:scale-110 hover:bg-theme hover:text-white duration-200 cursor-pointer"
-              >
-                <span className="absolute inset-0 rounded-full bg-gradient-to-r from-pink-500 via-theme to-pink-600 opacity-90 group-hover:opacity-100 transition-opacity" />
-                <span className="absolute inset-0 rounded-full ring-2 ring-white/60 group-hover:ring-white/90 transition-all" />
-                <span className="relative z-10">Request a Demo Call</span>
-              </a>
+              <CTA classname="w-72 h-20" />{" "}
             </FadeRise>
           </FadeRise>
         </div>
@@ -427,14 +427,15 @@ export default function Home() {
 
       {/* BEFORE / AFTER */}
       <section className="grid grid-cols-1 md:grid-cols-2 gap-16 max-md:gap-8 max-w-6xl mx-auto px-8 max-md:px-4">
-        <FadeRise className="w-full flex justify-end">
-          <div className="rounded-3xl p-8 max-md:p-6 border-2 border-white/20 relative overflow-hidden max-w-lg">
+        {/* Left column: Before content now */}
+        <FadeRise className="h-full" delay={0.15}>
+          <div className="bg-gradient-to-b from-white/15 to-white/20 rounded-3xl p-12  max-md:p-6 border-2 border-white/20 relative overflow-hidden max-w-lg h-full">
             <img
-              className="absolute top-0 right-0 w-32 max-md:w-24"
-              src="/carddesgn.png"
-              alt="decor"
+              className="absolute bottom-1 right-1 w-28 max-md:w-24  "
+              src="/carddesign2.png"
+              alt="decor2"
             />
-            <div className="relative z-10 space-y-6">
+            <div className="relative z-10 space-y-8">
               <div>
                 <h2 className="text-4xl max-md:text-3xl font-bold text-white mb-2">
                   Before
@@ -450,10 +451,9 @@ export default function Home() {
                 "You assign practices—hoping they remember",
                 "You wait two weeks blind to daily struggles",
                 "You chase for updates or messy exports",
-                "You stitch together spreadsheets & notes",
               ].map((t, i) => (
-                <div className="flex items-center gap-3" key={i}>
-                  <div className="w-1 h-10 bg-theme rounded-full" />
+                <div className="flex items-start gap-3" key={i}>
+                  <div className="w-1 h-10 bg-theme rounded-full mt-1" />
                   <p className="text-white leading-relaxed text-lg max-md:text-base">
                     {t}
                   </p>
@@ -462,14 +462,16 @@ export default function Home() {
             </div>
           </div>
         </FadeRise>
-        <FadeRise className="h-full" delay={0.15}>
-          <div className="bg-gradient-to-b from-white/15 to-white/20 rounded-3xl p-8 max-md:p-6 border-2 border-white/20 relative overflow-hidden max-w-lg h-full">
+
+        {/* Right column: After content now */}
+        <FadeRise className="w-full flex justify-end">
+          <div className="rounded-3xl p-12 pb-6 max-md:p-6 border-2 border-white/20 relative overflow-hidden max-w-lg h-full">
             <img
-              className="absolute bottom-0 right-0 w-32 max-md:w-24"
-              src="/carddesign2.png"
-              alt="decor2"
+              className="absolute top-4 right-4 w-32 max-md:w-24"
+              src="/carddesgn.png"
+              alt="decor"
             />
-            <div className="relative z-10 space-y-6">
+            <div className="relative z-10 space-y-8">
               <div>
                 <h2 className="text-4xl max-md:text-3xl font-bold text-white mb-2">
                   After
@@ -486,8 +488,8 @@ export default function Home() {
                 "AI surfaces what to focus",
                 "You coach with precision & foresight",
               ].map((t, i) => (
-                <div className="flex items-center gap-3" key={i}>
-                  <div className="w-1 h-10 bg-theme rounded-full" />
+                <div className="flex items-start gap-3" key={i}>
+                  <div className="w-1 h-10 bg-theme rounded-full mt-1" />
                   <p className="text-white leading-relaxed text-lg max-md:text-base">
                     {t}
                   </p>
@@ -503,9 +505,9 @@ export default function Home() {
         <FadeRise>
           <Title text="Powered By" />
         </FadeRise>
-        <div className="flex flex-col md:flex-row justify-center items-stretch w-full max-w-6xl divide-y md:divide-y-0 md:divide-x divide-white/20">
+        <div className="flex flex-col  md:flex-row justify-center items-stretch w-full max-w-6xl divide-y md:divide-y-0 md:divide-x divide-white/20">
           {[
-            { v: 8, label: "Days of real-world behavioral data", suffix: "+" },
+            { v: 8, label: "Days of real-world behavioral data", suffix: "M+" },
             { v: 500, label: "User profiles analyzed", suffix: "K+" },
             {
               v: 50,
@@ -545,96 +547,6 @@ export default function Home() {
                 </div>
               ))}
             </Marquee>
-          </div>
-        </FadeRise>
-      </section>
-
-      {/* TESTIMONIALS MARQUEE - Fixed Version */}
-      <section className="flex flex-col items-center gap-10 max-md:gap-6 overflow-hidden w-full">
-        <FadeRise>
-          <div className="text-3xl max-md:text-2xl text-center">
-            What Other <span className="text-theme">Coaches</span> Are Saying
-          </div>
-        </FadeRise>
-        <div className="w-full overflow-hidden">
-          <Marquee pauseOnHover className="[--duration:20s]">
-            {Array.from({ length: 6 }).map((_, i) => (
-              <FadeRise key={i} delay={i * 0.05} className="">
-                <div className="bg-gradient-to-b from-zinc-800 to-zinc-900 w-96 max-md:w-80 p-6 max-md:p-4 rounded-2xl border border-white/10 flex flex-col gap-4 max-md:gap-3 shrink-0">
-                  <p className="text-white text-base max-md:text-sm leading-relaxed">
-                    "This platform transformed how I work with clients—objective
-                    insight = better breakthroughs."
-                  </p>
-                  <div className="flex items-center gap-3 mt-2">
-                    <div className="w-12 h-12 rounded-full overflow-hidden shrink-0">
-                      <img
-                        src="/pfp.png"
-                        alt="coach"
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                    <div className="min-w-0">
-                      <h4 className="text-white font-semibold text-sm max-md:text-xs truncate">
-                        Morgan Lobb
-                      </h4>
-                      <p className="text-zinc-400 text-xs max-md:text-2xs truncate">
-                        Executive Coach
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </FadeRise>
-            ))}
-          </Marquee>
-        </div>
-        <FadeRise delay={0.25}>
-          <div className="text-lg max-md:text-base text-center">
-            Let us show you how to multiply your revenue, not your workload.
-          </div>
-        </FadeRise>
-      </section>
-
-      {/* TESTIMONIALS MARQUEE - Fixed Version */}
-      <section className="flex flex-col items-center gap-10 max-md:gap-6 overflow-hidden w-full">
-        <FadeRise>
-          <div className="text-3xl max-md:text-2xl text-center">
-            What Other <span className="text-theme">Coaches</span> Are Saying
-          </div>
-        </FadeRise>
-        <div className="w-full overflow-hidden">
-          <Marquee pauseOnHover className="[--duration:20s]">
-            {Array.from({ length: 6 }).map((_, i) => (
-              <FadeRise key={i} delay={i * 0.05} className="">
-                <div className="bg-gradient-to-b from-zinc-800 to-zinc-900 w-96 max-md:w-80 p-6 max-md:p-4 rounded-2xl border border-white/10 flex flex-col gap-4 max-md:gap-3 shrink-0">
-                  <p className="text-white text-base max-md:text-sm leading-relaxed">
-                    "This platform transformed how I work with clients—objective
-                    insight = better breakthroughs."
-                  </p>
-                  <div className="flex items-center gap-3 mt-2">
-                    <div className="w-12 h-12 rounded-full overflow-hidden shrink-0">
-                      <img
-                        src="/pfp.png"
-                        alt="coach"
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                    <div className="min-w-0">
-                      <h4 className="text-white font-semibold text-sm max-md:text-xs truncate">
-                        Morgan Lobb
-                      </h4>
-                      <p className="text-zinc-400 text-xs max-md:text-2xs truncate">
-                        Executive Coach
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </FadeRise>
-            ))}
-          </Marquee>
-        </div>
-        <FadeRise delay={0.25}>
-          <div className="text-lg max-md:text-base text-center">
-            Let us show you how to multiply your revenue, not your workload.
           </div>
         </FadeRise>
       </section>
@@ -708,64 +620,69 @@ export default function Home() {
       </section>
 
       {/* ONBOARD BENEFITS */}
+
       <section className="flex flex-col items-center">
         <div className="flex w-full px-16 max-md:px-4 justify-start">
           <Title text="In Your First 10-14 Days, You Will" />
         </div>
         <div className="w-full px-8 max-md:px-4 mt-8 max-md:mt-4">
-          <div className="flex flex-col md:flex-row gap-6 w-full">
+          <div className="grid grid-cols-6 grid-rows-6 gap-4 w-full max-w-5xl mx-auto h-96">
             {[
               {
                 icon: Timer,
                 title: "Eliminate Wasted Time",
-                text: "Go from ‘What’s on your mind?’ to data-informed clarity.",
+                text: "Go from 'What's on your mind?' to data-informed clarity.",
+                gridClass: "col-start-1 col-end-3 row-start-3 row-end-5",
               },
               {
                 icon: Lightbulb,
                 title: "Unlock Deeper Insights",
                 text: "Surface challenges happening between sessions.",
+                gridClass: "col-start-3 col-end-5 row-start-2 row-end-4",
               },
               {
                 icon: Target,
                 title: "Lead With Precision",
-                text: "Guide the conversation when clients can’t articulate needs.",
+                text: "Guide the conversation when clients can't articulate needs.",
+                gridClass: "col-start-5 col-end-7 row-start-1 row-end-3",
               },
             ].map((c, i) => (
               <FadeRise
                 key={c.title}
                 delay={i * 0.12}
-                className="flex-1 rounded-2xl border border-white/30 bg-gradient-to-b from-white/10 to-black/80 p-8 max-md:p-6"
+                className={`${c.gridClass} rounded-2xl border border-white/30 bg-gradient-to-b from-white/10 to-black/80 p-6 max-md:p-4 flex flex-col justify-center items-center text-center aspect-square`}
               >
-                <c.icon className="w-12 h-12 text-theme mb-6" />
-                <h3 className="text-white font-semibold text-xl max-md:text-lg mb-4">
+                <c.icon className="w-10 h-10 max-md:w-8 max-md:h-8 text-theme mb-4 max-md:mb-3" />
+                <h3 className="text-white font-semibold text-lg max-md:text-base mb-3 max-md:mb-2">
                   {c.title}
                 </h3>
-                <p className="text-white/70 leading-relaxed">{c.text}</p>
+                <p className="text-white/70 text-sm max-md:text-xs leading-relaxed">
+                  {c.text}
+                </p>
               </FadeRise>
             ))}
           </div>
         </div>
       </section>
-
       {/* CTA CURVE */}
-      <section className="relative flex flex-col md:flex-row items-center justify-start gap-16 max-md:gap-8 md:pl-0 px-10 max-md:px-6">
-        <FadeRise className="bg-white text-black rounded-3xl p-16 max-md:p-8 flex flex-col items-center justify-center relative overflow-hidden min-h-[400px] max-md:min-h-[300px] max-w-4xl max-md:w-full">
-          <h2 className="text-5xl max-md:text-4xl font-bold text-center leading-tight mb-6 max-w-2xl">
+      <section className="relative flex flex-col md:flex-row items-center justify-start gap-16 md:pl-0 px-6 md:px-12">
+        <FadeRise className="bg-white text-black rounded-none md:rounded-r-[300px] p-16 flex flex-col items-center justify-center relative overflow-hidden min-h-[400px] max-w-4xl">
+          <h2 className="text-4xl md:text-5xl font-bold text-center leading-tight mb-6 max-w-2xl">
             Turn Your Expertise into a potential 5x to 10x Return
           </h2>
           <a
             href="https://calendly.com/d/cswq-pmr-xzn/discovery-call"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-gradient-to-r from-theme to-pink-600 text-white font-semibold px-12 max-md:px-8 py-5 max-md:py-4 rounded-full text-lg max-md:text-base shadow-xl hover:shadow-2xl transition-all mb-8 max-md:mb-4"
+            className="bg-gradient-to-r from-theme to-pink-600 text-white font-semibold px-12 py-5 rounded-full text-lg shadow-xl hover:shadow-2xl transition-all mb-8"
           >
             Book a Personalized Demo Call
           </a>
-          <p className="text-base max-md:text-sm text-zinc-600 text-center max-w-lg">
+          <p className="text-base text-zinc-600 text-center max-w-lg">
             Let us show you how to multiply your revenue, not your workload.
           </p>
         </FadeRise>
-        <div className="flex flex-col gap-6 w-full md:w-96">
+        <div className="flex flex-col gap-6 w-96">
           {[
             "Instantly add high-value, data-driven programs.",
             "Confidently introduce premium revenue streams.",
@@ -773,10 +690,10 @@ export default function Home() {
             <FadeRise
               delay={0.15 + i * 0.1}
               key={i}
-              className="bg-[#1a1a1a] border border-white/20 rounded-3xl px-8 max-md:px-6 py-6 max-md:py-4 relative"
+              className="bg-[#1a1a1a] border border-white/20 rounded-3xl px-8 py-6 relative"
             >
-              <div className="absolute left-6 top-6 w-[3px] h-16 bg-theme rounded-full max-md:hidden" />
-              <p className="pl-10 text-lg max-md:text-base leading-relaxed text-white">
+              <div className="absolute left-6 top-6 w-[3px] h-16 bg-theme rounded-full" />
+              <p className="pl-10 text-lg leading-relaxed text-white">
                 <span className="text-pink-400 font-semibold">
                   {t.split(" ")[0]}
                 </span>{" "}
@@ -784,53 +701,12 @@ export default function Home() {
               </p>
             </FadeRise>
           ))}
+          <Image src="/security.png" width={400} height={400} alt="security" />
         </div>
       </section>
 
       {/* TESTIMONIALS */}
-      <section className="flex flex-col items-center gap-10 max-md:gap-6">
-        <FadeRise>
-          <div className="text-3xl max-md:text-2xl text-center">
-            What Other <span className="text-theme">Coaches</span> Are Saying
-          </div>
-        </FadeRise>
-        <Marquee pauseOnHover className="[--duration:20s] overflow-x-hidden">
-          {Array.from({ length: 6 }).map((_, i) => (
-            <FadeRise key={i} delay={i * 0.05} className="mx-4">
-              <div className="bg-gradient-to-b from-zinc-800 to-zinc-900 w-96 max-md:w-80 p-6 max-md:p-4 rounded-2xl border border-white/10 flex flex-col gap-4 max-md:gap-3">
-                <p className="text-white text-base max-md:text-sm leading-relaxed">
-                  “This platform transformed how I work with clients—objective
-                  insight = better breakthroughs.”
-                </p>
-                <div className="flex items-center gap-3 mt-2">
-                  <div className="w-12 h-12 rounded-full overflow-hidden">
-                    <img
-                      src="/pfp.png"
-                      alt="coach"
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <div>
-                    <h4 className="text-white font-semibold text-sm max-md:text-xs">
-                      Morgan Lobb
-                    </h4>
-                    <p className="text-zinc-400 text-xs max-md:text-2xs">
-                      Executive Coach
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </FadeRise>
-          ))}
-        </Marquee>
-        {/* <FadeRise delay={0.1}>
-        </FadeRise> */}
-        <FadeRise delay={0.25}>
-          <div className="text-lg max-md:text-base text-center">
-            Let us show you how to multiply your revenue, not your workload.
-          </div>
-        </FadeRise>
-      </section>
+      <TestimonialsSection />
       <FAQ></FAQ>
       {/* RESULTS */}
       <section className="flex flex-col items-center text-center">
@@ -849,13 +725,14 @@ export default function Home() {
         <FadeRise className="flex justify-center items-center" delay={0.2}>
           <img
             className="w-2/3 max-md:w-full mt-16 max-md:mt-8 -translate-x-16 max-md:-translate-x-0"
-            src="/result.png"
+            src="/hero.png"
             alt="result"
           />
         </FadeRise>
       </section>
 
       {/* POSITIONING */}
+
       <section className="flex flex-col items-center space-y-10 max-md:space-y-6">
         <FadeRise>
           <div className="max-w-7xl text-2xl max-md:text-lg text-center">
@@ -867,14 +744,17 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-md:gap-4 max-w-6xl w-full px-8 max-md:px-4 mt-12 max-md:mt-6">
           {[
             {
+              icon: Activity,
               title: "Evidence-Based",
               body: "Real-time insight into physiology & mindset.",
             },
             {
+              icon: Cog,
               title: "Systematized",
               body: "Behavioral change engine supports follow-through.",
             },
             {
+              icon: Heart,
               title: "Deeply Human",
               body: "Frees you to focus on irreplaceable transformation.",
             },
@@ -884,7 +764,9 @@ export default function Home() {
               delay={i * 0.12}
               className="bg-gradient-to-b from-zinc-900 to-black rounded-3xl p-8 max-md:p-6 border border-white/20 space-y-4 max-md:space-y-3"
             >
-              <div className="w-12 h-12 bg-zinc-600 rounded-lg" />
+              <div className="w-12 h-12 bg-theme/20 rounded-lg flex items-center justify-center">
+                <c.icon className="w-6 h-6 text-theme" />
+              </div>
               <h3 className="text-white text-2xl max-md:text-xl font-semibold">
                 {c.title}
               </h3>
@@ -899,14 +781,7 @@ export default function Home() {
           </div>
         </FadeRise>
         <FadeRise delay={0.5}>
-          <a
-            href="https://calendly.com/d/cswq-pmr-xzn/discovery-call"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-theme text-white px-8 max-md:px-6 py-4 max-md:py-3 rounded-full border-4 border-white text-xl max-md:text-lg"
-          >
-            Book a Personalized Demo Call
-          </a>
+          <CTA />
         </FadeRise>
         <FadeRise delay={0.6}>
           <div className="text-xl max-md:text-lg text-center">
