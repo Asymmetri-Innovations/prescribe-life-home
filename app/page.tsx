@@ -185,9 +185,7 @@ export default function Home() {
         <Image src="/security.png" width={400} height={400} alt="security" />
       </FadeRise>
 
-      <div className="max-md:hidden">
-        <Explain />
-      </div>
+      <div className="max-md:hidden"></div>
       <div className="hidden max-md:block">
         <div className="w-full flex-col justify-center items-center hidden max-md:flex mb-16">
           <Splide
