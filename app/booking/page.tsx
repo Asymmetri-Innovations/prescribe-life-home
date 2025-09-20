@@ -4,7 +4,28 @@ import { Newsletter } from "@/components/Newsletter";
 import Image from "next/image";
 import { FadeRise } from "@/components/FadeRise";
 import { motion } from "motion/react";
+import Script from "next/script";
+import CTA from "@/components/CTA";
+
 export default function BookingPage() {
+  const scrollToCalendly = () => {
+    setTimeout(() => {
+      const calendlySection = document.getElementById("calendly-section");
+      if (calendlySection) {
+        calendlySection.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      } else {
+        // Fallback: scroll to top of page
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      }
+    }, 100);
+  };
+
   return (
     <main className="space-y-32 relative pt-16 overflow-x-hidden max-w-full">
       <Image
@@ -14,6 +35,43 @@ export default function BookingPage() {
         height={300}
         alt="bg"
       />
+      <section className="flex flex-col justify-center items-center">
+        {/* background images remain static */}
+        <FadeRise>
+          <div className="max-w-5xl mx-auto text-center px-8 max-md:px-4 py-16 max-md:py-10">
+            <h2 className="text-5xl max-md:text-4xl font-bold text-white leading-tight">
+              Book Your <span className="text-theme">Personalized</span>{" "}
+              30‑Minute Demo
+            </h2>
+            <p className="text-zinc-300 text-xl max-md:text-base mt-4 max-md:mt-2 leading-relaxed">
+              Join us for a session where we'll show you how{" "}
+              <span className="text-white font-semibold">Prescribe Life</span>{" "}
+              becomes a seamless extension of your coaching philosophy
+            </p>
+          </div>
+        </FadeRise>
+        <FadeRise>
+          <div
+            id="calendly-section"
+            className="flex flex-col justify-center items-center space-y-6 w-full [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
+          >
+            <p className="text-3xl text-center">
+              Pick a suitable date and time
+            </p>
+
+            <div
+              className="calendly-inline-widget w-full  rounded-2xl overflow-hidden [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
+              data-url="https://calendly.com/d/cswq-pmr-xzn/discovery-call?hide_gdpr_banner=1&primary_color=ad128a"
+              style={{ minWidth: 600, height: 700, width: "100%" }}
+            ></div>
+
+            <Script
+              src="https://assets.calendly.com/assets/external/widget.js"
+              strategy="lazyOnload"
+            />
+          </div>
+        </FadeRise>
+      </section>
       <section className="flex flex-col justify-center items-center min-h-screen space-y-6 max-md:space-y-4 pt-16 max-md:pt-8 px-4 max-md:px-2">
         <FadeRise>
           <div className="text-base max-md:text-sm">Best Part..</div>
@@ -33,9 +91,15 @@ export default function BookingPage() {
         </FadeRise>
 
         <FadeRise delay={0.15}>
-          <button className="cursor-pointer bg-white/16 backdrop-blur-lg px-6 max-md:px-4 py-3 max-md:py-2 rounded-full border border-white/30 text-sm max-md:text-xs hover:scale-110 hover:bg-theme hover:text-white duration-200 ">
-            See Your 5x Revenue Path
-          </button>
+          <div className="mt-8 max-md:mt-4 sm:mt-10 flex justify-center">
+            <button
+              onClick={scrollToCalendly}
+              className="flex items-center justify-center relative group bg-gradient-to-r from-theme to-pink-600 text-white font-medium px-8 py-3 rounded-full shadow-lg hover:shadow-theme/30 transition-all cursor-pointer"
+            >
+              <span className="relative z-10">See your 5x Revenue Path</span>
+              <span className="absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition-opacity bg-white/10" />
+            </button>
+          </div>
         </FadeRise>
 
         <FadeRise delay={0.25}>
@@ -57,7 +121,7 @@ export default function BookingPage() {
               </FadeRise>
               <FadeRise delay={0.1}>
                 <p className="text-white/90 text-lg max-md:text-base leading-relaxed">
-                  The right technology shouldn’t replace you,{" "}
+                  The right technology shouldn't replace you,{" "}
                   <span className="text-theme font-semibold">
                     it should amplify you
                   </span>
@@ -92,29 +156,7 @@ export default function BookingPage() {
           </FadeRise>
         </div>
       </section>
-      <section className="flex flex-col justify-center items-center">
-        {/* background images remain static */}
-        <FadeRise>
-          <div className="max-w-5xl mx-auto text-center px-8 max-md:px-4 py-16 max-md:py-10">
-            <h2 className="text-5xl max-md:text-4xl font-bold text-white leading-tight">
-              Book Your <span className="text-theme">Personalized</span>{" "}
-              30‑Minute Demo
-            </h2>
-            <p className="text-zinc-300 text-xl max-md:text-base mt-4 max-md:mt-2 leading-relaxed">
-              Join us for a session where we’ll show you how{" "}
-              <span className="text-white font-semibold">Prescribe Life</span>{" "}
-              becomes a seamless extension of your coaching philosophy
-            </p>
-          </div>
-        </FadeRise>
-        <FadeRise className="flex justify-center items-center">
-          <img
-            className="rounded-3xl w-3/5 max-md:w-4/5"
-            src="/book2.png"
-            alt=""
-          />
-        </FadeRise>
-      </section>
+
       <section>
         <div className="relative mx-auto max-w-7xl px-8 max-md:px-4 py-16 max-md:py-10 md:pb-0">
           <FadeRise>
@@ -142,7 +184,7 @@ export default function BookingPage() {
               },
             ].map((card, i) => (
               <FadeRise key={i} delay={i * 0.08}>
-                <div className="rounded-2xl p-8 max-md:p-6 bg-gradient-to-b from-zinc-900/70 to-black/80 border border-white/10 ring-1 ring-white/10 shadow-[0_16px_48px_-20px_rgba(0,0,0,0.6)]">
+                <div className="rounded-2xl p-8 max-md:p-6 bg-gradient-to-b from-zinc-900/70 to-black/80 border border-white/10 ring-1 ring-white/10 shadow-[0_16px_48px_-20px_rgba(0,0,0,0.6)] h-[280px]">
                   <div className="w-10 h-[3px] bg-gradient-to-r from-theme to-pink-500 rounded-full mb-4" />
                   <h3 className="text-white text-2xl max-md:text-xl font-semibold leading-snug">
                     {card.title}
@@ -167,18 +209,13 @@ export default function BookingPage() {
           </FadeRise>
           <FadeRise delay={0.08}>
             <div className="mt-8 max-md:mt-4 sm:mt-10 flex justify-center">
-              <a
-                href="https://calendly.com/d/cswq-pmr-xzn/discovery-call"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group relative inline-flex items-center justify-center px-10 max-md:px-8 py-4 max-md:py-3 rounded-full font-semibold text-white text-lg max-md:text-base shadow-[0_10px_30px_-10px_rgba(236,72,153,0.6)]"
+              <button
+                onClick={scrollToCalendly}
+                className="flex items-center justify-center relative group bg-gradient-to-r from-theme to-pink-600 text-white font-medium px-8 py-3 rounded-full shadow-lg hover:shadow-theme/30 transition-all cursor-pointer"
               >
-                <span className="absolute inset-0 rounded-full bg-gradient-to-r from-pink-500 via-theme to-pink-600 opacity-95 group-hover:opacity-100 transition-opacity" />
-                <span className="absolute inset-0 rounded-full ring-2 ring-white/80" />
-                <span className="relative z-10">
-                  Book a Personalized Demo Call
-                </span>
-              </a>
+                <span className="relative z-10">Request a Demo Call</span>
+                <span className="absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition-opacity bg-white/10" />
+              </button>
             </div>
           </FadeRise>
           <FadeRise delay={0.16}>

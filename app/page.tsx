@@ -76,96 +76,97 @@ export default function Home() {
       />
 
       {/* HERO */}
+
       <section
         id="hero"
-        className="min-h-screen flex flex-col items-center justify-center space-y-6 max-md:space-y-4 pt-32 text-center max-md:mx-4 px-4 max-md:px-2"
+        className="min-h-screen flex flex-col items-center justify-center pt-32 px-6 max-md:px-4"
       >
-        <motion.h1
-          className="text-6xl max-md:text-4xl font-medium"
-          initial={{ y: 30, filter: "blur(4px)", opacity: 0 }}
-          animate={{ y: 0, filter: "blur(0px)", opacity: 1 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-        >
-          Set the new standard in <br />
-          <span className="text-gradient">performance coaching</span>
-        </motion.h1>
-
-        <motion.p
-          className="max-w-3xl mx-auto text-lg max-md:text-base"
-          initial={{ y: 24, filter: "blur(4px)", opacity: 0 }}
-          animate={{ y: 0, filter: "blur(0px)", opacity: 1 }}
-          transition={{ duration: 0.75, delay: 0.15, ease: "easeOut" }}
-        >
-          Resilience coaching that adapts in real time to evolving client needs,
-          powered by behavioral science and biometric precision—because burnout
-          should not be the cost of performance.
-        </motion.p>
-        <motion.a
-          href="https://calendly.com/d/cswq-pmr-xzn/discovery-call"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="bg-white/16 hover:scale-110 hover:bg-theme hover:text-white duration-200 cursor-pointer backdrop-blur-lg px-6 py-3 rounded-full border border-white/30 text-sm"
-          initial={{ y: 20, filter: "blur(4px)", opacity: 0 }}
-          animate={{ y: 0, filter: "blur(0px)", opacity: 1 }}
-          transition={{ duration: 0.7, delay: 0.3 }}
-          whileHover={{ scale: 1.06 }}
-          whileTap={{ scale: 0.94 }}
-        >
-          Request a demo call
-        </motion.a>
         <motion.div
           initial={{ y: 32, filter: "blur(6px)", opacity: 0 }}
           animate={{ y: 0, filter: "blur(0px)", opacity: 1 }}
           transition={{ duration: 1, delay: 0.45 }}
+          className="w-full"
         >
-          {/* Two-column grid: text left, image right */}
-          <div className="grid grid-cols-1 md:grid-cols-[1fr_600px] gap-10 max-w-7xl mx-auto items-center text-center mt-6">
-            <section className="space-y-6 max-md:space-y-4 px-6 max-md:px-4 text-left">
-              <FadeRise>
-                <p className="text-white/80 text-lg max-md:text-base">
-                  The International Coach Federation (ICF) reports that 85% of
-                  coaches are hearing increased demand for mental well-being
-                  support.
-                </p>
-              </FadeRise>
-              <FadeRise delay={0.06}>
-                <p className="text-white/80 text-lg max-md:text-base">
-                  Mercer’s Global Talent Trends report shares that 80% of
-                  professionals are at risk of burnout.
-                </p>
-              </FadeRise>
-              <FadeRise delay={0.12}>
-                <p className="text-theme text-4xl max-md:text-xl font-semibold">
-                  “PrescribeLife.Ai was built to help coaches meet this urgent
-                  need head on.”
-                </p>
-              </FadeRise>
-              <FadeRise delay={0.18}>
-                <p className="text-white/80 text-lg max-md:text-base">
-                  Whether you coach executives, leaders, founders or already
-                  focus on resilience, mental fitness and burnout —
-                  PrescribeLife.AI is designed for you.
-                </p>
-              </FadeRise>
-            </section>
+          {/* Two-column grid: text 40%, image 60% */}
+          <div className="grid grid-cols-1 md:grid-cols-[2fr_3fr] gap-8 w-full items-center h-full">
+            {/* Left-side text - 40% */}
+            <div className="flex flex-col items-start text-left max-md:text-center max-md:items-center space-y-6 max-md:space-y-4">
+              <motion.h1
+                className="text-6xl max-md:text-4xl font-medium"
+                initial={{ y: 30, filter: "blur(4px)", opacity: 0 }}
+                animate={{ y: 0, filter: "blur(0px)", opacity: 1 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+              >
+                Set the new standard in <br />
+                <span className="text-gradient">performance coaching</span>
+              </motion.h1>
 
-            {/* Right-side image */}
+              <motion.p
+                className="text-lg max-md:text-base"
+                initial={{ y: 24, filter: "blur(4px)", opacity: 0 }}
+                animate={{ y: 0, filter: "blur(0px)", opacity: 1 }}
+                transition={{ duration: 0.75, delay: 0.15, ease: "easeOut" }}
+              >
+                Resilience coaching that adapts in real time to evolving client
+                needs, powered by behavioral science and biometric
+                precision—because burnout should not be the cost of performance.
+              </motion.p>
+
+              <motion.a
+                href="https://calendly.com/d/cswq-pmr-xzn/discovery-call"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white/16 hover:scale-110 hover:bg-theme hover:text-white duration-200 cursor-pointer backdrop-blur-lg px-6 py-3 rounded-full border border-white/30 text-sm"
+                initial={{ y: 20, filter: "blur(4px)", opacity: 0 }}
+                animate={{ y: 0, filter: "blur(0px)", opacity: 1 }}
+                transition={{ duration: 0.7, delay: 0.3 }}
+                whileHover={{ scale: 1.06 }}
+                whileTap={{ scale: 0.94 }}
+              >
+                Request a demo call
+              </motion.a>
+            </div>
+
+            {/* Right-side image - 60% */}
             <div className="flex items-center justify-center">
               <Image
                 src="/result.png"
-                width={700}
-                height={800}
+                width={900}
+                height={900}
                 alt="platform"
-                className="w-full h-auto max-w-[700px]"
+                className="w-full h-auto"
               />
             </div>
           </div>
         </motion.div>
-        <FadeRise className="flex justify-center items-center" delay={0.12}>
-          <Image src="/security.png" width={400} height={400} alt="security" />
+      </section>
+      <section className="relative max-w-5xl mx-auto px-6 text-center space-y-4 sm:space-y-6">
+        <FadeRise>
+          <p className="text-white/80 text-base sm:text-lg">
+            The International Coach Federation (ICF) reports that 85% of coaches
+            are hearing increased demand for mental well-being support.
+          </p>
+        </FadeRise>
+        <FadeRise delay={0.06}>
+          <p className="text-white/80 text-base sm:text-lg">
+            Mercer’s Global Talent Trends report shares that 80% of
+            professionals are at risk of burnout.
+          </p>
+        </FadeRise>
+        <FadeRise delay={0.12}>
+          <p className="text-theme text-lg sm:text-2xl md:text-4xl font-semibold">
+            “PrescribeLife.Ai was built to help coaches meet this urgent need
+            head on.”
+          </p>
+        </FadeRise>
+        <FadeRise delay={0.18}>
+          <p className="text-white/80 text-base sm:text-lg">
+            Whether you coach executives, leaders, founders or already focus on
+            resilience, mental fitness and burnout — PrescribeLife.AI is
+            designed for you.
+          </p>
         </FadeRise>
       </section>
-
       {/* TRUSTED */}
       {/* <section className="flex flex-col items-center min-h-[50vh] space-y-10 text-center">
         <FadeRise>
@@ -312,7 +313,9 @@ export default function Home() {
                 and behavior patterns—fuel for your intuition to drive lasting
                 change.
               </p>
-              <CTA />
+              <div className="flex items-center justify-start">
+                <CTA classname="w-2xs" />
+              </div>
             </div>
           </FadeRise>
           <FadeRise delay={0.1}>
@@ -348,9 +351,9 @@ export default function Home() {
             </p>
             <FadeRise
               delay={0.4}
-              className="flex justify-start max-md:justify-center mt-24 max-md:mt-12"
+              className="flex justify-center max-md:justify-center mt-24 max-md:mt-12"
             >
-              <CTA classname="w-72 h-20" />{" "}
+              <CTA classname="" />{" "}
             </FadeRise>
           </FadeRise>
         </div>
@@ -429,13 +432,13 @@ export default function Home() {
       <section className="grid grid-cols-1 md:grid-cols-2 gap-16 max-md:gap-8 max-w-6xl mx-auto px-8 max-md:px-4">
         {/* Left column: Before content now */}
         <FadeRise className="h-full" delay={0.15}>
-          <div className="bg-gradient-to-b from-white/15 to-white/20 rounded-3xl p-12  max-md:p-6 border-2 border-white/20 relative overflow-hidden max-w-lg h-full">
+          <div className="bg-gradient-to-b from-white/15 to-white/20 rounded-3xl p-12 max-md:p-6 border-2 border-white/20 relative overflow-hidden w-full h-full flex flex-col">
             <img
-              className="absolute bottom-1 right-1 w-28 max-md:w-24  "
+              className="absolute bottom-1 right-1 w-28 max-md:w-24"
               src="/carddesign2.png"
               alt="decor2"
             />
-            <div className="relative z-10 space-y-8">
+            <div className="relative z-10 space-y-8 flex-1">
               <div>
                 <h2 className="text-4xl max-md:text-3xl font-bold text-white mb-2">
                   Before
@@ -464,14 +467,14 @@ export default function Home() {
         </FadeRise>
 
         {/* Right column: After content now */}
-        <FadeRise className="w-full flex justify-end">
-          <div className="rounded-3xl p-12 pb-6 max-md:p-6 border-2 border-white/20 relative overflow-hidden max-w-lg h-full">
+        <FadeRise className="h-full">
+          <div className="rounded-3xl p-12 pb-6 max-md:p-6 border-2 border-white/20 relative overflow-hidden w-full h-full flex flex-col">
             <img
               className="absolute top-4 right-4 w-32 max-md:w-24"
               src="/carddesgn.png"
               alt="decor"
             />
-            <div className="relative z-10 space-y-8">
+            <div className="relative z-10 space-y-8 flex-1">
               <div>
                 <h2 className="text-4xl max-md:text-3xl font-bold text-white mb-2">
                   After
@@ -666,8 +669,8 @@ export default function Home() {
       </section>
       {/* CTA CURVE */}
       <section className="relative flex flex-col md:flex-row items-center justify-start gap-16 md:pl-0 px-6 md:px-12">
-        <FadeRise className="bg-white text-black rounded-none md:rounded-r-[300px] p-16 flex flex-col items-center justify-center relative overflow-hidden min-h-[400px] max-w-4xl">
-          <h2 className="text-4xl md:text-5xl font-bold text-center leading-tight mb-6 max-w-2xl">
+        <FadeRise className="bg-white text-black rounded-2xl md:rounded-r-[300px] p-16 max-md:p-8 flex flex-col items-center justify-center relative overflow-hidden min-h-[400px] w-full max-w-5xl md:max-w-7xl">
+          <h2 className="text-4xl md:text-5xl font-bold text-center leading-tight mb-6 max-w-3xl">
             Turn Your Expertise into a potential 5x to 10x Return
           </h2>
           <a
