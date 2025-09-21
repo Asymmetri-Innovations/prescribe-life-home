@@ -540,13 +540,31 @@ export default function Home() {
         <FadeRise>
           <div className="overflow-x-hidden w-full">
             <Marquee className="[--duration:20s]">
-              {[1, 2, 3, 4, 5].map((i) => (
+              {[
+                { name: "Oura", src: "/oura.png" },
+                { name: "Fitbit", src: "/fitbit.png" },
+                { name: "Garmin", src: "/garmin.png" },
+                { name: "Apple Health", src: "/apple-health.png" },
+                { name: "Google Fit", src: "/google-fit.png" },
+                { name: "Health Connect", src: "/health-connect.png" },
+                { name: "MyFitnessPal", src: "/myfitnesspal.png" },
+                { name: "Peloton", src: "/peloton.png" },
+                { name: "Samsung Health", src: "/samsung-health.png" },
+                { name: "Strava", src: "/strava.png" },
+                { name: "Whoop", src: "/whoop.png" },
+              ].map((app) => (
                 <div
-                  key={i}
-                  className="bg-gradient-to-r from-white/15 to-white/20 w-64 max-md:w-[45vw] p-7 max-md:p-5 rounded-xl border-2 border-white/20 flex flex-col items-center gap-3 max-md:gap-2 shrink-0"
+                  key={app.name}
+                  className="bg-white w-64 max-md:w-[45vw] p-7 max-md:p-5 rounded-xl border-2 border-white/20 flex flex-col items-center gap-3 max-md:gap-2 shrink-0 shadow-md"
                 >
-                  <div className="w-16 h-16 max-md:w-12 max-md:h-12 rounded-full bg-white" />
-                  <div className="text-base max-md:text-sm">Name</div>
+                  <img
+                    src={app.src}
+                    alt={app.name}
+                    className="w-16 h-16 max-md:w-12 max-md:h-12 rounded-full object-contain"
+                  />
+                  <div className="text-base max-md:text-sm text-gray-900">
+                    {app.name}
+                  </div>
                 </div>
               ))}
             </Marquee>
