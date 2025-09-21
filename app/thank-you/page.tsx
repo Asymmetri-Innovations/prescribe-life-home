@@ -8,7 +8,7 @@ export default function ConfirmationPage() {
     <main className="relative overflow-hidden max-w-full min-w-0 px-4 max-md:px-2">
       {/* Background */}
       <Image
-        className="w-full h-full absolute inset-0 object-cover rotate-30 rotate-animation-slow scale-110 z-[-1]"
+        className="absolute inset-0 w-full h-full object-cover animate-slow-rotate scale-110 z-[-1]"
         src="/bggradient.png"
         width={1920}
         height={1080}

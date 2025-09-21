@@ -184,12 +184,12 @@ export default function BookingPage() {
               },
             ].map((card, i) => (
               <FadeRise key={i} delay={i * 0.08}>
-                <div className="rounded-2xl p-8 max-md:p-6 bg-gradient-to-b from-zinc-900/70 to-black/80 border border-white/10 ring-1 ring-white/10 shadow-[0_16px_48px_-20px_rgba(0,0,0,0.6)] h-[280px]">
+                <div className="rounded-2xl p-8 max-md:p-6 bg-gradient-to-b from-zinc-900/70 to-black/80 border border-white/10 ring-1 ring-white/10 shadow-[0_16px_48px_-20px_rgba(0,0,0,0.6)] h-[280px] md:h-[400px] xl:h-[280px]">
                   <div className="w-10 h-[3px] bg-gradient-to-r from-theme to-pink-500 rounded-full mb-4" />
-                  <h3 className="text-white text-2xl max-md:text-xl font-semibold leading-snug">
+                  <h3 className="text-white text-2xl max-md:text-xl md:text-lg lg:text-xl xl:text-2xl font-semibold leading-snug">
                     {card.title}
                   </h3>
-                  <p className="text-zinc-300 mt-4 leading-relaxed text-base max-md:text-sm">
+                  <p className="text-zinc-300 mt-4 leading-relaxed text-base max-md:text-sm md:text-sm lg:text-base">
                     {card.body}
                   </p>
                 </div>
