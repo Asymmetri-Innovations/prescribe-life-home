@@ -17,7 +17,7 @@ const teamMembers = [
     title: "Co-Founder & Chief Medical Officer",
     description:
       "As Co-Founder and Chief Medical Officer, I bring two decades of clinical expertise to our mission of redefining how we measure and manage resilience in high-performing individuals.",
-    image: "/gavin.jpg",
+    image: "/neetu-johnson.jpg",
   },
   {
     name: "Jessica Malach",
@@ -226,9 +226,9 @@ export default function TeamPage() {
             you perform better and lead with resilience.
           </p>
         </FadeRise>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-7xl w-full">
+        <div className="flex flex-wrap justify-center gap-6 max-w-7xl w-full">
           {advisors.map((advisor, i) => (
-            <FadeRise key={i} delay={i * 0.1}>
+            <FadeRise key={i} delay={i * 0.1} className="w-full max-w-sm">
               <MagicCard>
                 <div className="rounded-2xl p-8 max-md:p-6 bg-gradient-to-b from-zinc-900/70 to-black/80 border border-white/10 ring-1 ring-white/10 shadow-[0_16px_48px_-20px_rgba(0,0,0,0.6)] flex flex-col items-center text-center space-y-4 h-full">
                   <Image

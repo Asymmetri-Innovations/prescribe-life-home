@@ -7,35 +7,35 @@ const testimonials = [
   {
     quote:
       "It's the missing link in what I'm doing — that biometric feedback loop.",
-    name: "Sarah Mitchell",
+    name: "- Sarah Mitchell",
     title: "Executive Coach",
     location: "UK",
   },
   {
     quote:
       "When we begin receiving this data and understanding ourselves, we can customise the best possible path towards health and well-being.",
-    name: "Marcus Johnson",
+    name: " - Marcus Johnson",
     title: "Leadership Coach",
     location: "US",
   },
   {
     quote:
       "Technology like this, when used well, can truly help us prevent burnout and sustain resilience.",
-    name: "Emily Chen",
+    name: " - Emily Chen",
     title: "Founder & Coach",
     location: "Canada",
   },
   {
     quote:
       "Sometimes we can do as much as we can with mindset and emotional intelligence, but physiology is the missing piece. This platform bridges that gap.",
-    name: "James Robertson",
-    title: "Resilience Coach",
+    name: " - James Robertson",
+    title: " - Resilience Coach",
     location: "UK",
   },
   {
     quote:
       "This platform is helping us move beyond stress and burnout by using data to truly understand ourselves and our clients.",
-    name: "Isabella Rodriguez",
+    name: " Isabella Rodriguez",
     title: "Well-being Consultant",
     location: "Europe",
   },
@@ -52,7 +52,7 @@ export default function TestimonialsSection() {
   return (
     <section className="flex flex-col items-center gap-10 max-md:gap-6">
       <FadeRise>
-        <div className="text-3xl max-md:text-2xl text-center">
+        <div className="text-4xl max-md:text-2xl text-center font-medium">
           What Other <span className="text-theme">Coaches</span> Are Saying
         </div>
       </FadeRise>
@@ -60,14 +60,11 @@ export default function TestimonialsSection() {
       <Marquee pauseOnHover className="[--duration:25s] overflow-x-hidden">
         {testimonials.map((testimonial, i) => (
           <FadeRise key={i} delay={i * 0.05} className="mx-4">
-            <div className="bg-gradient-to-b from-zinc-800 to-zinc-900 w-96 h-64 max-md:w-80 max-md:h-60 p-6 max-md:p-4 rounded-2xl border border-white/10 flex flex-col justify-between gap-4 max-md:gap-3">
+            <div className="bg-gradient-to-b from-zinc-800 to-zinc-900 w-96 h-56 max-md:w-80 max-md:h-60 p-6 max-md:p-4 rounded-2xl border border-white/10 flex flex-col justify-between gap-4 max-md:gap-3">
               <p className="text-white text-base max-md:text-sm leading-relaxed">
                 "{testimonial.quote}"
               </p>
               <div className="flex items-center gap-3 mt-2">
-                <div className="w-12 h-12 rounded-full bg-theme/20 flex items-center justify-center">
-                  <User className="w-6 h-6 text-theme" />
-                </div>
                 <div>
                   <h4 className="text-white font-semibold text-sm max-md:text-xs">
                     {testimonial.name}

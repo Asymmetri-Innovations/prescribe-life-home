@@ -27,7 +27,7 @@ export default function BookingPage() {
   };
 
   return (
-    <main className="space-y-32 relative pt-16 overflow-x-hidden max-w-full">
+    <main className="space-y-24 relative pt-16 overflow-hidden max-w-full">
       <Image
         className="w-[150vw] h-[150vh] absolute rotate-30 rotate-animation-slow scale-110 z-[-1] overflow-x-hidden max-w-full"
         src="/bggradient.png"
@@ -35,11 +35,14 @@ export default function BookingPage() {
         height={300}
         alt="bg"
       />
-      <section className="flex flex-col justify-center items-center">
+      <section className="flex flex-col justify-center items-center ">
         {/* background images remain static */}
         <FadeRise>
           <div className="max-w-5xl mx-auto text-center px-8 max-md:px-4 py-16 max-md:py-10">
-            <h2 className="text-5xl max-md:text-4xl font-bold text-white leading-tight">
+            <h2
+              className="text-5xl max-md:text-4xl font-bold text-white leading-tight"
+              id="calendly-section"
+            >
               Book Your <span className="text-theme">Personalized</span>{" "}
               30‑Minute Demo
             </h2>
@@ -50,60 +53,47 @@ export default function BookingPage() {
             </p>
           </div>
         </FadeRise>
-        <FadeRise>
-          <div
-            id="calendly-section"
-            className="flex flex-col justify-center items-center space-y-6 w-full [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
-          >
-            <p className="text-3xl text-center">
-              Pick a suitable date and time
-            </p>
+        <FadeRise className="w-full">
+          <div className="">
+            <div className="flex flex-col justify-center items-center space-y-6  [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
+              <p className="text-3xl text-center">
+                Pick a suitable date and time
+              </p>
 
-            <div
-              className="calendly-inline-widget w-full  rounded-2xl overflow-hidden [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
-              data-url="https://calendly.com/d/cswq-pmr-xzn/discovery-call?hide_gdpr_banner=1&primary_color=ad128a"
-              style={{ minWidth: 600, height: 700, width: "100%" }}
-            ></div>
+              <div
+                className="calendly-inline-widget w-full  rounded-2xl overflow-hidden [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
+                data-url="https://calendly.com/d/cswq-pmr-xzn/discovery-call?hide_gdpr_banner=1&primary_color=ad128a"
+                style={{ minWidth: 600, height: 700, width: "100%" }}
+              ></div>
 
-            <Script
-              src="https://assets.calendly.com/assets/external/widget.js"
-              strategy="lazyOnload"
-            />
+              <Script
+                src="https://assets.calendly.com/assets/external/widget.js"
+                strategy="lazyOnload"
+              />
+            </div>
           </div>
         </FadeRise>
       </section>
-      <section className="flex flex-col justify-center items-center min-h-screen space-y-6 max-md:space-y-4 pt-16 max-md:pt-8 px-4 max-md:px-2">
+      <section className="flex flex-col justify-center items-center min-h-screen space-y-6 max-md:space-y-4  max-md:pt-8 px-4 max-md:px-2">
         <FadeRise>
           <div className="text-base max-md:text-sm">Best Part..</div>
         </FadeRise>
         <FadeRise delay={0.05}>
-          <div className="text-6xl max-md:text-4xl font-medium">
+          <div className="text-6xl max-md:text-4xl font-medium max-md:text-center">
             This isn't a New System. <br /> It's an{" "}
             <span className="text-theme">Extension of You</span>
           </div>
         </FadeRise>
         <FadeRise className="flex justify-center items-center mb-6">
           <img
-            className="w-2/5 max-md:w-4/5 rounded-3xl"
-            src="/book.png"
+            className="w-3/5 max-md:w-4/5 rounded-3xl"
+            src="/coach-analyze.png"
             alt=""
           />
         </FadeRise>
 
-        <FadeRise delay={0.15}>
-          <div className="mt-8 max-md:mt-4 sm:mt-10 flex justify-center">
-            <button
-              onClick={scrollToCalendly}
-              className="flex items-center justify-center relative group bg-gradient-to-r from-theme to-pink-600 text-white font-medium px-8 py-3 rounded-full shadow-lg hover:shadow-theme/30 transition-all cursor-pointer"
-            >
-              <span className="relative z-10">See your 5x Revenue Path</span>
-              <span className="absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition-opacity bg-white/10" />
-            </button>
-          </div>
-        </FadeRise>
-
         <FadeRise delay={0.25}>
-          <div className="relative flex flex-col justify-center items-center  space-y-10 max-md:space-y-6 text-center px-4 max-md:px-2">
+          <div className="relative flex flex-col justify-center items-center  space-y-10 max-md:space-y-6 text-center px-4 max-md:px-2 mt-3">
             <div className="absolute inset-0 pointer-events-none  " />
             <div className="relative max-w-5xl space-y-8">
               <FadeRise>
@@ -155,6 +145,15 @@ export default function BookingPage() {
             </p>
           </FadeRise>
         </div>
+        <div className="flex items-center justify-center mt-7">
+          <button
+            onClick={scrollToCalendly}
+            className="flex items-center justify-center relative group bg-gradient-to-r from-theme to-pink-600 text-white font-medium px-8 py-3 rounded-full shadow-lg hover:shadow-theme/30 transition-all cursor-pointer"
+          >
+            <span className="relative z-10">See Your 5x Revenue Path</span>
+            <span className="absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition-opacity bg-white/10" />
+          </button>
+        </div>
       </section>
 
       <section>
@@ -184,7 +183,7 @@ export default function BookingPage() {
               },
             ].map((card, i) => (
               <FadeRise key={i} delay={i * 0.08}>
-                <div className="rounded-2xl p-8 max-md:p-6 bg-gradient-to-b from-zinc-900/70 to-black/80 border border-white/10 ring-1 ring-white/10 shadow-[0_16px_48px_-20px_rgba(0,0,0,0.6)] h-[280px] md:h-[400px] xl:h-[280px]">
+                <div className="rounded-2xl p-4 max-md:p-6 bg-gradient-to-b from-zinc-900/70 to-black/80 border border-white/10 ring-1 ring-white/10 shadow-[0_16px_48px_-20px_rgba(0,0,0,0.6)] h-[280px] md:h-[400px] xl:h-[280px] max-md:h-full">
                   <div className="w-10 h-[3px] bg-gradient-to-r from-theme to-pink-500 rounded-full mb-4" />
                   <h3 className="text-white text-2xl max-md:text-xl md:text-lg lg:text-xl xl:text-2xl font-semibold leading-snug">
                     {card.title}
@@ -239,7 +238,6 @@ export default function BookingPage() {
           <Newsletter />
         </FadeRise>
       </section>
-      <section></section>
     </main>
   );
 }
