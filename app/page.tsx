@@ -78,20 +78,17 @@ export default function Home() {
 
       {/* HERO */}
 
-      <section
-        id="hero"
-        className="min-h-screen flex flex-col pt-24 px-6 max-md:px-4"
-      >
+      <section id="hero" className=" flex flex-col pt-24 px-6 max-md:px-4">
         <motion.div
           initial={{ y: 32, filter: "blur(6px)", opacity: 0 }}
           animate={{ y: 0, filter: "blur(0px)", opacity: 1 }}
           transition={{ duration: 1, delay: 0.45 }}
-          className="w-full pb-0 max-md:pb-0"
+          className="w-full pb-0 max-md:pb-0 min-h-screen"
         >
           {/* Two-column grid */}
           <div className="grid grid-cols-1 md:grid-cols-[2fr_3fr] gap-8 w-full h-full mt-16 max-md:mt-8">
             {/* Left-side text */}
-            <div className="flex flex-col items-start text-left max-md:text-center max-md:items-center space-y-6 max-md:space-y-4 order-1">
+            <div className="flex flex-col items-start justify-center text-left max-md:text-center max-md:items-center space-y-6 max-md:space-y-4 order-1">
               <motion.h1
                 className="text-6xl max-md:text-4xl font-medium"
                 initial={{ y: 30, filter: "blur(4px)", opacity: 0 }}
