@@ -39,10 +39,7 @@ export default function BookingPage() {
         {/* background images remain static */}
         <FadeRise>
           <div className="max-w-5xl mx-auto text-center px-8 max-md:px-4 py-16 max-md:py-10">
-            <h2
-              className="text-5xl max-md:text-4xl font-bold text-white leading-tight"
-              id="calendly-section"
-            >
+            <h2 className="text-5xl max-md:text-4xl font-bold text-white leading-tight">
               Book Your <span className="text-theme">Personalized</span>{" "}
               30‑Minute Demo
             </h2>
@@ -53,8 +50,8 @@ export default function BookingPage() {
             </p>
           </div>
         </FadeRise>
-        <FadeRise className="w-full">
-          <div className="">
+        <FadeRise className="w-full ">
+          <div className="" id="calendly-section">
             <div className="flex flex-col justify-center items-center space-y-6  [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
               <p className="text-3xl text-center">
                 Pick a suitable date and time
