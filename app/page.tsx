@@ -111,7 +111,7 @@ export default function Home() {
               </motion.p>
 
               {/* Button only on desktop */}
-              <motion.div className="flex">
+              <motion.div className="flex max-md:hidden">
                 <CTA />
               </motion.div>
             </div>
@@ -127,19 +127,9 @@ export default function Home() {
               />
 
               {/* Button only on mobile */}
-              <motion.a
-                href="https://calendly.com/d/cswq-pmr-xzn/discovery-call"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="md:hidden bg-white/16 hover:scale-110 hover:bg-theme hover:text-white duration-200 cursor-pointer backdrop-blur-lg px-6 py-3 rounded-full border border-white/30 text-sm mt-4"
-                initial={{ y: 20, filter: "blur(4px)", opacity: 0 }}
-                animate={{ y: 0, filter: "blur(0px)", opacity: 1 }}
-                transition={{ duration: 0.7, delay: 0.3 }}
-                whileHover={{ scale: 1.06 }}
-                whileTap={{ scale: 0.94 }}
-              >
-                Request a demo call
-              </motion.a>
+              <motion.div className="flex md:hidden">
+                <CTA />
+              </motion.div>
             </div>
           </div>
         </motion.div>
@@ -420,7 +410,7 @@ export default function Home() {
                 "Your Expertise & Guidance",
               ].map((item, i) => (
                 <li key={i} className="relative pl-6 leading-snug">
-                  <span className="absolute left-0 top-2 w-4 h-[2px] bg-gradient-to-r from-theme via-pink-500 to-blue-500" />
+                  <span className="absolute left-0 top-2 w-4 h-[2px] bg-gradient-to-r from-theme via-pink-500 to-blue-500 max-md:text-lg" />
                   {item}
                 </li>
               ))}

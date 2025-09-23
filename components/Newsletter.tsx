@@ -45,7 +45,7 @@ export function Newsletter() {
                   className="text-black text-sm"
                 >
                   I agree to receive updates and promotions from
-                  prescribelife.ai
+                  PrescribeLife.AI
                 </label>
               </div>
               <button className="bg-black text-white px-8 py-4 rounded-full font-semibold hover:bg-zinc-800 transition-colors">
