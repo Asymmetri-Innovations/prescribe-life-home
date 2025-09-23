@@ -380,7 +380,7 @@ export default function Home() {
         <div className="relative w-full md:w-1/2 space-y-10 max-md:space-y-6 pl-16 max-md:pl-0">
           <FadeRise className="space-y-4" delay={0.15}>
             <h3 className="text-3xl max-md:text-2xl font-semibold">
-              Without Prescribelife.ai
+              Without PrescribeLife.AI
             </h3>
             <div className="flex flex-col items-start gap-10 ">
               <ul className="space-y-5 max-md:space-y-3 text-base max-md:text-sm font-medium text-zinc-200 ">
@@ -397,9 +397,9 @@ export default function Home() {
           </FadeRise>
           <FadeRise className="space-y-4" delay={0.15}>
             <h3 className="text-3xl max-md:text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-theme to-pink-600">
-              With Prescribelife.ai
+              With Prescribelife.AI
             </h3>
-            <ul className="space-y-4 max-md:space-y-2 text-sm max-md:text-xs font-medium  text-zinc-200  tracking-tight">
+            <ul className="space-y-4 max-md:space-y-2 text-base max-md:text-sm font-medium text-zinc-200">
               {[
                 "Client Reporting with Prompts on Automation",
                 "Real-Time Recovery & Stress Levels",

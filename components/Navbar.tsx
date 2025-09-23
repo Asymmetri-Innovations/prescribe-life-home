@@ -117,7 +117,7 @@ export default function Navbar() {
         className="flex items-center gap-2"
       >
         <motion.div className="max-md:hidden">
-          <CTA />
+          <CTA titleText="Request a Demo" />
         </motion.div>
 
         {/* Mobile hamburger */}
