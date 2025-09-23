@@ -78,10 +78,7 @@ export default function Home() {
 
       {/* HERO */}
 
-      <section
-        id="hero"
-        className="min-h-screen flex flex-col pt-24 px-6 max-md:px-4"
-      >
+      <section id="hero" className="flex flex-col pt-24 px-6 max-md:px-4">
         <motion.div
           initial={{ y: 32, filter: "blur(6px)", opacity: 0 }}
           animate={{ y: 0, filter: "blur(0px)", opacity: 1 }}
