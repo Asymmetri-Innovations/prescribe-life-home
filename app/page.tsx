@@ -78,12 +78,12 @@ export default function Home() {
 
       {/* HERO */}
 
-      <section id="hero" className=" flex flex-col pt-24 px-6 max-md:px-4">
+      <section id="hero" className=" flex flex-col pt-24 px-6 max-md:px-4 ">
         <motion.div
           initial={{ y: 32, filter: "blur(6px)", opacity: 0 }}
           animate={{ y: 0, filter: "blur(0px)", opacity: 1 }}
           transition={{ duration: 1, delay: 0.45 }}
-          className="w-full pb-0 max-md:pb-0 min-h-screen"
+          className="w-full pb-0 max-md:pb-0 min-h-screen mx-6"
         >
           {/* Two-column grid */}
           <div className="grid grid-cols-1 md:grid-cols-[2fr_3fr] gap-8 w-full h-full mt-16 max-md:mt-8">
