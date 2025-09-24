@@ -120,18 +120,11 @@ export default function Footer() {
             <ul className="space-y-3">
               <li>
                 <a
-                  href="#"
+                  target="_blank"
+                  href="https://sites.google.com/asymmetri.in/prescribe-life-policies/home"
                   className="text-white hover:text-theme transition-colors"
                 >
-                  Privacy Policy
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-white hover:text-theme transition-colors"
-                >
-                  Terms of Use
+                  Policies and Terms
                 </a>
               </li>
             </ul>
