@@ -226,7 +226,7 @@ export default function Navbar() {
                 </span>
               </Link>
 
-              <Link
+              {/* <Link
                 href="/"
                 onClick={() => setMobileMenuOpen(false)}
                 aria-current={isActive("/") ? "page" : undefined}
@@ -238,7 +238,7 @@ export default function Navbar() {
                 >
                   The Science
                 </span>
-              </Link>
+              </Link> */}
 
               <Link
                 href="/booking"

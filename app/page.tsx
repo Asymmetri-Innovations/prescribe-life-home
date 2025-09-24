@@ -69,7 +69,7 @@ export default function Home() {
   return (
     <main className="space-y-24 relative overflow-x-hidden max-w-full min-w-0 px-4 max-md:px-2">
       <Image
-        className="w-full h-[150vh] absolute rotate-30 rotate-animation-slow scale-110 z-[-1] overflow-hidden"
+        className="absolute inset-0 w-full md:h-[150vh] max-md:h-[80vh] object-cover md:rotate-30 rotate-animation-slow md:scale-110 max-md:scale-100 z-[-1] overflow-visible pointer-events-none"
         src="/bggradient.png"
         width={300}
         height={300}
@@ -86,9 +86,9 @@ export default function Home() {
           className="w-full pb-0 max-md:pb-0 min-h-screen flex justify-center items-center"
         >
           {/* Two-column grid */}
-          <div className="flex items-start justify-center gap-8 w-full  max-md:mt-8 ">
+          <div className="flex flex-col md:flex-row items-start justify-center gap-8 w-full  max-md:mt-8 ">
             {/* Left-side text */}
-            <div className="flex w-3/5 flex-col items-start justify-center text-left max-md:text-center max-md:items-center space-y-6 max-md:space-y-4 order-1 ">
+            <div className="flex w-full md:w-1/2 flex-col items-start justify-center text-left max-md:text-center max-md:items-center space-y-6 max-md:space-y-4 order-1 ">
               <motion.h1
                 className="text-5xl max-md:text-4xl font-medium"
                 initial={{ y: 30, filter: "blur(4px)", opacity: 0 }}
@@ -117,7 +117,7 @@ export default function Home() {
             </div>
 
             {/* Right-side image */}
-            <div className="flex w-3/5 flex-col items-center justify-start order-2 space-y-6">
+            <div className="flex w-full md:w-1/2 flex-col items-center justify-start order-2 space-y-6">
               <Image
                 src="/result.png"
                 width={900}
@@ -448,10 +448,10 @@ export default function Home() {
               <img
                 className={
                   i === 0
-                    ? "w-64 translate-x-8 max-md:w-48 max-md:translate-x-0"
+                    ? "w-64 translate-x-8 max-md:w-48 max-md:translate-x-0 mx-auto max-md:hidden"
                     : i === 2
-                    ? "w-64 -translate-x-8 max-md:w-48 max-md:translate-x-0"
-                    : "w-64 max-md:w-48"
+                    ? "w-64 -translate-x-8 max-md:w-48 max-md:translate-x-0 mx-auto max-md:hidden"
+                    : "w-64 max-md:w-48 mx-auto"
                 }
                 src={p}
                 alt={p}
@@ -620,7 +620,7 @@ export default function Home() {
           <FadeRise className="h-full">
             <div className="bg-gradient-to-br from-red-900/20 to-red-800/20 rounded-3xl p-8 max-md:p-6 border border-red-500/20 backdrop-blur-sm h-full space-y-6 max-md:space-y-4">
               <div className="flex items-center gap-4 mb-2">
-                <div className="w-16 h-16 bg-red-500/20 rounded-2xl flex items-center justify-center">
+                <div className="min-w-16 h-16 bg-red-500/20 rounded-2xl flex items-center justify-center">
                   <MessageCircleQuestion className="w-8 h-8 text-red-400" />
                 </div>
                 <h3 className="text-3xl max-md:text-2xl font-semibold text-white">
@@ -649,7 +649,7 @@ export default function Home() {
           <FadeRise delay={0.15}>
             <div className="bg-gradient-to-br from-green-900/20 to-emerald-800/20 rounded-3xl p-8 max-md:p-6 border border-green-500/20 backdrop-blur-sm space-y-6 max-md:space-y-4">
               <div className="flex items-center gap-4 mb-2">
-                <div className="w-16 h-16 bg-green-500/20 rounded-2xl flex items-center justify-center">
+                <div className="min-w-16 h-16 bg-green-500/20 rounded-2xl flex items-center justify-center">
                   <Lightbulb className="w-8 h-8 text-green-400" />
                 </div>
                 <h3 className="text-3xl max-md:text-2xl font-semibold text-white">
@@ -745,7 +745,7 @@ export default function Home() {
             Let us show you how to multiply your revenue, not your workload.
           </p>
         </FadeRise>
-        <div className="flex flex-col gap-6 w-96">
+        <div className="flex flex-col gap-6 w-full md:w-96">
           {[
             "Instantly add high-value, data-driven programs.",
             "Confidently introduce premium revenue streams.",
