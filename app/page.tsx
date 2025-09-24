@@ -78,19 +78,19 @@ export default function Home() {
 
       {/* HERO */}
 
-      <section id="hero" className=" flex flex-col pt-24 px-6 max-md:px-4">
+      <section id="hero" className=" flex flex-col pt-24 px-16 max-md:px-4">
         <motion.div
           initial={{ y: 32, filter: "blur(6px)", opacity: 0 }}
           animate={{ y: 0, filter: "blur(0px)", opacity: 1 }}
           transition={{ duration: 1, delay: 0.45 }}
-          className="w-full pb-0 max-md:pb-0 min-h-screen"
+          className="w-full pb-0 max-md:pb-0 min-h-screen flex justify-center items-center"
         >
           {/* Two-column grid */}
-          <div className="grid grid-cols-1 md:grid-cols-[2fr_3fr] gap-8 w-full h-full mt-16 max-md:mt-8">
+          <div className="flex items-start justify-center gap-8 w-full  max-md:mt-8 ">
             {/* Left-side text */}
-            <div className="flex flex-col items-start justify-center text-left max-md:text-center max-md:items-center space-y-6 max-md:space-y-4 order-1">
+            <div className="flex w-3/5 flex-col items-start justify-center text-left max-md:text-center max-md:items-center space-y-6 max-md:space-y-4 order-1 ">
               <motion.h1
-                className="text-6xl max-md:text-4xl font-medium"
+                className="text-5xl max-md:text-4xl font-medium"
                 initial={{ y: 30, filter: "blur(4px)", opacity: 0 }}
                 animate={{ y: 0, filter: "blur(0px)", opacity: 1 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
@@ -117,7 +117,7 @@ export default function Home() {
             </div>
 
             {/* Right-side image */}
-            <div className="flex flex-col items-center justify-start order-2 space-y-6">
+            <div className="flex w-3/5 flex-col items-center justify-start order-2 space-y-6">
               <Image
                 src="/result.png"
                 width={900}
@@ -381,7 +381,7 @@ export default function Home() {
             </p>
             <FadeRise
               delay={0.4}
-              className="flex justify-center max-md:justify-center mt-24 max-md:mt-12"
+              className="flex justify-left max-md:justify-center mt-24 max-md:mt-12"
             >
               <CTA classname="" />{" "}
             </FadeRise>

@@ -45,7 +45,7 @@ export default function BookingPage() {
             </h2>
             <p className="text-zinc-300 text-xl max-md:text-base mt-4 max-md:mt-2 leading-relaxed">
               Join us for a session where we'll show you how{" "}
-              <span className="text-white font-semibold">Prescribe Life</span>{" "}
+              <span className="text-white font-semibold">PrescribeLife.AI</span>{" "}
               becomes a seamless extension of your coaching philosophy
             </p>
           </div>

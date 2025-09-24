@@ -19,6 +19,13 @@ export default function Navbar() {
   const [lastScrollY, setLastScrollY] = useState(0);
   const path = usePathname();
 
+  // Helper to check active route (supports nested routes except for "/")
+  const isActive = (href: string) => {
+    if (!path) return false;
+    if (href === "/") return path === "/";
+    return path.startsWith(href);
+  };
+
   // Close mobile menu on route change
   useEffect(() => {
     setMobileMenuOpen(false);
@@ -39,7 +46,7 @@ export default function Navbar() {
 
   return (
     <motion.div
-      className={`fixed top-3 left-1/2 -translate-x-1/2 w-11/12 md:w-4/5 rounded-2xl p-2 md:p-3 px-4 md:px-6 bg-gradient-to-r from-white/16 via-white/10 to-white/20 border-[0.5px] border-white/30 backdrop-blur-lg flex items-center justify-between text-sm font-semibold z-[99999] duration-300 ${
+      className={`fixed top-3 left-1/2 -translate-x-1/2 w-11/12 md:w-[95%]  rounded-2xl p-2 md:p-3 px-4 md:px-6 bg-gradient-to-r from-white/16 via-white/10 to-white/20 border-[0.5px] border-white/30 backdrop-blur-lg flex items-center justify-between text-sm font-semibold z-[99999] duration-300 ${
         hidden ? "-translate-y-full" : "translate-y-0"
       }`}
       initial={{ y: -20, filter: "blur(8px)", opacity: 0 }}
@@ -52,8 +59,10 @@ export default function Navbar() {
           initial={{ y: -10, filter: "blur(6px)", opacity: 0 }}
           animate={{ y: 0, filter: "blur(0px)", opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.1, ease: "easeOut" }}
+          className="flex justify-center items-center gap-3"
         >
-          <img src="/logo.svg" alt="" />
+          <img className="w-10 rounded-md" src="/logo.jpg" alt="" />
+          <div>PrescribeLife.AI</div>
         </motion.div>
       </a>
       {/* Desktop links */}
@@ -68,13 +77,22 @@ export default function Navbar() {
           whileHover={{ y: -2 }}
           transition={{ duration: 0.2 }}
         >
-          <Link href={"/our-story"}>
-            <motion.span className="inline-block cursor-pointer">
+          <Link
+            href={"/our-story"}
+            aria-current={isActive("/our-story") ? "page" : undefined}
+          >
+            <motion.span
+              className={`inline-block cursor-pointer ${
+                isActive("/our-story")
+                  ? "text-theme"
+                  : "text-white hover:text-theme"
+              }`}
+            >
               Our Story
             </motion.span>
           </Link>
         </motion.div>
-        <motion.div
+        {/* <motion.div
           className="inline"
           whileHover={{ y: -2 }}
           transition={{ duration: 0.2 }}
@@ -84,14 +102,23 @@ export default function Navbar() {
               The Science
             </motion.span>
           </Link>
-        </motion.div>
+        </motion.div> */}
         <motion.div
           className="inline"
           whileHover={{ y: -2 }}
           transition={{ duration: 0.2 }}
         >
-          <Link href={"/booking"}>
-            <motion.span className="inline-block cursor-pointer">
+          <Link
+            href={"/booking"}
+            aria-current={isActive("/booking") ? "page" : undefined}
+          >
+            <motion.span
+              className={`inline-block cursor-pointer ${
+                isActive("/booking")
+                  ? "text-theme"
+                  : "text-white hover:text-theme"
+              }`}
+            >
               Book a demo
             </motion.span>
           </Link>
@@ -101,8 +128,17 @@ export default function Navbar() {
           whileHover={{ y: -2 }}
           transition={{ duration: 0.2 }}
         >
-          <Link href={"/our-team"}>
-            <motion.span className="inline-block cursor-pointer">
+          <Link
+            href={"/our-team"}
+            aria-current={isActive("/our-team") ? "page" : undefined}
+          >
+            <motion.span
+              className={`inline-block cursor-pointer ${
+                isActive("/our-team")
+                  ? "text-theme"
+                  : "text-white hover:text-theme"
+              }`}
+            >
               Our Team
             </motion.span>
           </Link>
@@ -174,23 +210,64 @@ export default function Navbar() {
             className="absolute left-0 right-0 top-[calc(100%+8px)] md:hidden rounded-xl p-3 bg-zinc-800 border-[0.5px] border-white/30 backdrop-blur-xl"
           >
             <nav className="flex flex-col gap-3">
-              <Link href="/our-story" onClick={() => setMobileMenuOpen(false)}>
-                <span className="inline-block cursor-pointer text-white">
+              <Link
+                href="/our-story"
+                onClick={() => setMobileMenuOpen(false)}
+                aria-current={isActive("/our-story") ? "page" : undefined}
+              >
+                <span
+                  className={`inline-block cursor-pointer ${
+                    isActive("/our-story")
+                      ? "text-white font-semibold"
+                      : "text-white/80"
+                  }`}
+                >
                   Our Story
                 </span>
               </Link>
-              <Link href="/" onClick={() => setMobileMenuOpen(false)}>
-                <span className="inline-block cursor-pointer text-white">
+
+              <Link
+                href="/"
+                onClick={() => setMobileMenuOpen(false)}
+                aria-current={isActive("/") ? "page" : undefined}
+              >
+                <span
+                  className={`inline-block cursor-pointer ${
+                    isActive("/") ? "text-white font-semibold" : "text-white/80"
+                  }`}
+                >
                   The Science
                 </span>
               </Link>
-              <Link href="/booking" onClick={() => setMobileMenuOpen(false)}>
-                <span className="inline-block cursor-pointer text-white">
+
+              <Link
+                href="/booking"
+                onClick={() => setMobileMenuOpen(false)}
+                aria-current={isActive("/booking") ? "page" : undefined}
+              >
+                <span
+                  className={`inline-block cursor-pointer ${
+                    isActive("/booking")
+                      ? "text-white font-semibold"
+                      : "text-white/80"
+                  }`}
+                >
                   Book a demo
                 </span>
               </Link>
-              <Link href="/our-team" onClick={() => setMobileMenuOpen(false)}>
-                <span className="inline-block cursor-pointer text-white">
+
+              <Link
+                href="/our-team"
+                onClick={() => setMobileMenuOpen(false)}
+                aria-current={isActive("/our-team") ? "page" : undefined}
+              >
+                <span
+                  className={`inline-block cursor-pointer ${
+                    isActive("/our-team")
+                      ? "text-white font-semibold"
+                      : "text-white/80"
+                  }`}
+                >
                   Our Team
                 </span>
               </Link>

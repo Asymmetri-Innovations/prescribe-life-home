@@ -3,18 +3,14 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#1a1a1a] text-white py-16 px-4 md:px-16">
+    <footer className="bg-[#1a1a1a] text-white py-16 px-4 md:px-16 mt-20">
       <div className="max-w-7xl mx-auto">
         {/* Main footer content */}
         <div className="grid grid-cols-1 md:grid-cols-5 gap-12 mb-12">
           {/* Logo and tagline */}
-          <div className="space-y-4">
-            <div className="flex items-center gap-2">
-              <img src="/logo.svg" alt="" />
-            </div>
-            <p className="text-zinc-400 text-sm">
-              Your New Health <span className="text-theme">Coach</span>
-            </p>
+          <div className="flex justify-center items-center gap-3">
+            <img className="w-10 rounded-md" src="/logo.jpg" alt="" />
+            <div>PrescribeLife.AI</div>
           </div>
 
           {/* Company */}
@@ -186,7 +182,7 @@ export default function Footer() {
             </a>
           </div>
           <p className="text-zinc-500 text-sm">
-            © 2025 Prescribe Life. All rights reserved.
+            © 2025 PrescribeLife.AI. All rights reserved.
           </p>
         </div>
       </div>

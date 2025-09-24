@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import LS from "@/components/LS";
 import Footer from "@/components/Footer";
+import Cookie from "@/components/Cookie";
 
 const geistSans = Space_Grotesk({
   variable: "--font-geist-sans",
@@ -30,7 +31,7 @@ export const metadata: Metadata = {
     "AI coaching platform",
     "coaching intelligence",
     "coaching dashboard",
-    "prescribe life",
+    "PrescribeLife.AI",
   ],
   authors: [{ name: "PrescribeLife.AI" }],
   creator: "PrescribeLife.AI",
@@ -86,6 +87,7 @@ export default function RootLayout({
       <body className={`${geistSans.className} antialiased`}>
         <LS></LS>
         <Navbar></Navbar>
+        <Cookie></Cookie>
         {children}
         <Footer />
       </body>

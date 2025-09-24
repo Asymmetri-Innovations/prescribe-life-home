@@ -7,6 +7,8 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
+
 import { MagicCard } from "@/components/MagicCard";
 
 import Image from "next/image";
@@ -52,6 +54,11 @@ export function TestimonialsCarousel() {
   return (
     <div className="w-full max-w-7xl mx-auto px-4 rounded-2xl">
       <Carousel
+        plugins={[
+          Autoplay({
+            delay: 2000,
+          }),
+        ]}
         opts={{
           align: "start",
           loop: true,
