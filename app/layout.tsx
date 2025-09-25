@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     siteName: "PrescribeLife.AI",
     images: [
       {
-        url: "/og-image.png",
+        url: "/og.png",
         width: 1200,
         height: 630,
         alt: "PrescribeLife.AI - Data-Driven Coaching Platform",
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
     title: "PrescribeLife.AI - Amplify Your Coaching Genius",
     description:
       "Real-time data and behavioral analysis tools for performance coaches. Scale your unique method for deeper, more lasting client transformations.",
-    images: ["/og-image.png"],
+    images: ["/og.png"],
     creator: "@prescribelifeai",
   },
   robots: {
