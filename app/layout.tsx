@@ -18,6 +18,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://prescribelife.ai"),
   title:
     "PrescribeLife.AI - Amplify Your Coaching Genius with Data-Driven Insights",
   description:
@@ -45,7 +46,7 @@ export const metadata: Metadata = {
     siteName: "PrescribeLife.AI",
     images: [
       {
-        url: "/og.png",
+        url: "https://prescribe-life-home.vercel.app/og.png", // fallback if original filename exists
         width: 1200,
         height: 630,
         alt: "PrescribeLife.AI - Data-Driven Coaching Platform",
@@ -59,7 +60,7 @@ export const metadata: Metadata = {
     title: "PrescribeLife.AI - Amplify Your Coaching Genius",
     description:
       "Real-time data and behavioral analysis tools for performance coaches. Scale your unique method for deeper, more lasting client transformations.",
-    images: ["/og.png"],
+    images: ["https://prescribe-life-home.vercel.app/og.png"],
     creator: "@prescribelifeai",
   },
   robots: {
