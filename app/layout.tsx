@@ -19,8 +19,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://prescribelife.ai"),
-  title:
-    "PrescribeLife.AI - Amplify Your Coaching Genius with Data-Driven Insights",
+  title: "PrescribeLife.AI - Set the new standard in performance coaching",
   description:
     "PrescribeLife provides real-time data and behavioral analysis tools for performance coaches. Scale your unique method for deeper, more lasting client transformations with evidence-based coaching intelligence.",
   keywords: [
@@ -39,7 +38,7 @@ export const metadata: Metadata = {
   creator: "PrescribeLife.AI",
   publisher: "PrescribeLife.AI",
   openGraph: {
-    title: "PrescribeLife.AI - Amplify Your Coaching Genius",
+    title: "PrescribeLife.AI - Set the new standard in performance coaching",
     description:
       "Real-time data and behavioral analysis tools for performance coaches. Scale your unique method for deeper, more lasting client transformations.",
     url: "https://prescribelife.ai",
@@ -57,7 +56,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "PrescribeLife.AI - Amplify Your Coaching Genius",
+    title: "PrescribeLife.AI - Set the new standard in performance coaching",
     description:
       "Real-time data and behavioral analysis tools for performance coaches. Scale your unique method for deeper, more lasting client transformations.",
     images: ["https://prescribe-life-home.vercel.app/og.png"],
