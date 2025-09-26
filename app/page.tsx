@@ -290,7 +290,7 @@ export default function Home() {
       <section className="max-w-6xl mx-auto px-8 max-md:px-4 space-y-20 max-md:space-y-12">
         <div className="space-y-12 max-md:space-y-8 max-md:text-center">
           <FadeRise>
-            <h2 className="text-5xl max-md:text-4xl font-bold leading-tight">
+            <h2 className="text-5xl max-md:text-4xl font-semibold leading-tight">
               Are Weekly Check-ins and Client Self-Reporting Still Enough?
             </h2>
           </FadeRise>
