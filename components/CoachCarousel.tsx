@@ -85,7 +85,7 @@ export function TestimonialsCarousel() {
                   </div>
 
                   {/* Highlighted Text */}
-                  <h3 className="text-2xl font-bold text-foreground mb-6 leading-tight">
+                  <h3 className="text-2xl capitalize font-bold text-foreground mb-6 leading-tight">
                     {testimonial.highlight}
                   </h3>
 

@@ -1,5 +1,12 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Open_Sans, Space_Grotesk } from "next/font/google";
+import {
+  Geist,
+  Geist_Mono,
+  Open_Sans,
+  Space_Grotesk,
+  Plus_Jakarta_Sans,
+  Inter,
+} from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import LS from "@/components/LS";
@@ -7,8 +14,8 @@ import Footer from "@/components/Footer";
 import Cookie from "@/components/Cookie";
 import Script from "next/script";
 
-const geistSans = Space_Grotesk({
-  variable: "--font-geist-sans",
+const geistSans = Plus_Jakarta_Sans({
+  // variable: "--font-geist-sans",
   subsets: ["latin"],
 });
 

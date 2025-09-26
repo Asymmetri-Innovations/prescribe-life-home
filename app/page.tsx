@@ -67,7 +67,7 @@ export default function Home() {
   ];
 
   return (
-    <main className="space-y-24 relative overflow-x-hidden max-w-full min-w-0 px-4 max-md:px-2">
+    <main className="space-y-24 relative overflow-hidden max-w-full min-w-0 px-4 max-md:px-2 ">
       <Image
         className="absolute inset-0 w-full md:h-[150vh] max-md:h-[80vh] object-cover md:rotate-30 rotate-animation-slow md:scale-110 max-md:scale-100 z-[-1] overflow-visible pointer-events-none"
         src="/bggradient.png"
@@ -78,7 +78,7 @@ export default function Home() {
 
       {/* HERO */}
 
-      <section id="hero" className=" flex flex-col pt-24 px-16 max-md:px-4">
+      <section id="hero" className=" flex flex-col pt-24 px-16 max-md:px-4 ">
         <motion.div
           initial={{ y: 32, filter: "blur(6px)", opacity: 0 }}
           animate={{ y: 0, filter: "blur(0px)", opacity: 1 }}
@@ -100,7 +100,7 @@ export default function Home() {
               </motion.h1>
 
               <motion.p
-                className="text-lg max-md:text-base"
+                className="text-lg max-md:text-base inter"
                 initial={{ y: 24, filter: "blur(4px)", opacity: 0 }}
                 animate={{ y: 0, filter: "blur(0px)", opacity: 1 }}
                 transition={{ duration: 0.75, delay: 0.15, ease: "easeOut" }}
@@ -169,25 +169,25 @@ export default function Home() {
 
       <section className="relative max-w-5xl mx-auto px-6 text-center space-y-4 sm:space-y-6">
         <FadeRise>
-          <p className="text-white/80 text-base sm:text-lg">
+          <p className="text-white/80 text-base sm:text-lg inter">
             The International Coach Federation (ICF) reports that 85% of coaches
             are hearing increased demand for mental well-being support.
           </p>
         </FadeRise>
         <FadeRise delay={0.06}>
-          <p className="text-white/80 text-base sm:text-lg">
-            Mercer’s Global Talent Trends report shares that 80% of
+          <p className="text-white/80 text-base sm:text-lg inter">
+            Mercer's Global Talent Trends report shares that 80% of
             professionals are at risk of burnout.
           </p>
         </FadeRise>
         <FadeRise delay={0.12}>
           <p className="text-theme text-4xl max-md:text-3xl font-semibold">
-            “PrescribeLife.Ai was built to help coaches meet this urgent need
-            head on.”
+            "PrescribeLife.Ai was built to help coaches meet this urgent need
+            head on."
           </p>
         </FadeRise>
         <FadeRise delay={0.18}>
-          <p className="text-white/80 text-base sm:text-lg">
+          <p className="text-white/80 text-base sm:text-lg inter">
             Whether you coach executives, leaders, founders or already focus on
             resilience, mental fitness and burnout — PrescribeLife.AI is
             designed for you.
@@ -222,10 +222,12 @@ export default function Home() {
                   <h3 className="text-3xl max-md:text-2xl font-semibold text-white">
                     {step.title}
                   </h3>
-                  <p className="text-zinc-400 leading-relaxed">
+                  <p className="text-zinc-400 leading-relaxed inter">
                     {step.description}
                   </p>
-                  <p className="text-white font-medium">{step.subtitle}</p>
+                  <p className="text-white font-medium inter">
+                    {step.subtitle}
+                  </p>
                 </div>
               </MagicCard>
             </FadeRise>
@@ -305,26 +307,26 @@ export default function Home() {
                 <h3 className="text-3xl max-md:text-2xl font-semibold text">
                   You excel in the moment
                 </h3>
-                <p>
+                <p className="inter">
                   During a call, you see the shifts, hear the hesitations, and
                   guide breakthroughs. Your expertise is undeniable.
                 </p>
-                <p>But what happens when the call ends?</p>
-                <p>
+                <p className="inter">But what happens when the call ends?</p>
+                <p className="inter">
                   Your client steps back into a 24/7 reality of hidden
                   stressors, fluctuating energy shifts, and invisible mindset
                   blocks.
                 </p>
-                <p>
-                  You’re left with week-old self-reporting, piecing together an
+                <p className="inter">
+                  You're left with week-old self-reporting, piecing together an
                   incomplete puzzle.
                 </p>
-                <p className="italic text-theme font-medium">
-                  “You’re coaching the person who shows up to the session, not
-                  the whole person living their life”.
+                <p className="italic text-theme font-medium inter">
+                  "You're coaching the person who shows up to the session, not
+                  the whole person living their life".
                 </p>
-                <p>
-                  This isn’t a flaw in your method—it’s a limitation of the
+                <p className="inter">
+                  This isn't a flaw in your method—it's a limitation of the
                   traditional model.
                 </p>
               </div>
@@ -338,7 +340,7 @@ export default function Home() {
                 <span className="text-theme/80">PrescribeLife.ai</span> closes
                 that gap.
               </h3>
-              <p className="text-zinc-300 max-w-md text-base max-md:text-sm">
+              <p className="text-zinc-300 max-w-md text-base max-md:text-sm inter">
                 We surface real-time, objective data on resilience, recovery,
                 and behavior patterns—fuel for your intuition to drive lasting
                 change.
@@ -376,7 +378,7 @@ export default function Home() {
               Set the New Standard in Coaching with Evidence-Based AI Insights &
               Signals:
             </h2>
-            <p className="text-lg max-md:text-base text-white/80 max-w-xl leading-relaxed mt-6 max-md:mt-4">
+            <p className="text-lg max-md:text-base text-white/80 max-w-xl leading-relaxed mt-6 max-md:mt-4 inter">
               Where your coaching genius meets real-time data intelligence.
             </p>
             <FadeRise
@@ -438,7 +440,7 @@ export default function Home() {
           />
         </FadeRise>
         <FadeRise delay={0.1}>
-          <div className="text-base max-md:text-sm">
+          <div className="text-base max-md:text-sm inter">
             Next Generation Performance Coaching Dashboard
           </div>
         </FadeRise>
@@ -560,7 +562,7 @@ export default function Home() {
                 <NumberTicker value={m.v} />
                 {m.suffix}
               </div>
-              <p className="text-white/60 text-center max-w-xs text-base max-md:text-sm">
+              <p className="text-white/60 text-center max-w-xs text-base max-md:text-sm inter">
                 {m.label}
               </p>
             </FadeRise>
@@ -719,7 +721,7 @@ export default function Home() {
                 <h3 className="text-3xl max-md:text-2xl font-semibold text-white mb-3 max-md:mb-2">
                   {c.title}
                 </h3>
-                <p className="text-white/70 text-sm max-md:text-xs leading-relaxed">
+                <p className="text-white/70 text-sm max-md:text-xs leading-relaxed inter">
                   {c.text}
                 </p>
               </FadeRise>
@@ -741,7 +743,7 @@ export default function Home() {
           >
             Book a Personalized Demo Call
           </a>
-          <p className="text-base text-zinc-600 text-center max-w-lg">
+          <p className="text-base text-zinc-600 text-center max-w-lg inter">
             Let us show you how to multiply your revenue, not your workload.
           </p>
         </FadeRise>
@@ -798,7 +800,7 @@ export default function Home() {
 
       <section className="flex flex-col items-center space-y-10 max-md:space-y-6">
         <FadeRise>
-          <div className="max-w-7xl text-2xl max-md:text-lg text-center">
+          <div className="max-w-7xl text-2xl max-md:text-lg text-center inter">
             You're here to create lasting change. Transformation happens between
             sessions. To guide that journey you need visibility—an adaptive,
             intelligent layer over your framework.
@@ -833,12 +835,12 @@ export default function Home() {
               <h3 className="text-3xl max-md:text-2xl font-semibold">
                 {c.title}
               </h3>
-              <p className="text-zinc-400 leading-relaxed">{c.body}</p>
+              <p className="text-zinc-400 leading-relaxed inter">{c.body}</p>
             </FadeRise>
           ))}
         </div>
         <FadeRise delay={0.4}>
-          <div className="max-w-4xl text-2xl max-md:text-lg text-center">
+          <div className="max-w-4xl text-2xl max-md:text-lg text-center inter">
             Not replacing your method—amplifying it. Adaptive, precise,
             profoundly effective.
           </div>
@@ -847,7 +849,7 @@ export default function Home() {
           <CTA />
         </FadeRise>
         <FadeRise delay={0.6}>
-          <div className="text-xl max-md:text-lg text-center">
+          <div className="text-xl max-md:text-lg text-center inter">
             Multiply impact without multiplying hours. <br />
             Take a peek into the <span className="text-theme">FUTURE</span>
           </div>
