@@ -90,7 +90,7 @@ export default function Home() {
             {/* Left-side text */}
             <div className="flex w-full md:w-1/2 flex-col items-start justify-center text-left max-md:text-center max-md:items-center space-y-6 max-md:space-y-4 order-1 ">
               <motion.h1
-                className="text-5xl max-md:text-4xl font-medium"
+                className="text-7xl max-md:text-4xl font-medium"
                 initial={{ y: 30, filter: "blur(4px)", opacity: 0 }}
                 animate={{ y: 0, filter: "blur(0px)", opacity: 1 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
@@ -219,7 +219,7 @@ export default function Home() {
                     {step.id}
                   </div>
                   <step.icon size={60} className="text-theme" />
-                  <h3 className="text-3xl max-md:text-2xl font-semibold text-white">
+                  <h3 className="text-[20px] max-md:text-2xl font-semibold text-white">
                     {step.title}
                   </h3>
                   <p className="text-zinc-400 leading-relaxed inter">
@@ -290,7 +290,7 @@ export default function Home() {
       <section className="max-w-6xl mx-auto px-8 max-md:px-4 space-y-20 max-md:space-y-12">
         <div className="space-y-12 max-md:space-y-8 max-md:text-center">
           <FadeRise>
-            <h2 className="text-5xl max-md:text-4xl font-semibold leading-tight">
+            <h2 className="text-5xl max-md:text-4xl  leading-tight">
               Are Weekly Check-ins and Client Self-Reporting Still Enough?
             </h2>
           </FadeRise>
@@ -832,7 +832,7 @@ export default function Home() {
               <div className="w-12 h-12 bg-theme/20 rounded-lg flex items-center justify-center">
                 <c.icon className="w-6 h-6 text-theme" />
               </div>
-              <h3 className="text-3xl max-md:text-2xl font-semibold">
+              <h3 className="text-[20px] max-md:text-2xl font-semibold">
                 {c.title}
               </h3>
               <p className="text-zinc-400 leading-relaxed inter">{c.body}</p>
