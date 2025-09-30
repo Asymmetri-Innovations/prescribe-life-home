@@ -176,10 +176,10 @@ export default function TeamPage() {
       />
       <section className="flex flex-col items-center justify-center space-y-10 max-md:space-y-6 pt-16 max-md:pt-8 px-4 max-md:px-2">
         <FadeRise delay={0.05}>
-          <div className="text-6xl max-md:text-4xl font-medium flex flex-col items-center mb-6">
+          <div className="text-5xl max-md:text-3xl font-medium flex flex-col items-center mb-6">
             Meet the <span className="text-theme">Team!</span>
           </div>
-          <p className="text-zinc-300 mt-4 max-w-4xl mx-auto text-center text-lg max-md:text-base leading-relaxed px-4 max-md:px-2 mb-5">
+          <p className="text-lg max-md:text-base inter">
             The experts and innovators behind PrescribeLife.ai, bringing
             together neuroscience, technology, and coaching expertise to help
             you perform better and lead with resilience.
@@ -200,13 +200,13 @@ export default function TeamPage() {
                     height={96}
                     className="w-24 h-24 object-cover rounded-full"
                   />
-                  <h3 className="text-white text-2xl max-md:text-xl font-semibold leading-snug">
+                  <h3 className="text-3xl max-md:text-xl font-semibold leading-snug">
                     {member.name}
                   </h3>
                   <p className="text-theme text-sm max-md:text-xs font-medium">
                     {member.title}
                   </p>
-                  <p className="text-zinc-300 text-base max-md:text-sm leading-relaxed mt-4 line-clamp-5">
+                  <p className="text-base max-md:text-sm inter">
                     {member.description}
                   </p>
                 </div>
@@ -217,10 +217,10 @@ export default function TeamPage() {
       </section>
       <section className="flex flex-col items-center justify-center space-y-10 max-md:space-y-6 pt-16 max-md:pt-8 px-4 max-md:px-2">
         <FadeRise delay={0.05}>
-          <div className="text-6xl max-md:text-4xl font-medium flex flex-col items-center mb-6">
+          <div className="text-5xl max-md:text-3xl font-medium flex flex-col items-center mb-6">
             <span className="text-theme">Advisors</span>
           </div>
-          <p className="text-zinc-300 mt-4 max-w-4xl mx-auto text-center text-lg max-md:text-base leading-relaxed px-4 max-md:px-2 mb-5">
+          <p className="text-lg max-md:text-base inter">
             The experts and innovators behind PrescribeLife.ai, bringing
             together neuroscience, technology, and coaching expertise to help
             you perform better and lead with resilience.
@@ -238,13 +238,13 @@ export default function TeamPage() {
                     height={96}
                     className="w-24 h-24 object-cover rounded-full"
                   />
-                  <h3 className="text-white text-2xl max-md:text-xl font-semibold leading-snug">
+                  <h3 className="text-3xl max-md:text-xl font-semibold leading-snug">
                     {advisor.name}
                   </h3>
                   <p className="text-theme text-sm max-md:text-xs font-medium">
                     {advisor.title}
                   </p>
-                  <p className="text-zinc-300 text-base max-md:text-sm leading-relaxed mt-4">
+                  <p className="text-base max-md:text-sm inter">
                     {advisor.description}
                   </p>
                 </div>
