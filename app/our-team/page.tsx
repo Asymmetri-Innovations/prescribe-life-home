@@ -200,13 +200,13 @@ export default function TeamPage() {
                     height={96}
                     className="w-24 h-24 object-cover rounded-full"
                   />
-                  <h3 className="text-3xl max-md:text-xl font-semibold leading-snug">
+                  <h3 className="text-2xl max-md:text-xl text-white font-semibold leading-snug ">
                     {member.name}
                   </h3>
                   <p className="text-theme text-sm max-md:text-xs font-medium">
                     {member.title}
                   </p>
-                  <p className="text-base max-md:text-sm inter">
+                  <p className="text-base max-md:text-sm inter text-white mt-5 ">
                     {member.description}
                   </p>
                 </div>
@@ -238,13 +238,13 @@ export default function TeamPage() {
                     height={96}
                     className="w-24 h-24 object-cover rounded-full"
                   />
-                  <h3 className="text-3xl max-md:text-xl font-semibold leading-snug">
+                  <h3 className="text-2xl max-md:text-xl text-white font-semibold leading-snug ">
                     {advisor.name}
                   </h3>
                   <p className="text-theme text-sm max-md:text-xs font-medium">
                     {advisor.title}
                   </p>
-                  <p className="text-base max-md:text-sm inter">
+                  <p className="text-base max-md:text-sm inter text-white mt-5 ">
                     {advisor.description}
                   </p>
                 </div>

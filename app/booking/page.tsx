@@ -39,11 +39,11 @@ export default function BookingPage() {
         {/* background images remain static */}
         <FadeRise>
           <div className="max-w-5xl mx-auto text-center px-8 max-md:px-4 py-16 max-md:py-10">
-            <h2 className="text-5xl max-md:text-4xl font-bold text-white leading-tight">
+            <h2 className="text-5xl max-md:text-3xl font-bold text-white leading-tight">
               Book Your <span className="text-theme">Personalized</span>{" "}
               30‑Minute Demo
             </h2>
-            <p className="text-zinc-300 text-xl max-md:text-base mt-4 max-md:mt-2 leading-relaxed">
+            <p className="text-lg max-md:text-base inter">
               Join us for a session where we'll show you how{" "}
               <span className="text-white font-semibold">PrescribeLife.AI</span>{" "}
               becomes a seamless extension of your coaching philosophy
@@ -53,7 +53,7 @@ export default function BookingPage() {
         <FadeRise className="w-full ">
           <div className="" id="calendly-section">
             <div className="flex flex-col justify-center items-center space-y-6  [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
-              <p className="text-3xl text-center">
+              <p className="text-3xl max-md:text-xl text-center">
                 Pick a suitable date and time
               </p>
 
@@ -73,10 +73,10 @@ export default function BookingPage() {
       </section>
       <section className="flex flex-col justify-center items-center min-h-screen space-y-6 max-md:space-y-4  max-md:pt-8 px-4 max-md:px-2">
         <FadeRise>
-          <div className="text-base max-md:text-sm">Best Part..</div>
+          <div className="text-base max-md:text-sm inter">Best Part..</div>
         </FadeRise>
         <FadeRise delay={0.05}>
-          <div className="text-6xl max-md:text-4xl font-medium max-md:text-center">
+          <div className="text-5xl max-md:text-3xl font-medium max-md:text-center">
             This isn't a New System. <br /> It's an{" "}
             <span className="text-theme">Extension of You</span>
           </div>
@@ -94,20 +94,20 @@ export default function BookingPage() {
             <div className="absolute inset-0 pointer-events-none  " />
             <div className="relative max-w-5xl space-y-8">
               <FadeRise>
-                <p className="text-white/90 text-lg max-md:text-base leading-relaxed">
+                <p className="text-lg max-md:text-base inter">
                   The fear with any new tech is that it will force you into a
                   box. That it will dilute your unique methodology and replace
                   your human touch with cold, generic algorithms.
                 </p>
               </FadeRise>
               <FadeRise delay={0.05}>
-                <p className="text-white text-lg max-md:text-base font-medium">
+                <p className="text-lg max-md:text-base font-medium inter">
                   We believe the{" "}
                   <span className="text-theme font-semibold">opposite</span>.
                 </p>
               </FadeRise>
               <FadeRise delay={0.1}>
-                <p className="text-white/90 text-lg max-md:text-base leading-relaxed">
+                <p className="text-lg max-md:text-base inter">
                   The right technology shouldn't replace you,{" "}
                   <span className="text-theme font-semibold">
                     it should amplify you
@@ -127,13 +127,13 @@ export default function BookingPage() {
 
         <div className="relative max-w-4xl mx-auto space-y-6 ">
           <FadeRise>
-            <h2 className="text-5xl max-md:text-4xl font-bold leading-tight text-white">
+            <h2 className="text-5xl max-md:text-3xl font-bold leading-tight text-white">
               Turn Every Client Engagement Into a
               <br className="hidden sm:block" /> Revenue Force Multiplier
             </h2>
           </FadeRise>
           <FadeRise delay={0.08}>
-            <p className="text-zinc-300 text-xl max-md:text-base leading-relaxed px-2">
+            <p className="text-lg max-md:text-base inter">
               PrescribeLife.AI helps you transform each coaching package into a
               high‑value, premium offer with the{" "}
               <span className="text-theme font-semibold">
@@ -156,7 +156,7 @@ export default function BookingPage() {
       <section>
         <div className="relative mx-auto max-w-7xl px-8 max-md:px-4 py-16 max-md:py-10 md:pb-0">
           <FadeRise>
-            <h2 className="text-4xl max-md:text-3xl font-bold text-center text-white">
+            <h2 className="text-5xl max-md:text-3xl font-bold text-center text-white">
               In Your Personalized Demo,{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-theme to-pink-500">
                 You Will Discover
@@ -182,10 +182,10 @@ export default function BookingPage() {
               <FadeRise key={i} delay={i * 0.08}>
                 <div className="rounded-2xl p-4 max-md:p-6 bg-gradient-to-b from-zinc-900/70 to-black/80 border border-white/10 ring-1 ring-white/10 shadow-[0_16px_48px_-20px_rgba(0,0,0,0.6)] h-[280px] md:h-[400px] xl:h-[280px] max-md:h-full">
                   <div className="w-10 h-[3px] bg-gradient-to-r from-theme to-pink-500 rounded-full mb-4" />
-                  <h3 className="text-white text-2xl max-md:text-xl md:text-lg lg:text-xl xl:text-2xl font-semibold leading-snug">
+                  <h3 className="text-2xl max-md:text-xl text-white font-semibold leading-snug ">
                     {card.title}
                   </h3>
-                  <p className="text-zinc-300 mt-4 leading-relaxed text-base max-md:text-sm md:text-sm lg:text-base">
+                  <p className="text-base max-md:text-sm inter text-white mt-5 ">
                     {card.body}
                   </p>
                 </div>
@@ -197,7 +197,7 @@ export default function BookingPage() {
       <section className="flex flex-col justify-center items-center">
         <div className="relative max-w-4xl mx-auto text-center px-8 max-md:px-4 py-16 max-md:py-10">
           <FadeRise>
-            <h2 className="text-5xl max-md:text-4xl font-bold text-white leading-tight">
+            <h2 className="text-5xl max-md:text-3xl font-bold text-white leading-tight">
               The Future of coaching is here.
               <br className="hidden sm:block" />
               <span className="text-theme"> See it for yourself.</span>
@@ -215,12 +215,12 @@ export default function BookingPage() {
             </div>
           </FadeRise>
           <FadeRise delay={0.16}>
-            <p className="mt-10 max-md:mt-6 text-zinc-300 text-lg max-md:text-base">
+            <p className="mt-10 max-md:mt-6 text-lg max-md:text-base inter">
               Let us show you how to multiply your revenue, not your workload.
             </p>
           </FadeRise>
           <FadeRise delay={0.24}>
-            <p className="mt-4 max-md:mt-2 text-zinc-300 text-lg max-md:text-base">
+            <p className="mt-4 max-md:mt-2 text-lg max-md:text-base inter">
               Take your sneek peek into the{" "}
               <span className="text-theme">FUTURE</span>
             </p>
