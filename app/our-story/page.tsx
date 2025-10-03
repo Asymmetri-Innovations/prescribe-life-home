@@ -50,7 +50,7 @@ export default function BookingPage() {
       />
       <section className="flex flex-col justify-center items-center min-h-screen space-y-6  max-md:space-y-4 pt-16 max-md:pt-8 px-4 max-md:px-2">
         <FadeRise delay={0.05}>
-          <div className="text-6xl max-md:text-4xl font-medium flex flex-col items-center mb-6">
+          <div className="text-6xl max-md:text-4xl font-semibold flex flex-col items-center mb-6">
             The Founding Story of <br />{" "}
             <span className="text-theme">PrescribeLife.AI</span>
           </div>
@@ -72,12 +72,12 @@ export default function BookingPage() {
                   height={96}
                   className="w-24 h-24 object-cover rounded-full"
                 />
-                <h3 className="text-white text-3xl max-md:text-2xl font-bold leading-snug">
+                <h3 className="text-white text-3xl max-md:text-2xl font-semibold leading-snug">
                   A Founder's Burnout
                 </h3>
               </div>
               <p
-                className="text-zinc-300 mt-4 leading-relaxed text-sm max-md:text-xs"
+                className="text-zinc-300 mt-4 leading-relaxed text-sm max-md:text-xs inter"
                 dangerouslySetInnerHTML={{
                   __html: `
                     <span class="text-theme">Oli Johnson</span>, our Co‑founder & CEO, was a high-performing entrepreneur who hit a wall. Even with a business coach and a therapist, burnout took him down. He realised the missing ingredient was clear, real-time data about his body — a signal that could have made the danger impossible to ignore.
@@ -96,12 +96,12 @@ export default function BookingPage() {
                   height={96}
                   className="w-24 h-24 object-cover rounded-full"
                 />
-                <h3 className="text-white text-3xl max-md:text-2xl font-bold leading-snug">
+                <h3 className="text-white text-3xl max-md:text-2xl font-semibold leading-snug">
                   A Doctor's Frustration
                 </h3>
               </div>
               <p
-                className="text-zinc-300 mt-4 leading-relaxed text-sm max-md:text-xs"
+                className="text-zinc-300 mt-4 leading-relaxed text-sm max-md:text-xs inter"
                 dangerouslySetInnerHTML={{
                   __html: `
                     <span class="text-theme">Dr. Neetu Johnson</span>, our Co‑founder & Chief Medical Officer, saw patients receiving prescriptions for symptoms rooted in stress and lifestyle. What they truly needed wasn't another pill — they needed a prescription for life.
@@ -121,7 +121,7 @@ export default function BookingPage() {
         <div className="absolute left-[-50px] top-1/2 -translate-y-1/2 w-[446px] h-[100px] bg-theme opacity-50 blur-3xl rotate-90" />
 
         <FadeRise>
-          <h2 className="text-5xl max-md:text-4xl font-bold text-black text-center">
+          <h2 className="text-5xl max-md:text-4xl font-semibold text-black text-center">
             The question that changed everything
           </h2>
         </FadeRise>
@@ -134,16 +134,16 @@ export default function BookingPage() {
             className="rounded-2xl shadow-lg"
           />
           <div className="flex flex-col space-y-16 max-md:space-y-10">
-            <p className="text-theme font-bold text-3xl max-md:text-2xl leading-relaxed">
+            <p className="text-theme font-semibold text-3xl max-md:text-2xl leading-relaxed">
               What if we could help people avoid burnout by coaching resilience
               with a system that captures the full picture—mental, emotional,
               and physiological?
             </p>
-            <p className="text-black font-bold text-3xl max-md:text-2xl leading-relaxed">
+            <p className="text-black font-semibold text-3xl max-md:text-2xl leading-relaxed">
               What if the right system could help millions sustain their
               performance without sacrificing their health?
             </p>
-            <p className="text-theme font-bold text-3xl max-md:text-2xl leading-relaxed">
+            <p className="text-theme font-semibold text-3xl max-md:text-2xl leading-relaxed">
               Who could we partner with to make this vision a reality?
             </p>
           </div>
@@ -157,7 +157,7 @@ export default function BookingPage() {
           <section className="flex flex-col justify-center items-center">
             <FadeRise>
               <div className="max-w-5xl mx-auto text-center px-8 max-md:px-4 py-16 max-md:py-10">
-                <h2 className="text-5xl max-md:text-4xl font-bold text-white leading-tight">
+                <h2 className="text-5xl max-md:text-4xl font-semibold text-white leading-tight">
                   For Coaches Who Help{" "}
                   <span className="text-theme">High Performers </span> <br />
                   Thrive
@@ -171,7 +171,7 @@ export default function BookingPage() {
               </div>
             </FadeRise>
           </section>{" "}
-          <h2 className="text-4xl max-md:text-4xl font-bold text-white text-center">
+          <h2 className="text-4xl max-md:text-4xl font-semibold text-white text-center">
             The First Adaptive Performance Coaching{" "}
             <span className="text-theme">Platform</span>
           </h2>
@@ -183,12 +183,12 @@ export default function BookingPage() {
                 <div className="rounded-2xl p-6 max-md:p-5 bg-white/10 shadow-lg border border-white/10 space-y-6 max-md:space-y-5 h-60 flex flex-col">
                   <div className="flex justify-between items-center">
                     <step.icon size={56} className="text-theme" />
-                    <div className="text-5xl max-md:text-3xl font-bold text-white/40">
+                    <div className="text-5xl max-md:text-3xl font-semibold text-white/40">
                       {step.id}
                     </div>
                   </div>
                   <div className="space-y-3 max-md:space-y-2 flex flex-col justify-end h-full">
-                    <h3 className="text-2xl max-md:text-xl font-bold text-white">
+                    <h3 className="text-2xl max-md:text-xl font-semibold text-white">
                       {step.title}
                     </h3>
                     <p className="text-zinc-300 text-base max-md:text-sm leading-relaxed">
@@ -213,7 +213,7 @@ export default function BookingPage() {
         <div className="absolute inset-0 z-[-1] bg-black opacity-75" />{" "}
         {/* Dark overlay */}
         <FadeRise className="flex flex-col items-center justify-center space-y-20 max-md:space-y-10">
-          <h2 className="text-5xl max-md:text-4xl font-bold text-white text-center leading-tight">
+          <h2 className="text-5xl max-md:text-4xl font-semibold text-white text-center leading-tight">
             This Is the Future of <br />
             <span className="text-theme">Performance Coaching</span>
           </h2>
@@ -244,7 +244,7 @@ export default function BookingPage() {
       <section className="mb-15">
         <FadeRise>
           <div className="max-w-5xl mx-auto text-center px-8 max-md:px-4 py-16 max-md:py-10">
-            <h2 className="text-5xl max-md:text-4xl font-bold text-white leading-tight">
+            <h2 className="text-5xl max-md:text-4xl font-semibold text-white leading-tight">
               Built with <span className="text-theme">Coaches</span>, Shaped by{" "}
               {""}
               <span className="text-theme">Experts</span> <br />

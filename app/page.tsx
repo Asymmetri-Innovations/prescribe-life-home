@@ -67,7 +67,7 @@ export default function Home() {
   ];
 
   return (
-    <main className="space-y-24 relative overflow-hidden max-w-full min-w-0 px-4 max-md:px-2 ">
+    <main className="space-y-24 relative overflow-hidden max-w-full min-w-0 px-6 max-md:px-5 ">
       <Image
         className="absolute inset-0 w-full md:h-[150vh] max-md:h-[80vh] object-cover md:rotate-30 rotate-animation-slow md:scale-110 max-md:scale-100 z-[-1] overflow-visible pointer-events-none"
         src="/bggradient.png"
@@ -78,7 +78,7 @@ export default function Home() {
 
       {/* HERO */}
 
-      <section id="hero" className=" flex flex-col pt-24 px-16 max-md:px-4 ">
+      <section id="hero" className=" flex flex-col pt-24 px-16 max-md:px-5 ">
         <motion.div
           initial={{ y: 32, filter: "blur(6px)", opacity: 0 }}
           animate={{ y: 0, filter: "blur(0px)", opacity: 1 }}
@@ -90,7 +90,7 @@ export default function Home() {
             {/* Left-side text */}
             <div className="flex w-full md:w-1/2 flex-col items-start justify-center text-left max-md:text-center max-md:items-center space-y-6 max-md:space-y-4 order-1 ">
               <motion.h1
-                className="text-6xl max-md:text-4xl font-medium"
+                className="text-6xl max-md:text-3xl font-semibold"
                 initial={{ y: 30, filter: "blur(4px)", opacity: 0 }}
                 animate={{ y: 0, filter: "blur(0px)", opacity: 1 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
@@ -127,19 +127,6 @@ export default function Home() {
               />
 
               {/* Button only on mobile */}
-              <motion.a
-                href="https://calendly.com/d/cswq-pmr-xzn/discovery-call"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="md:hidden bg-white/16 hover:scale-110 hover:bg-theme hover:text-white duration-200 cursor-pointer backdrop-blur-lg px-6 py-3 rounded-full border border-white/30 text-sm mt-4"
-                initial={{ y: 20, filter: "blur(4px)", opacity: 0 }}
-                animate={{ y: 0, filter: "blur(0px)", opacity: 1 }}
-                transition={{ duration: 0.7, delay: 0.3 }}
-                whileHover={{ scale: 1.06 }}
-                whileTap={{ scale: 0.94 }}
-              >
-                Request a demo call
-              </motion.a>
             </div>
           </div>
         </motion.div>
@@ -147,9 +134,9 @@ export default function Home() {
           initial={{ y: 32, filter: "blur(6px)", opacity: 0 }}
           animate={{ y: 0, filter: "blur(0px)", opacity: 1 }}
           transition={{ duration: 1, delay: 0.45 }}
-          className="w-full pb-0 max-md:pb-0 space-y-8 mt-20 max-md:mt-10"
+          className="w-full pb-0 max-md:pb-0 space-y-8  max-md:mt-10"
         >
-          <p className="text-5xl max-md:text-3xl text-center">
+          <p className="text-5xl max-md:text-2xl text-center font-semibold px-2">
             Trusted by Performance Coaches Behind Today's <br />
             <span className="text-theme">Most Influential Leaders</span>
           </p>
@@ -167,7 +154,7 @@ export default function Home() {
         </motion.div>
       </section>
 
-      <section className="relative max-w-5xl mx-auto px-6 text-center space-y-4 sm:space-y-6">
+      <section className="relative max-w-5xl mx-auto px-8 max-md:px-5 text-center space-y-4 sm:space-y-6">
         <FadeRise>
           <p className="text-lg max-md:text-base inter">
             The International Coach Federation (ICF) reports that 85% of coaches
@@ -290,7 +277,7 @@ export default function Home() {
       <section className="max-w-6xl mx-auto px-8 max-md:px-4 space-y-20 max-md:space-y-12">
         <div className="space-y-12 max-md:space-y-8 max-md:text-center">
           <FadeRise>
-            <h2 className="text-5xl max-md:text-3xl leading-tight">
+            <h2 className="text-5xl max-md:text-3xl leading-tight font-semibold">
               Are Weekly Check-ins and Client Self-Reporting Still Enough?
             </h2>
           </FadeRise>
@@ -376,7 +363,7 @@ export default function Home() {
         <div className="pointer-events-none absolute bottom-0 -right-20 w-[360px] h-[360px] bg-gradient-to-br from-pink-400/40 to-blue-400/40 blur-3xl opacity-40" />
         <div className="relative space-y-10 w-full md:w-1/2 text-left">
           <FadeRise>
-            <h2 className="text-5xl max-md:text-3xl font-bold leading-tight">
+            <h2 className="text-5xl max-md:text-3xl font-semibold leading-tight">
               Set the New Standard in Coaching with Evidence-Based AI Insights &
               Signals:
             </h2>
@@ -685,14 +672,14 @@ export default function Home() {
 
       {/* ONBOARD BENEFITS */}
 
-      <section className="flex flex-col items-center">
-        <div className="flex w-full px-16 max-md:px-4 justify-start">
+      <section className="flex flex-col items-center mx-32 max-md:mx-0 px-6 max-md:px-5">
+        <div className="flex w-full px-16 max-md:px-4 justify-start ">
           <Title
             text="In Your First 10-14 Days, You Will"
-            className="text-5xl max-md:text-3xl"
+            className="text-5xl max-md:text-3xl "
           />
         </div>
-        <div className="w-full px-8 max-md:px-4 mt-8 max-md:mt-4">
+        <div className="w-full px-8 max-md:px-5 mt-8 max-md:mt-4">
           <div className="grid grid-cols-1 md:grid-cols-6 md:grid-rows-6 gap-4 w-full max-w-5xl mx-auto">
             {[
               {
@@ -720,7 +707,7 @@ export default function Home() {
               <FadeRise
                 key={c.title}
                 delay={i * 0.12}
-                className={`${c.gridClass} rounded-2xl border border-white/30 bg-gradient-to-b from-white/10 to-black/80 p-6 max-md:p-2 max-md:w-full flex flex-col justify-center items-center text-center max-md:h-auto max-md:min-h-56`}
+                className={`${c.gridClass} rounded-2xl border border-white/30 bg-gradient-to-b from-white/10 to-black/80 p-6 max-md:p-4 max-md:w-full flex flex-col justify-center items-center text-center max-md:h-auto max-md:min-h-56`}
               >
                 <c.icon className="w-10 h-10 max-md:w-8 max-md:h-8 text-theme mb-4 max-md:mb-3" />
                 <h3 className="text-3xl max-md:text-xl font-semibold text-white mb-3 max-md:mb-2">
@@ -737,7 +724,7 @@ export default function Home() {
       {/* CTA CURVE */}
       <section className="relative flex flex-col md:flex-row items-center justify-start gap-16 md:pl-0 px-6 md:px-12">
         <FadeRise className="bg-white text-black rounded-2xl md:rounded-r-[300px] p-16 max-md:p-8 flex flex-col items-center justify-center relative overflow-hidden min-h-[400px] w-full max-w-5xl md:max-w-7xl">
-          <h2 className="text-5xl max-md:text-3xl font-bold text-center leading-tight mb-6 max-w-3xl">
+          <h2 className="text-5xl max-md:text-3xl font-semibold text-center leading-tight mb-6 max-w-3xl">
             Turn Your Expertise into a potential 5x to 10x Return
           </h2>
           <a

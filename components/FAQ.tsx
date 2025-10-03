@@ -88,7 +88,7 @@ export default function FAQ() {
 
   return (
     <section className="flex flex-col justify-center items-center gap-12 px-4 md:px-16">
-      <div className="text-5xl font-medium">FAQs</div>
+      <div className="text-5xl max-md:text-3xl font-medium">FAQs</div>
       <div className="w-full max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-6">
         {/* Left Column */}
         <div className="space-y-6">
@@ -99,16 +99,18 @@ export default function FAQ() {
               initial={false}
               onClick={() => toggleItem(index)}
             >
-              <div className="p-8 flex flex-col flex-1 min-h-[150px]">
+              <div className="p-8 max-md:p-5 flex flex-col flex-1 min-h-[150px] max-md:min-h-[120px]">
                 <div className="flex items-center justify-between">
-                  <h3 className="text-lg font-medium pr-4">{item.question}</h3>
+                  <h3 className="text-lg max-md:text-sm font-medium pr-4 max-md:pr-3">
+                    {item.question}
+                  </h3>
                   <motion.div
                     animate={{
                       rotate: expandedItems.includes(index) ? 180 : 0,
                     }}
                     transition={{ duration: 0.2 }}
                   >
-                    <ChevronDown className="w-6 h-6 text-zinc-400 flex-shrink-0" />
+                    <ChevronDown className="w-6 h-6 max-md:w-4 max-md:h-4 text-zinc-400 flex-shrink-0" />
                   </motion.div>
                 </div>
 
@@ -127,7 +129,7 @@ export default function FAQ() {
                         ease: [0.04, 0.62, 0.23, 0.98],
                       }}
                     >
-                      <div className="pt-4 text-zinc-300 leading-relaxed ">
+                      <div className="pt-4 max-md:pt-2 text-zinc-300 leading-relaxed max-md:text-xs">
                         {item.answer}
                       </div>
                     </motion.div>
@@ -149,9 +151,9 @@ export default function FAQ() {
                 initial={false}
                 onClick={() => toggleItem(actualIndex)}
               >
-                <div className="p-8 flex flex-col flex-1 min-h-[150px]">
+                <div className="p-8 max-md:p-5 flex flex-col flex-1 min-h-[150px] max-md:min-h-[120px]">
                   <div className="flex items-center justify-between">
-                    <h3 className="text-lg font-medium pr-4">
+                    <h3 className="text-lg max-md:text-sm font-medium pr-4 max-md:pr-3">
                       {item.question}
                     </h3>
                     <motion.div
@@ -160,7 +162,7 @@ export default function FAQ() {
                       }}
                       transition={{ duration: 0.2 }}
                     >
-                      <ChevronDown className="w-6 h-6 text-zinc-400 flex-shrink-0" />
+                      <ChevronDown className="w-6 h-6 max-md:w-4 max-md:h-4 text-zinc-400 flex-shrink-0" />
                     </motion.div>
                   </div>
 
@@ -179,7 +181,7 @@ export default function FAQ() {
                           ease: [0.04, 0.62, 0.23, 0.98],
                         }}
                       >
-                        <div className="pt-4 text-zinc-300 leading-relaxed">
+                        <div className="pt-4 max-md:pt-2 text-zinc-300 leading-relaxed max-md:text-xs">
                           {item.answer}
                         </div>
                       </motion.div>

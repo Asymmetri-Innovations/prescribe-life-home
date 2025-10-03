@@ -5,5 +5,9 @@ export function Title({
   text: string;
   className?: string;
 }) {
-  return <div className={`text-3xl font-medium ${className}`}>{text}</div>;
+  return (
+    <div className={`text-3xl max-md:text-2xl font-semibold ${className}`}>
+      {text}
+    </div>
+  );
 }

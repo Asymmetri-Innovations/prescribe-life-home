@@ -33,7 +33,7 @@ export default function Cookie() {
     <AnimatePresence>
       {visible && (
         <motion.div
-          className="fixed inset-x-0 bottom-4 z-[99998] flex justify-center px-3"
+          className="fixed inset-x-0 bottom-4 z-[99998] flex justify-center px-3  "
           initial={{ y: 20, opacity: 0, filter: "blur(6px)" }}
           animate={{ y: 0, opacity: 1, filter: "blur(0px)" }}
           exit={{ y: 20, opacity: 0, filter: "blur(6px)" }}
@@ -41,7 +41,7 @@ export default function Cookie() {
           role="region"
           aria-label="Cookie consent banner"
         >
-          <div className="w-full max-w-3xl rounded-2xl border-[0.5px] border-white/30 bg-gradient-to-r from-white/16 via-white/10 to-white/20 backdrop-blur-lg p-4 md:p-5">
+          <div className="w-full max-w-3xl rounded-2xl border-[0.5px] border-white/50 bg-zinc-900 backdrop-blur-xl p-4 md:p-5 ">
             <div className="flex flex-col md:flex-row md:items-center gap-4">
               <p className="text-sm text-white/90 leading-relaxed">
                 We use cookies to enhance your experience, analyze traffic, and

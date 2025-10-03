@@ -103,26 +103,7 @@ export default function Navbar() {
             </motion.span>
           </Link>
         </motion.div> */}
-        <motion.div
-          className="inline"
-          whileHover={{ y: -2 }}
-          transition={{ duration: 0.2 }}
-        >
-          <Link
-            href={"/booking"}
-            aria-current={isActive("/booking") ? "page" : undefined}
-          >
-            <motion.span
-              className={`inline-block cursor-pointer ${
-                isActive("/booking")
-                  ? "text-theme"
-                  : "text-white hover:text-theme"
-              }`}
-            >
-              Book a demo
-            </motion.span>
-          </Link>
-        </motion.div>
+
         <motion.div
           className="inline"
           whileHover={{ y: -2 }}
@@ -152,8 +133,15 @@ export default function Navbar() {
         transition={{ duration: 0.5, delay: 0.3, ease: "easeOut" }}
         className="flex items-center gap-2"
       >
-        <motion.div className="max-md:hidden">
-          <CTA />
+        <motion.div className="md:hidden">
+          <a
+            href="https://calendly.com/d/cswq-pmr-xzn/discovery-call"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-1 bg-gradient-to-r from-theme to-pink-600 rounded-full py-2 px-4 text-white text-center text-sm"
+          >
+            Request a Demo
+          </a>
         </motion.div>
 
         {/* Mobile hamburger */}
@@ -271,15 +259,6 @@ export default function Navbar() {
                   Our Team
                 </span>
               </Link>
-
-              <a
-                href="https://calendly.com/d/cswq-pmr-xzn/discovery-call"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-1 bg-gradient-to-r from-theme to-pink-600 rounded-full py-2 px-4 text-white text-center text-sm"
-              >
-                Request a Demo
-              </a>
             </nav>
           </motion.div>
         )}
