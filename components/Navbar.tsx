@@ -133,9 +133,9 @@ export default function Navbar() {
         transition={{ duration: 0.5, delay: 0.3, ease: "easeOut" }}
         className="flex items-center gap-2"
       >
-        <motion.div className="md:hidden">
+        <motion.div className="">
           <a
-            href="https://calendly.com/d/cswq-pmr-xzn/discovery-call"
+            href="/booking"
             target="_blank"
             rel="noopener noreferrer"
             className="mt-1 bg-gradient-to-r from-theme to-pink-600 rounded-full py-2 px-4 text-white text-center text-sm"
