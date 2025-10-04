@@ -103,7 +103,7 @@ export default function Home() {
               </motion.h1>
 
               <motion.p
-                className="text-lg max-md:text-base inter"
+                className="text-xl max-md:text-base inter"
                 initial={{ y: 24, filter: "blur(4px)", opacity: 0 }}
                 animate={{ y: 0, filter: "blur(0px)", opacity: 1 }}
                 transition={{ duration: 0.75, delay: 0.15, ease: "easeOut" }}
