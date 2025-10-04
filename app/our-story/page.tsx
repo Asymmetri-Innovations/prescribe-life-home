@@ -257,72 +257,140 @@ export default function BookingPage() {
               performance.
             </p>
           </div>
-          <AvatarStack className="justify-center mt-10 max-md:mt-6">
-            <Avatar className="w-20 h-20 max-md:w-16 max-md:h-16">
-              <AvatarImage src="/anne-nortman.JPG" className="object-cover" />
-              <AvatarFallback className="text-xl max-md:text-lg">
-                AN
-              </AvatarFallback>
-            </Avatar>
-            <Avatar className="w-20 h-20 max-md:w-16 max-md:h-16">
-              <AvatarImage
-                src="/divij-vidhi-handa.jpg"
-                className="object-cover"
-              />
-              <AvatarFallback className="text-xl max-md:text-lg">
-                DH
-              </AvatarFallback>
-            </Avatar>
-            <Avatar className="w-20 h-20 max-md:w-16 max-md:h-16">
-              <AvatarImage src="/jessica-malach.jpg" className="object-cover" />
-              <AvatarFallback className="text-xl max-md:text-lg">
-                JM
-              </AvatarFallback>
-            </Avatar>
-            <Avatar className="w-20 h-20 max-md:w-16 max-md:h-16">
-              <AvatarImage src="/laura-basson.jpeg" className="object-cover" />
-              <AvatarFallback className="text-xl max-md:text-lg">
-                LB
-              </AvatarFallback>
-            </Avatar>
-            <Avatar className="w-20 h-20 max-md:w-16 max-md:h-16">
-              <AvatarImage
-                src="/Madelein-van-Zyl.jpeg"
-                className="object-cover"
-              />
-              <AvatarFallback className="text-xl max-md:text-lg">
-                MZ
-              </AvatarFallback>
-            </Avatar>
-            <Avatar className="w-20 h-20 max-md:w-16 max-md:h-16">
-              <AvatarImage src="/marvin-noveda.jpg" className="object-cover" />
-              <AvatarFallback className="text-xl max-md:text-lg">
-                MN
-              </AvatarFallback>
-            </Avatar>
-            <Avatar className="w-20 h-20 max-md:w-16 max-md:h-16">
-              <AvatarImage src="/oli-johnson.jpg" className="object-cover" />
-              <AvatarFallback className="text-xl max-md:text-lg">
-                OJ
-              </AvatarFallback>
-            </Avatar>
-            <Avatar className="w-20 h-20 max-md:w-16 max-md:h-16">
-              <AvatarImage
-                src="/professor-rajat-gupta.jpg"
-                className="object-cover"
-              />
-              <AvatarFallback className="text-xl max-md:text-lg">
-                RG
-              </AvatarFallback>
-            </Avatar>
-            <Avatar className="w-20 h-20 max-md:w-16 max-md:h-16">
-              <AvatarImage src="/ujwal-kumar.png" className="object-cover" />
-              <AvatarFallback className="text-xl max-md:text-lg">
-                UK
-              </AvatarFallback>
-            </Avatar>
-          </AvatarStack>
         </FadeRise>
+      </section>
+
+      {/* Jessica Malach Featured Section */}
+      <section className="py-4 max-md:py-3 px-8 max-md:px-4 bg-black">
+        <div className="max-w-5xl mx-auto">
+          <FadeRise>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 max-md:gap-2 items-center">
+              {/* Left Column - Circular Headshot */}
+              <div className="flex justify-center md:justify-start">
+                <Image
+                  src="/jessica-malach.jpg"
+                  alt="Jessica Malach"
+                  width={200}
+                  height={200}
+                  className="w-60 h-60 max-md:w-48 max-md:h-48 object-cover rounded-full border-3 border-theme/20 shadow-xl"
+                />
+              </div>
+
+              {/* Right Column - Information */}
+              <div className="space-y-1 max-md:space-y-1">
+                <div>
+                  <h3 className="text-3xl max-md:text-xl font-semibold text-white">
+                    Jessica Malach
+                  </h3>
+                  <p className="text-theme text-lg max-md:text-base font-medium">
+                    Head of Product & Commercialization, Certified Resilience
+                    Coach
+                  </p>
+                </div>
+
+                <div className="space-y-1 max-md:space-y-1">
+                  <p className="text-zinc-300 text-base max-md:text-sm leading-relaxed">
+                    Our system was designed by Jessica Malach, a resilience
+                    coach with 20+ years of experience building human-centered
+                    performance systems, to ensure our platform speaks to both
+                    the science and the soul of sustainable performance.
+                  </p>
+
+                  <div className="bg-gradient-to-r from-theme/10 to-pink-500/10 rounded-xl p-2 max-md:p-2 border border-theme/20">
+                    <p className="text-white text-sm max-md:text-xs leading-relaxed italic">
+                      "The future of coaching isn't about replacing human
+                      intuition—it's about amplifying it with data that matters.
+                      We built PrescribeLife.AI to give coaches the visibility
+                      they need to create lasting change."
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </FadeRise>
+        </div>
+      </section>
+
+      {/* Avatar Stack */}
+      <section className="py-3 max-md:py-2 px-8 max-md:px-4 bg-black">
+        <div className="max-w-5xl mx-auto">
+          <FadeRise>
+            <AvatarStack className="justify-center">
+              <Avatar className="w-20 h-20 max-md:w-16 max-md:h-16">
+                <AvatarImage src="/anne-nortman.JPG" className="object-cover" />
+                <AvatarFallback className="text-xl max-md:text-lg">
+                  AN
+                </AvatarFallback>
+              </Avatar>
+              <Avatar className="w-20 h-20 max-md:w-16 max-md:h-16">
+                <AvatarImage
+                  src="/divij-vidhi-handa.jpg"
+                  className="object-cover"
+                />
+                <AvatarFallback className="text-xl max-md:text-lg">
+                  DH
+                </AvatarFallback>
+              </Avatar>
+              <Avatar className="w-20 h-20 max-md:w-16 max-md:h-16">
+                <AvatarImage
+                  src="/jessica-malach.jpg"
+                  className="object-cover"
+                />
+                <AvatarFallback className="text-xl max-md:text-lg">
+                  JM
+                </AvatarFallback>
+              </Avatar>
+              <Avatar className="w-20 h-20 max-md:w-16 max-md:h-16">
+                <AvatarImage
+                  src="/laura-basson.jpeg"
+                  className="object-cover"
+                />
+                <AvatarFallback className="text-xl max-md:text-lg">
+                  LB
+                </AvatarFallback>
+              </Avatar>
+              <Avatar className="w-20 h-20 max-md:w-16 max-md:h-16">
+                <AvatarImage
+                  src="/Madelein-van-Zyl.jpeg"
+                  className="object-cover"
+                />
+                <AvatarFallback className="text-xl max-md:text-lg">
+                  MZ
+                </AvatarFallback>
+              </Avatar>
+              <Avatar className="w-20 h-20 max-md:w-16 max-md:h-16">
+                <AvatarImage
+                  src="/marvin-noveda.jpg"
+                  className="object-cover"
+                />
+                <AvatarFallback className="text-xl max-md:text-lg">
+                  MN
+                </AvatarFallback>
+              </Avatar>
+              <Avatar className="w-20 h-20 max-md:w-16 max-md:h-16">
+                <AvatarImage src="/oli-johnson.jpg" className="object-cover" />
+                <AvatarFallback className="text-xl max-md:text-lg">
+                  OJ
+                </AvatarFallback>
+              </Avatar>
+              <Avatar className="w-20 h-20 max-md:w-16 max-md:h-16">
+                <AvatarImage
+                  src="/professor-rajat-gupta.jpg"
+                  className="object-cover"
+                />
+                <AvatarFallback className="text-xl max-md:text-lg">
+                  RG
+                </AvatarFallback>
+              </Avatar>
+              <Avatar className="w-20 h-20 max-md:w-16 max-md:h-16">
+                <AvatarImage src="/ujwal-kumar.png" className="object-cover" />
+                <AvatarFallback className="text-xl max-md:text-lg">
+                  UK
+                </AvatarFallback>
+              </Avatar>
+            </AvatarStack>
+          </FadeRise>
+        </div>
       </section>
     </main>
   );
