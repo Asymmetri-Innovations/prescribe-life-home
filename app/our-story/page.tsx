@@ -277,18 +277,18 @@ export default function BookingPage() {
               </div>
 
               {/* Right Column - Information */}
-              <div className="space-y-1 max-md:space-y-1">
+              <div className="space-y-6 max-md:space-y-6">
                 <div>
-                  <h3 className="text-3xl max-md:text-xl font-semibold text-white">
+                  <h3 className="text-3xl max-md:text-xl font-semibold text-white ">
                     Jessica Malach
                   </h3>
                   <p className="text-theme text-lg max-md:text-base font-medium">
-                    Head of Product & Commercialization, Certified Resilience
+                    - Head of Product & Commercialization, Certified Resilience
                     Coach
                   </p>
                 </div>
 
-                <div className="space-y-1 max-md:space-y-1">
+                <div className="space-y-6 max-md:space-y-6">
                   <p className="text-zinc-300 text-base max-md:text-sm leading-relaxed">
                     Our system was designed by Jessica Malach, a resilience
                     coach with 20+ years of experience building human-centered

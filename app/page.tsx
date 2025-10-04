@@ -78,15 +78,18 @@ export default function Home() {
 
       {/* HERO */}
 
-      <section id="hero" className=" flex flex-col pt-24 px-16 max-md:px-5 ">
+      <section
+        id="hero"
+        className=" flex flex-col pt-8 max-md:pt-4 px-16 max-md:px-5 "
+      >
         <motion.div
           initial={{ y: 32, filter: "blur(6px)", opacity: 0 }}
           animate={{ y: 0, filter: "blur(0px)", opacity: 1 }}
           transition={{ duration: 1, delay: 0.45 }}
-          className="w-full pb-0 max-md:pb-0 min-h-screen flex justify-center items-center"
+          className="w-full pb-0 max-md:pb-0 min-h-screen flex justify-center items-center max-md:items-center max-md:justify-center"
         >
           {/* Two-column grid */}
-          <div className="flex flex-col md:flex-row items-start justify-center gap-8 w-full  max-md:mt-8 ">
+          <div className="flex flex-col md:flex-row items-start justify-center gap-8 w-full  max-md:mt-2 ">
             {/* Left-side text */}
             <div className="flex w-full md:w-1/2 flex-col items-start justify-center text-left max-md:text-center max-md:items-center space-y-6 max-md:space-y-4 order-1 ">
               <motion.h1
