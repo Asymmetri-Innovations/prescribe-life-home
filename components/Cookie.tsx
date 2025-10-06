@@ -33,7 +33,7 @@ export default function Cookie() {
     <AnimatePresence>
       {visible && (
         <motion.div
-          className="fixed inset-x-0 bottom-4 z-[99998] flex justify-center px-3  "
+          className="fixed inset-x-0 md:inset-x-auto md:left-4 bottom-4 z-[99998] flex justify-center md:justify-start px-3 md:px-0"
           initial={{ y: 20, opacity: 0, filter: "blur(6px)" }}
           animate={{ y: 0, opacity: 1, filter: "blur(0px)" }}
           exit={{ y: 20, opacity: 0, filter: "blur(6px)" }}
@@ -41,11 +41,11 @@ export default function Cookie() {
           role="region"
           aria-label="Cookie consent banner"
         >
-          <div className="w-full max-w-3xl rounded-2xl border-[0.5px] border-white/50 bg-zinc-900 backdrop-blur-xl p-4 md:p-5 ">
-            <div className="flex flex-col md:flex-row md:items-center gap-4">
-              <p className="text-sm text-white/90 leading-relaxed">
+          <div className="w-full max-w-3xl rounded-2xl border-[0.5px] border-white/50 bg-zinc-900 backdrop-blur-xl p-4 md:p-5">
+            <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+              <p className="text-sm text-white/90 leading-relaxed md:flex-1">
                 We use cookies to enhance your experience, analyze traffic, and
-                improve our services. By clicking “Accept,” you agree to our use
+                improve our services. By clicking "Accept," you agree to our use
                 of cookies. See our{" "}
                 <a
                   href="/privacy"
@@ -55,7 +55,7 @@ export default function Cookie() {
                 </a>
                 .
               </p>
-              <div className="flex flex-col sm:flex-row gap-2 sm:shrink-0">
+              <div className="flex flex-col sm:flex-row gap-2 md:shrink-0">
                 <button
                   onClick={rejectAll}
                   className="w-full sm:w-auto rounded-full border border-white/30 px-4 py-2 text-sm text-white/90 hover:bg-white/10 transition"

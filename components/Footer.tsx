@@ -19,7 +19,7 @@ export default function Footer() {
             <ul className="space-y-3">
               <li>
                 <a
-                  href="#"
+                  href="/"
                   className="text-white hover:text-theme transition-colors"
                 >
                   Home
@@ -27,7 +27,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="/our-story"
                   className="text-white hover:text-theme transition-colors"
                 >
                   Our Story
@@ -43,7 +43,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="/our-team"
                   className="text-white hover:text-theme transition-colors"
                 >
                   Our Team
@@ -97,7 +97,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="/booking"
                   className="text-white hover:text-theme transition-colors"
                 >
                   Book a Demo
