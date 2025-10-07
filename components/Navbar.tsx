@@ -9,7 +9,6 @@ import {
 } from "motion/react";
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
-import CTA from "./CTA";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -19,130 +18,97 @@ export default function Navbar() {
   const [lastScrollY, setLastScrollY] = useState(0);
   const path = usePathname();
 
-  // Helper to check active route (supports nested routes except for "/")
   const isActive = (href: string) => {
     if (!path) return false;
     if (href === "/") return path === "/";
     return path.startsWith(href);
   };
 
-  // Close mobile menu on route change
   useEffect(() => {
     setMobileMenuOpen(false);
   }, [path]);
 
   useMotionValueEvent(scrollY, "change", (latest) => {
-    // Hide header when scrolling down, show when scrolling up
     const diff = latest - lastScrollY;
-    if (diff > 0) {
-      setHidden(true);
-    } else {
-      setHidden(false);
-    }
+    if (diff > 0) setHidden(true);
+    else setHidden(false);
+
     setLastScrollY(latest);
-    // Update background color state
     setIsScrolled(latest > 200);
   });
 
   return (
     <motion.div
-      className={`fixed top-3 left-1/2 -translate-x-1/2 w-11/12 md:w-[95%]  rounded-2xl p-2 md:p-3 px-4 md:px-6 bg-gradient-to-r from-white/16 via-white/10 to-white/20 border-[0.5px] border-white/30 backdrop-blur-lg flex items-center justify-between text-sm font-semibold z-[99999] duration-300 ${
+      className={`fixed top-3 left-1/2 -translate-x-1/2 w-11/12 md:w-[95%] rounded-2xl p-1.5 md:p-3 bg-gradient-to-r from-white/16 via-white/10 to-white/20 border-[0.5px] border-white/30 backdrop-blur-lg flex items-center justify-between text-sm font-semibold z-[99999] duration-300 ${
         hidden ? "-translate-y-full" : "translate-y-0"
       }`}
       initial={{ y: -20, filter: "blur(8px)", opacity: 0 }}
       animate={{ y: 0, filter: "blur(0px)", opacity: 1 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
     >
-      {/* Logo */}
-      <a href="/">
-        <motion.div
+      {/* Logo + Text */}
+      <a href="/" className="flex items-center gap-1 sm:gap-2 flex-shrink-0">
+        <motion.img
+          src="/logo.jpg"
+          alt=""
+          className="w-6 sm:w-8 md:w-10 rounded-md"
           initial={{ y: -10, filter: "blur(6px)", opacity: 0 }}
           animate={{ y: 0, filter: "blur(0px)", opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.1, ease: "easeOut" }}
-          className="flex justify-center items-center gap-3"
+        />
+        <motion.span
+          className="text-white font-medium text-[12px] sm:text-sm whitespace-nowrap"
+          initial={{ y: -10, filter: "blur(6px)", opacity: 0 }}
+          animate={{ y: 0, filter: "blur(0px)", opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.15, ease: "easeOut" }}
         >
-          <img className="w-10 rounded-md" src="/logo.jpg" alt="" />
-          <div>PrescribeLife.AI</div>
-        </motion.div>
+          PrescribeLife.AI
+        </motion.span>
       </a>
+
       {/* Desktop links */}
       <motion.div
-        className="hidden md:flex items-center space-x-6"
+        className="hidden md:flex items-center space-x-4"
         initial={{ y: -15, filter: "blur(8px)", opacity: 0 }}
         animate={{ y: 0, filter: "blur(0px)", opacity: 1 }}
         transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
       >
-        <motion.div
-          className="inline"
-          whileHover={{ y: -2 }}
-          transition={{ duration: 0.2 }}
-        >
-          <Link
-            href={"/our-story"}
-            aria-current={isActive("/our-story") ? "page" : undefined}
+        {["/our-story", "/our-team"].map((href) => (
+          <motion.div
+            key={href}
+            className="inline"
+            whileHover={{ y: -2 }}
+            transition={{ duration: 0.2 }}
           >
-            <motion.span
-              className={`inline-block cursor-pointer ${
-                isActive("/our-story")
-                  ? "text-theme"
-                  : "text-white hover:text-theme"
-              }`}
+            <Link
+              href={href}
+              aria-current={isActive(href) ? "page" : undefined}
             >
-              Our Story
-            </motion.span>
-          </Link>
-        </motion.div>
-        {/* <motion.div
-          className="inline"
-          whileHover={{ y: -2 }}
-          transition={{ duration: 0.2 }}
-        >
-          <Link href={"/"}>
-            <motion.span className="inline-block cursor-pointer">
-              The Science
-            </motion.span>
-          </Link>
-        </motion.div> */}
-
-        <motion.div
-          className="inline"
-          whileHover={{ y: -2 }}
-          transition={{ duration: 0.2 }}
-        >
-          <Link
-            href={"/our-team"}
-            aria-current={isActive("/our-team") ? "page" : undefined}
-          >
-            <motion.span
-              className={`inline-block cursor-pointer ${
-                isActive("/our-team")
-                  ? "text-theme"
-                  : "text-white hover:text-theme"
-              }`}
-            >
-              Our Team
-            </motion.span>
-          </Link>
-        </motion.div>
+              <motion.span
+                className={`inline-block cursor-pointer ${
+                  isActive(href) ? "text-theme" : "text-white hover:text-theme"
+                }`}
+              >
+                {href === "/our-story" ? "Our Story" : "Our Team"}
+              </motion.span>
+            </Link>
+          </motion.div>
+        ))}
       </motion.div>
 
-      {/* Right side: CTA (desktop) + Hamburger (mobile) */}
-      <motion.div
-        initial={{ y: -10, filter: "blur(6px)", opacity: 0 }}
-        animate={{ y: 0, filter: "blur(0px)", opacity: 1 }}
-        transition={{ duration: 0.5, delay: 0.3, ease: "easeOut" }}
-        className="flex items-center gap-2"
-      >
-        <motion.div className="">
-          <a
-            href="/booking"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-1 bg-gradient-to-r from-theme to-pink-600 rounded-full py-2 px-4 text-white text-center text-sm"
-          >
-            Request a Demo
-          </a>
-        </motion.div>
+      {/* Right side: CTA + Mobile menu */}
+      <motion.div className="flex items-center gap-1 sm:gap-2 flex-shrink-0">
+        <motion.a
+          href="/booking"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-gradient-to-r from-theme to-pink-600 rounded-full py-1 px-2 sm:py-1.5 sm:px-3 text-white text-[10px] sm:text-sm whitespace-nowrap"
+          initial={{ y: -10, filter: "blur(6px)", opacity: 0 }}
+          animate={{ y: 0, filter: "blur(0px)", opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.3, ease: "easeOut" }}
+        >
+          Request a Demo
+        </motion.a>
 
         {/* Mobile hamburger */}
         <motion.button
@@ -151,13 +117,13 @@ export default function Navbar() {
           aria-controls="mobile-menu"
           aria-expanded={mobileMenuOpen}
           onClick={() => setMobileMenuOpen((v) => !v)}
-          className="md:hidden inline-flex items-center justify-center rounded-full p-2 border border-white/30 bg-white/10 hover:bg-white/20 transition"
+          className="md:hidden inline-flex items-center justify-center rounded-full p-1.5 border border-white/30 bg-white/10 hover:bg-white/20 transition"
           whileTap={{ scale: 0.95 }}
         >
           {mobileMenuOpen ? (
             <svg
-              width="22"
-              height="22"
+              width="18"
+              height="18"
               viewBox="0 0 24 24"
               fill="none"
               stroke="white"
@@ -169,8 +135,8 @@ export default function Navbar() {
             </svg>
           ) : (
             <svg
-              width="22"
-              height="22"
+              width="18"
+              height="18"
               viewBox="0 0 24 24"
               fill="none"
               stroke="white"
@@ -198,67 +164,24 @@ export default function Navbar() {
             className="absolute left-0 right-0 top-[calc(100%+8px)] md:hidden rounded-xl p-3 bg-zinc-800 border-[0.5px] border-white/30 backdrop-blur-xl"
           >
             <nav className="flex flex-col gap-3">
-              <Link
-                href="/our-story"
-                onClick={() => setMobileMenuOpen(false)}
-                aria-current={isActive("/our-story") ? "page" : undefined}
-              >
-                <span
-                  className={`inline-block cursor-pointer ${
-                    isActive("/our-story")
-                      ? "text-white font-semibold"
-                      : "text-white/80"
-                  }`}
+              {["/our-story", "/our-team"].map((href) => (
+                <Link
+                  key={href}
+                  href={href}
+                  onClick={() => setMobileMenuOpen(false)}
+                  aria-current={isActive(href) ? "page" : undefined}
                 >
-                  Our Story
-                </span>
-              </Link>
-
-              {/* <Link
-                href="/"
-                onClick={() => setMobileMenuOpen(false)}
-                aria-current={isActive("/") ? "page" : undefined}
-              >
-                <span
-                  className={`inline-block cursor-pointer ${
-                    isActive("/") ? "text-white font-semibold" : "text-white/80"
-                  }`}
-                >
-                  The Science
-                </span>
-              </Link> */}
-
-              {/* <Link
-                href="/booking"
-                onClick={() => setMobileMenuOpen(false)}
-                aria-current={isActive("/booking") ? "page" : undefined}
-              >
-                <span
-                  className={`inline-block cursor-pointer ${
-                    isActive("/booking")
-                      ? "text-white font-semibold"
-                      : "text-white/80"
-                  }`}
-                >
-                  Book a demo
-                </span>
-              </Link> */}
-
-              <Link
-                href="/our-team"
-                onClick={() => setMobileMenuOpen(false)}
-                aria-current={isActive("/our-team") ? "page" : undefined}
-              >
-                <span
-                  className={`inline-block cursor-pointer ${
-                    isActive("/our-team")
-                      ? "text-white font-semibold"
-                      : "text-white/80"
-                  }`}
-                >
-                  Our Team
-                </span>
-              </Link>
+                  <span
+                    className={`inline-block cursor-pointer max-sm:text-[10px] ${
+                      isActive(href)
+                        ? "text-white font-semibold"
+                        : "text-white/80"
+                    }`}
+                  >
+                    {href === "/our-story" ? "Our Story" : "Our Team"}
+                  </span>
+                </Link>
+              ))}
             </nav>
           </motion.div>
         )}
