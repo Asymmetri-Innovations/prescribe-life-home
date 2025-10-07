@@ -174,7 +174,7 @@ export default function TeamPage() {
         height={300}
         alt="bg"
       />
-      <section className="flex flex-col items-center justify-center space-y-10 max-md:space-y-6 pt-16 max-md:pt-8 px-4 max-md:px-2">
+      <section className="flex flex-col items-center justify-center space-y-10 max-md:space-y-6 pt-16 max-md:pt-8 px-4 max-md:px-2 mx-5">
         <FadeRise delay={0.05}>
           <div className="text-5xl max-md:text-3xl font-semibold flex flex-col items-center mb-6">
             Meet the <span className="text-theme">Team!</span>
@@ -187,7 +187,7 @@ export default function TeamPage() {
         </FadeRise>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-7xl w-full items-stretch">
           {teamMembers.map((member, i) => (
-            <FadeRise key={i} delay={i * 0.1}>
+            <FadeRise key={i} delay={i * 0.05}>
               <MagicCard>
                 <div
                   className="rounded-2xl p-8 max-md:p-6 bg-gradient-to-b from-zinc-900/70 to-black/80 border border-white/10 ring-1 ring-white/10 shadow-[0_16px_48px_-20px_rgba(0,0,0,0.6)] 
@@ -215,7 +215,7 @@ export default function TeamPage() {
           ))}
         </div>
       </section>
-      <section className="flex flex-col items-center justify-center space-y-10 max-md:space-y-6 pt-16 max-md:pt-8 px-4 max-md:px-2">
+      <section className="flex flex-col items-center justify-center space-y-10 max-md:space-y-6 pt-16 max-md:pt-8 px-4 max-md:px-2 mx-5">
         <FadeRise delay={0.05}>
           <div className="text-5xl max-md:text-3xl font-semibold flex flex-col items-center mb-6">
             <span className="text-theme">Advisors</span>

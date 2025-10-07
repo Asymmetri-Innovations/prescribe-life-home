@@ -197,7 +197,7 @@ export default function Home() {
         <FadeRise>
           <Title
             text="Powerful Insights, Radically Simple to Use"
-            className="text-5xl max-md:text-3xl"
+            className="text-5xl max-md:text-3xl mx-5 text-center"
           />
         </FadeRise>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl w-full px-6 max-md:px-4">
@@ -278,23 +278,32 @@ export default function Home() {
 
       {/* GAP NARRATIVE */}
       <section className="max-w-6xl mx-auto px-8 max-md:px-4 space-y-20 max-md:space-y-12">
+        {/* First block */}
         <div className="space-y-12 max-md:space-y-8 max-md:text-center">
           <FadeRise>
             <h2 className="text-5xl max-md:text-3xl leading-tight font-semibold">
               Are Weekly Check-ins and Client Self-Reporting Still Enough?
             </h2>
           </FadeRise>
-          <div className="grid md:grid-cols-2 gap-12 items-start max-md:items-center">
-            <FadeRise delay={0.05} className="">
-              <img
-                className="rounded-xl shadow-lg ring-1 ring-white/10 max-md:w-3/4 max-md:mx-auto"
-                src="/gavin.jpg"
-                alt="coach context"
-              />
+
+          <div className="relative grid md:grid-cols-2 gap-12 items-start max-md:items-center">
+            {/* Pink hue background */}
+
+            {/* Image */}
+            <FadeRise delay={0.05}>
+              <div className="relative z-10 flex justify-start max-md:justify-center">
+                <img
+                  className="rounded-4xl max-w-[80%] md:max-w-[70%] mx-auto grayscale "
+                  src="/logo.jpg"
+                  alt="coach context"
+                />
+              </div>
             </FadeRise>
+
+            {/* Text */}
             <FadeRise delay={0.12}>
               <div className="space-y-5 max-md:space-y-3 text-base max-md:text-sm leading-relaxed">
-                <h3 className="text-3xl max-md:text-xl font-semibold text">
+                <h3 className="text-3xl max-md:text-xl font-semibold">
                   You excel in the moment
                 </h3>
                 <p className="text-base max-md:text-sm inter">
@@ -325,10 +334,12 @@ export default function Home() {
             </FadeRise>
           </div>
         </div>
+
+        {/* Second block stays the same */}
         <div className="grid md:grid-cols-2 gap-12 items-start">
           <FadeRise>
             <div className="space-y-6 max-md:text-center">
-              <h3 className="text-3xl max-md:text-xl font-semibold text">
+              <h3 className="text-3xl max-md:text-xl font-semibold">
                 <span className="text-theme/80">PrescribeLife.AI</span> closes
                 that gap.
               </h3>
@@ -342,18 +353,15 @@ export default function Home() {
               </div>
             </div>
           </FadeRise>
+
           <FadeRise delay={0.1}>
-            <div className="rounded-xl bg-gradient-to-br from-zinc-900 via-zinc-800 to-black p-6 md:p-8 ring-1 ring-white/10 shadow-xl relative overflow-hidden">
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(236,72,153,0.18),transparent_65%)]" />
-              <div className="space-y-6 relative z-10">
+            <div className="relative">
+              <div className="space-y-6 relative z-10 flex flex-col items-center">
                 <img
-                  src="/second.jpg"
+                  src="/logo.jpg"
                   alt="fusion"
-                  className="rounded-lg ring-1 ring-white/10 max-md:w-full"
+                  className="ring-1 ring-white/10 rounded-4xl max-w-[80%] md:max-w-[70%] mx-auto"
                 />
-                <div className="text-center text-xs tracking-widest text-zinc-400 font-semibold">
-                  UNPRECEDENTED CLIENT RESULTS
-                </div>
               </div>
             </div>
           </FadeRise>
@@ -604,7 +612,7 @@ export default function Home() {
         <FadeRise>
           <Title
             text="Your Next Coaching Session Could Be Your Best Ever."
-            className="text-5xl max-md:text-3xl"
+            className="text-5xl max-md:text-3xl mx-5 text-center"
           />
         </FadeRise>
         <FadeRise delay={0.1}>
@@ -725,7 +733,7 @@ export default function Home() {
         </div>
       </section>
       {/* CTA CURVE */}
-      <section className="relative flex flex-col md:flex-row items-center justify-start gap-16 md:pl-0 px-6 md:px-12">
+      <section className="relative flex flex-col md:flex-row items-center justify-start gap-16 md:pl-0 px-6 md:px-12 mr-12">
         <FadeRise className="bg-white text-black rounded-2xl md:rounded-r-[300px] p-16 max-md:p-8 flex flex-col items-center justify-center relative overflow-hidden min-h-[400px] w-full max-w-5xl md:max-w-7xl">
           <h2 className="text-5xl max-md:text-3xl font-semibold text-center leading-tight mb-6 max-w-3xl">
             Turn Your Expertise into a potential 5x to 10x Return

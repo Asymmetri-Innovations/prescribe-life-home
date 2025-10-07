@@ -40,7 +40,7 @@ export default function BookingPage() {
     },
   ];
   return (
-    <main className="space-y-32 relative pt-16 overflow-x-hidden max-w-full">
+    <main className="space-y-32 relative pt-16 overflow-x-hidden max-w-full ">
       <Image
         className="w-[150vw] h-[150vh] absolute rotate-30 rotate-animation-slow scale-110 z-[-1] overflow-x-hidden max-w-full"
         src="/bggradient.png"
@@ -48,7 +48,7 @@ export default function BookingPage() {
         height={300}
         alt="bg"
       />
-      <section className="flex flex-col justify-center items-center min-h-screen space-y-6  max-md:space-y-4 pt-16 max-md:pt-8 px-4 max-md:px-2">
+      <section className="flex flex-col justify-center items-center min-h-screen space-y-6  max-md:space-y-4 pt-16 max-md:pt-8 px-4 max-md:px-2 mx-4">
         <FadeRise delay={0.05}>
           <div className="text-6xl max-md:text-4xl font-semibold flex flex-col items-center mb-6">
             The Founding Story of <br />{" "}
@@ -61,7 +61,7 @@ export default function BookingPage() {
             strained health, and in lives running on fumes.
           </p>
         </FadeRise>
-        <FadeRise className="flex justify-center items-center mb-6 gap-6 max-md:flex-col">
+        <FadeRise className="flex justify-center items-center mb-6 gap-6 max-md:flex-col mx-5">
           <MagicCard>
             <div className="rounded-2xl p-8 max-md:p-6 bg-gradient-to-b from-zinc-900/70 to-black/80 border border-white/10 ring-1 ring-white/10 shadow-[0_16px_48px_-20px_rgba(0,0,0,0.6)] flex flex-col space-y-4 max-w-xl w-auto h-72">
               <div className="flex items-center space-x-4">
@@ -151,7 +151,7 @@ export default function BookingPage() {
       </section>
 
       {/* The First Adaptive Performance Coaching Platform */}
-      <section className="flex flex-col items-center justify-center py-24 max-md:py-16 px-8 max-md:px-4 gap-16 max-md:gap-8 bg-black">
+      <section className="flex flex-col items-center justify-center py-24 max-md:py-16 px-8 max-md:px-4 gap-16 max-md:gap-8 bg-black mx-5">
         <FadeRise>
           {/* For Coaches Who Help High Performers Thrive */}
           <section className="flex flex-col justify-center items-center">
@@ -272,7 +272,7 @@ export default function BookingPage() {
                   alt="Jessica Malach"
                   width={200}
                   height={200}
-                  className="w-60 h-60 max-md:w-48 max-md:h-48 object-cover rounded-full border-3 border-theme/20 shadow-xl"
+                  className="w-60 h-60 max-md:w-48 max-md:h-48 object-cover object-top rounded-full border-3 border-theme/20 shadow-xl"
                 />
               </div>
 
