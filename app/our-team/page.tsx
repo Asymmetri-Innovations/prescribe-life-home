@@ -198,7 +198,7 @@ export default function TeamPage() {
                     alt={member.name}
                     width={96}
                     height={96}
-                    className="w-24 h-24 object-cover rounded-full"
+                    className="w-24 h-24 object-cover object-top rounded-full"
                   />
                   <h3 className="text-2xl max-md:text-xl text-white font-bold leading-snug ">
                     {member.name}
