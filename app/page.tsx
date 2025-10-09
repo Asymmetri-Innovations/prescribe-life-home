@@ -297,7 +297,7 @@ export default function Home() {
             {/* Pink hue background */}
 
             {/* Image */}
-            <FadeRise delay={0.05}>
+            <FadeRise delay={0.05} className="max-md:hidden">
               <div className="relative z-10 flex justify-start max-md:justify-center">
                 <img
                   className="rounded-4xl max-w-[80%] md:max-w-[70%] mx-auto grayscale "
@@ -361,7 +361,7 @@ export default function Home() {
             </div>
           </FadeRise>
 
-          <FadeRise delay={0.1}>
+          <FadeRise delay={0.1} className="max-md:hidden">
             <div className="relative">
               <div className="space-y-6 relative z-10 flex flex-col items-center">
                 <img
@@ -440,50 +440,53 @@ export default function Home() {
 
       {/* PHONE / DASHBOARD */}
       <FadeRise>
-        <section className="space-y-6 max-md:space-y-4 flex flex-col items-center relative px-4 max-md:px-2 md:text-center mx-10">
+        <section className="space-y-6 max-md:space-y-4 flex flex-col items-center relative md:text-center w-full">
           <FadeRise>
             <Title
               text="Your Impact is Capped by Your Calendar. Until Now."
-              className="text-5xl max-md:text-3xl"
+              className="text-5xl max-md:text-3xl px-4"
             />
           </FadeRise>
 
           <FadeRise delay={0.1}>
-            <div className="text-base max-md:text-sm inter">
+            <div className="text-base max-md:text-sm inter px-4">
               Next Generation Performance Coaching Dashboard
             </div>
           </FadeRise>
 
           <FadeRise delay={0.2}>
-            <div className="w-full max-w-5xl mx-auto mt-4">
+            {/* Slightly wider carousel, arrows at edges */}
+            <div className="w-full max-w-6xl mx-auto mt-6 relative">
               <Carousel
                 opts={{
-                  align: "start",
+                  align: "center",
                   loop: true,
                 }}
                 className="w-full"
               >
-                <CarouselContent>
+                <CarouselContent className="gap-6 px-4">
                   {["/DG9.png", "/DG10.png", "/DG11.png", "/DG8.png"].map(
                     (src, index) => (
                       <CarouselItem
                         key={index}
-                        className="basis-full md:basis-1/2 lg:basis-1/3 flex justify-center"
+                        className="flex-shrink-0 w-[70%] md:w-[45%] lg:w-[35%] flex justify-center"
                       >
-                        <Image
-                          src={src}
-                          alt={`Dashboard ${index + 1}`}
-                          width={600}
-                          height={400}
-                          className="object-contain w-full h-auto rounded-xl"
-                        />
+                        <div className="w-full h-[320px] max-md:h-[200px] flex items-center justify-center overflow-hidden rounded-xl">
+                          <Image
+                            src={src}
+                            alt={`Dashboard ${index + 1}`}
+                            width={800}
+                            height={600}
+                            className="w-full h-full object-contain"
+                          />
+                        </div>
                       </CarouselItem>
                     )
                   )}
                 </CarouselContent>
 
-                <CarouselPrevious className="hidden md:flex" />
-                <CarouselNext className="hidden md:flex" />
+                <CarouselPrevious className="absolute left-0 top-1/2 -translate-y-1/2 md:flex hidden" />
+                <CarouselNext className="absolute right-0 top-1/2 -translate-y-1/2 md:flex hidden" />
               </Carousel>
             </div>
           </FadeRise>
