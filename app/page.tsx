@@ -772,7 +772,9 @@ export default function Home() {
 
       {/* TESTIMONIALS */}
       <TestimonialsSection />
-      <FAQ></FAQ>
+      <div id="faq">
+        <FAQ></FAQ>
+      </div>
       {/* RESULTS */}
       <section className="flex flex-col items-center text-center">
         <FadeRise>
