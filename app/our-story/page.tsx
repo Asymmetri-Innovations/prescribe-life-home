@@ -50,7 +50,7 @@ export default function BookingPage() {
       />
       <section className="flex flex-col justify-center items-center min-h-screen space-y-6  max-md:space-y-4 pt-16 max-md:pt-8 px-4 max-md:px-2 mx-4">
         <FadeRise delay={0.05}>
-          <div className="text-6xl max-md:text-4xl font-semibold flex flex-col items-center mb-6">
+          <div className="text-6xl max-md:text-4xl font-bold flex flex-col items-center mb-6">
             The Founding Story of <br />{" "}
             <span className="text-theme">PrescribeLife.AI</span>
           </div>
@@ -250,7 +250,7 @@ export default function BookingPage() {
 
       <section className="mb-15">
         <FadeRise>
-          <div className="max-w-5xl mx-auto text-center px-8 max-md:px-4 py-16 max-md:py-10">
+          <div className="max-w-5xl mx-auto text-center px-8 max-md:px-4  max-md:py-10">
             <h2 className="text-5xl max-md:text-4xl font-semibold text-white leading-tight">
               Built with <span className="text-theme">Coaches</span>, Shaped by{" "}
               {""}

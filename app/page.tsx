@@ -26,6 +26,13 @@ import "@splidejs/react-splide/css";
 import CTA from "@/components/CTA";
 import TestimonialsSection from "@/components/Testimonials";
 import { TestimonialsCarousel } from "@/components/CoachCarousel";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 // Mild, performant animation helper
 const list = [
@@ -432,36 +439,56 @@ export default function Home() {
       </section>
 
       {/* PHONE / DASHBOARD */}
-      <section className="space-y-6 max-md:space-y-4 flex flex-col items-center relative px-4 max-md:px-2 md:text-center  mx-10">
-        <FadeRise>
-          <Title
-            text="Your Impact is Capped by Your Calendar. Until Now."
-            className="text-5xl max-md:text-3xl"
-          />
-        </FadeRise>
-        <FadeRise delay={0.1}>
-          <div className="text-base max-md:text-sm inter">
-            Next Generation Performance Coaching Dashboard
-          </div>
-        </FadeRise>
-        <div className="flex flex-col md:flex-row gap-6 max-md:gap-3">
-          {["/phone1.png", "/phone2.png", "/phone3.png"].map((p, i) => (
-            <FadeRise delay={0.15 + i * 0.1} key={p}>
-              <img
-                className={
-                  i === 0
-                    ? "w-64 translate-x-8 max-md:w-48 max-md:translate-x-0 mx-auto max-md:hidden"
-                    : i === 2
-                    ? "w-64 -translate-x-8 max-md:w-48 max-md:translate-x-0 mx-auto max-md:hidden"
-                    : "w-64 max-md:w-48 mx-auto"
-                }
-                src={p}
-                alt={p}
-              />
-            </FadeRise>
-          ))}
-        </div>
-      </section>
+      <FadeRise>
+        <section className="space-y-6 max-md:space-y-4 flex flex-col items-center relative px-4 max-md:px-2 md:text-center mx-10">
+          <FadeRise>
+            <Title
+              text="Your Impact is Capped by Your Calendar. Until Now."
+              className="text-5xl max-md:text-3xl"
+            />
+          </FadeRise>
+
+          <FadeRise delay={0.1}>
+            <div className="text-base max-md:text-sm inter">
+              Next Generation Performance Coaching Dashboard
+            </div>
+          </FadeRise>
+
+          <FadeRise delay={0.2}>
+            <div className="w-full max-w-5xl mx-auto mt-4">
+              <Carousel
+                opts={{
+                  align: "start",
+                  loop: true,
+                }}
+                className="w-full"
+              >
+                <CarouselContent>
+                  {["/DG9.png", "/DG10.png", "/DG11.png", "/DG8.png"].map(
+                    (src, index) => (
+                      <CarouselItem
+                        key={index}
+                        className="basis-full md:basis-1/2 lg:basis-1/3 flex justify-center"
+                      >
+                        <Image
+                          src={src}
+                          alt={`Dashboard ${index + 1}`}
+                          width={600}
+                          height={400}
+                          className="object-contain w-full h-auto rounded-xl"
+                        />
+                      </CarouselItem>
+                    )
+                  )}
+                </CarouselContent>
+
+                <CarouselPrevious className="hidden md:flex" />
+                <CarouselNext className="hidden md:flex" />
+              </Carousel>
+            </div>
+          </FadeRise>
+        </section>
+      </FadeRise>
 
       {/* BEFORE / AFTER */}
       <section className="grid grid-cols-1 md:grid-cols-2 gap-16 max-md:gap-8 max-w-6xl mx-auto px-8 max-md:px-4">
@@ -743,7 +770,10 @@ export default function Home() {
           >
             Book a Personalized Demo Call
           </a>
-          <p className="text-base text-zinc-600 text-center max-w-lg inter">
+          <p
+            className="text-base text-zinc-600 text-center max-w-lg inter"
+            id="faq"
+          >
             Let us show you how to multiply your revenue, not your workload.
           </p>
         </FadeRise>

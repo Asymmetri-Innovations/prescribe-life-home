@@ -134,12 +134,6 @@ var timeout = 3000; // Timeout value to remove the flicker (in milliseconds)
       </head>
       <body className={`${geistSans.className} antialiased`}>
         {/* Start-of-body scripts */}
-        <Script id="ehapi" strategy="afterInteractive">
-          {`var EhAPI = EhAPI || {}; EhAPI.after_load = function(){EhAPI.set_account('7q5p0l6h5hqp18mlodhhnkqs31', 'prescribelife');EhAPI.execute('rules');};(function(d,s,f) {var sc=document.createElement(s);sc.type='text/javascript';sc.async=true;sc.src=f;var m=document.getElementsByTagName(s)[0];m.parentNode.insertBefore(sc,m);})(document, 'script', '//d2p078bqz5urf7.cloudfront.net/jsapi/ehform.js?v' + new Date().getHours());`}
-        </Script>
-        <Script id="crisp-chat" strategy="afterInteractive">
-          {`window.$crisp=[];window.CRISP_WEBSITE_ID="2fb0716b-033c-4528-95bf-e05815fc9f66";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();`}
-        </Script>
 
         <LS></LS>
         <Navbar></Navbar>
