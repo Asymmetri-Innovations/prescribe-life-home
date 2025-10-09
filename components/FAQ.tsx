@@ -102,9 +102,9 @@ export default function FAQ({ classname }: { classname?: string }) {
               initial={false}
               onClick={() => toggleItem(index)}
             >
-              <div className="p-8 max-md:p-5 flex flex-col flex-1 min-h-[120px] max-md:min-h-[80px]">
+              <div className="p-8 max-md:p-5 flex flex-col flex-1 min-h-[110px]  max-md:h-[60px]">
                 <div className="flex items-center justify-between">
-                  <h3 className="text-lg max-md:text-sm font-medium pr-4 max-md:pr-3">
+                  <h3 className="text-lg max-md:text-sm font-medium pr-4 max-md:pr-3 line-clamp-3">
                     {item.question}
                   </h3>
                   <motion.div
@@ -154,9 +154,9 @@ export default function FAQ({ classname }: { classname?: string }) {
                 initial={false}
                 onClick={() => toggleItem(actualIndex)}
               >
-                <div className="p-8 max-md:p-5 flex flex-col flex-1 min-h-[120px] max-md:min-h-[80px]">
+                <div className="p-8 max-md:p-5 flex flex-col flex-1 min-h-[120px] max-md:h-[60px]">
                   <div className="flex items-center justify-between">
-                    <h3 className="text-lg max-md:text-sm font-medium pr-4 max-md:pr-3">
+                    <h3 className="text-lg max-md:text-sm font-medium pr-4 max-md:pr-3 line-clamp-3">
                       {item.question}
                     </h3>
                     <motion.div

@@ -33,6 +33,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import { PhoneDashboard } from "@/components/phone-dashboard";
 
 // Mild, performant animation helper
 const list = [
@@ -439,59 +440,7 @@ export default function Home() {
       </section>
 
       {/* PHONE / DASHBOARD */}
-      <FadeRise>
-        <section className="space-y-6 max-md:space-y-4 flex flex-col items-center relative md:text-center w-full">
-          <FadeRise>
-            <Title
-              text="Your Impact is Capped by Your Calendar. Until Now."
-              className="text-5xl max-md:text-3xl px-4"
-            />
-          </FadeRise>
-
-          <FadeRise delay={0.1}>
-            <div className="text-base max-md:text-sm inter px-4">
-              Next Generation Performance Coaching Dashboard
-            </div>
-          </FadeRise>
-
-          <FadeRise delay={0.2}>
-            {/* Slightly wider carousel, arrows at edges */}
-            <div className="w-full max-w-6xl mx-auto mt-6 relative">
-              <Carousel
-                opts={{
-                  align: "center",
-                  loop: true,
-                }}
-                className="w-full"
-              >
-                <CarouselContent className="gap-6 px-4">
-                  {["/DG9.png", "/DG10.png", "/DG11.png", "/DG8.png"].map(
-                    (src, index) => (
-                      <CarouselItem
-                        key={index}
-                        className="flex-shrink-0 w-[70%] md:w-[45%] lg:w-[35%] flex justify-center"
-                      >
-                        <div className="w-full h-[320px] max-md:h-[200px] flex items-center justify-center overflow-hidden rounded-xl">
-                          <Image
-                            src={src}
-                            alt={`Dashboard ${index + 1}`}
-                            width={800}
-                            height={600}
-                            className="w-full h-full object-contain"
-                          />
-                        </div>
-                      </CarouselItem>
-                    )
-                  )}
-                </CarouselContent>
-
-                <CarouselPrevious className="absolute left-0 top-1/2 -translate-y-1/2 md:flex hidden" />
-                <CarouselNext className="absolute right-0 top-1/2 -translate-y-1/2 md:flex hidden" />
-              </Carousel>
-            </div>
-          </FadeRise>
-        </section>
-      </FadeRise>
+      <PhoneDashboard />
 
       {/* BEFORE / AFTER */}
       <section className="grid grid-cols-1 md:grid-cols-2 gap-16 max-md:gap-8 max-w-6xl mx-auto px-8 max-md:px-4">
@@ -760,8 +709,9 @@ export default function Home() {
         </div>
       </section>
       {/* CTA CURVE */}
-      <section className="relative flex flex-col md:flex-row items-center justify-start gap-16 md:pl-0 px-6 md:px-12 mr-12">
-        <FadeRise className="bg-white text-black rounded-2xl md:rounded-r-[300px] p-16 max-md:p-8 flex flex-col items-center justify-center relative overflow-hidden min-h-[400px] w-full max-w-5xl md:max-w-7xl">
+      <section className="relative flex flex-col md:flex-row items-start md:items-center justify-start gap-16 px-6 md:px-12">
+        {/* White Curve Card */}
+        <FadeRise className="bg-white text-black rounded-2xl md:rounded-r-[300px] p-16 max-md:p-8 flex flex-col items-center justify-center relative overflow-hidden min-h-[400px] w-full md:w-[65%] lg:w-[60%] xl:w-[55%] -translate-x-8 md:-translate-x-16">
           <h2 className="text-5xl max-md:text-3xl font-semibold text-center leading-tight mb-6 max-w-3xl">
             Turn Your Expertise into a potential 5x to 10x Return
           </h2>
@@ -773,14 +723,13 @@ export default function Home() {
           >
             Book a Personalized Demo Call
           </a>
-          <p
-            className="text-base text-zinc-600 text-center max-w-lg inter"
-            id="faq"
-          >
+          <p className="text-base text-zinc-600 text-center max-w-lg inter">
             Let us show you how to multiply your revenue, not your workload.
           </p>
         </FadeRise>
-        <div className="flex flex-col gap-6 w-full md:w-96">
+
+        {/* Right-side column */}
+        <div className="flex flex-col gap-6 w-full md:w-[35%] lg:w-[40%] xl:w-[45%] items-start">
           {[
             "Instantly add high-value, data-driven programs.",
             "Confidently introduce premium revenue streams.",
@@ -788,7 +737,7 @@ export default function Home() {
             <FadeRise
               delay={0.15 + i * 0.1}
               key={i}
-              className="bg-[#1a1a1a] border border-white/20 rounded-3xl px-8 py-6 relative"
+              className="bg-[#1a1a1a] border border-white/20 rounded-3xl px-8 py-6 relative w-full max-w-[360px] md:max-w-[400px] lg:max-w-[440px] transition-all"
             >
               <div className="absolute left-6 top-6 w-[3px] h-16 bg-theme rounded-full" />
               <p className="pl-10 text-lg leading-relaxed text-white">
@@ -799,7 +748,13 @@ export default function Home() {
               </p>
             </FadeRise>
           ))}
-          <Image src="/security.png" width={400} height={400} alt="security" />
+          <Image
+            src="/security.png"
+            width={400}
+            height={400}
+            alt="security"
+            className="mt-6"
+          />
         </div>
       </section>
 

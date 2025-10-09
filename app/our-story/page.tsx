@@ -40,7 +40,7 @@ export default function BookingPage() {
     },
   ];
   return (
-    <main className="space-y-32 relative pt-16 overflow-x-hidden max-w-full ">
+    <main className="space-y-28 relative pt-16 overflow-x-hidden max-w-full ">
       <Image
         className="w-[150vw] h-[150vh] absolute rotate-30 rotate-animation-slow scale-110 z-[-1] overflow-x-hidden max-w-full"
         src="/bggradient.png"
