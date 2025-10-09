@@ -61,51 +61,58 @@ export default function BookingPage() {
             strained health, and in lives running on fumes.
           </p>
         </FadeRise>
-        <FadeRise className="flex justify-center items-center mb-6 gap-6 max-md:flex-col mx-5">
+        <FadeRise className="flex justify-center items-start gap-6 max-md:flex-col mx-5">
           <MagicCard>
-            <div className="rounded-2xl p-8 max-md:p-6 bg-gradient-to-b from-zinc-900/70 to-black/80 border border-white/10 ring-1 ring-white/10 shadow-[0_16px_48px_-20px_rgba(0,0,0,0.6)] flex flex-col space-y-4 max-w-xl w-auto h-72">
-              <div className="flex items-center space-x-4">
+            <div className="rounded-2xl p-8 max-md:p-6 bg-gradient-to-b from-zinc-900/70 to-black/80 border border-white/10 ring-1 ring-white/10 shadow-[0_16px_48px_-20px_rgba(0,0,0,0.6)] flex flex-col max-w-xl w-auto h-72">
+              {/* Top section: Image + Title */}
+              <div className="flex items-center space-x-4 mb-4">
                 <Image
                   src="/oli-johnson.jpg"
                   alt="Oli Johnson"
                   width={96}
                   height={96}
-                  className="w-24 h-24 object-cover rounded-full"
+                  className="w-24 h-24 object-cover rounded-full flex-shrink-0"
                 />
                 <h3 className="text-white text-3xl max-md:text-2xl font-semibold leading-snug">
                   A Founder's Burnout
                 </h3>
               </div>
+
+              {/* Description below */}
               <p
-                className="text-zinc-300 mt-4 leading-relaxed text-sm max-md:text-xs inter"
+                className="text-zinc-300 text-sm max-md:text-xs leading-relaxed inter flex-1"
                 dangerouslySetInnerHTML={{
                   __html: `
-                    <span class="text-theme">Oli Johnson</span>, our Co‑founder & CEO, was a high-performing entrepreneur who hit a wall. Even with a business coach and a therapist, burnout took him down. He realised the missing ingredient was clear, real-time data about his body — a signal that could have made the danger impossible to ignore.
-                    `,
+            <span class="text-theme">Oli Johnson</span>, our Co‑founder & CEO, was a high-performing entrepreneur who hit a wall. Even with a business coach and a therapist, burnout took him down. He realised the missing ingredient was clear, real-time data about his body — a signal that could have made the danger impossible to ignore.
+          `,
                 }}
               />
             </div>
           </MagicCard>
+
           <MagicCard>
-            <div className="rounded-2xl  p-8 max-md:p-6 bg-gradient-to-b from-zinc-900/70 to-black/80 border border-white/10 ring-1 ring-white/10 shadow-[0_16px_48px_-20px_rgba(0,0,0,0.6)] flex flex-col  max-w-xl w-auto h-72">
-              <div className="flex items-center space-x-4">
+            <div className="rounded-2xl p-8 max-md:p-6 bg-gradient-to-b from-zinc-900/70 to-black/80 border border-white/10 ring-1 ring-white/10 shadow-[0_16px_48px_-20px_rgba(0,0,0,0.6)] flex flex-col max-w-xl w-auto h-72">
+              {/* Top section: Image + Title */}
+              <div className="flex items-center space-x-4 mb-4">
                 <Image
                   src="/neetu-johnson.jpg"
                   alt="Dr. Neetu Johnson"
                   width={96}
                   height={96}
-                  className="w-24 h-24 object-cover rounded-full"
+                  className="w-24 h-24 object-cover rounded-full flex-shrink-0"
                 />
                 <h3 className="text-white text-3xl max-md:text-2xl font-semibold leading-snug">
                   A Doctor's Frustration
                 </h3>
               </div>
+
+              {/* Description below */}
               <p
-                className="text-zinc-300 mt-4 leading-relaxed text-sm max-md:text-xs inter"
+                className="text-zinc-300 text-sm max-md:text-xs leading-relaxed inter flex-1"
                 dangerouslySetInnerHTML={{
                   __html: `
-                    <span class="text-theme">Dr. Neetu Johnson</span>, our Co‑founder & Chief Medical Officer, saw patients receiving prescriptions for symptoms rooted in stress and lifestyle. What they truly needed wasn't another pill — they needed a prescription for life.
-                    `,
+            <span class="text-theme">Dr. Neetu Johnson</span>, our Co‑founder & Chief Medical Officer, saw patients receiving prescriptions for symptoms rooted in stress and lifestyle. What they truly needed wasn't another pill — they needed a prescription for life.
+          `,
                 }}
               />
             </div>
@@ -121,8 +128,8 @@ export default function BookingPage() {
         <div className="absolute left-[-50px] top-1/2 -translate-y-1/2 w-[446px] h-[100px] bg-theme opacity-50 blur-3xl rotate-90" />
 
         <FadeRise>
-          <h2 className="text-5xl max-md:text-4xl font-semibold text-black text-center">
-            The question that changed everything
+          <h2 className="text-5xl max-md:text-4xl font-bold text-black text-center">
+            The Question That Changed Everything
           </h2>
         </FadeRise>
         <FadeRise className="flex items-center gap-20 max-md:flex-col">
@@ -134,16 +141,16 @@ export default function BookingPage() {
             className="rounded-2xl shadow-lg"
           />
           <div className="flex flex-col space-y-16 max-md:space-y-10">
-            <p className="text-theme font-semibold text-3xl max-md:text-2xl leading-relaxed">
+            <p className="text-theme  text-3xl max-md:text-2xl leading-relaxed">
               What if we could help people avoid burnout by coaching resilience
               with a system that captures the full picture—mental, emotional,
               and physiological?
             </p>
-            <p className="text-black font-semibold text-3xl max-md:text-2xl leading-relaxed">
+            <p className="text-black  text-3xl max-md:text-2xl leading-relaxed">
               What if the right system could help millions sustain their
               performance without sacrificing their health?
             </p>
-            <p className="text-theme font-semibold text-3xl max-md:text-2xl leading-relaxed">
+            <p className="text-theme  text-3xl max-md:text-2xl leading-relaxed">
               Who could we partner with to make this vision a reality?
             </p>
           </div>
@@ -151,18 +158,17 @@ export default function BookingPage() {
       </section>
 
       {/* The First Adaptive Performance Coaching Platform */}
-      <section className="flex flex-col items-center justify-center py-24 max-md:py-16 px-8 max-md:px-4 gap-16 max-md:gap-8 bg-black mx-5">
+      <section className="flex flex-col items-center justify-center py-0 px-8 max-md:px-4 gap-4 max-md:gap-2 bg-black mx-5">
         <FadeRise>
           {/* For Coaches Who Help High Performers Thrive */}
           <section className="flex flex-col justify-center items-center">
             <FadeRise>
-              <div className="max-w-5xl mx-auto text-center px-8 max-md:px-4 py-16 max-md:py-10">
+              <div className="max-w-5xl mx-auto text-center px-0 py-0">
                 <h2 className="text-5xl max-md:text-4xl font-semibold text-white leading-tight">
                   For Coaches Who Help{" "}
-                  <span className="text-theme">High Performers </span> <br />
-                  Thrive
+                  <span className="text-theme">High Performers </span> Thrive
                 </h2>
-                <p className="text-zinc-300 text-xl max-md:text-base mt-4 max-md:mt-2 leading-relaxed">
+                <p className="text-zinc-300 text-xl max-md:text-base mt-2 leading-relaxed">
                   Coaches are the key to solving the burnout crisis. You are on
                   the frontlines of human performance, yet you often lack the
                   visibility into what’s happening between sessions.
@@ -170,24 +176,25 @@ export default function BookingPage() {
                 </p>
               </div>
             </FadeRise>
-          </section>{" "}
-          <h2 className="text-4xl max-md:text-4xl font-semibold text-white text-center">
+          </section>
+          <h2 className="text-4xl max-md:text-4xl font-semibold text-white text-center mt-2">
             The First Adaptive Performance Coaching{" "}
             <span className="text-theme">Platform</span>
           </h2>
         </FadeRise>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl w-full">
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl w-full mt-4">
           {steps.map((step, i) => (
             <FadeRise key={step.id} delay={i * 0.1}>
               <MagicCard>
-                <div className="rounded-2xl p-6 max-md:p-5 bg-white/10 shadow-lg border border-white/10 space-y-6 max-md:space-y-5 h-60 flex flex-col">
+                <div className="rounded-2xl p-4 max-md:p-3 bg-white/10 shadow-lg border border-white/10 space-y-3 max-md:space-y-2 h-60 flex flex-col">
                   <div className="flex justify-between items-center">
                     <step.icon size={56} className="text-theme" />
                     <div className="text-5xl max-md:text-3xl font-semibold text-white/40">
                       {step.id}
                     </div>
                   </div>
-                  <div className="space-y-3 max-md:space-y-2 flex flex-col justify-end h-full">
+                  <div className="space-y-2 max-md:space-y-1 flex flex-col justify-end h-full">
                     <h3 className="text-2xl max-md:text-xl font-semibold text-white">
                       {step.title}
                     </h3>

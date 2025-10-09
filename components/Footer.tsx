@@ -1,7 +1,30 @@
+"use client";
+
 import { Facebook, Instagram } from "lucide-react";
+import { usePathname, useRouter } from "next/navigation";
 import Image from "next/image";
 
 export default function Footer() {
+  const router = useRouter();
+  const pathname = usePathname();
+
+  const scrollToFAQ = () => {
+    const faqSection = document.getElementById("faq");
+    if (faqSection) {
+      faqSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const handleFAQClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    if (pathname === "/") {
+      scrollToFAQ();
+    } else {
+      router.push("/#faq");
+      setTimeout(scrollToFAQ, 100); // slight delay to allow Home to render
+    }
+  };
+
   return (
     <footer className="bg-[#1a1a1a] text-white py-16 px-4 md:px-16 mt-20">
       <div className="max-w-7xl mx-auto">
@@ -89,7 +112,8 @@ export default function Footer() {
             <ul className="space-y-3">
               <li>
                 <a
-                  href="#"
+                  href="#faq"
+                  onClick={handleFAQClick}
                   className="text-white hover:text-theme transition-colors"
                 >
                   FAQs
