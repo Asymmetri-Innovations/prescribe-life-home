@@ -26,6 +26,14 @@ import "@splidejs/react-splide/css";
 import CTA from "@/components/CTA";
 import TestimonialsSection from "@/components/Testimonials";
 import { TestimonialsCarousel } from "@/components/CoachCarousel";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import { PhoneDashboard } from "@/components/phone-dashboard";
 
 // Mild, performant animation helper
 const list = [
@@ -290,7 +298,7 @@ export default function Home() {
             {/* Pink hue background */}
 
             {/* Image */}
-            <FadeRise delay={0.05}>
+            <FadeRise delay={0.05} className="max-md:hidden">
               <div className="relative z-10 flex justify-start max-md:justify-center">
                 <img
                   className="rounded-4xl max-w-[80%] md:max-w-[70%] mx-auto grayscale "
@@ -354,7 +362,7 @@ export default function Home() {
             </div>
           </FadeRise>
 
-          <FadeRise delay={0.1}>
+          <FadeRise delay={0.1} className="max-md:hidden">
             <div className="relative">
               <div className="space-y-6 relative z-10 flex flex-col items-center">
                 <img
@@ -369,7 +377,7 @@ export default function Home() {
       </section>
 
       {/* Comparison Illustration (new section) */}
-      <section className="relative mx-auto max-w-7xl px-8 max-md:px-4 py-32 max-md:py-20 rounded-[48px] bg-gradient-to-b from-white/10 via-white/5 to-pink-500/10 border border-white/20 shadow-[0_8px_40px_-12px_rgba(236,72,153,0.25)] overflow-hidden flex flex-col md:flex-row justify-start items-start max-md:space-y-8 max-md:mx-4">
+      <section className="relative mx-auto max-w-7xl px-8 max-md:px-4 py-32 max-md:py-20 rounded-[48px] bg-gradient-to-b from-white/10 via-white/5 to-pink-500/10 border border-white/20 shadow-[0_8px_40px_-12px_rgba(236,72,153,0.25)] overflow-hidden flex flex-col md:flex-row justify-start items-start max-md:space-y-8 max-md:mx-5">
         <div className="pointer-events-none absolute -top-32 -left-32 w-[420px] h-[420px] bg-gradient-to-br from-theme/30 to-pink-500/30 blur-3xl opacity-40" />
         <div className="pointer-events-none absolute bottom-0 -right-20 w-[360px] h-[360px] bg-gradient-to-br from-pink-400/40 to-blue-400/40 blur-3xl opacity-40" />
         <div className="relative space-y-10 w-full md:w-1/2 text-left">
@@ -432,36 +440,7 @@ export default function Home() {
       </section>
 
       {/* PHONE / DASHBOARD */}
-      <section className="space-y-6 max-md:space-y-4 flex flex-col items-center relative px-4 max-md:px-2">
-        <FadeRise>
-          <Title
-            text="Your Impact is Capped by Your Calendar. Until Now."
-            className="text-5xl max-md:text-3xl"
-          />
-        </FadeRise>
-        <FadeRise delay={0.1}>
-          <div className="text-base max-md:text-sm inter">
-            Next Generation Performance Coaching Dashboard
-          </div>
-        </FadeRise>
-        <div className="flex flex-col md:flex-row gap-6 max-md:gap-3">
-          {["/phone1.png", "/phone2.png", "/phone3.png"].map((p, i) => (
-            <FadeRise delay={0.15 + i * 0.1} key={p}>
-              <img
-                className={
-                  i === 0
-                    ? "w-64 translate-x-8 max-md:w-48 max-md:translate-x-0 mx-auto max-md:hidden"
-                    : i === 2
-                    ? "w-64 -translate-x-8 max-md:w-48 max-md:translate-x-0 mx-auto max-md:hidden"
-                    : "w-64 max-md:w-48 mx-auto"
-                }
-                src={p}
-                alt={p}
-              />
-            </FadeRise>
-          ))}
-        </div>
-      </section>
+      <PhoneDashboard />
 
       {/* BEFORE / AFTER */}
       <section className="grid grid-cols-1 md:grid-cols-2 gap-16 max-md:gap-8 max-w-6xl mx-auto px-8 max-md:px-4">
@@ -683,7 +662,7 @@ export default function Home() {
 
       {/* ONBOARD BENEFITS */}
 
-      <section className="flex flex-col items-center mx-32 max-md:mx-0 px-6 max-md:px-5">
+      <section className="flex flex-col items-center mx-32 max-md:mx-0 px-6 max-md:px-5 -mt-20 max-md:-mt-8">
         <div className="flex w-full px-16 max-md:px-4 justify-start ">
           <Title
             text="In Your First 10-14 Days, You Will"
@@ -691,40 +670,37 @@ export default function Home() {
           />
         </div>
         <div className="w-full px-8 max-md:px-5 mt-8 max-md:mt-4">
-          <div className="grid grid-cols-1 md:grid-cols-6 md:grid-rows-6 gap-4 w-full max-w-5xl mx-auto">
+          <div className="relative grid grid-cols-1 md:grid-cols-3 md:grid-rows-3 gap-2 w-full max-w-3xl mx-auto place-items-center">
             {[
               {
                 icon: Timer,
                 title: "Eliminate Wasted Time",
                 text: "Go from 'What's on your mind?' to data-informed clarity.",
-                gridClass:
-                  "md:col-start-1 md:col-end-3 md:row-start-3 md:row-end-5",
+                gridClass: "md:col-start-1 md:row-start-3",
               },
               {
                 icon: Lightbulb,
                 title: "Unlock Deeper Insights",
                 text: "Surface challenges happening between sessions.",
-                gridClass:
-                  "md:col-start-3 md:col-end-5 md:row-start-2 md:row-end-4",
+                gridClass: "md:col-start-2 md:row-start-2",
               },
               {
                 icon: Target,
                 title: "Lead With Precision",
                 text: "Guide the conversation when clients can't articulate needs.",
-                gridClass:
-                  "md:col-start-5 md:col-end-7 md:row-start-1 md:row-end-3",
+                gridClass: "md:col-start-3 md:row-start-1",
               },
             ].map((c, i) => (
               <FadeRise
                 key={c.title}
                 delay={i * 0.12}
-                className={`${c.gridClass} rounded-2xl border border-white/30 bg-gradient-to-b from-white/10 to-black/80 p-6 max-md:p-4 max-md:w-full flex flex-col justify-center items-center text-center max-md:h-auto max-md:min-h-56`}
+                className={`${c.gridClass} rounded-2xl border border-white/30 bg-gradient-to-b from-white/10 to-black/80 p-6 flex flex-col justify-center items-center text-center w-60 h-60 md:w-60 md:h-60`}
               >
-                <c.icon className="w-10 h-10 max-md:w-8 max-md:h-8 text-theme mb-4 max-md:mb-3" />
-                <h3 className="text-3xl max-md:text-xl font-semibold text-white mb-3 max-md:mb-2">
+                <c.icon className="w-10 h-10 text-theme mb-3" />
+                <h3 className="text-2xl font-semibold text-white mb-2">
                   {c.title}
                 </h3>
-                <p className="text-sm max-md:text-xs leading-tight inter">
+                <p className="text-sm leading-tight inter text-white/80">
                   {c.text}
                 </p>
               </FadeRise>
@@ -733,13 +709,14 @@ export default function Home() {
         </div>
       </section>
       {/* CTA CURVE */}
-      <section className="relative flex flex-col md:flex-row items-center justify-start gap-16 md:pl-0 px-6 md:px-12 mr-12">
-        <FadeRise className="bg-white text-black rounded-2xl md:rounded-r-[300px] p-16 max-md:p-8 flex flex-col items-center justify-center relative overflow-hidden min-h-[400px] w-full max-w-5xl md:max-w-7xl">
+      <section className="relative flex flex-col md:flex-row items-start md:items-center justify-start gap-16 px-6 md:px-12">
+        {/* White Curve Card */}
+        <FadeRise className="bg-white text-black rounded-2xl md:rounded-r-[300px] p-16 max-md:p-8 flex flex-col items-center justify-center relative overflow-hidden min-h-[400px] w-full md:w-[65%] lg:w-[60%] xl:w-[55%] -translate-x-8 md:-translate-x-16">
           <h2 className="text-5xl max-md:text-3xl font-semibold text-center leading-tight mb-6 max-w-3xl">
             Turn Your Expertise into a potential 5x to 10x Return
           </h2>
           <a
-            href="https://calendly.com/d/cswq-pmr-xzn/discovery-call"
+            href="/booking"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-gradient-to-r from-theme to-pink-600 text-white font-semibold px-12 py-5 rounded-full text-lg shadow-xl hover:shadow-2xl transition-all mb-8 max-md:text-center"
@@ -750,7 +727,9 @@ export default function Home() {
             Let us show you how to multiply your revenue, not your workload.
           </p>
         </FadeRise>
-        <div className="flex flex-col gap-6 w-full md:w-96">
+
+        {/* Right-side column */}
+        <div className="flex flex-col gap-6 w-full md:w-[35%] lg:w-[40%] xl:w-[45%] items-start">
           {[
             "Instantly add high-value, data-driven programs.",
             "Confidently introduce premium revenue streams.",
@@ -758,7 +737,7 @@ export default function Home() {
             <FadeRise
               delay={0.15 + i * 0.1}
               key={i}
-              className="bg-[#1a1a1a] border border-white/20 rounded-3xl px-8 py-6 relative"
+              className="bg-[#1a1a1a] border border-white/20 rounded-3xl px-8 py-6 relative w-full max-w-[360px] md:max-w-[400px] lg:max-w-[440px] transition-all"
             >
               <div className="absolute left-6 top-6 w-[3px] h-16 bg-theme rounded-full" />
               <p className="pl-10 text-lg leading-relaxed text-white">
@@ -769,13 +748,21 @@ export default function Home() {
               </p>
             </FadeRise>
           ))}
-          <Image src="/security.png" width={400} height={400} alt="security" />
+          <Image
+            src="/security.png"
+            width={400}
+            height={400}
+            alt="security"
+            className="mt-6"
+          />
         </div>
       </section>
 
       {/* TESTIMONIALS */}
       <TestimonialsSection />
-      <FAQ></FAQ>
+      <div id="faq">
+        <FAQ></FAQ>
+      </div>
       {/* RESULTS */}
       <section className="flex flex-col items-center text-center">
         <FadeRise>

@@ -73,7 +73,7 @@ const faqData: FAQItem[] = [
   },
 ];
 
-export default function FAQ() {
+export default function FAQ({ classname }: { classname?: string }) {
   const [expandedItems, setExpandedItems] = useState<number[]>([]);
 
   const toggleItem = (index: number) => {
@@ -87,7 +87,10 @@ export default function FAQ() {
   const rightColumnItems = faqData.slice(midIndex);
 
   return (
-    <section className="flex flex-col justify-center items-center gap-12 px-4 md:px-16">
+    <section
+      id="faq"
+      className={`flex flex-col justify-center items-center gap-12 px-4 md:px-16 ${classname}`}
+    >
       <div className="text-5xl max-md:text-3xl font-medium">FAQs</div>
       <div className="w-full max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-6">
         {/* Left Column */}
@@ -99,9 +102,9 @@ export default function FAQ() {
               initial={false}
               onClick={() => toggleItem(index)}
             >
-              <div className="p-8 max-md:p-5 flex flex-col flex-1 min-h-[150px] max-md:min-h-[80px]">
+              <div className="p-8 max-md:p-5 flex flex-col flex-1 min-h-[100px]  max-md:h-[60px]">
                 <div className="flex items-center justify-between">
-                  <h3 className="text-lg max-md:text-sm font-medium pr-4 max-md:pr-3">
+                  <h3 className="text-lg max-md:text-sm font-medium pr-4 max-md:pr-3 line-clamp-3">
                     {item.question}
                   </h3>
                   <motion.div
@@ -151,9 +154,9 @@ export default function FAQ() {
                 initial={false}
                 onClick={() => toggleItem(actualIndex)}
               >
-                <div className="p-8 max-md:p-5 flex flex-col flex-1 min-h-[150px] max-md:min-h-[80px]">
+                <div className="p-8 max-md:p-5 flex flex-col flex-1 min-h-[100px] max-md:h-[60px]">
                   <div className="flex items-center justify-between">
-                    <h3 className="text-lg max-md:text-sm font-medium pr-4 max-md:pr-3">
+                    <h3 className="text-lg max-md:text-sm font-medium pr-4 max-md:pr-3 line-clamp-3">
                       {item.question}
                     </h3>
                     <motion.div
