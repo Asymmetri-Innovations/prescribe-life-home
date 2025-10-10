@@ -1,5 +1,6 @@
 "use client";
 
+import Autoplay from "embla-carousel-autoplay";
 import { FadeRise } from "./FadeRise";
 import { Title } from "./Title";
 import {
@@ -31,7 +32,15 @@ export const PhoneDashboard = () => {
         {/* Carousel 1 */}
         <FadeRise delay={0.2}>
           <div className="w-full max-w-[1400px] mx-auto mt-6 relative">
-            <Carousel opts={{ align: "start", loop: true }} className="w-full">
+            <Carousel
+              opts={{ align: "start", loop: true }}
+              className="w-full"
+              plugins={[
+                Autoplay({
+                  delay: 2000,
+                }),
+              ]}
+            >
               <CarouselContent className="-ml-2 md:-ml-4 flex gap-6">
                 <CarouselItem className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
                   <div className="w-full h-[280px] max-md:h-[200px] flex items-center justify-center overflow-hidden rounded-xl">
@@ -98,7 +107,15 @@ export const PhoneDashboard = () => {
         {/* Carousel 2 */}
         <FadeRise delay={0.4}>
           <div className="w-full max-w-[1400px] mx-auto mt-6 relative">
-            <Carousel opts={{ align: "start", loop: true }} className="w-full">
+            <Carousel
+              opts={{ align: "end", loop: true, direction: "ltr" }}
+              className="w-full"
+              plugins={[
+                Autoplay({
+                  delay: 4000,
+                }),
+              ]}
+            >
               <CarouselContent className="-ml-2 md:-ml-4 flex gap-6">
                 <CarouselItem className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
                   <div className="w-full h-[280px] max-md:h-[200px] flex items-center justify-center overflow-hidden rounded-xl">
