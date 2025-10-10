@@ -847,7 +847,6 @@ export default function Home() {
       </section>
 
       {/* NEWSLETTER */}
-      <Newsletter></Newsletter>
     </main>
   );
 }
