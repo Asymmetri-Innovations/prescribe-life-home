@@ -30,12 +30,16 @@ export default function Navbar() {
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     const diff = latest - lastScrollY;
-    if (diff > 0) setHidden(true);
-    else setHidden(false);
-
+    setHidden(diff > 0);
     setLastScrollY(latest);
     setIsScrolled(latest > 200);
   });
+
+  const navLinks = [
+    { href: "/new-standard", label: "New Standard" },
+    { href: "/our-story", label: "Our Story" },
+    { href: "/our-team", label: "Our Team" },
+  ];
 
   return (
     <motion.div
@@ -50,7 +54,7 @@ export default function Navbar() {
       <a href="/" className="flex items-center gap-1 sm:gap-2 flex-shrink-0">
         <motion.img
           src="/logo.jpg"
-          alt=""
+          alt="logo"
           className="w-6 sm:w-8 md:w-10 rounded-md"
           initial={{ y: -10, filter: "blur(6px)", opacity: 0 }}
           animate={{ y: 0, filter: "blur(0px)", opacity: 1 }}
@@ -68,12 +72,12 @@ export default function Navbar() {
 
       {/* Desktop links */}
       <motion.div
-        className="hidden md:flex items-center space-x-4"
+        className="hidden md:flex items-center space-x-6"
         initial={{ y: -15, filter: "blur(8px)", opacity: 0 }}
         animate={{ y: 0, filter: "blur(0px)", opacity: 1 }}
         transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
       >
-        {["/our-story", "/our-team"].map((href) => (
+        {navLinks.map(({ href, label }) => (
           <motion.div
             key={href}
             className="inline"
@@ -85,11 +89,11 @@ export default function Navbar() {
               aria-current={isActive(href) ? "page" : undefined}
             >
               <motion.span
-                className={`inline-block cursor-pointer ${
+                className={`inline-block cursor-pointer transition-colors duration-200 ${
                   isActive(href) ? "text-theme" : "text-white hover:text-theme"
                 }`}
               >
-                {href === "/our-story" ? "Our Story" : "Our Team"}
+                {label}
               </motion.span>
             </Link>
           </motion.div>
@@ -164,7 +168,7 @@ export default function Navbar() {
             className="absolute left-0 right-0 top-[calc(100%+8px)] md:hidden rounded-xl p-3 bg-zinc-800 border-[0.5px] border-white/30 backdrop-blur-xl"
           >
             <nav className="flex flex-col gap-3">
-              {["/our-story", "/our-team"].map((href) => (
+              {navLinks.map(({ href, label }) => (
                 <Link
                   key={href}
                   href={href}
@@ -178,7 +182,7 @@ export default function Navbar() {
                         : "text-white/80"
                     }`}
                   >
-                    {href === "/our-story" ? "Our Story" : "Our Team"}
+                    {label}
                   </span>
                 </Link>
               ))}
