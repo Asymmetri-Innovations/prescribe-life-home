@@ -31,7 +31,7 @@ export const PhoneDashboard = () => {
 
         {/* Carousel 1 */}
         <FadeRise delay={0.2}>
-          <div className="w-full max-w-[1400px] mx-auto mt-6 relative">
+          <div className="w-full max-w-[1400px] mx-auto mt-6 relative px-16 max-md:px-4">
             <Carousel opts={{ align: "start", loop: true }} className="w-full">
               <CarouselContent className="-ml-2 md:-ml-4 flex gap-6">
                 <CarouselItem className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
@@ -83,8 +83,8 @@ export const PhoneDashboard = () => {
                 </CarouselItem>
               </CarouselContent>
 
-              <CarouselPrevious className="absolute -left-8 top-1/2 -translate-y-1/2 md:flex hidden" />
-              <CarouselNext className="absolute -right-8 top-1/2 -translate-y-1/2 md:flex hidden" />
+              <CarouselPrevious className="absolute -left-12 top-1/2 -translate-y-1/2 md:flex hidden" />
+              <CarouselNext className="absolute -right-12 top-1/2 -translate-y-1/2 md:flex hidden" />
             </Carousel>
           </div>
         </FadeRise>
@@ -98,7 +98,7 @@ export const PhoneDashboard = () => {
 
         {/* Carousel 2 */}
         <FadeRise delay={0.4}>
-          <div className="w-full max-w-[1400px] mx-auto mt-6 relative">
+          <div className="w-full max-w-[1400px] mx-auto mt-6 relative px-16 max-md:px-4">
             <Carousel opts={{ align: "end", loop: true }} className="w-full">
               <CarouselContent className="-ml-2 md:-ml-4 flex gap-6">
                 <CarouselItem className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
@@ -150,8 +150,8 @@ export const PhoneDashboard = () => {
                 </CarouselItem>
               </CarouselContent>
 
-              <CarouselPrevious className="absolute -left-8 top-1/2 -translate-y-1/2 md:flex hidden" />
-              <CarouselNext className="absolute -right-8 top-1/2 -translate-y-1/2 md:flex hidden" />
+              <CarouselPrevious className="absolute -left-12 top-1/2 -translate-y-1/2 md:flex hidden " />
+              <CarouselNext className="absolute -right-12 top-1/2 -translate-y-1/2 md:flex hidden" />
             </Carousel>
           </div>
         </FadeRise>

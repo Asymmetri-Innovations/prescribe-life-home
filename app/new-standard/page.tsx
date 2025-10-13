@@ -6,7 +6,7 @@ import React from "react";
 import { Title } from "@/components/Title";
 import { FadeRise } from "@/components/FadeRise";
 import CTA from "@/components/CTA";
-import { Angry, Dna, Sparkle, Handshake, Users, Heart } from "lucide-react";
+import { Dna, Sparkle, Handshake, Users, Heart } from "lucide-react";
 
 const steps = [
   {
@@ -14,7 +14,8 @@ const steps = [
     title: "Personalized Behavioral Change System",
     description:
       "Facilitates self-awareness, better decision-making, and adaptive strategies to help your clients drive measurable resilience and performance gains — aligned with your unique coaching style.",
-    icon: Angry,
+    icon: null,
+    image: "/behaviours.png",
   },
   {
     id: "02",
@@ -22,6 +23,7 @@ const steps = [
     description:
       "Captures real-time physiological and emotional resilience markers, tracking trends across sleep, readiness, activity, and wellbeing—without requiring new hardware. Every small choice adds up. With Habitual Insights, coaches and clients see the hidden patterns driving performance and burnout.",
     icon: Dna,
+    image: null,
   },
 ];
 
@@ -31,27 +33,26 @@ export default function Home() {
       <main className="space-y-20 relative overflow-hidden max-w-full min-w-0 px-6 max-md:px-5">
         {/* Background */}
         <Image
-          className="absolute inset-0 w-full md:h-[150vh] max-md:h-[80vh] object-cover md:rotate-30 rotate-animation-slow md:scale-110 max-md:scale-100 z-[-1] pointer-events-none"
+          className="absolute inset-0 w-full md:h-[150vh] max-md:h-[80vh] object-cover md:rotate-30 rotate-animation-slow md:scale-110 max-md:scale-100 z-[-1] overflow-visible pointer-events-none"
           src="/bggradient.png"
           width={300}
           height={300}
           alt="bg"
         />
-
         {/* HERO */}
         <section
           id="hero"
-          className="flex flex-col pt-8 max-md:pt-4 px-16 max-md:px-5"
+          className="flex flex-col pt-10 max-md:pt-8 px-6 max-md:px-4"
         >
           <motion.div
             initial={{ y: 32, filter: "blur(6px)", opacity: 0 }}
             animate={{ y: 0, filter: "blur(0px)", opacity: 1 }}
             transition={{ duration: 1, delay: 0.45 }}
-            className="w-full pb-0 max-md:pb-0 min-h-[60vh] max-md:min-h-[60vh] flex justify-center items-center"
+            className="w-full min-h-[70vh] flex justify-center items-center"
           >
-            <div className="flex w-full flex-col items-center justify-center text-center mx-auto space-y-6 max-md:space-y-4 order-1">
+            <div className="flex w-full flex-col items-center justify-center text-center mx-auto space-y-8 max-md:space-y-6">
               <motion.h1
-                className="text-6xl max-md:text-3xl font-semibold text-center"
+                className="text-6xl md:text-5xl max-md:text-3xl font-semibold text-center leading-snug"
                 initial={{ y: 30, filter: "blur(4px)", opacity: 0 }}
                 animate={{ y: 0, filter: "blur(0px)", opacity: 1 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
@@ -61,18 +62,18 @@ export default function Home() {
               </motion.h1>
 
               <motion.p
-                className="text-lg max-md:text-base inter text-center w-full max-w-none mt-2 px-8 md:px-20"
+                className="text-lg max-md:text-base inter text-center w-full max-w-4xl mt-4 px-2"
                 initial={{ y: 24, filter: "blur(4px)", opacity: 0 }}
                 animate={{ y: 0, filter: "blur(0px)", opacity: 1 }}
                 transition={{ duration: 0.75, delay: 0.15, ease: "easeOut" }}
               >
-                Effective coaching isn’t one-size-fits-all. The new standard
-                ensures burnout is no longer the cost of high <br />
-                performance — by cultivating resilience through the right
-                systems, insights, and support.
+                Effective coaching isn't one-size-fits-all. The new standard
+                ensures burnout is no longer the cost of high performance — by
+                cultivating resilience through the right systems, insights, and
+                support.
               </motion.p>
 
-              <motion.div className="flex justify-center">
+              <motion.div className="flex justify-center mt-6">
                 <CTA />
               </motion.div>
             </div>
@@ -80,13 +81,13 @@ export default function Home() {
         </section>
 
         {/* WHY IT MATTERS */}
-        <section className="relative mx-auto max-w-7xl px-8 max-md:px-4 py-16 max-md:py-10">
+        <section className="relative mx-auto max-w-7xl px-8 max-md:px-4 py-12 max-md:py-10 -mt-30">
           <FadeRise className="text-center space-y-2">
             <h2 className="text-5xl max-md:text-3xl font-semibold">
               Why it matters
             </h2>
             <div className="text-theme text-3xl max-md:text-xl font-semibold">
-              Here’s Why
+              Here's Why
             </div>
           </FadeRise>
 
@@ -239,17 +240,27 @@ export default function Home() {
         </section>
 
         {/* PERSONALIZED BEHAVIORAL CHANGE SYSTEM */}
-        <div className="flex items-center justify-center">
+        <div className="flex items-center justify-center -mt-25 max-md:-mt-5">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-6xl w-full items-stretch">
             {steps.map((step, i) => (
               <FadeRise key={step.id} delay={i * 0.1}>
                 <MagicCard className="h-full">
                   <div className="rounded-2xl h-full flex flex-col justify-between p-8 max-md:p-6 bg-white/10 shadow-lg border border-white/10">
                     <div className="flex justify-between items-start mb-4">
-                      <step.icon
-                        size={56}
-                        className="text-theme flex-shrink-0"
-                      />
+                      {step.image ? (
+                        <Image
+                          src={step.image}
+                          alt={step.title}
+                          width={56}
+                          height={56}
+                          className="flex-shrink-0"
+                        />
+                      ) : step.icon ? (
+                        React.createElement(step.icon, {
+                          size: 56,
+                          className: "text-theme flex-shrink-0",
+                        })
+                      ) : null}
                       <div className="text-5xl max-md:text-3xl font-semibold text-white/30">
                         {step.id}
                       </div>
@@ -353,11 +364,11 @@ export default function Home() {
         </section>
 
         {/* JOIN THE NEXT GENERATION OF COACHES */}
-        <section className="flex flex-col items-center text-center space-y-14 max-md:space-y-8 py-20 relative">
+        <section className="flex flex-col items-center text-center space-y-12 max-md:space-y-8 py-20 relative mt-10">
           <FadeRise>
             <Title
               text="Join the Next Generation of Coaches Now"
-              className="text-4xl max-md:text-2xl font-semibold"
+              className="text-6xl max-md:text-2xl font-semibold"
             />
           </FadeRise>
           <FadeRise delay={0.05}>
@@ -450,7 +461,7 @@ export default function Home() {
         />
         <div className="relative z-10 space-y-8 max-w-4xl mx-auto px-6">
           <FadeRise delay={0.12}>
-            <p className="text-white text-3xl max-md:text-2xl font-semibold">
+            <p className="text-white text-5xl max-md:text-2xl font-semibold">
               Ready to See the <span className="text-theme">New Standard</span>{" "}
               in Action?
             </p>

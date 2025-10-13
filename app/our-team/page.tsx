@@ -176,22 +176,24 @@ export default function TeamPage() {
       />
       <section className="flex flex-col items-center justify-center space-y-10 max-md:space-y-6 pt-16 max-md:pt-8 px-4 max-md:px-2 mx-5">
         <FadeRise delay={0.05}>
-          <div className="text-5xl max-md:text-3xl font-semibold flex flex-col items-center mb-6">
+          <div className="text-6xl max-md:text-3xl font-semibold text-center mb-6">
             Meet the <span className="text-theme">Team!</span>
           </div>
-          <p className="text-lg max-md:text-base inter">
+          <p className="text-lg max-md:text-base inter text-center max-w-4xl">
             The experts and innovators behind PrescribeLife.ai, bringing
             together neuroscience, technology, and coaching expertise to help
             you perform better and lead with resilience.
           </p>
         </FadeRise>
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-7xl w-full items-stretch">
           {teamMembers.map((member, i) => (
             <FadeRise key={i} delay={i * 0.05}>
-              <MagicCard>
+              <MagicCard className="h-full">
                 <div
-                  className="rounded-2xl p-8 max-md:p-6 bg-gradient-to-b from-zinc-900/70 to-black/80 border border-white/10 ring-1 ring-white/10 shadow-[0_16px_48px_-20px_rgba(0,0,0,0.6)] 
-                        flex flex-col items-center text-center space-y-4 h-full min-h-[420px] max-h-[420px]"
+                  className="rounded-2xl p-8 max-md:p-6 bg-gradient-to-b from-zinc-900/70 to-black/80 
+            border border-white/10 ring-1 ring-white/10 shadow-[0_16px_48px_-20px_rgba(0,0,0,0.6)] 
+            flex flex-col items-center text-center space-y-4 h-full"
                 >
                   <Image
                     src={member.image}
@@ -200,13 +202,13 @@ export default function TeamPage() {
                     height={96}
                     className="w-24 h-24 object-cover object-top rounded-full"
                   />
-                  <h3 className="text-2xl max-md:text-xl text-white font-bold leading-snug ">
+                  <h3 className="text-2xl max-md:text-xl text-white font-bold leading-snug">
                     {member.name}
                   </h3>
                   <p className="text-theme text-sm max-md:text-xs font-medium">
                     {member.title}
                   </p>
-                  <p className="text-base max-md:text-sm inter text-white mt-5 ">
+                  <p className="text-base max-md:text-sm inter text-white mt-5 p-2">
                     {member.description}
                   </p>
                 </div>
@@ -215,7 +217,7 @@ export default function TeamPage() {
           ))}
         </div>
       </section>
-      <section className="flex flex-col items-center justify-center space-y-10 max-md:space-y-6 pt-16 max-md:pt-8 px-4 max-md:px-2 mx-5">
+      <section className="flex flex-col items-center justify-center space-y-10 max-md:space-y-6 pt-16 max-md:pt-8 px-4 max-md:px-2 mx-5 -mb-20 -mt-15 ">
         <FadeRise delay={0.05}>
           <div className="text-5xl max-md:text-3xl font-semibold flex flex-col items-center mb-6">
             <span className="text-theme">Advisors</span>

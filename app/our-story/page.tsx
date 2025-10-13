@@ -40,7 +40,7 @@ export default function BookingPage() {
     },
   ];
   return (
-    <main className="space-y-28 relative pt-16 overflow-x-hidden max-w-full ">
+    <main className="space-y-28 relative pt-16 overflow-hidden max-w-full ">
       <Image
         className="w-[150vw] h-[150vh] absolute rotate-30 rotate-animation-slow scale-110 z-[-1] overflow-x-hidden max-w-full"
         src="/bggradient.png"
@@ -48,9 +48,9 @@ export default function BookingPage() {
         height={300}
         alt="bg"
       />
-      <section className="flex flex-col justify-center items-center min-h-screen space-y-6  max-md:space-y-4 pt-16 max-md:pt-8 px-4 max-md:px-2 mx-4">
+      <section className="flex flex-col justify-center items-center min-h-screen space-y-6  max-md:space-y-4 pt-8 max-md:pt-8 px-4 max-md:px-2 mx-4 -mb-15 md:-mb-3 sm:-mb-1">
         <FadeRise delay={0.05}>
-          <div className="text-6xl max-md:text-4xl font-bold flex flex-col items-center mb-6">
+          <div className="text-6xl max-md:text-4xl font-semibold flex flex-col items-center mb-6">
             The Founding Story of <br />{" "}
             <span className="text-theme">PrescribeLife.AI</span>
           </div>
@@ -61,9 +61,9 @@ export default function BookingPage() {
             strained health, and in lives running on fumes.
           </p>
         </FadeRise>
-        <FadeRise className="flex justify-center items-center mb-6 gap-6 max-md:flex-col mx-5">
+        <FadeRise className="flex justify-center items-stretch mb-6 gap-6 max-md:flex-col mx-5">
           <MagicCard>
-            <div className="rounded-2xl p-8 max-md:p-6 bg-gradient-to-b from-zinc-900/70 to-black/80 border border-white/10 ring-1 ring-white/10 shadow-[0_16px_48px_-20px_rgba(0,0,0,0.6)] flex flex-col space-y-4 max-w-xl w-auto h-72">
+            <div className="rounded-2xl p-8 max-md:p-6 bg-gradient-to-b from-zinc-900/70 to-black/80 border border-white/10 ring-1 ring-white/10 shadow-[0_16px_48px_-20px_rgba(0,0,0,0.6)] flex flex-col space-y-4 max-w-xl w-auto h-full">
               <div className="flex items-center space-x-4">
                 <Image
                   src="/oli-johnson.jpg"
@@ -77,17 +77,17 @@ export default function BookingPage() {
                 </h3>
               </div>
               <p
-                className="text-zinc-300 mt-4 leading-relaxed text-sm max-md:text-xs inter"
+                className="text-zinc-300 mt-4 leading-relaxed text-sm inter"
                 dangerouslySetInnerHTML={{
                   __html: `
-                    <span class="text-theme">Oli Johnson</span>, our Co‑founder & CEO, was a high-performing entrepreneur who hit a wall. Even with a business coach and a therapist, burnout took him down. He realised the missing ingredient was clear, real-time data about his body — a signal that could have made the danger impossible to ignore.
-                    `,
+            <span class="text-theme">Oli Johnson</span>, our Co‑founder & CEO, was a high-performing entrepreneur who hit a wall. Even with a business coach and a therapist, burnout took him down. He realised the missing ingredient was clear, real-time data about his body — a signal that could have made the danger impossible to ignore.
+            `,
                 }}
               />
             </div>
           </MagicCard>
           <MagicCard>
-            <div className="rounded-2xl  p-8 max-md:p-6 bg-gradient-to-b from-zinc-900/70 to-black/80 border border-white/10 ring-1 ring-white/10 shadow-[0_16px_48px_-20px_rgba(0,0,0,0.6)] flex flex-col  max-w-xl w-auto h-72">
+            <div className="rounded-2xl p-8 max-md:p-6 bg-gradient-to-b from-zinc-900/70 to-black/80 border border-white/10 ring-1 ring-white/10 shadow-[0_16px_48px_-20px_rgba(0,0,0,0.6)] flex flex-col space-y-4 max-w-xl w-auto h-full">
               <div className="flex items-center space-x-4">
                 <Image
                   src="/neetu-johnson.jpg"
@@ -101,11 +101,11 @@ export default function BookingPage() {
                 </h3>
               </div>
               <p
-                className="text-zinc-300 mt-4 leading-relaxed text-sm max-md:text-xs inter"
+                className="text-zinc-300 mt-4 leading-relaxed text-sm inter"
                 dangerouslySetInnerHTML={{
                   __html: `
-                    <span class="text-theme">Dr. Neetu Johnson</span>, our Co‑founder & Chief Medical Officer, saw patients receiving prescriptions for symptoms rooted in stress and lifestyle. What they truly needed wasn't another pill — they needed a prescription for life.
-                    `,
+            <span class="text-theme">Dr. Neetu Johnson</span>, our Co‑founder & Chief Medical Officer, saw patients receiving prescriptions for symptoms rooted in stress and lifestyle. What they truly needed wasn't another pill — they needed a prescription for life.
+            `,
                 }}
               />
             </div>
@@ -151,7 +151,7 @@ export default function BookingPage() {
       </section>
 
       {/* The First Adaptive Performance Coaching Platform */}
-      <section className="flex flex-col items-center justify-center py-24 max-md:py-16 px-8 max-md:px-4 gap-16 max-md:gap-8 bg-black mx-5">
+      <section className="flex flex-col items-center justify-center py-24 max-md:py-16 px-8 max-md:px-4 gap-16 max-md:gap-8 bg-black mx-5 -mt-25 max-md:-mt-15">
         <FadeRise>
           {/* For Coaches Who Help High Performers Thrive */}
           <section className="flex flex-col justify-center items-center">

@@ -27,6 +27,14 @@ export default function Footer() {
               </li>
               <li>
                 <a
+                  href="/new-standard"
+                  className="text-white hover:text-theme transition-colors"
+                >
+                  New Standard
+                </a>
+              </li>
+              <li>
+                <a
                   href="/our-story"
                   className="text-white hover:text-theme transition-colors"
                 >
@@ -131,35 +139,44 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Social icons */}
-        <div className="flex items-center gap-4 mb-8">
-          <a
-            href="#"
-            className="w-12 h-12 bg-zinc-800 rounded-full flex items-center justify-center hover:bg-zinc-700 transition-colors"
-          >
-            <div className="w-6 h-6 text-white">
-              <svg viewBox="0 0 24 24" fill="currentColor">
-                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-              </svg>
-            </div>
-          </a>
-          <a
-            href="#"
-            className="w-12 h-12 bg-zinc-800 rounded-full flex items-center justify-center hover:bg-zinc-700 transition-colors"
-          >
-            <Instagram className="w-6 h-6 text-white" />
-          </a>
-          <a
-            href="#"
-            className="w-12 h-12 bg-zinc-800 rounded-full flex items-center justify-center hover:bg-zinc-700 transition-colors"
-          >
-            <Facebook className="w-6 h-6 text-white" />
-          </a>
+        <div className="flex items-center justify-between w-full max-w-7xl mx-auto pt-8 border-t border-zinc-800 max-md:flex-col max-md:items-center max-md:gap-4">
+          {/* Social icons */}
+          <div className="flex items-center gap-4">
+            <a
+              href="#"
+              className="w-12 h-12 bg-zinc-800 rounded-full flex items-center justify-center hover:bg-zinc-700 transition-colors"
+            >
+              <div className="w-6 h-6 text-white">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                </svg>
+              </div>
+            </a>
+            <a
+              href="#"
+              className="w-12 h-12 bg-zinc-800 rounded-full flex items-center justify-center hover:bg-zinc-700 transition-colors"
+            >
+              <Instagram className="w-6 h-6 text-white" />
+            </a>
+            <a
+              href="#"
+              className="w-12 h-12 bg-zinc-800 rounded-full flex items-center justify-center hover:bg-zinc-700 transition-colors"
+            >
+              <Facebook className="w-6 h-6 text-white" />
+            </a>
+          </div>
+
+          {/* Copyright text */}
+          <div>
+            <p className="text-zinc-500 text-sm text-right max-md:text-center">
+              © 2025 PrescribeLife.AI. All rights reserved.
+            </p>
+          </div>
         </div>
 
-        {/* Bottom section */}
+        {/* Bottom section
         <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-zinc-800">
-          <div className="flex items-center gap-4 mb-4 md:mb-0">
+        <div className="flex items-center gap-4 mb-4 md:mb-0">
             <a
               href="#"
               className="text-zinc-400 hover:text-white transition-colors text-sm"
@@ -177,7 +194,7 @@ export default function Footer() {
           <p className="text-zinc-500 text-sm">
             © 2025 PrescribeLife.AI. All rights reserved.
           </p>
-        </div>
+        </div> */}
       </div>
     </footer>
   );
