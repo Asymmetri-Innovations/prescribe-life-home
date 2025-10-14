@@ -84,10 +84,7 @@ export default function Navbar() {
             whileHover={{ y: -2 }}
             transition={{ duration: 0.2 }}
           >
-            <Link
-              href={href}
-              aria-current={isActive(href) ? "page" : undefined}
-            >
+            <a href={href} aria-current={isActive(href) ? "page" : undefined}>
               <motion.span
                 className={`inline-block cursor-pointer transition-colors duration-200 ${
                   isActive(href) ? "text-theme" : "text-white hover:text-theme"
@@ -95,7 +92,7 @@ export default function Navbar() {
               >
                 {label}
               </motion.span>
-            </Link>
+            </a>
           </motion.div>
         ))}
       </motion.div>
@@ -169,7 +166,7 @@ export default function Navbar() {
           >
             <nav className="flex flex-col gap-3">
               {navLinks.map(({ href, label }) => (
-                <Link
+                <a
                   key={href}
                   href={href}
                   onClick={() => setMobileMenuOpen(false)}
@@ -184,7 +181,7 @@ export default function Navbar() {
                   >
                     {label}
                   </span>
-                </Link>
+                </a>
               ))}
             </nav>
           </motion.div>
