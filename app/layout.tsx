@@ -13,6 +13,7 @@ import LS from "@/components/LS";
 import Footer from "@/components/Footer";
 import Cookie from "@/components/Cookie";
 import Script from "next/script";
+import ScrollToTop from "@/components/ScrollToTop";
 
 const geistSans = Plus_Jakarta_Sans({
   // variable: "--font-geist-sans",
@@ -138,6 +139,7 @@ var timeout = 3000; // Timeout value to remove the flicker (in milliseconds)
         <LS></LS>
         <Navbar></Navbar>
         <Cookie></Cookie>
+        <ScrollToTop></ScrollToTop>
         {children}
 
         {/* EngageHub form embed */}
