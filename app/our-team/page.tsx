@@ -217,7 +217,7 @@ export default function TeamPage() {
           ))}
         </div>
       </section>
-      <section className="flex flex-col items-center justify-center space-y-10 max-md:space-y-6 pt-16 max-md:pt-8 px-4 max-md:px-2 mx-5 -mb-20 -mt-15 ">
+      <section className="flex flex-col items-center justify-center space-y-6 max-md:space-y-4 pt-4 max-md:pt-8 px-4 max-md:px-2 mx-5 -mb-32 -mt-20 ">
         <FadeRise delay={0.05}>
           <div className="text-5xl max-md:text-3xl font-semibold flex flex-col items-center mb-6">
             <span className="text-theme">Advisors</span>

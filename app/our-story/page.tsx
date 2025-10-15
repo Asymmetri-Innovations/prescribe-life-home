@@ -53,7 +53,7 @@ export default function BookingPage() {
       />
 
       {/* Founding Story */}
-      <section className="flex flex-col justify-center items-center min-h-screen space-y-4 max-md:space-y-3 pt-6 max-md:pt-6 px-4 max-md:px-2 mx-4">
+      <section className="flex flex-col justify-center items-center min-h-[80vh] space-y-4 max-md:space-y-3 pt-6 max-md:pt-6 px-4 max-md:px-2 mx-4">
         <FadeRise delay={0.05}>
           <div className="text-6xl max-md:text-4xl font-semibold flex flex-col items-center mb-4">
             The Founding Story of <br />{" "}
@@ -155,7 +155,7 @@ export default function BookingPage() {
       </section>
 
       {/* Adaptive Platform */}
-      <section className="flex flex-col items-center justify-center py-14 max-md:py-10 px-6 max-md:px-3 gap-8 bg-black mx-5">
+      <section className="flex flex-col items-center justify-center py-5 max-md:py-10 px-6 max-md:px-3 gap-8 bg-black mx-5">
         <FadeRise>
           <section className="flex flex-col justify-center items-center">
             <FadeRise>

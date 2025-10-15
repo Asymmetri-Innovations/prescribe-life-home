@@ -34,6 +34,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { PhoneDashboard } from "@/components/phone-dashboard";
+import { PhoneDashboardSplide } from "@/components/phone-dashboard-splide";
 
 // Mild, performant animation helper
 const list = [
@@ -440,7 +441,7 @@ export default function Home() {
       </section>
 
       {/* PHONE / DASHBOARD */}
-      <PhoneDashboard />
+      <PhoneDashboardSplide />
 
       {/* BEFORE / AFTER */}
       <section className="grid grid-cols-1 md:grid-cols-2 gap-16 max-md:gap-8 max-w-6xl mx-auto px-8 max-md:px-4">

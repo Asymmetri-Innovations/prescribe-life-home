@@ -30,7 +30,7 @@ const steps = [
 export default function Home() {
   return (
     <div>
-      <main className="space-y-20 relative overflow-hidden max-w-full min-w-0 px-6 max-md:px-5">
+      <main className="space-y-12 max-md:space-y-8 relative overflow-hidden max-w-full min-w-0 px-6 max-md:px-5">
         {/* Background */}
         <Image
           className="absolute inset-0 w-full md:h-[150vh] max-md:h-[80vh] object-cover md:rotate-30 rotate-animation-slow md:scale-110 max-md:scale-100 z-[-1] overflow-visible pointer-events-none"
@@ -81,7 +81,7 @@ export default function Home() {
         </section>
 
         {/* WHY IT MATTERS */}
-        <section className="relative mx-auto max-w-7xl px-8 max-md:px-4 py-12 max-md:py-10 -mt-30">
+        <section className="relative mx-auto max-w-7xl px-8 max-md:px-4 py-8 max-md:py-6 -mt-20 max-md:-mt-12">
           <FadeRise className="text-center space-y-2">
             <h2 className="text-5xl max-md:text-3xl font-semibold">
               Why it matters
@@ -91,7 +91,7 @@ export default function Home() {
             </div>
           </FadeRise>
 
-          <div className="flex flex-col md:flex-row items-center justify-between mt-12 max-md:mt-8 gap-12">
+          <div className="flex flex-col md:flex-row items-center justify-between mt-8 max-md:mt-6 gap-12">
             <FadeRise className="md:w-1/2">
               <div className="space-y-6 max-md:space-y-4 leading-relaxed text-center md:text-left">
                 <p className="text-lg max-md:text-base">
@@ -122,14 +122,14 @@ export default function Home() {
         </section>
 
         {/* ESSENTIALS OF THE NEW STANDARD */}
-        <section className="flex flex-col items-center space-y-10 max-md:space-y-6 mt-0">
+        <section className="flex flex-col items-center space-y-8 max-md:space-y-6">
           <FadeRise delay={0.6}>
             <div className="text-5xl max-md:text-3xl text-center font-semibold">
               The Essentials of the{" "}
               <span className="text-theme">New Standard</span>
             </div>
           </FadeRise>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-md:gap-4 max-w-6xl w-full px-8 max-md:px-4 mt-12 max-md:mt-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-md:gap-4 max-w-6xl w-full px-8 max-md:px-4 mt-8 max-md:mt-6">
             {[
               {
                 titleLines: ["Adaptive", "Coaching"],
@@ -161,7 +161,7 @@ export default function Home() {
         </section>
 
         {/* NEEDED TO DELIVER IT */}
-        <section className="flex flex-col items-center space-y-10 max-md:space-y-6 mt-10">
+        <section className="flex flex-col items-center space-y-8 max-md:space-y-6">
           <FadeRise>
             <h2 className="text-5xl max-md:text-3xl font-semibold text-center">
               What is needed to <span className="text-theme">Deliver it ?</span>
@@ -213,7 +213,7 @@ export default function Home() {
             />
           </FadeRise>
           <FadeRise delay={0.15}>
-            <div className="w-full max-w-6xl px-8 max-md:px-4 mt-8">
+            <div className="w-full max-w-6xl px-8 max-md:px-4 mt-6">
               <p className="text-lg max-md:text-base text-white/80 text-center">
                 The PrescribeLife.AI platform integrates three layers,{" "}
                 <span className="text-theme">
@@ -356,7 +356,7 @@ export default function Home() {
           </FadeRise>
           <FadeRise className="flex justify-center items-center" delay={0.2}>
             <img
-              className="w-2/3 max-md:w-full mt-16 max-md:mt-8 -translate-x-16 max-md:-translate-x-0"
+              className="w-2/3 max-md:w-full mt-12 max-md:mt-8 -translate-x-16 max-md:-translate-x-0"
               src="/hero.png"
               alt="result"
             />
@@ -364,7 +364,7 @@ export default function Home() {
         </section>
 
         {/* JOIN THE NEXT GENERATION OF COACHES */}
-        <section className="flex flex-col items-center text-center space-y-12 max-md:space-y-8 py-20 relative mt-10">
+        <section className="flex flex-col items-center text-center space-y-10 max-md:space-y-8 py-12 max-md:py-8 relative">
           <FadeRise>
             <Title
               text="Join the Next Generation of Coaches Now"
@@ -417,7 +417,7 @@ export default function Home() {
             </p>
           </FadeRise>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl w-full px-8 max-md:px-4 mt-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl w-full px-8 max-md:px-4 mt-10">
             {[
               {
                 icon: <Handshake className="w-8 h-8 text-pink-400" />,
@@ -454,7 +454,7 @@ export default function Home() {
 
         {/* BOTTOM CTA SECTION */}
       </main>
-      <section className="relative w-screen left-[50%] right-[50%] -mx-[50vw] overflow-hidden bg-black text-center text-white min-h-[500px] max-md:min-h-[400px] flex items-center py-16 max-md:py-12 -mb-20 ">
+      <section className="relative w-screen left-[50%] right-[50%] -mx-[50vw] overflow-hidden bg-black text-center text-white min-h-[500px] max-md:min-h-[400px] flex items-center py-12 max-md:py-10 -mb-20 ">
         <div
           className="absolute inset-0 bg-repeat bg-center bg-[length:auto_100%] opacity-60 "
           style={{ backgroundImage: "url('/new-standard-grid.png')" }}
