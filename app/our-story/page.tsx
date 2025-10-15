@@ -55,7 +55,7 @@ export default function BookingPage() {
       {/* Founding Story */}
       <section className="flex flex-col justify-center items-center min-h-[80vh] space-y-4 max-md:space-y-3 pt-6 max-md:pt-6 px-4 max-md:px-2 mx-4">
         <FadeRise delay={0.05}>
-          <div className="text-6xl max-md:text-4xl font-semibold flex flex-col items-center mb-4">
+          <div className="text-6xl max-md:text-4xl font-semibold flex flex-col items-center mb-4 mt-10 max-md:text-center">
             The Founding Story of <br />{" "}
             <span className="text-theme">PrescribeLife.AI</span>
           </div>
