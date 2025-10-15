@@ -40,7 +40,7 @@ export default function BookingPage() {
     },
   ];
   return (
-    <main className="space-y-28 relative pt-16 overflow-hidden max-w-full ">
+    <main className="space-y-18 relative pt-16 overflow-hidden max-w-full ">
       <Image
         className="w-[150vw] h-[150vh] absolute rotate-30 rotate-animation-slow scale-110 z-[-1] overflow-x-hidden max-w-full"
         src="/bggradient.png"
@@ -48,7 +48,7 @@ export default function BookingPage() {
         height={300}
         alt="bg"
       />
-      <section className="flex flex-col justify-center items-center min-h-screen space-y-6  max-md:space-y-4 pt-8 max-md:pt-8 px-4 max-md:px-2 mx-4 -mb-15 md:-mb-3 sm:-mb-1">
+      <section className="flex flex-col justify-center items-center min-h-screen space-y-6  max-md:space-y-4 pt-8 max-md:pt-8 px-4 max-md:px-2 mx-4  md:-mb-3 sm:-mb-1">
         <FadeRise delay={0.05}>
           <div className="text-6xl max-md:text-4xl font-semibold flex flex-col items-center mb-6">
             The Founding Story of <br />{" "}
@@ -230,7 +230,7 @@ export default function BookingPage() {
             </p>
           </div>
           <a
-            href="https://calendly.com/d/cswq-pmr-xzn/discovery-call"
+            href="/booking"
             target="_blank"
             rel="noopener noreferrer"
             className="relative group bg-gradient-to-r from-theme to-pink-600 text-white font-medium px-8 py-3 rounded-full shadow-lg hover:shadow-theme/30 transition-all"

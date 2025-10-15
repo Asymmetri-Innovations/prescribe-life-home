@@ -1,7 +1,39 @@
-import { Facebook, Instagram } from "lucide-react";
+"use client";
 import Image from "next/image";
-
+import { useRouter } from "next/navigation";
+import { Facebook, Instagram } from "lucide-react";
+import { useEffect } from "react";
 export default function Footer() {
+  const router = useRouter();
+
+  // This runs after route change, checks if we’re on /#faq and scrolls to it
+  useEffect(() => {
+    if (window.location.hash === "#faq") {
+      // wait for the DOM to load
+      setTimeout(() => {
+        const faqSection = document.getElementById("faq");
+        if (faqSection) {
+          faqSection.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 400); // 400ms delay gives enough time for homepage to mount
+    }
+  }, []);
+
+  const handleFaqClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+
+    if (window.location.pathname === "/") {
+      // Already on home → just scroll
+      const faqSection = document.getElementById("faq");
+      if (faqSection) {
+        faqSection.scrollIntoView({ behavior: "smooth" });
+      }
+    } else {
+      // Navigate to home with hash
+      router.push("/#faq");
+    }
+  };
+
   return (
     <footer className="bg-[#1a1a1a] text-white py-16 px-4 md:px-16 mt-20">
       <div className="max-w-7xl mx-auto">
@@ -41,14 +73,7 @@ export default function Footer() {
                   Our Story
                 </a>
               </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-white hover:text-theme transition-colors"
-                >
-                  The Science
-                </a>
-              </li>
+
               <li>
                 <a
                   href="/our-team"
@@ -97,7 +122,7 @@ export default function Footer() {
             <ul className="space-y-3">
               <li>
                 <a
-                  href="#"
+                  href="/#faq"
                   className="text-white hover:text-theme transition-colors"
                 >
                   FAQs
