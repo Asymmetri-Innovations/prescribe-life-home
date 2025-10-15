@@ -12,6 +12,15 @@ import "@splidejs/react-splide/css";
 export const PhoneDashboardSplide = () => {
   return (
     <FadeRise>
+      {/* ✅ Hide Splide arrows only on mobile */}
+      <style jsx global>{`
+        @media (max-width: 768px) {
+          .splide__arrows {
+            display: none !important;
+          }
+        }
+      `}</style>
+
       <section className="space-y-6 max-md:space-y-4 flex flex-col items-center relative md:text-center w-full">
         <FadeRise>
           <Title
@@ -36,7 +45,7 @@ export const PhoneDashboardSplide = () => {
                 perMove: 1,
                 gap: "1rem",
                 autoplay: true,
-                interval: 2000, // auto scroll every 3s
+                interval: 2000,
                 pauseOnHover: false,
                 pagination: false,
                 breakpoints: {
@@ -84,10 +93,9 @@ export const PhoneDashboardSplide = () => {
                 perMove: 1,
                 gap: "1rem",
                 autoplay: true,
-                interval: 2000, // auto scroll every 3s
+                interval: 2000,
                 pauseOnHover: false,
-
-                direction: "rtl", // reverse direction
+                direction: "rtl",
                 pagination: false,
                 breakpoints: {
                   1024: { perPage: 2 },
