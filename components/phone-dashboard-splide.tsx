@@ -13,13 +13,13 @@ export const PhoneDashboardSplide = () => {
   return (
     <FadeRise>
       {/* ✅ Hide Splide arrows only on mobile */}
-      <style jsx global>{`
+      {/* <style jsx global>{`
         @media (max-width: 768px) {
           .splide__arrows {
             display: none !important;
           }
         }
-      `}</style>
+      `}</style> */}
 
       <section className="space-y-6 max-md:space-y-4 flex flex-col items-center relative md:text-center w-full">
         <FadeRise>

@@ -76,7 +76,7 @@ export default function Home() {
   ];
 
   return (
-    <main className="space-y-24 relative overflow-hidden max-w-full min-w-0 px-6 max-md:px-5 ">
+    <main className="space-y-16 max-md:space-y-12 relative overflow-hidden max-w-full min-w-0 px-4 max-md:px-5">
       <Image
         className="absolute inset-0 w-full md:h-[150vh] max-md:h-[80vh] object-cover md:rotate-30 rotate-animation-slow md:scale-110 max-md:scale-100 z-[-1] overflow-visible pointer-events-none"
         src="/bggradient.png"
@@ -89,18 +89,18 @@ export default function Home() {
 
       <section
         id="hero"
-        className=" flex flex-col pt-8 max-md:pt-4 px-16 max-md:px-5 "
+        className="flex flex-col  max-md:pt-4 px-6 max-md:px-5"
       >
         <motion.div
           initial={{ y: 32, filter: "blur(6px)", opacity: 0 }}
           animate={{ y: 0, filter: "blur(0px)", opacity: 1 }}
           transition={{ duration: 1, delay: 0.45 }}
-          className="w-full pb-0 max-md:pb-0 min-h-screen flex justify-center items-center max-md:items-center max-md:justify-center"
+          className="w-full pb-0 max-md:pb-0 min-h-[85vh] max-md:min-h-[80vh] flex justify-center items-center max-md:items-center max-md:justify-center"
         >
           {/* Two-column grid */}
-          <div className="flex flex-col md:flex-row items-start justify-center gap-8 w-full  max-md:mt-2 ">
+          <div className="flex flex-col md:flex-row items-start justify-center gap-6 max-md:gap-4 w-full max-md:mt-2">
             {/* Left-side text */}
-            <div className="flex w-full md:w-1/2 flex-col items-start justify-center text-left max-md:text-center max-md:items-center space-y-6 max-md:space-y-4 order-1 ">
+            <div className="flex w-full md:w-1/2 flex-col items-start justify-center text-left max-md:text-center max-md:items-center space-y-4 max-md:space-y-3 order-1">
               <motion.h1
                 className="text-6xl max-md:text-3xl font-semibold"
                 initial={{ y: 30, filter: "blur(4px)", opacity: 0 }}
@@ -129,7 +129,7 @@ export default function Home() {
             </div>
 
             {/* Right-side image */}
-            <div className="flex w-full md:w-1/2 flex-col items-center justify-start order-2 space-y-6">
+            <div className="flex w-full md:w-1/2 flex-col items-center justify-start order-2 space-y-4 max-md:space-y-3">
               <Image
                 src="/result.png"
                 width={900}
@@ -146,7 +146,7 @@ export default function Home() {
           initial={{ y: 32, filter: "blur(6px)", opacity: 0 }}
           animate={{ y: 0, filter: "blur(0px)", opacity: 1 }}
           transition={{ duration: 1, delay: 0.45 }}
-          className="w-full pb-0 max-md:pb-0 space-y-8  max-md:mt-10"
+          className="w-full pb-0 max-md:pb-0 space-y-6 max-md:space-y-4 max-md:mt-8"
         >
           <p className="text-5xl max-md:text-2xl text-center font-semibold px-2">
             Trusted by Performance Coaches Behind Today's <br />
@@ -378,7 +378,7 @@ export default function Home() {
       </section>
 
       {/* Comparison Illustration (new section) */}
-      <section className="relative mx-auto max-w-7xl px-8 max-md:px-4 py-32 max-md:py-20 rounded-[48px] bg-gradient-to-b from-white/10 via-white/5 to-pink-500/10 border border-white/20 shadow-[0_8px_40px_-12px_rgba(236,72,153,0.25)] overflow-hidden flex flex-col md:flex-row justify-start items-start max-md:space-y-8 max-md:mx-5">
+      <section className="relative mx-auto max-w-7xl px-8 max-md:px-4 py-12 max-md:py-8 rounded-[48px] bg-gradient-to-b from-white/10 via-white/5 to-pink-500/10 border border-white/20 shadow-[0_8px_40px_-12px_rgba(236,72,153,0.25)] overflow-hidden flex flex-col md:flex-row justify-start items-start max-md:space-y-8 max-md:mx-5">
         <div className="pointer-events-none absolute -top-32 -left-32 w-[420px] h-[420px] bg-gradient-to-br from-theme/30 to-pink-500/30 blur-3xl opacity-40" />
         <div className="pointer-events-none absolute bottom-0 -right-20 w-[360px] h-[360px] bg-gradient-to-br from-pink-400/40 to-blue-400/40 blur-3xl opacity-40" />
         <div className="relative space-y-10 w-full md:w-1/2 text-left">
@@ -710,9 +710,9 @@ export default function Home() {
         </div>
       </section>
       {/* CTA CURVE */}
-      <section className="relative flex flex-col md:flex-row items-start md:items-center justify-start gap-16 px-6 md:px-12">
+      <section className="relative flex flex-col md:flex-row items-start md:items-center justify-start gap-8 max-md:gap-6 px-6 md:px-12">
         {/* White Curve Card */}
-        <FadeRise className="bg-white text-black rounded-2xl md:rounded-r-[300px] p-16 max-md:p-8 flex flex-col items-center justify-center relative overflow-hidden min-h-[400px] w-full md:w-[65%] lg:w-[60%] xl:w-[55%] -translate-x-8 md:-translate-x-16">
+        <FadeRise className="bg-white text-black rounded-2xl md:rounded-r-[300px] p-12 max-md:p-6 flex flex-col items-center justify-center relative overflow-hidden min-h-[400px] max-md:min-h-[300px] w-full md:w-[65%] lg:w-[60%] xl:w-[55%] max-md:translate-x-0 -translate-x-8 md:-translate-x-16">
           <h2 className="text-5xl max-md:text-3xl font-semibold text-center leading-tight mb-6 max-w-3xl">
             Turn Your Expertise into a potential 5x to 10x Return
           </h2>
@@ -730,7 +730,7 @@ export default function Home() {
         </FadeRise>
 
         {/* Right-side column */}
-        <div className="flex flex-col gap-6 w-full md:w-[35%] lg:w-[40%] xl:w-[45%] items-start">
+        <div className="flex flex-col gap-4 max-md:gap-3 w-full md:w-[35%] lg:w-[40%] xl:w-[45%] items-start max-md:items-center">
           {[
             "Instantly add high-value, data-driven programs.",
             "Confidently introduce premium revenue streams.",
@@ -738,7 +738,7 @@ export default function Home() {
             <FadeRise
               delay={0.15 + i * 0.1}
               key={i}
-              className="bg-[#1a1a1a] border border-white/20 rounded-3xl px-8 py-6 relative w-full max-w-[360px] md:max-w-[400px] lg:max-w-[440px] transition-all"
+              className="bg-[#1a1a1a] border border-white/20 rounded-3xl px-6 max-md:px-4 py-4 max-md:py-3 relative w-full max-w-[360px] md:max-w-[400px] lg:max-w-[440px] transition-all"
             >
               <div className="absolute left-6 top-6 w-[3px] h-16 bg-theme rounded-full" />
               <p className="pl-10 text-lg leading-relaxed text-white">

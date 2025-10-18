@@ -133,3 +133,18 @@ html {
   font-optical-sizing: auto;
   font-style: normal;
 }
+/* CTA Curve section mobile fixes */
+@media (max-width: 767px) {
+  /* Ensure no negative margins on mobile for CTA section */
+  .bg-white.rounded-2xl {
+    transform: translateX(0) !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  
+  /* Fix spacing in CTA section */
+  section:has(.bg-white.rounded-2xl) {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+}
