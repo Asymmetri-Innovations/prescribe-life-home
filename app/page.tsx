@@ -740,8 +740,8 @@ export default function Home() {
               key={i}
               className="bg-[#1a1a1a] border border-white/20 rounded-3xl px-6 max-md:px-4 py-4 max-md:py-3 relative w-full max-w-[360px] md:max-w-[400px] lg:max-w-[440px] transition-all"
             >
-              <div className="absolute left-6 top-6 w-[3px] h-16 bg-theme rounded-full" />
-              <p className="pl-10 text-lg leading-relaxed text-white">
+              <div className="absolute left-6 top-6 w-[3px] h-12 max-md:h-10 bg-theme rounded-full" />
+              <p className="pl-10 text-lg max-md:text-base leading-relaxed text-white">
                 <span className="text-pink-400 font-semibold">
                   {t.split(" ")[0]}
                 </span>{" "}
