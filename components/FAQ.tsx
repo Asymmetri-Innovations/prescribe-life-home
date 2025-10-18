@@ -132,7 +132,7 @@ export default function FAQ({ classname }: { classname?: string }) {
                         ease: [0.04, 0.62, 0.23, 0.98],
                       }}
                     >
-                      <div className="pt-4 max-md:pt-2 text-zinc-300 leading-relaxed max-md:text-xs">
+                      <div className="pt-4 max-md:pt-2 text-zinc-300 text-base max-md:text-sm leading-[1.7]">
                         {item.answer}
                       </div>
                     </motion.div>
@@ -184,7 +184,7 @@ export default function FAQ({ classname }: { classname?: string }) {
                           ease: [0.04, 0.62, 0.23, 0.98],
                         }}
                       >
-                        <div className="pt-4 max-md:pt-2 text-zinc-300 leading-relaxed max-md:text-xs">
+                        <div className="pt-4 max-md:pt-2 text-zinc-300 text-base max-md:text-sm leading-[1.7]">
                           {item.answer}
                         </div>
                       </motion.div>
