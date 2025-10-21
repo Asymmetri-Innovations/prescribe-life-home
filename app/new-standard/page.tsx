@@ -52,7 +52,7 @@ export default function NewStandard() {
           >
             <div className="flex w-full flex-col items-center justify-center text-center mx-auto space-y-2 max-md:space-y-1">
               <motion.h1
-                className="text-6xl md:text-5xl max-md:text-3xl font-semibold text-center leading-tight max-md:leading-tight"
+                className="text-6xl md:text-5xl max-md:text-2xl font-semibold text-center leading-tight max-md:leading-tight"
                 initial={{ y: 30, filter: "blur(4px)", opacity: 0 }}
                 animate={{ y: 0, filter: "blur(0px)", opacity: 1 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
@@ -62,7 +62,7 @@ export default function NewStandard() {
               </motion.h1>
 
               <motion.p
-                className="text-lg max-md:text-base inter text-center w-full max-w-4xl mt-0 px-2"
+                className="text-lg max-md:text-sm inter text-center w-full max-w-4xl mt-0 px-2"
                 initial={{ y: 24, filter: "blur(4px)", opacity: 0 }}
                 animate={{ y: 0, filter: "blur(0px)", opacity: 1 }}
                 transition={{ duration: 0.75, delay: 0.15, ease: "easeOut" }}
@@ -81,12 +81,12 @@ export default function NewStandard() {
         </section>
 
         {/* WHY IT MATTERS */}
-        <section className="relative mx-auto max-w-7xl px-8 max-md:px-4 py-4 max-md:py-3 -mt-12 max-md:-mt-8">
+        <section className="relative mx-auto max-w-7xl px-8 max-md:px-4 py-4 max-md:py-3 -mt-8 max-md:-mt-12">
           <FadeRise className="text-center space-y-1">
-            <h2 className="text-5xl max-md:text-3xl font-semibold">
+            <h2 className="text-5xl max-md:text-2xl font-semibold">
               Why it matters
             </h2>
-            <div className="text-theme text-3xl max-md:text-xl font-semibold">
+            <div className="text-theme text-3xl max-md:text-lg font-semibold">
               Here's Why
             </div>
           </FadeRise>
@@ -95,12 +95,12 @@ export default function NewStandard() {
             {/* Text content - spans 1 column */}
             <FadeRise className="col-span-1 max-md:col-span-1">
               <div className="space-y-6 max-md:space-y-4 leading-relaxed text-left max-md:text-center">
-                <p className="text-lg max-md:text-base">
+                <p className="text-lg max-md:text-sm">
                   Traditional coaching often stops at goals and accountability,
                   missing the hidden stress and recovery patterns that shape
                   outcomes.
                 </p>
-                <p className="text-theme font-semibold text-lg max-md:text-base">
+                <p className="text-theme font-semibold text-lg max-md:text-sm">
                   The new standard brings resilience science, biometric data,
                   and adaptive support into every client journey.
                 </p>
@@ -125,7 +125,7 @@ export default function NewStandard() {
         {/* ESSENTIALS OF THE NEW STANDARD */}
         <section className="flex flex-col items-center space-y-8 max-md:space-y-6">
           <FadeRise delay={0.6}>
-            <div className="text-5xl max-md:text-3xl text-center font-semibold">
+            <div className="text-5xl max-md:text-2xl text-center font-semibold">
               The Essentials of the{" "}
               <span className="text-theme">New Standard</span>
             </div>
@@ -150,10 +150,10 @@ export default function NewStandard() {
                 delay={i * 0.12}
                 className="rounded-2xl p-4 md:p-5 max-md:p-3 border border-white/20 bg-gradient-to-b from-zinc-800/70 to-black/90 shadow-[0_8px_30px_-12px_rgba(0,0,0,0.5)] space-y-2 max-md:space-y-1.5 flex flex-col h-full min-h-[160px] max-md:min-h-[120px]"
               >
-                <h3 className="text-white font-semibold text-2xl md:text-3xl max-md:text-lg leading-tight">
+                <h3 className="text-white font-semibold text-2xl md:text-3xl max-md:text-base leading-tight">
                   {c.titleLines[0]} <br /> {c.titleLines[1]}
                 </h3>
-                <p className="text-white/80 text-sm md:text-base max-md:text-sm leading-snug max-md:leading-tight inter flex-1">
+                <p className="text-white/80 text-sm md:text-base max-md:text-xs leading-snug max-md:leading-tight inter flex-1">
                   {c.body}
                 </p>
               </FadeRise>
@@ -164,7 +164,7 @@ export default function NewStandard() {
         {/* NEEDED TO DELIVER IT */}
         <section className="flex flex-col items-center space-y-8 max-md:space-y-6">
           <FadeRise>
-            <h2 className="text-5xl max-md:text-3xl font-semibold text-center">
+            <h2 className="text-5xl max-md:text-2xl font-semibold text-center">
               What is needed to <span className="text-theme">Deliver it ?</span>
             </h2>
           </FadeRise>
@@ -188,10 +188,10 @@ export default function NewStandard() {
                 delay={i * 0.12}
                 className="rounded-2xl p-3 md:p-4 max-md:p-2.5 border border-white/20 bg-gradient-to-b from-zinc-800/70 to-black/90 shadow-[0_8px_30px_-12px_rgba(0,0,0,0.5)] space-y-1.5 max-md:space-y-1 flex flex-col h-full min-h-[140px] max-md:min-h-[100px]"
               >
-                <h3 className="text-white font-semibold text-2xl md:text-3xl max-md:text-lg leading-tight">
+                <h3 className="text-white font-semibold text-2xl md:text-3xl max-md:text-base leading-tight">
                   {c.titleLines.join(" ")}
                 </h3>
-                <p className="text-white/80 text-sm md:text-base max-md:text-sm leading-snug max-md:leading-tight inter flex-1">
+                <p className="text-white/80 text-sm md:text-base max-md:text-xs leading-snug max-md:leading-tight inter flex-1">
                   {c.body}
                 </p>
               </FadeRise>
