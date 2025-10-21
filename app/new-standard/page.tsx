@@ -129,7 +129,7 @@ export default function Home() {
               <span className="text-theme">New Standard</span>
             </div>
           </FadeRise>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-md:gap-4 max-w-6xl w-full px-8 max-md:px-4 mt-8 max-md:mt-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-md:gap-3 max-w-6xl w-full px-6 max-md:px-4 mt-6 max-md:mt-4">
             {[
               {
                 titleLines: ["Adaptive", "Coaching"],
@@ -147,12 +147,12 @@ export default function Home() {
               <FadeRise
                 key={c.titleLines.join("-")}
                 delay={i * 0.12}
-                className="rounded-2xl p-6 md:p-7 border border-white/20 bg-gradient-to-b from-zinc-800/70 to-black/90 shadow-[0_8px_30px_-12px_rgba(0,0,0,0.5)] space-y-3 flex flex-col h-full min-h-[200px]"
+                className="rounded-2xl p-4 md:p-5 max-md:p-3 border border-white/20 bg-gradient-to-b from-zinc-800/70 to-black/90 shadow-[0_8px_30px_-12px_rgba(0,0,0,0.5)] space-y-2 max-md:space-y-1.5 flex flex-col h-full min-h-[160px] max-md:min-h-[120px]"
               >
-                <h3 className="text-white font-semibold text-3xl max-md:text-xl leading-snug">
+                <h3 className="text-white font-semibold text-2xl md:text-3xl max-md:text-lg leading-tight">
                   {c.titleLines[0]} <br /> {c.titleLines[1]}
                 </h3>
-                <p className="text-white/80 text-base max-md:text-sm leading-relaxed inter flex-1">
+                <p className="text-white/80 text-sm md:text-base max-md:text-sm leading-snug max-md:leading-tight inter flex-1">
                   {c.body}
                 </p>
               </FadeRise>
@@ -167,7 +167,7 @@ export default function Home() {
               What is needed to <span className="text-theme">Deliver it ?</span>
             </h2>
           </FadeRise>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-md:gap-4 max-w-6xl w-full px-8 max-md:px-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-md:gap-3 max-w-6xl w-full px-6 max-md:px-4">
             {[
               {
                 titleLines: ["Right", "System"],
@@ -185,12 +185,12 @@ export default function Home() {
               <FadeRise
                 key={c.titleLines.join("-")}
                 delay={i * 0.12}
-                className="rounded-2xl p-6 md:p-7 border border-white/20 bg-gradient-to-b from-zinc-800/70 to-black/90 shadow-[0_8px_30px_-12px_rgba(0,0,0,0.5)] space-y-3 flex flex-col h-full min-h-[200px]"
+                className="rounded-2xl p-3 md:p-4 max-md:p-2.5 border border-white/20 bg-gradient-to-b from-zinc-800/70 to-black/90 shadow-[0_8px_30px_-12px_rgba(0,0,0,0.5)] space-y-1.5 max-md:space-y-1 flex flex-col h-full min-h-[140px] max-md:min-h-[100px]"
               >
-                <h3 className="text-white font-semibold text-3xl max-md:text-xl leading-snug">
+                <h3 className="text-white font-semibold text-2xl md:text-3xl max-md:text-lg leading-tight">
                   {c.titleLines.join(" ")}
                 </h3>
-                <p className="text-white/80 text-base max-md:text-sm leading-relaxed inter flex-1">
+                <p className="text-white/80 text-sm md:text-base max-md:text-sm leading-snug max-md:leading-tight inter flex-1">
                   {c.body}
                 </p>
               </FadeRise>

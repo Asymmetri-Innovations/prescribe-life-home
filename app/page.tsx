@@ -823,10 +823,10 @@ export default function Home() {
               <div className="w-9 h-9 max-md:w-8 max-md:h-8 bg-theme/20 rounded-lg flex items-center justify-center">
                 <c.icon className="w-4 h-4 max-md:w-4 max-md:h-4 text-theme" />
               </div>
-              <h3 className="text-2xl md:text-3xl max-md:text-lg font-semibold">
+              <h3 className="text-xl md:text-2xl max-md:text-lg font-semibold">
                 {c.title}
               </h3>
-              <p className="text-zinc-400 text-sm md:text-base leading-snug max-md:leading-tight inter">
+              <p className="text-zinc-400 text-sm leading-tight inter">
                 {c.body}
               </p>
             </FadeRise>
