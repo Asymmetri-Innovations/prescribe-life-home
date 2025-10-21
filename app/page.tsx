@@ -290,27 +290,14 @@ export default function Home() {
         {/* First block */}
         <div className="space-y-12 max-md:space-y-8 max-md:text-center">
           <FadeRise>
-            <h2 className="text-5xl max-md:text-3xl leading-tight font-semibold">
+            <h2 className="text-5xl max-md:text-3xl leading-tight font-semibold text-center">
               Are Weekly Check-ins and Client Self-Reporting Still Enough?
             </h2>
           </FadeRise>
 
           <div className="relative grid md:grid-cols-2 gap-12 items-start max-md:items-center">
-            {/* Pink hue background */}
-
-            {/* Image */}
-            <FadeRise delay={0.05} className="max-md:hidden">
-              <div className="relative z-10 flex justify-start max-md:justify-center">
-                <img
-                  className="rounded-4xl max-w-[80%] md:max-w-[70%] mx-auto grayscale "
-                  src="/logo.jpg"
-                  alt="coach context"
-                />
-              </div>
-            </FadeRise>
-
-            {/* Text */}
-            <FadeRise delay={0.12}>
+            {/* Text - Now on the left */}
+            <FadeRise delay={0.05}>
               <div className="space-y-5 max-md:space-y-3 text-base max-md:text-sm leading-relaxed">
                 <h3 className="text-3xl max-md:text-xl font-semibold">
                   You excel in the moment
@@ -341,6 +328,19 @@ export default function Home() {
                 </p>
               </div>
             </FadeRise>
+
+            {/* Image - Now on the right */}
+            <FadeRise delay={0.12} className="max-md:hidden">
+              <div className="relative z-10 flex justify-center max-md:justify-center">
+                <Image
+                  src="/coaching-in-dark.png"
+                  alt="Coaching in the Dark - Before PrescribeLife.AI"
+                  width={400}
+                  height={500}
+                  className="rounded-3xl max-w-[80%] md:max-w-[70%] mx-auto"
+                />
+              </div>
+            </FadeRise>
           </div>
         </div>
 
@@ -366,10 +366,12 @@ export default function Home() {
           <FadeRise delay={0.1} className="max-md:hidden">
             <div className="relative">
               <div className="space-y-6 relative z-10 flex flex-col items-center">
-                <img
-                  src="/logo.jpg"
-                  alt="fusion"
-                  className="ring-1 ring-white/10 rounded-4xl max-w-[80%] md:max-w-[70%] mx-auto"
+                <Image
+                  src="/coaching-clarity.png"
+                  alt="Coaching with Clarity - After PrescribeLife.AI"
+                  width={400}
+                  height={500}
+                  className="rounded-3xl max-w-[80%] md:max-w-[70%] mx-auto"
                 />
               </div>
             </div>
@@ -444,76 +446,30 @@ export default function Home() {
       <PhoneDashboardSplide />
 
       {/* BEFORE / AFTER */}
-      <section className="grid grid-cols-1 md:grid-cols-2 gap-16 max-md:gap-8 max-w-6xl mx-auto px-8 max-md:px-4">
-        {/* Left column: Before content now */}
+      <section className="grid grid-cols-1 md:grid-cols-2 gap-8 max-md:gap-4 max-w-6xl mx-auto px-8 max-md:px-4">
+        {/* Left column: Before image */}
         <FadeRise className="h-full" delay={0.15}>
-          <div className="bg-gradient-to-b from-white/15 to-white/20 rounded-3xl p-12 max-md:p-6 border-2 border-white/20 relative overflow-hidden w-full h-full flex flex-col">
-            <img
-              className="absolute bottom-1 right-1 w-28 max-md:w-24"
-              src="/carddesign2.png"
-              alt="decor2"
+          <div className="w-full h-full flex items-center justify-center">
+            <Image
+              src="/before.png"
+              alt="Before - The Manual, Reactive Grind"
+              width={600}
+              height={400}
+              className="w-full h-auto rounded-3xl"
             />
-            <div className="relative z-10 space-y-8 flex-1">
-              <div>
-                <h2 className="text-5xl max-md:text-3xl font-bold text-white mb-2">
-                  Before
-                </h2>
-                <p className="text-5xl max-md:text-3xl text-zinc-400">
-                  The Manual,
-                  <br />
-                  Reactive Grind
-                </p>
-              </div>
-              {[
-                "You have a great session based on what the client reports",
-                "You assign practices—hoping they remember",
-                "You wait two weeks blind to daily struggles",
-                "You chase for updates or messy exports",
-              ].map((t, i) => (
-                <div className="flex items-start gap-3" key={i}>
-                  <div className="w-1 h-10 bg-theme rounded-full mt-1" />
-                  <p className="text-white leading-relaxed text-lg max-md:text-base">
-                    {t}
-                  </p>
-                </div>
-              ))}
-            </div>
           </div>
         </FadeRise>
 
-        {/* Right column: After content now */}
+        {/* Right column: After image */}
         <FadeRise className="h-full">
-          <div className="rounded-3xl p-12 pb-6 max-md:p-6 border-2 border-white/20 relative overflow-hidden w-full h-full flex flex-col">
-            <img
-              className="absolute top-4 right-4 w-32 max-md:w-24"
-              src="/carddesgn.png"
-              alt="decor"
+          <div className="w-full h-full flex items-center justify-center">
+            <Image
+              src="/after.png"
+              alt="After - The Automatic, Proactive System"
+              width={600}
+              height={400}
+              className="w-full h-auto rounded-3xl"
             />
-            <div className="relative z-10 space-y-8 flex-1">
-              <div>
-                <h2 className="text-5xl max-md:text-3xl font-bold text-white mb-2">
-                  After
-                </h2>
-                <p className="text-5xl max-md:text-3xl text-zinc-400">
-                  The Automatic,
-                  <br />
-                  Proactive System
-                </p>
-              </div>
-              {[
-                "Biometric data streams to your dashboard",
-                "Adaptive system supports change 24/7",
-                "AI surfaces what to focus",
-                "You coach with precision & foresight",
-              ].map((t, i) => (
-                <div className="flex items-start gap-3" key={i}>
-                  <div className="w-1 h-10 bg-theme rounded-full mt-1" />
-                  <p className="text-white leading-relaxed text-lg max-md:text-base">
-                    {t}
-                  </p>
-                </div>
-              ))}
-            </div>
           </div>
         </FadeRise>
       </section>
