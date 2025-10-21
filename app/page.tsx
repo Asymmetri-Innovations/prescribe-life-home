@@ -38,7 +38,6 @@ import { PhoneDashboardSplide } from "@/components/phone-dashboard-splide";
 import { MakeYouHuman } from "@/components/MakeYouHuman";
 import { MeetingTheUrgentDemand } from "@/components/MeetingTheUrgentDemand";
 import { AmplifyHumanTouch } from "@/components/AmplifyHumanTouch";
-import { StaircaseCards } from "@/components/StaircaseCards";
 
 // Mild, performant animation helper
 const list = [
@@ -458,8 +457,8 @@ export default function Home() {
             <Image
               src="/before.png"
               alt="Before - The Manual, Reactive Grind"
-              width={600}
-              height={400}
+              width={800}
+              height={600}
               className="w-full h-auto rounded-3xl"
             />
           </div>
@@ -471,8 +470,8 @@ export default function Home() {
             <Image
               src="/after.png"
               alt="After - The Automatic, Proactive System"
-              width={600}
-              height={400}
+              width={800}
+              height={600}
               className="w-full h-auto rounded-3xl"
             />
           </div>
@@ -623,20 +622,14 @@ export default function Home() {
         <FadeRise>
           <Title
             text="In Your First 10-14 Days, You Will"
-            className="text-5xl max-md:text-3xl mx-5 text-left"
+            className="text-5xl max-md:text-3xl mx-5 text-left my-5"
           />
         </FadeRise>
       </section>
 
       {/* ONBOARD BENEFITS */}
 
-      {/* <section className="flex flex-col items-center mx-32 max-md:mx-0 px-6 max-md:px-5 -mt-20 max-md:-mt-8">
-        <div className="flex w-full px-16 max-md:px-4 justify-start ">
-          <Title
-            text="In Your First 10-14 Days, You Will"
-            className="text-5xl max-md:text-3xl "
-          />
-        </div>
+      <section className="flex flex-col items-center mx-32 max-md:mx-0 px-6 max-md:px-5 -mt-20 max-md:-mt-8">
         <div className="w-full px-8 max-md:px-5 mt-8 max-md:mt-4">
           <div className="relative grid grid-cols-1 md:grid-cols-3 md:grid-rows-3 gap-2 w-full max-w-3xl mx-auto place-items-center">
             {[
@@ -675,8 +668,8 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </section> */}
-      <StaircaseCards />
+      </section>
+
       {/* CTA CURVE */}
       <section className="relative flex flex-col md:flex-row items-start md:items-center justify-start gap-8 max-md:gap-6 px-6 md:px-12">
         {/* White Curve Card */}
