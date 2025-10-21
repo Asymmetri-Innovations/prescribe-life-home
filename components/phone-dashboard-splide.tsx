@@ -107,14 +107,14 @@ export const PhoneDashboardSplide = () => {
               {["/DG12.png", "/DG13.png", "/DG14.png", "/DG15.png"].map(
                 (src, index) => (
                   <SplideSlide key={index}>
-                    <div className="w-full h-[280px] max-md:h-[200px] flex items-center justify-center overflow-hidden rounded-xl">
+                    <div className="w-full h-[280px] max-md:h-[200px] flex items-center justify-center rounded-xl p-2">
                       <Image
                         src={src}
                         alt={`Dashboard ${index + 5}`}
                         width={800}
                         height={600}
                         className={`w-full h-full object-contain ${
-                          index === 1 || index === 2 ? "scale-[1.3]" : ""
+                          index === 1 || index === 2 ? "scale-[1.15]" : ""
                         }`}
                       />
                     </div>
