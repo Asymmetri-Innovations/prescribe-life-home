@@ -35,6 +35,7 @@ import {
 } from "@/components/ui/carousel";
 import { PhoneDashboard } from "@/components/phone-dashboard";
 import { PhoneDashboardSplide } from "@/components/phone-dashboard-splide";
+import { MakeYouHuman } from "@/components/MakeYouHuman";
 
 // Mild, performant animation helper
 const list = [
@@ -234,6 +235,8 @@ export default function Home() {
         </div>
       </section>
 
+      {/* MAKE YOU HUMAN */}
+      <MakeYouHuman />
       <div className="max-md:hidden"></div>
       {/* <div className="hidden max-md:block">
         <div className="w-full flex-col justify-center items-center hidden max-md:flex mb-16">
