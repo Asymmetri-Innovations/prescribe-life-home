@@ -37,6 +37,7 @@ import { PhoneDashboard } from "@/components/phone-dashboard";
 import { PhoneDashboardSplide } from "@/components/phone-dashboard-splide";
 import { MakeYouHuman } from "@/components/MakeYouHuman";
 import { MeetingTheUrgentDemand } from "@/components/MeetingTheUrgentDemand";
+import { AmplifyHumanTouch } from "@/components/AmplifyHumanTouch";
 
 // Mild, performant animation helper
 const list = [
@@ -384,7 +385,7 @@ export default function Home() {
       </section>
 
       {/* Comparison Illustration (new section) */}
-      <section className="relative mx-auto max-w-7xl px-8 max-md:px-4 py-12 max-md:py-8 rounded-[48px] bg-gradient-to-b from-white/10 via-white/5 to-pink-500/10 border border-white/20 shadow-[0_8px_40px_-12px_rgba(236,72,153,0.25)] overflow-hidden flex flex-col md:flex-row justify-start items-start max-md:space-y-8 max-md:mx-5">
+      {/* <section className="relative mx-auto max-w-7xl px-8 max-md:px-4 py-12 max-md:py-8 rounded-[48px] bg-gradient-to-b from-white/10 via-white/5 to-pink-500/10 border border-white/20 shadow-[0_8px_40px_-12px_rgba(236,72,153,0.25)] overflow-hidden flex flex-col md:flex-row justify-start items-start max-md:space-y-8 max-md:mx-5">
         <div className="pointer-events-none absolute -top-32 -left-32 w-[420px] h-[420px] bg-gradient-to-br from-theme/30 to-pink-500/30 blur-3xl opacity-40" />
         <div className="pointer-events-none absolute bottom-0 -right-20 w-[360px] h-[360px] bg-gradient-to-br from-pink-400/40 to-blue-400/40 blur-3xl opacity-40" />
         <div className="relative space-y-10 w-full md:w-1/2 text-left">
@@ -444,7 +445,8 @@ export default function Home() {
             </ul>
           </FadeRise>
         </div>
-      </section>
+      </section> */}
+      <AmplifyHumanTouch />
 
       {/* PHONE / DASHBOARD */}
       <PhoneDashboardSplide />

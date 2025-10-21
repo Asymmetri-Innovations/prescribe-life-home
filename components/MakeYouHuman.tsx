@@ -41,9 +41,9 @@ export const MakeYouHuman = () => {
 
             <p>
               PrescribeLife.AI is the{" "}
-              <div className="font-bold">
+              <span className="font-bold">
                 first platform designed not as a replacement,
-              </div>
+              </span>{" "}
               but as an amplifier for your humanity.
             </p>
 
