@@ -36,6 +36,7 @@ import {
 import { PhoneDashboard } from "@/components/phone-dashboard";
 import { PhoneDashboardSplide } from "@/components/phone-dashboard-splide";
 import { MakeYouHuman } from "@/components/MakeYouHuman";
+import { MeetingTheUrgentDemand } from "@/components/MeetingTheUrgentDemand";
 
 // Mild, performant animation helper
 const list = [
@@ -166,7 +167,7 @@ export default function Home() {
           </section>
         </motion.div>
       </section>
-
+      <MeetingTheUrgentDemand />
       <section className="relative max-w-5xl mx-auto px-8 max-md:px-5 text-center space-y-4 sm:space-y-6">
         <FadeRise>
           <p className="text-lg max-md:text-base inter">
