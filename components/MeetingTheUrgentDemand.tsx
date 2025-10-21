@@ -42,9 +42,9 @@ export const MeetingTheUrgentDemand = () => {
 
       {/* Middle text */}
       <FadeRise delay={0.3}>
-        <p className="text-2xl max-md:text-lg text-center text-theme font-semibold inter">
-          "PrescribeLife.AI was built to help coaches meet this urgent need head
-          on."
+        <p className="text-2xl max-md:text-lg text-center text-theme  inter">
+          PrescribeLife.AI was built to help coaches meet this urgent need head
+          on.
         </p>
       </FadeRise>
 

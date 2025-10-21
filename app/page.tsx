@@ -38,6 +38,7 @@ import { PhoneDashboardSplide } from "@/components/phone-dashboard-splide";
 import { MakeYouHuman } from "@/components/MakeYouHuman";
 import { MeetingTheUrgentDemand } from "@/components/MeetingTheUrgentDemand";
 import { AmplifyHumanTouch } from "@/components/AmplifyHumanTouch";
+import { StaircaseCards } from "@/components/StaircaseCards";
 
 // Mild, performant animation helper
 const list = [
@@ -169,6 +170,131 @@ export default function Home() {
         </motion.div>
       </section>
       <MeetingTheUrgentDemand />
+      {/* GAP NARRATIVE */}
+      <section className="max-w-6xl mx-auto px-8 max-md:px-4 space-y-20 max-md:space-y-12">
+        {/* First block */}
+        <div className="space-y-12 max-md:space-y-8 max-md:text-center">
+          <FadeRise>
+            <h2 className="text-5xl max-md:text-3xl leading-tight font-semibold text-center">
+              Are Weekly Check-ins and Client Self-Reporting Still Enough?
+            </h2>
+          </FadeRise>
+
+          <div className="relative grid md:grid-cols-2 gap-12 items-start max-md:items-center">
+            {/* Text - Now on the left */}
+            <FadeRise delay={0.05}>
+              <div className="space-y-5 max-md:space-y-3 text-base max-md:text-sm leading-relaxed">
+                <h3 className="text-3xl max-md:text-xl font-semibold">
+                  You excel in the moment
+                </h3>
+                <p className="text-base max-md:text-sm inter">
+                  During a call, you see the shifts, hear the hesitations, and
+                  guide breakthroughs. Your expertise is undeniable.
+                </p>
+                <p className="text-base max-md:text-sm inter">
+                  But what happens when the call ends?
+                </p>
+                <p className="text-base max-md:text-sm inter">
+                  Your client steps back into a 24/7 reality of hidden
+                  stressors, fluctuating energy shifts, and invisible mindset
+                  blocks.
+                </p>
+                <p className="text-base max-md:text-sm inter">
+                  You're left with week-old self-reporting, piecing together an
+                  incomplete puzzle.
+                </p>
+                <p className="italic text-theme font-bold inter">
+                  "You're coaching the person who shows up to the session, not
+                  the whole person living their life".
+                </p>
+                <p className="text-base max-md:text-sm inter">
+                  This isn't a flaw in your method—it's a limitation of the
+                  traditional model.
+                </p>
+              </div>
+            </FadeRise>
+
+            {/* Image - Now on the right */}
+            <FadeRise delay={0.12} className="max-md:hidden">
+              <div className="relative z-10 flex justify-center items-start h-full">
+                <Image
+                  src="/coaching-in-dark.png"
+                  alt="Coaching in the Dark - Before PrescribeLife.AI"
+                  width={600}
+                  height={700}
+                  className="rounded-3xl w-full h-full object-cover max-h-[500px]"
+                />
+              </div>
+            </FadeRise>
+          </div>
+        </div>
+
+        {/* Second block stays the same */}
+        <div className="grid md:grid-cols-2 gap-12 items-start">
+          <FadeRise>
+            <div className="space-y-6 max-md:text-center">
+              <h3 className="text-3xl max-md:text-xl font-semibold">
+                <span className="text-theme/80">PrescribeLife.AI</span> closes
+                that gap.
+              </h3>
+              <p className="text-base max-md:text-sm inter">
+                We surface real-time, objective data on resilience, recovery,
+                and behavior patterns—fuel for your intuition to drive lasting
+                change.
+              </p>
+              <div className="flex justify-start max-md:justify-center">
+                <CTA classname="w-2xs" />
+              </div>
+            </div>
+          </FadeRise>
+
+          <FadeRise delay={0.1} className="max-md:hidden">
+            <div className="relative h-full">
+              <div className="relative z-10 flex flex-col items-center justify-start h-full">
+                <Image
+                  src="/coaching-clarity.png"
+                  alt="Coaching with Clarity - After PrescribeLife.AI"
+                  width={600}
+                  height={700}
+                  className="rounded-3xl w-full h-full object-cover max-h-[500px]"
+                />
+              </div>
+            </div>
+          </FadeRise>
+        </div>
+      </section>
+      {/* STEPS */}
+      <section className="flex flex-col items-center space-y-8 max-md:space-y-4">
+        <FadeRise>
+          <Title
+            text="Powerful Insights, Radically Simple to Use"
+            className="text-5xl max-md:text-3xl mx-5 text-center"
+          />
+        </FadeRise>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl w-full px-6 max-md:px-4">
+          {steps.map((step, i) => (
+            <FadeRise key={step.id} delay={i * 0.12}>
+              <MagicCard>
+                <div className="h-[400px] rounded-2xl p-8 border border-white/10 relative overflow-hidden space-y-6 max-md:space-y-4">
+                  <div className="absolute top-6 right-6 text-6xl max-md:text-4xl font-bold text-white/30 opacity-50">
+                    {step.id}
+                  </div>
+                  <step.icon size={60} className="text-theme" />
+                  <h3 className="text-[20px] max-md:text-2xl font-semibold text-white">
+                    {step.title}
+                  </h3>
+                  <p className="text-base max-md:text-sm inter">
+                    {step.description}
+                  </p>
+                  <p className="text-base max-md:text-sm font-medium inter">
+                    {step.subtitle}
+                  </p>
+                </div>
+              </MagicCard>
+            </FadeRise>
+          ))}
+        </div>
+      </section>
       <section className="relative max-w-5xl mx-auto px-8 max-md:px-5 text-center space-y-4 sm:space-y-6">
         <FadeRise>
           <p className="text-lg max-md:text-base inter">
@@ -203,39 +329,6 @@ export default function Home() {
         </FadeRise>
         
       </section> */}
-
-      {/* STEPS */}
-      <section className="flex flex-col items-center space-y-8 max-md:space-y-4">
-        <FadeRise>
-          <Title
-            text="Powerful Insights, Radically Simple to Use"
-            className="text-5xl max-md:text-3xl mx-5 text-center"
-          />
-        </FadeRise>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl w-full px-6 max-md:px-4">
-          {steps.map((step, i) => (
-            <FadeRise key={step.id} delay={i * 0.12}>
-              <MagicCard>
-                <div className="h-[400px] rounded-2xl p-8 border border-white/10 relative overflow-hidden space-y-6 max-md:space-y-4">
-                  <div className="absolute top-6 right-6 text-6xl max-md:text-4xl font-bold text-white/30 opacity-50">
-                    {step.id}
-                  </div>
-                  <step.icon size={60} className="text-theme" />
-                  <h3 className="text-[20px] max-md:text-2xl font-semibold text-white">
-                    {step.title}
-                  </h3>
-                  <p className="text-base max-md:text-sm inter">
-                    {step.description}
-                  </p>
-                  <p className="text-base max-md:text-sm font-medium inter">
-                    {step.subtitle}
-                  </p>
-                </div>
-              </MagicCard>
-            </FadeRise>
-          ))}
-        </div>
-      </section>
 
       {/* MAKE YOU HUMAN */}
       <MakeYouHuman />
@@ -289,100 +382,6 @@ export default function Home() {
           ></motion.div>
         </div>
       </div> */}
-
-      {/* GAP NARRATIVE */}
-      <section className="max-w-6xl mx-auto px-8 max-md:px-4 space-y-20 max-md:space-y-12">
-        {/* First block */}
-        <div className="space-y-12 max-md:space-y-8 max-md:text-center">
-          <FadeRise>
-            <h2 className="text-5xl max-md:text-3xl leading-tight font-semibold text-center">
-              Are Weekly Check-ins and Client Self-Reporting Still Enough?
-            </h2>
-          </FadeRise>
-
-          <div className="relative grid md:grid-cols-2 gap-12 items-start max-md:items-center">
-            {/* Text - Now on the left */}
-            <FadeRise delay={0.05}>
-              <div className="space-y-5 max-md:space-y-3 text-base max-md:text-sm leading-relaxed">
-                <h3 className="text-3xl max-md:text-xl font-semibold">
-                  You excel in the moment
-                </h3>
-                <p className="text-base max-md:text-sm inter">
-                  During a call, you see the shifts, hear the hesitations, and
-                  guide breakthroughs. Your expertise is undeniable.
-                </p>
-                <p className="text-base max-md:text-sm inter">
-                  But what happens when the call ends?
-                </p>
-                <p className="text-base max-md:text-sm inter">
-                  Your client steps back into a 24/7 reality of hidden
-                  stressors, fluctuating energy shifts, and invisible mindset
-                  blocks.
-                </p>
-                <p className="text-base max-md:text-sm inter">
-                  You're left with week-old self-reporting, piecing together an
-                  incomplete puzzle.
-                </p>
-                <p className="italic text-theme font-bold inter">
-                  "You're coaching the person who shows up to the session, not
-                  the whole person living their life".
-                </p>
-                <p className="text-base max-md:text-sm inter">
-                  This isn't a flaw in your method—it's a limitation of the
-                  traditional model.
-                </p>
-              </div>
-            </FadeRise>
-
-            {/* Image - Now on the right */}
-            <FadeRise delay={0.12} className="max-md:hidden">
-              <div className="relative z-10 flex justify-center max-md:justify-center">
-                <Image
-                  src="/coaching-in-dark.png"
-                  alt="Coaching in the Dark - Before PrescribeLife.AI"
-                  width={400}
-                  height={500}
-                  className="rounded-3xl max-w-[80%] md:max-w-[70%] mx-auto"
-                />
-              </div>
-            </FadeRise>
-          </div>
-        </div>
-
-        {/* Second block stays the same */}
-        <div className="grid md:grid-cols-2 gap-12 items-start">
-          <FadeRise>
-            <div className="space-y-6 max-md:text-center">
-              <h3 className="text-3xl max-md:text-xl font-semibold">
-                <span className="text-theme/80">PrescribeLife.AI</span> closes
-                that gap.
-              </h3>
-              <p className="text-base max-md:text-sm inter">
-                We surface real-time, objective data on resilience, recovery,
-                and behavior patterns—fuel for your intuition to drive lasting
-                change.
-              </p>
-              <div className="flex justify-start max-md:justify-center">
-                <CTA classname="w-2xs" />
-              </div>
-            </div>
-          </FadeRise>
-
-          <FadeRise delay={0.1} className="max-md:hidden">
-            <div className="relative">
-              <div className="space-y-6 relative z-10 flex flex-col items-center">
-                <Image
-                  src="/coaching-clarity.png"
-                  alt="Coaching with Clarity - After PrescribeLife.AI"
-                  width={400}
-                  height={500}
-                  className="rounded-3xl max-w-[80%] md:max-w-[70%] mx-auto"
-                />
-              </div>
-            </div>
-          </FadeRise>
-        </div>
-      </section>
 
       {/* Comparison Illustration (new section) */}
       {/* <section className="relative mx-auto max-w-7xl px-8 max-md:px-4 py-12 max-md:py-8 rounded-[48px] bg-gradient-to-b from-white/10 via-white/5 to-pink-500/10 border border-white/20 shadow-[0_8px_40px_-12px_rgba(236,72,153,0.25)] overflow-hidden flex flex-col md:flex-row justify-start items-start max-md:space-y-8 max-md:mx-5">
@@ -620,12 +619,18 @@ export default function Home() {
               </p>
             </div>
           </FadeRise>
-        </div>
+        </div>{" "}
+        <FadeRise>
+          <Title
+            text="In Your First 10-14 Days, You Will"
+            className="text-5xl max-md:text-3xl mx-5 text-left"
+          />
+        </FadeRise>
       </section>
 
       {/* ONBOARD BENEFITS */}
 
-      <section className="flex flex-col items-center mx-32 max-md:mx-0 px-6 max-md:px-5 -mt-20 max-md:-mt-8">
+      {/* <section className="flex flex-col items-center mx-32 max-md:mx-0 px-6 max-md:px-5 -mt-20 max-md:-mt-8">
         <div className="flex w-full px-16 max-md:px-4 justify-start ">
           <Title
             text="In Your First 10-14 Days, You Will"
@@ -670,7 +675,8 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
+      <StaircaseCards />
       {/* CTA CURVE */}
       <section className="relative flex flex-col md:flex-row items-start md:items-center justify-start gap-8 max-md:gap-6 px-6 md:px-12">
         {/* White Curve Card */}
