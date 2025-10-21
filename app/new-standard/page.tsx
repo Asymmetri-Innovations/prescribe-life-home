@@ -27,7 +27,7 @@ const steps = [
   },
 ];
 
-export default function Home() {
+export default function NewStandard() {
   return (
     <div>
       <main className="space-y-12 max-md:space-y-8 relative overflow-hidden max-w-full min-w-0 px-6 max-md:px-5">
@@ -42,17 +42,17 @@ export default function Home() {
         {/* HERO */}
         <section
           id="hero"
-          className="flex flex-col pt-10 max-md:pt-8 px-6 max-md:px-4"
+          className="flex flex-col pt-6 max-md:pt-6 px-6 max-md:px-4"
         >
           <motion.div
             initial={{ y: 32, filter: "blur(6px)", opacity: 0 }}
             animate={{ y: 0, filter: "blur(0px)", opacity: 1 }}
             transition={{ duration: 1, delay: 0.45 }}
-            className="w-full min-h-[70vh] flex justify-center items-center"
+            className="w-full min-h-[55vh] max-md:min-h-[45vh] flex justify-center items-center"
           >
-            <div className="flex w-full flex-col items-center justify-center text-center mx-auto space-y-8 max-md:space-y-6">
+            <div className="flex w-full flex-col items-center justify-center text-center mx-auto space-y-2 max-md:space-y-1">
               <motion.h1
-                className="text-6xl md:text-5xl max-md:text-3xl font-semibold text-center leading-snug"
+                className="text-6xl md:text-5xl max-md:text-3xl font-semibold text-center leading-tight max-md:leading-tight"
                 initial={{ y: 30, filter: "blur(4px)", opacity: 0 }}
                 animate={{ y: 0, filter: "blur(0px)", opacity: 1 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
@@ -62,7 +62,7 @@ export default function Home() {
               </motion.h1>
 
               <motion.p
-                className="text-lg max-md:text-base inter text-center w-full max-w-4xl mt-4 px-2"
+                className="text-lg max-md:text-base inter text-center w-full max-w-4xl mt-0 px-2"
                 initial={{ y: 24, filter: "blur(4px)", opacity: 0 }}
                 animate={{ y: 0, filter: "blur(0px)", opacity: 1 }}
                 transition={{ duration: 0.75, delay: 0.15, ease: "easeOut" }}
@@ -73,7 +73,7 @@ export default function Home() {
                 support.
               </motion.p>
 
-              <motion.div className="flex justify-center mt-6">
+              <motion.div className="flex justify-center mt-1 max-md:mt-0">
                 <CTA />
               </motion.div>
             </div>
@@ -81,8 +81,8 @@ export default function Home() {
         </section>
 
         {/* WHY IT MATTERS */}
-        <section className="relative mx-auto max-w-7xl px-8 max-md:px-4 py-8 max-md:py-6 -mt-20 max-md:-mt-12">
-          <FadeRise className="text-center space-y-2">
+        <section className="relative mx-auto max-w-7xl px-8 max-md:px-4 py-4 max-md:py-3 -mt-12 max-md:-mt-8">
+          <FadeRise className="text-center space-y-1">
             <h2 className="text-5xl max-md:text-3xl font-semibold">
               Why it matters
             </h2>
@@ -91,9 +91,10 @@ export default function Home() {
             </div>
           </FadeRise>
 
-          <div className="flex flex-col md:flex-row items-center justify-between mt-8 max-md:mt-6 gap-12">
-            <FadeRise className="md:w-1/2">
-              <div className="space-y-6 max-md:space-y-4 leading-relaxed text-center md:text-left">
+          <div className="grid grid-cols-3 max-md:grid-cols-1 gap-6 max-md:gap-4 items-center mt-6 max-md:mt-4">
+            {/* Text content - spans 1 column */}
+            <FadeRise className="col-span-1 max-md:col-span-1">
+              <div className="space-y-6 max-md:space-y-4 leading-relaxed text-left max-md:text-center">
                 <p className="text-lg max-md:text-base">
                   Traditional coaching often stops at goals and accountability,
                   missing the hidden stress and recovery patterns that shape
@@ -106,17 +107,17 @@ export default function Home() {
               </div>
             </FadeRise>
 
-            <FadeRise
-              delay={0.05}
-              className="md:w-1/2 flex justify-center md:justify-end"
-            >
-              <Image
-                src="/resilience-insight.png"
-                alt="Resilience • Insight • Adaptive support"
-                width={400}
-                height={400}
-                className="w-full max-w-md"
-              />
+            {/* Image - spans 2 columns */}
+            <FadeRise delay={0.05} className="col-span-2 max-md:col-span-1">
+              <div className="flex justify-center">
+                <Image
+                  src="/process.png"
+                  alt="The new standard process for coaching"
+                  width={600}
+                  height={600}
+                  className="w-full max-w-2xl"
+                />
+              </div>
             </FadeRise>
           </div>
         </section>
