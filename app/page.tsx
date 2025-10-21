@@ -797,7 +797,7 @@ export default function Home() {
             intelligent layer over your framework.
           </div>
         </FadeRise>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-md:gap-4 max-w-6xl w-full px-8 max-md:px-4 mt-12 max-md:mt-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-3 max-md:gap-2 max-w-6xl w-full px-4 max-md:px-3 mt-6 max-md:mt-3">
           {[
             {
               icon: Activity,
@@ -818,15 +818,17 @@ export default function Home() {
             <FadeRise
               key={c.title}
               delay={i * 0.12}
-              className="bg-gradient-to-b from-zinc-900 to-black rounded-3xl p-8 max-md:p-3 max-md:h-auto max-md:min-h-56 border border-white/20 space-y-4 max-md:space-y-3"
+              className="bg-gradient-to-b from-zinc-900 to-black rounded-3xl p-4 max-md:p-3 max-md:h-auto max-md:min-h-44 border border-white/20 space-y-2 max-md:space-y-2"
             >
-              <div className="w-12 h-12 bg-theme/20 rounded-lg flex items-center justify-center">
-                <c.icon className="w-6 h-6 text-theme" />
+              <div className="w-9 h-9 max-md:w-8 max-md:h-8 bg-theme/20 rounded-lg flex items-center justify-center">
+                <c.icon className="w-4 h-4 max-md:w-4 max-md:h-4 text-theme" />
               </div>
-              <h3 className="text-3xl max-md:text-xl font-semibold">
+              <h3 className="text-2xl md:text-3xl max-md:text-lg font-semibold">
                 {c.title}
               </h3>
-              <p className="text-zinc-400 leading-relaxed inter">{c.body}</p>
+              <p className="text-zinc-400 text-sm md:text-base leading-snug max-md:leading-tight inter">
+                {c.body}
+              </p>
             </FadeRise>
           ))}
         </div>
