@@ -231,7 +231,7 @@ export default function Home() {
         {/* Second block stays the same */}
         <div className="grid md:grid-cols-2 gap-12 items-start">
           <FadeRise>
-            <div className="space-y-6 max-md:text-center">
+            <div className="space-y-8 max-md:text-center mt-12 max-md:mt-8">
               <h3 className="text-3xl max-md:text-xl font-semibold">
                 <span className="text-theme/80">PrescribeLife.AI</span> closes
                 that gap.
