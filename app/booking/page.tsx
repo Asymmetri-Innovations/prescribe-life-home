@@ -27,7 +27,7 @@ export default function BookingPage() {
   };
 
   return (
-    <main className="space-y-24 relative pt-16 overflow-hidden max-w-full">
+    <main className="space-y-4 relative pt-16 overflow-hidden max-w-full">
       <Image
         className="w-[150vw] h-[150vh] absolute rotate-30 rotate-animation-slow scale-110 z-[-1] overflow-x-hidden max-w-full"
         src="/bggradient.png"
@@ -39,7 +39,7 @@ export default function BookingPage() {
         {/* background images remain static */}
         <FadeRise>
           <div className="max-w-5xl mx-auto text-center px-8 max-md:px-4 py-16 max-md:py-10">
-            <h2 className="text-5xl max-md:text-3xl font-bold text-white leading-tight">
+            <h2 className="text-5xl max-md:text-3xl font-semibold text-white leading-tight">
               Book Your <span className="text-theme">Personalized</span>{" "}
               30‑Minute Demo
             </h2>
@@ -52,7 +52,7 @@ export default function BookingPage() {
         </FadeRise>
         <FadeRise className="w-full ">
           <div className="" id="calendly-section">
-            <div className="flex flex-col justify-center items-center space-y-6  [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
+            <div className="flex flex-col justify-center items-center space-y-3  [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
               <p className="text-3xl max-md:text-xl text-center">
                 Pick a suitable date and time
               </p>
@@ -71,7 +71,7 @@ export default function BookingPage() {
           </div>
         </FadeRise>
       </section>
-      <section className="flex flex-col justify-center items-center min-h-screen space-y-6 max-md:space-y-4  max-md:pt-8 px-4 max-md:px-2">
+      <section className="flex flex-col justify-center items-center space-y-4 max-md:space-y-3 px-4 max-md:px-2 -mt-16 max-md:-mt-12">
         <FadeRise>
           <div className="text-base max-md:text-sm inter">Best Part..</div>
         </FadeRise>
@@ -90,9 +90,9 @@ export default function BookingPage() {
         </FadeRise>
 
         <FadeRise delay={0.25}>
-          <div className="relative flex flex-col justify-center items-center  space-y-10 max-md:space-y-6 text-center px-4 max-md:px-2 mt-3">
+          <div className="relative flex flex-col justify-center items-center  space-y-4 max-md:space-y-3 text-center px-4 max-md:px-2 mt-3">
             <div className="absolute inset-0 pointer-events-none  " />
-            <div className="relative max-w-5xl space-y-8">
+            <div className="relative max-w-5xl space-y-4">
               <FadeRise>
                 <p className="text-lg max-md:text-base inter">
                   The fear with any new tech is that it will force you into a
@@ -120,14 +120,14 @@ export default function BookingPage() {
           </div>
         </FadeRise>
       </section>
-      <section className="relative mx-auto max-w-7xl px-8 max-md:mx-5 py-24 max-md:py-16 rounded-3xl overflow-hidden text-center bg-gradient-to-b from-zinc-950 to-black border border-white/10">
+      <section className="relative mx-auto max-w-6xl px-8 max-md:mx-5 py-12 max-md:py-8 rounded-3xl overflow-hidden text-center bg-gradient-to-b from-zinc-950 to-black border border-white/10">
         {/* Ambient glow accents */}
         <div className="pointer-events-none absolute -top-24 -left-24 w-[420px] h-[420px] bg-gradient-to-br from-theme/25 to-pink-500/25 blur-3xl opacity-50" />
         <div className="pointer-events-none absolute bottom-[-120px] right-[-120px] w-[420px] h-[420px] bg-gradient-to-br from-pink-400/20 to-blue-400/20 blur-3xl opacity-50" />
 
-        <div className="relative max-w-4xl mx-auto space-y-6 ">
+        <div className="relative max-w-4xl mx-auto space-y-2 ">
           <FadeRise>
-            <h2 className="text-5xl max-md:text-3xl font-bold leading-tight text-white">
+            <h2 className="text-5xl max-md:text-3xl font-semibold leading-tight text-white">
               Turn Every Client Engagement Into a
               <br className="hidden sm:block" /> Revenue Force Multiplier
             </h2>
@@ -142,7 +142,7 @@ export default function BookingPage() {
             </p>
           </FadeRise>
         </div>
-        <div className="flex items-center justify-center mt-7">
+        <div className="flex items-center justify-center mt-4">
           <button
             onClick={scrollToCalendly}
             className="flex items-center justify-center relative group bg-gradient-to-r from-theme to-pink-600 text-white font-medium px-8 py-3 rounded-full shadow-lg hover:shadow-theme/30 transition-all cursor-pointer"
@@ -154,7 +154,7 @@ export default function BookingPage() {
       </section>
 
       <section>
-        <div className="relative mx-auto max-w-7xl px-8 max-md:px-4 py-16 max-md:py-10 md:pb-0">
+        <div className="relative mx-auto max-w-7xl px-8 max-md:px-4 py-8 max-md:py-6 md:pb-0">
           <FadeRise>
             <h2 className="text-5xl max-md:text-3xl font-bold text-center text-white">
               In Your Personalized Demo,{" "}
@@ -195,7 +195,7 @@ export default function BookingPage() {
         </div>
       </section>
       <section className="flex flex-col justify-center items-center">
-        <div className="relative max-w-4xl mx-auto text-center px-8 max-md:px-4 py-16 max-md:py-10">
+        <div className="relative max-w-4xl mx-auto text-center px-8 max-md:px-4 py-8 max-md:py-6">
           <FadeRise>
             <h2 className="text-5xl max-md:text-3xl font-bold text-white leading-tight">
               The Future of coaching is here.
