@@ -103,7 +103,7 @@ export default function Home() {
           {/* Two-column grid */}
           <div className="flex flex-col md:flex-row items-start justify-center gap-6 max-md:gap-2 w-full max-md:mt-1">
             {/* Left-side text */}
-            <div className="flex w-full md:w-1/2 flex-col items-start justify-center text-left max-md:text-center max-md:items-center space-y-4 max-md:space-y-2 order-1">
+            <div className="flex w-full md:w-1/2 flex-col items-start justify-center text-left max-md:text-center max-md:items-center space-y-4 max-md:space-y-4 order-1">
               <motion.h1
                 className="text-6xl max-md:text-3xl font-semibold"
                 initial={{ y: 30, filter: "blur(4px)", opacity: 0 }}
@@ -170,7 +170,7 @@ export default function Home() {
       </section>
       <MeetingTheUrgentDemand />
       {/* GAP NARRATIVE */}
-      <section className="max-w-6xl mx-auto px-8 max-md:px-4 space-y-20 max-md:space-y-12">
+      <section className="max-w-6xl mx-auto px-8 max-md:px-4 space-y-12 max-md:space-y-8">
         {/* First block */}
         <div className="space-y-12 max-md:space-y-8 max-md:text-center">
           <FadeRise>
