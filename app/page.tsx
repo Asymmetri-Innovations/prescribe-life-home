@@ -79,7 +79,7 @@ export default function Home() {
   ];
 
   return (
-    <main className="space-y-16 max-md:space-y-12 relative overflow-hidden max-w-full min-w-0 px-4 max-md:px-5">
+    <main className="space-y-14 max-md:space-y-10 relative overflow-hidden max-w-full min-w-0 px-4 max-md:px-5">
       <Image
         className="absolute inset-0 w-full md:h-[150vh] max-md:h-[80vh] object-cover md:rotate-30 rotate-animation-slow md:scale-110 max-md:scale-100 z-[-1] overflow-visible pointer-events-none"
         src="/bggradient.png"
@@ -98,7 +98,7 @@ export default function Home() {
           initial={{ y: 32, filter: "blur(6px)", opacity: 0 }}
           animate={{ y: 0, filter: "blur(0px)", opacity: 1 }}
           transition={{ duration: 1, delay: 0.45 }}
-          className="w-full pb-0 max-md:pb-0 min-h-[85vh] max-md:min-h-[80vh] flex justify-center items-center max-md:items-center max-md:justify-center"
+          className="w-full pb-0 max-md:pb-0 min-h-[85vh] max-md:min-h-[72vh] flex justify-center items-center max-md:items-center max-md:justify-center"
         >
           {/* Two-column grid */}
           <div className="flex flex-col md:flex-row items-start justify-center gap-6 max-md:gap-2 w-full max-md:mt-1">
@@ -149,7 +149,7 @@ export default function Home() {
           initial={{ y: 32, filter: "blur(6px)", opacity: 0 }}
           animate={{ y: 0, filter: "blur(0px)", opacity: 1 }}
           transition={{ duration: 1, delay: 0.45 }}
-          className="w-full pb-0 max-md:pb-0 space-y-6 max-md:space-y-4 max-md:mt-8"
+          className="w-full pb-0 max-md:pb-0 space-y-6 max-md:space-y-4 max-md:mt-2"
         >
           <p className="text-5xl max-md:text-2xl text-center font-semibold px-2">
             Trusted by Performance Coaches Behind Today's <br />
