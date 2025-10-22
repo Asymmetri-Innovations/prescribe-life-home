@@ -27,7 +27,7 @@ export default function BookingPage() {
   };
 
   return (
-    <main className="space-y-4 relative pt-16 overflow-hidden max-w-full">
+    <main className="space-y-10 relative pt-16 overflow-hidden max-w-full">
       <Image
         className="w-[150vw] h-[150vh] absolute rotate-30 rotate-animation-slow scale-110 z-[-1] overflow-x-hidden max-w-full"
         src="/bggradient.png"
@@ -120,7 +120,7 @@ export default function BookingPage() {
           </div>
         </FadeRise>
       </section>
-      <section className="relative mx-auto max-w-6xl px-8 max-md:mx-5 py-12 max-md:py-8 rounded-3xl overflow-hidden text-center bg-gradient-to-b from-zinc-950 to-black border border-white/10">
+      <section className="relative mx-auto max-w-6xl px-4 max-md:px-3 py-12 max-md:py-8 rounded-3xl overflow-hidden text-center bg-gradient-to-b from-zinc-950 to-black border border-white/10">
         {/* Ambient glow accents */}
         <div className="pointer-events-none absolute -top-24 -left-24 w-[420px] h-[420px] bg-gradient-to-br from-theme/25 to-pink-500/25 blur-3xl opacity-50" />
         <div className="pointer-events-none absolute bottom-[-120px] right-[-120px] w-[420px] h-[420px] bg-gradient-to-br from-pink-400/20 to-blue-400/20 blur-3xl opacity-50" />

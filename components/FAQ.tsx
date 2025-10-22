@@ -104,7 +104,7 @@ export default function FAQ({ classname }: { classname?: string }) {
             >
               <div className="p-8 max-md:p-5 flex flex-col flex-1 min-h-[100px]  max-md:h-[60px]">
                 <div className="flex items-center justify-between">
-                  <h3 className="text-lg max-md:text-sm font-medium pr-4 max-md:pr-3 line-clamp-3">
+                  <h3 className="text-xl max-md:text-lg font-medium pr-4 max-md:pr-3 line-clamp-3 ">
                     {item.question}
                   </h3>
                   <motion.div
@@ -132,7 +132,7 @@ export default function FAQ({ classname }: { classname?: string }) {
                         ease: [0.04, 0.62, 0.23, 0.98],
                       }}
                     >
-                      <div className="pt-4 max-md:pt-2 text-zinc-300 text-base max-md:text-sm leading-[1.7]">
+                      <div className="pt-4 max-md:pt-2 text-zinc-300 text-lg max-md:text-base leading-[1.7]">
                         {item.answer}
                       </div>
                     </motion.div>
@@ -156,7 +156,7 @@ export default function FAQ({ classname }: { classname?: string }) {
               >
                 <div className="p-8 max-md:p-5 flex flex-col flex-1 min-h-[100px] max-md:h-[60px]">
                   <div className="flex items-center justify-between">
-                    <h3 className="text-lg max-md:text-sm font-medium pr-4 max-md:pr-3 line-clamp-3">
+                    <h3 className="text-xl max-md:text-lg font-medium pr-4 max-md:pr-3 line-clamp-3">
                       {item.question}
                     </h3>
                     <motion.div
@@ -184,7 +184,7 @@ export default function FAQ({ classname }: { classname?: string }) {
                           ease: [0.04, 0.62, 0.23, 0.98],
                         }}
                       >
-                        <div className="pt-4 max-md:pt-2 text-zinc-300 text-base max-md:text-sm leading-[1.7]">
+                        <div className="pt-4 max-md:pt-2 text-zinc-300 text-lg max-md:text-base leading-[1.7]">
                           {item.answer}
                         </div>
                       </motion.div>
