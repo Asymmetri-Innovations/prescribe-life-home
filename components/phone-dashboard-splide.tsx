@@ -37,7 +37,7 @@ export const PhoneDashboardSplide = () => {
 
         {/* Splide Carousel 1 - Left to Right */}
         <FadeRise delay={0.2}>
-          <div className="w-full max-w-[1400px] mx-auto mt-6 relative px-16 max-md:px-4">
+          <div className="w-full max-w-[1400px] mx-auto mt-6 relative px-16 max-md:px-4 overflow-y-visible  ">
             <Splide
               options={{
                 type: "loop",
@@ -48,6 +48,9 @@ export const PhoneDashboardSplide = () => {
                 interval: 2000,
                 pauseOnHover: false,
                 pagination: false,
+                focus: "center",
+                // showArrows: false,
+                arrows: false,
                 breakpoints: {
                   1024: { perPage: 2 },
                   640: { perPage: 1 },
@@ -58,7 +61,7 @@ export const PhoneDashboardSplide = () => {
               {["/DG9.png", "/DG10.png", "/DG11.png", "/DG8.png"].map(
                 (src, index) => (
                   <SplideSlide key={index}>
-                    <div className="w-full h-[280px] max-md:h-[200px] flex items-center justify-center overflow-hidden rounded-xl">
+                    <div className="w-full min-h-full py-6 h-full max-md:h-full flex items-center justify-center overflow-hidden rounded-xl">
                       <Image
                         src={src}
                         alt={`Dashboard ${index + 1}`}
@@ -85,16 +88,18 @@ export const PhoneDashboardSplide = () => {
 
         {/* Splide Carousel 2 - Right to Left */}
         <FadeRise delay={0.4}>
-          <div className="w-full max-w-[1400px] mx-auto mt-6 relative px-16 max-md:px-4">
+          <div className="w-full max-w-[1400px] mx-auto mt-6 relative px-16 max-md:px-4 mobile-hehe">
             <Splide
               options={{
                 type: "loop",
                 perPage: 3,
                 perMove: 1,
-                gap: "1rem",
+                // focus: "center",
+                gap: "2rem",
                 autoplay: true,
                 interval: 2000,
                 pauseOnHover: false,
+                arrows: false,
                 direction: "rtl",
                 pagination: false,
                 breakpoints: {
@@ -107,7 +112,7 @@ export const PhoneDashboardSplide = () => {
               {["/DG12.png", "/DG13.png", "/DG14.png", "/DG15.png"].map(
                 (src, index) => (
                   <SplideSlide key={index}>
-                    <div className="w-full h-[280px] max-md:h-[200px] flex items-center justify-center rounded-xl p-2">
+                    <div className="w-full h-full min-h-full max-md:h-full py-6 flex items-center justify-center  p-2">
                       <Image
                         src={src}
                         alt={`Dashboard ${index + 5}`}
