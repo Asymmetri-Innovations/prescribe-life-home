@@ -179,7 +179,7 @@ export default function TeamPage() {
           <div className="text-6xl max-md:text-3xl font-semibold text-center mb-6">
             Meet the <span className="text-theme">Team!</span>
           </div>
-          <p className="text-lg max-md:text-base inter text-center max-w-4xl">
+          <p className="text-lg max-md:text-base inter text-center max-w-3xl  ">
             The experts and innovators behind PrescribeLife.ai, bringing
             together neuroscience, technology, and coaching expertise to help
             you perform better and lead with resilience.
@@ -222,7 +222,7 @@ export default function TeamPage() {
           <div className="text-5xl max-md:text-3xl font-semibold flex flex-col items-center mb-6">
             <span className="text-theme">Advisors</span>
           </div>
-          <p className="text-lg max-md:text-base inter">
+          <p className="text-lg max-md:text-base inter max-w-3xl text-center">
             The experts and innovators behind PrescribeLife.ai, bringing
             together neuroscience, technology, and coaching expertise to help
             you perform better and lead with resilience.

@@ -455,12 +455,12 @@ export default function NewStandard() {
 
         {/* BOTTOM CTA SECTION */}
       </main>
-      <section className="relative w-screen left-[50%] right-[50%] -mx-[50vw] overflow-hidden bg-black text-center text-white min-h-[500px] max-md:min-h-[400px] flex items-center py-12 max-md:py-10 -mb-20 ">
+      <section className="relative w-screen left-[50%] right-[50%] -mx-[50vw] overflow-hidden bg-black text-center text-white min-h-[400px] max-md:min-h-[300px] flex items-center py-12 max-md:py-10 -mb-20 ">
         <div
           className="absolute inset-0 bg-repeat bg-center bg-[length:auto_100%] opacity-60 "
           style={{ backgroundImage: "url('/new-standard-grid.png')" }}
         />
-        <div className="relative z-10 space-y-8 max-w-4xl mx-auto px-6">
+        <div className="relative z-10 space-y-4 max-w-4xl mx-auto px-6">
           <FadeRise delay={0.12}>
             <p className="text-white text-5xl max-md:text-2xl font-semibold">
               Ready to See the <span className="text-theme">New Standard</span>{" "}
