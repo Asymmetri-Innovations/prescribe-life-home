@@ -73,7 +73,7 @@ export default function BookingPage() {
       </section>
       <section className="flex flex-col justify-center items-center space-y-4 max-md:space-y-3 px-4 max-md:px-2 -mt-16 max-md:-mt-12">
         <FadeRise>
-          <div className="text-base max-md:text-sm inter">Best Part..</div>
+          <div className="text-base max-md:text-sm inter mt-4">Best Part..</div>
         </FadeRise>
         <FadeRise delay={0.05}>
           <div className="text-5xl max-md:text-3xl font-medium max-md:text-center">
