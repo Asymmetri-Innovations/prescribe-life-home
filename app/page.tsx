@@ -170,7 +170,7 @@ export default function Home() {
       </section>
       <MeetingTheUrgentDemand />
       {/* GAP NARRATIVE */}
-      <section className="max-w-6xl mx-auto px-8 max-md:px-4 space-y-12 max-md:space-y-8">
+      <section className="max-w-6xl mx-auto px-8 max-md:px-4 space-y-8 max-md:space-y-6">
         {/* First block */}
         <div className="space-y-12 max-md:space-y-8 max-md:text-center">
           <FadeRise>

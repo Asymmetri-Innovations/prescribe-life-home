@@ -48,7 +48,7 @@ export default function NewStandard() {
             initial={{ y: 32, filter: "blur(6px)", opacity: 0 }}
             animate={{ y: 0, filter: "blur(0px)", opacity: 1 }}
             transition={{ duration: 1, delay: 0.45 }}
-            className="w-full min-h-[55vh] max-md:min-h-[35vh] flex justify-center items-center"
+            className="w-full min-h-[50vh] max-md:min-h-[37vh] flex justify-center items-center"
           >
             <div className="flex w-full flex-col items-center justify-center text-center mx-auto space-y-2 max-md:space-y-1">
               <motion.h1
