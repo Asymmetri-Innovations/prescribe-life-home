@@ -202,16 +202,10 @@ export default function NewStandard() {
         {/* ELEVATE YOUR PRACTICE */}
         <section className="flex flex-col items-center text-center">
           <FadeRise>
-            <Title
-              text="Elevate Your Practice with "
-              className="text-5xl max-md:text-3xl"
-            />
-          </FadeRise>
-          <FadeRise delay={0.1}>
-            <Title
-              text="PrescribeLife.Ai"
-              className="text-theme text-5xl max-md:text-3xl"
-            />
+            <h2 className="text-5xl max-md:text-3xl font-semibold">
+              Elevate Your Practice with{" "}
+              <span className="text-theme">PrescribeLife.Ai</span>
+            </h2>
           </FadeRise>
           <FadeRise delay={0.15}>
             <div className="w-full max-w-6xl px-8 max-md:px-4 mt-6">
@@ -246,7 +240,7 @@ export default function NewStandard() {
             {steps.map((step, i) => (
               <FadeRise key={step.id} delay={i * 0.1}>
                 <MagicCard className="h-full">
-                  <div className="rounded-2xl h-full flex flex-col justify-between p-8 max-md:p-6 bg-white/10 shadow-lg border border-white/10">
+                  <div className="rounded-2xl h-full flex flex-col p-8 max-md:p-6 bg-white/10 shadow-lg border border-white/10">
                     <div className="flex justify-between items-start mb-4">
                       {step.image ? (
                         <Image
@@ -266,8 +260,8 @@ export default function NewStandard() {
                         {step.id}
                       </div>
                     </div>
-                    <div className="space-y-3">
-                      <h3 className="text-2xl max-md:text-xl font-semibold text-white">
+                    <div>
+                      <h3 className="text-2xl max-md:text-xl font-semibold text-white mb-3">
                         {step.title}
                       </h3>
                       <p className="text-zinc-300 text-base max-md:text-sm leading-relaxed">
