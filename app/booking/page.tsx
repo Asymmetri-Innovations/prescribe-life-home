@@ -43,6 +43,7 @@ export default function BookingPage() {
               Book Your <span className="text-theme">Personalized</span>{" "}
               30‑Minute Demo
             </h2>
+
             <p className="text-lg max-md:text-base inter">
               Join us for a session where we'll show you how{" "}
               <span className="text-white font-semibold">PrescribeLife.AI</span>{" "}
@@ -120,7 +121,7 @@ export default function BookingPage() {
           </div>
         </FadeRise>
       </section>
-      <section className="relative mx-auto max-w-6xl px-4 max-md:px-3 py-12 max-md:py-8 rounded-3xl overflow-hidden text-center bg-gradient-to-b from-zinc-950 to-black border border-white/10">
+      <section className="relative mx-auto max-w-5xl px-4 max-md:px-3 py-10 max-md:py-8 rounded-3xl overflow-hidden text-center bg-gradient-to-b from-zinc-950 to-black border border-white/10">
         {/* Ambient glow accents */}
         <div className="pointer-events-none absolute -top-24 -left-24 w-[420px] h-[420px] bg-gradient-to-br from-theme/25 to-pink-500/25 blur-3xl opacity-50" />
         <div className="pointer-events-none absolute bottom-[-120px] right-[-120px] w-[420px] h-[420px] bg-gradient-to-br from-pink-400/20 to-blue-400/20 blur-3xl opacity-50" />
