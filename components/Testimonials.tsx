@@ -59,23 +59,21 @@ export default function TestimonialsSection() {
 
       <Marquee pauseOnHover className="[--duration:25s] overflow-x-hidden">
         {testimonials.map((testimonial, i) => (
-          <FadeRise key={i} delay={i * 0.05} className="mx-4">
-            <div className="bg-gradient-to-b from-zinc-800 to-zinc-900 w-96 h-56 max-md:w-80 max-md:h-60 p-6 max-md:p-4 rounded-2xl border border-white/10 flex flex-col justify-between gap-4 max-md:gap-3">
-              <p className="text-white text-base max-md:text-sm leading-relaxed">
-                "{testimonial.quote}"
-              </p>
-              <div className="flex items-center gap-3 mt-2">
-                <div>
-                  <h4 className="text-white font-semibold text-sm max-md:text-xs">
-                    {testimonial.name}
-                  </h4>
-                  <p className="text-zinc-400 text-xs max-md:text-2xs">
-                    {testimonial.title}, {testimonial.location}
-                  </p>
-                </div>
+          <div className="bg-gradient-to-b from-zinc-800 to-zinc-900 w-96 h-56 max-md:w-80 max-md:min-h-full max-md:h-full p-6 max-md:p-4 rounded-2xl border border-white/10 flex flex-col justify-between gap-4 max-md:gap-3">
+            <p className="text-white text-base max-md:text-sm leading-relaxed">
+              "{testimonial.quote}"
+            </p>
+            <div className="flex items-center gap-3 mt-2">
+              <div>
+                <h4 className="text-white font-semibold text-sm max-md:text-xs">
+                  {testimonial.name}
+                </h4>
+                <p className="text-zinc-400 text-xs max-md:text-2xs">
+                  {testimonial.title}, {testimonial.location}
+                </p>
               </div>
             </div>
-          </FadeRise>
+          </div>
         ))}
       </Marquee>
 

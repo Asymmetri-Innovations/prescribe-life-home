@@ -79,7 +79,7 @@ export default function Home() {
   ];
 
   return (
-    <main className="space-y-14 max-md:space-y-10 relative overflow-hidden max-w-full min-w-0 px-4 max-md:px-5">
+    <main className="space-y-14 max-md:space-y-10 relative overflow-hidden max-w-full min-w-0 px-4 max-md:px-2">
       <Image
         className="absolute inset-0 w-full md:h-[150vh] max-md:h-[80vh] object-cover md:rotate-30 rotate-animation-slow md:scale-110 max-md:scale-100 z-[-1] overflow-visible pointer-events-none"
         src="/bggradient.png"
@@ -92,20 +92,20 @@ export default function Home() {
 
       <section
         id="hero"
-        className="flex flex-col  max-md:pt-4 px-6 max-md:px-5"
+        className="flex flex-col  max-md:pt-4 px-6 max-md:px-2"
       >
         <motion.div
           initial={{ y: 32, filter: "blur(6px)", opacity: 0 }}
           animate={{ y: 0, filter: "blur(0px)", opacity: 1 }}
           transition={{ duration: 1, delay: 0.45 }}
-          className="w-full pb-0 max-md:pb-0 min-h-[85vh] max-md:min-h-[72vh] flex justify-center items-center max-md:items-center max-md:justify-center"
+          className="w-full pb-0 max-md:pb-0 min-h-[80vh] pt-16 max-md:min-h-[72vh] flex justify-center items-center max-md:items-center max-md:justify-center max-md:mt-6"
         >
           {/* Two-column grid */}
           <div className="flex flex-col md:flex-row items-start justify-center gap-6 max-md:gap-2 w-full max-md:mt-1">
             {/* Left-side text */}
-            <div className="flex w-full md:w-1/2 flex-col items-start justify-center text-left max-md:text-center max-md:items-center space-y-4 max-md:space-y-4 order-1">
+            <div className="flex w-full md:w-1/2 flex-col items-start justify-center text-left max-md:text-center max-md:items-center space-y-4 max-md:space-y-4 order-1 max-md:mb-16">
               <motion.h1
-                className="text-6xl max-md:text-3xl font-semibold"
+                className="text-6xl max-md:text-2xl font-semibold"
                 initial={{ y: 30, filter: "blur(4px)", opacity: 0 }}
                 animate={{ y: 0, filter: "blur(0px)", opacity: 1 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
@@ -274,7 +274,7 @@ export default function Home() {
           {steps.map((step, i) => (
             <FadeRise key={step.id} delay={i * 0.12}>
               <MagicCard>
-                <div className="h-[400px] rounded-2xl p-8 border border-white/10 relative overflow-hidden space-y-6 max-md:space-y-4">
+                <div className="h-[400px] max-md:h-full rounded-2xl p-8 border border-white/10 relative overflow-hidden space-y-6 max-md:space-y-4">
                   <div className="absolute top-6 right-6 text-6xl max-md:text-4xl font-bold text-white/30 opacity-50">
                     {step.id}
                   </div>
@@ -629,9 +629,9 @@ export default function Home() {
 
       {/* ONBOARD BENEFITS */}
 
-      <section className="flex flex-col items-center mx-32 max-md:mx-0 px-6 max-md:px-5 -mt-20 max-md:-mt-8 py-16 pb-28">
+      <section className="flex flex-col items-center mx-32 max-md:mx-0 px-6 max-md:px-5 -mt-20 max-md:-mt-8 py-16 pb-28 max-md:py-0">
         <div className="w-full px-8 max-md:px-5 mt-8 max-md:mt-4">
-          <div className="relative flex w-full max-w-3xl mx-auto place-items-center gap-6">
+          <div className="relative flex w-full max-w-3xl mx-auto place-items-center gap-6 max-md:flex-col">
             {[
               {
                 icon: Timer,
@@ -657,13 +657,13 @@ export default function Home() {
                 delay={i * 0.12}
                 className={`${
                   i === 2
-                    ? "translate-y-0"
+                    ? "md:translate-y-0"
                     : i === 1
-                    ? "translate-y-12"
+                    ? "md:translate-y-12"
                     : i === 0
-                    ? "translate-y-24"
+                    ? "md:translate-y-24"
                     : ""
-                }  rounded-2xl border border-white/30 bg-gradient-to-b from-white/10 to-black/80 p-6 flex flex-col justify-center items-center text-center w-60 h-60 md:w-60 md:h-60`}
+                }  rounded-2xl border border-white/30 bg-gradient-to-b from-white/10 to-black/80 p-6 flex flex-col justify-center items-center text-center w-60 h-60 md:w-60 md:h-60 `}
               >
                 <c.icon className="w-10 h-10 text-theme mb-3" />
                 <h3 className="text-2xl font-semibold text-white mb-2">

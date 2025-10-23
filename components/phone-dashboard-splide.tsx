@@ -47,8 +47,8 @@ export const PhoneDashboardSplide = () => {
                 autoplay: true,
                 interval: 2000,
                 pauseOnHover: false,
-                pagination: false,
                 focus: "center",
+                pagination: true,
                 // showArrows: false,
                 arrows: false,
                 breakpoints: {
@@ -101,7 +101,7 @@ export const PhoneDashboardSplide = () => {
                 pauseOnHover: false,
                 arrows: false,
                 direction: "rtl",
-                pagination: false,
+                pagination: true,
                 breakpoints: {
                   1024: { perPage: 2 },
                   640: { perPage: 1 },

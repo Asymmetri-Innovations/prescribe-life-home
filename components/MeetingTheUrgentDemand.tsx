@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export const MeetingTheUrgentDemand = () => {
   return (
-    <section className="max-w-7xl mx-auto px-8 max-md:px-4  max-md:pt-10 pb-4 max-md:pb-3 space-y-10 max-md:space-y-6">
+    <section className="max-w-7xl mx-auto px-8 max-md:px-4  max-md:pt-0 pb-4 max-md:pb-3 space-y-10 max-md:space-y-6 ">
       {/* Title */}
       <FadeRise>
         <h2 className="text-5xl max-md:text-3xl font-semibold text-center leading-tight">
@@ -14,7 +14,7 @@ export const MeetingTheUrgentDemand = () => {
       </FadeRise>
 
       {/* Top section - Two images */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-md:gap-2">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8  max-md:gap-0">
         <FadeRise delay={0.1}>
           <div className="flex justify-center">
             <Image
@@ -22,7 +22,7 @@ export const MeetingTheUrgentDemand = () => {
               alt="85% increased demand for mental well-being support"
               width={500}
               height={300}
-              className="w-full h-auto rounded-2xl"
+              className="w-full h-auto rounded-2xl "
             />
           </div>
         </FadeRise>
@@ -53,13 +53,13 @@ export const MeetingTheUrgentDemand = () => {
         {/* Text content - spans 1 column */}
         <FadeRise delay={0.4} className="col-span-1 max-md:col-span-1">
           <div className="space-y-6 max-md:space-y-4">
-            <h3 className="text-3xl max-md:text-2xl font-bold leading-tight">
+            <h3 className="text-3xl max-md:text-2xl font-bold leading-tight max-md:text-center">
               Built For World's Most
               <br />
               Influential Coaches ...
             </h3>
 
-            <div className="space-y-4 max-md:space-y-3 text-base max-md:text-sm leading-relaxed inter">
+            <div className="space-y-4 max-md:space-y-3 text-base max-md:text-sm leading-relaxed inter max-md:text-center">
               <p>
                 who coach executives, leaders, founders or already focus on
                 resilience, mental fitness and burnout

@@ -6,13 +6,15 @@ import CTA from "./CTA";
 
 export const AmplifyHumanTouch = () => {
   return (
-    <section className="max-w-7xl mx-auto px-8 max-md:px-4 py-16 max-md:py-12 space-y-8 max-md:space-y-6 text-center -mt-12 max-md:-mt-8">
+    <section className="max-w-7xl mx-auto px-8 max-md:px-0 py-16 max-md:py-12 space-y-8 max-md:space-y-6 text-center -mt-12 max-md:-mt-8 max-md:pt-0 max-md:mb-0 ">
       {/* Title */}
       <FadeRise>
-        <h2 className="text-5xl max-md:text-3xl font-semibold leading-tight">
-          Amplify Your Human Touch with Evidence based
-          <br />
-          AI Insights and Signals
+        <h2 className="text-5xl max-md:text-2xl font-semibold leading-tight">
+          Amplify Your Human Touch with
+          <br className="block md:hidden" />
+          Evidence Based <br className="md:block hidden" />
+          AI Insights <br className="block md:hidden" />
+          and Signals
         </h2>
       </FadeRise>
 
@@ -32,7 +34,7 @@ export const AmplifyHumanTouch = () => {
       </FadeRise>
 
       {/* Two images */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-7 max-md:gap-2 max-w-5xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-7 max-md:gap-0 max-w-5xl mx-auto">
         <FadeRise delay={0.3}>
           <div className="flex justify-center">
             <Image
