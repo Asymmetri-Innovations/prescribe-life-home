@@ -50,9 +50,9 @@ export default function NewStandard() {
             transition={{ duration: 1, delay: 0.45 }}
             className="w-full min-h-[50vh] max-md:min-h-[37vh] flex justify-center items-center"
           >
-            <div className="flex w-full flex-col items-center justify-center text-center mx-auto space-y-2 max-md:space-y-1">
+            <div className="flex w-full flex-col items-center justify-center text-center mx-auto space-y-2 max-md:space-y-1 max-md:pt-16">
               <motion.h1
-                className="text-6xl md:text-5xl max-md:text-2xl font-semibold text-center leading-tight max-md:leading-tight"
+                className="text-6xl md:text-5xl max-md:text-2xl font-semibold text-center leading-tight max-md:leading-tight max-md:mb-6"
                 initial={{ y: 30, filter: "blur(4px)", opacity: 0 }}
                 animate={{ y: 0, filter: "blur(0px)", opacity: 1 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
@@ -73,7 +73,7 @@ export default function NewStandard() {
                 support.
               </motion.p>
 
-              <motion.div className="flex justify-center mt-1 max-md:mt-0">
+              <motion.div className="flex justify-center mt-1 max-md:mt-0 max-md:my-8 max-md:mt-8">
                 <CTA />
               </motion.div>
             </div>

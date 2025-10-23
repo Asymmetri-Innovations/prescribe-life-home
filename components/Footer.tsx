@@ -38,15 +38,15 @@ export default function Footer() {
     <footer className="bg-[#1a1a1a] text-white py-16 px-4 md:px-16 mt-20">
       <div className="max-w-7xl mx-auto">
         {/* Main footer content */}
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-12 mb-12">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-12 mb-12">
           {/* Logo and tagline */}
-          <div className="flex justify-center items-center gap-3">
+          <div className="flex justify-center items-center gap-3 col-span-2 md:col-span-1">
             <img className="w-10 rounded-md" src="/logo.jpg" alt="" />
             <div>PrescribeLife.AI</div>
           </div>
 
           {/* Company */}
-          <div className="space-y-4">
+          <div className="space-y-4 ">
             <h3 className="text-zinc-400 font-semibold text-sm">Company</h3>
             <ul className="space-y-3">
               <li>
