@@ -8,6 +8,8 @@
 }
 
 @theme inline {
+  --breakpoint-tablet: 36rem;
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-theme: #d557ad;

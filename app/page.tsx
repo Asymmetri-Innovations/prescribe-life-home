@@ -101,9 +101,9 @@ export default function Home() {
           className="w-full pb-0 max-md:pb-0 min-h-[80vh] pt-16 max-md:min-h-[72vh] flex justify-center items-center max-md:items-center max-md:justify-center max-md:mt-6"
         >
           {/* Two-column grid */}
-          <div className="flex flex-col md:flex-row items-start justify-center gap-6 max-md:gap-2 w-full max-md:mt-1">
+          <div className="flex flex-col md:flex-row items-start justify-center gap-6 max-tablet:gap-2 w-full max-tablet:mt-1 ">
             {/* Left-side text */}
-            <div className="flex w-full md:w-1/2 flex-col items-start justify-center text-left max-md:text-center max-md:items-center space-y-4 max-md:space-y-4 order-1 max-md:mb-16">
+            <div className="flex w-full md:w-1/2 flex-col items-start justify-center text-left max-md:text-center max-md:items-center space-y-4 max-md:space-y-4 order-1 max-md:mb-16 ">
               <motion.h1
                 className="text-6xl max-md:text-2xl font-semibold"
                 initial={{ y: 30, filter: "blur(4px)", opacity: 0 }}
