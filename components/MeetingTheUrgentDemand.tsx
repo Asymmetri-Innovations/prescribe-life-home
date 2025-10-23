@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export const MeetingTheUrgentDemand = () => {
   return (
-    <section className="max-w-7xl mx-auto px-8 max-md:px-4 py-16 max-md:py-12 space-y-16 max-md:space-y-8">
+    <section className="max-w-7xl mx-auto px-8 max-md:px-4  max-md:pt-10 pb-4 max-md:pb-3 space-y-10 max-md:space-y-6">
       {/* Title */}
       <FadeRise>
         <h2 className="text-5xl max-md:text-3xl font-semibold text-center leading-tight">

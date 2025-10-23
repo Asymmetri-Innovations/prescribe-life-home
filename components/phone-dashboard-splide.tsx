@@ -25,7 +25,7 @@ export const PhoneDashboardSplide = () => {
         <FadeRise>
           <Title
             text="Your Impact is Capped by Your Calendar. Until Now."
-            className="text-5xl max-md:text-3xl px-4"
+            className="text-5xl max-md:text-3xl px-4 max-md:text-center"
           />
         </FadeRise>
 
