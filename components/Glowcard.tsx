@@ -1,26 +1,33 @@
-import React from "react";
+type Props = {
+  title: string;
+  secondaryLine?: React.ReactNode; // ✅ can be text, JSX, or fragments
+  titleCn?: string;
+};
 
-interface GlowingCardProps {
-  children: React.ReactNode;
-  glow?: boolean;
-  className?: string;
-}
-
-export default function GlowCard({
-  children,
-  glow = false,
-  className = "",
-}: GlowingCardProps) {
+export function GlassmorphicCard({ title, secondaryLine, titleCn }: Props) {
   return (
-    <div
-      className={`relative rounded-2xl px-6 py-4 text-center bg-black/60 text-white backdrop-blur-sm border border-white/10 overflow-hidden ${className}`}
-    >
-      {/* blurred border glow */}
-      {glow && (
-        <div className="absolute inset-0 -z-10 rounded-2xl blur-3xl opacity-70 bg-theme" />
-      )}
-
-      {children}
+    <div className="bg-black flex items-center justify-center p-4">
+      <div
+        className={`flex flex-col items-start p-6 gap-16 rounded-2xl ${
+          titleCn ?? "w-[350px] min-h-[132px]"
+        }`}
+        style={{
+          background:
+            "linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, rgba(0, 0, 0, 0) 125.17%)",
+          boxShadow: "inset 0px 4px 25px #D557AD",
+        }}
+      >
+        <div className="flex flex-col items-start w-full ">
+          <h2 className="text-2xl font-bold text-white text-center w-full leading-relaxed tracking-wide">
+            {title}
+          </h2>
+          {secondaryLine && (
+            <p className="text-base font-medium text-white text-center w-full leading-relaxed tracking-wide opacity-80">
+              {secondaryLine}
+            </p>
+          )}
+        </div>
+      </div>
     </div>
   );
 }

@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "ngrok": "ngrok http 3000"
   },
   "dependencies": {
     "@radix-ui/react-avatar": "^1.1.10",
@@ -20,6 +21,7 @@
     "lucide-react": "^0.543.0",
     "motion": "^12.23.12",
     "next": "15.5.2",
+    "ngrok": "5.0.0-beta.2",
     "react": "19.1.0",
     "react-animated-3d-card": "^1.0.2",
     "react-dom": "19.1.0",
