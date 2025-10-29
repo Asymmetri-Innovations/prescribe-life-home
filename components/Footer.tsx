@@ -49,9 +49,6 @@ export default function Footer() {
               />
               <div className="text-xl font-medium">PrescribeLife.AI</div>
             </div>
-            <div className="text-md text-white md:mt-6 tracking-wide">
-              Your New Health <span className="text-theme">Coach</span>
-            </div>
           </div>
 
           {/* Company */}
