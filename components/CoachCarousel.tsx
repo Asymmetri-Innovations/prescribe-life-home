@@ -52,7 +52,7 @@ const testimonials = [
 
 export function TestimonialsCarousel() {
   return (
-    <div className="w-full max-w-7xl mx-auto px-4 rounded-2xl">
+    <div className="w-full rounded-2xl">
       <Carousel
         plugins={[
           Autoplay({
@@ -65,11 +65,11 @@ export function TestimonialsCarousel() {
         }}
         className="w-full"
       >
-        <CarouselContent className="-ml-2 md:-ml-4">
+        <CarouselContent className="">
           {testimonials.map((testimonial, index) => (
             <CarouselItem
               key={index}
-              className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3"
+              className="md:basis-1/2 lg:basis-1/3"
             >
               <MagicCard className="h-full">
                 <div className="p-10 flex flex-col items-start text-left h-full max-md:p-4 mt-  max-md:space-y-5">

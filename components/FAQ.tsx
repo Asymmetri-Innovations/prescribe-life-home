@@ -7,7 +7,6 @@ import { ChevronDown } from "lucide-react";
 interface FAQItem {
   question: string;
   answer: string;
-  isWhite?: boolean;
 }
 
 const faqData: FAQItem[] = [
@@ -15,66 +14,65 @@ const faqData: FAQItem[] = [
     question:
       "There are so many platforms out there. What makes PrescribeLife.AI different, and how do I know it’s for real?",
     answer:
-      "We get it. In a world full of \"game-changing\" tech, skepticism is smart. The difference is, we’re not just another data tracker. We are the only platform that connects your client's real-time biometrics, personalized DNA insights, and their daily behaviors into one adaptive system.\n\nIt’s built on a foundation of 8 million+ days of data and 50,000+ clinical assessments, so the insights aren't guesswork; they're science-backed and ready for you to use in your very next session.",
+      "We get it. In a world full of 'game-changing' tech, skepticism is smart. The difference is, we’re not just another data tracker. We are the only platform that connects your client's real-time biometrics, personalized DNA insights, and their daily behaviors into one adaptive system.",
   },
   {
     question:
       "My clients are incredibly busy executives. Will they actually use this?",
     answer:
-      "This is a critical question. The last thing high-performers need is another item on their to-do list. That’s why we designed PrescribeLife.AI to deliver value even with minimal effort.\n\nJust by having their phone, your clients provide passive data that gives you immediate insight into their sleep, readiness, and activity levels.\n\nWhen they choose to engage more deeply with their habits, the insights become even more powerful. Either way, you get the data you need to spot patterns and start conversations that matter.",
+      "That’s why we designed PrescribeLife.AI to deliver value even with minimal effort. Passive data from their phone gives you insights into sleep, readiness, and activity levels — no extra work for them.",
   },
   {
-    question:
-      "What if my client doesn’t have an Apple Watch, or Oura ring, or other wearables?",
+    question: "What if my client doesn’t have an Apple Watch or Oura ring?",
     answer:
-      "No device? No problem. While we integrate with top wearables, they are not required. The platform can gather essential data from the smartphone they already carry with them every day and facial scan technology, ensuring you can bring this level of insight to every single client, no extra hardware needed.",
+      "No device? No problem. The platform gathers essential data via smartphones and facial scan tech — no hardware required.",
   },
   {
     question:
       "I’m a performance coach, not a data scientist. Will I be able to understand this?",
     answer:
-      "Absolutely. Your genius is in coaching, not crunching numbers. We built this platform to honor that.\n\nWe handle all the complex science behind the scenes so you don’t have to be a health expert or data scientist.\n\nOur AI co-pilot, Preslie™, translates biometric and behavioral data into simple, coach-ready insights and topics for your next session. You get to focus on what you do best, guiding your clients with a new layer of precision.",
+      "Absolutely. Preslie™ (our AI co-pilot) translates data into simple, coach-ready insights so you can focus on guiding clients — not crunching numbers.",
   },
   {
     question: "Is this just for resilience or wellness?",
     answer:
-      "No. This is about performance under pressure, recovery strategy, and decision-making capacity built for coaches who go far beyond basic wellbeing.",
+      "No. This is about performance under pressure, recovery strategy, and decision-making capacity — far beyond basic wellbeing.",
   },
   {
-    question:
-      "I’ve spent years perfecting my coaching framework. Will this try to replace it?",
+    question: "Will this replace my coaching framework?",
     answer:
-      "Not at all. It’s designed to do the exact opposite. Your framework is your unique advantage, and our platform is built to amplify it.\n\nThink of PrescribeLife.AI as a high-precision lens for the powerful camera you already have. It provides real-time, objective data to validate your intuition and tailor your existing methods to what your client needs right now, making your unique process even more impactful.",
+      "Not at all. PrescribeLife.AI amplifies your framework, providing real-time data to tailor your methods — not replace them.",
   },
   {
-    question: "What kind of coaches can benefit from your platform?",
+    question: "What kind of coaches can benefit?",
     answer:
-      "Performance coaches to Founders, executives, leaders, and professionals under pressure.\nIf they perform at a high level and you coach them, PrescribeLife.AI gives you both the edge.",
+      "Performance coaches to founders, executives, and leaders — anyone coaching high-performers benefits from PrescribeLife.AI.",
   },
   {
-    question: "Can I use this for my group coaching programs?",
+    question: "Can I use this for group coaching programs?",
     answer:
-      'Yes, it’s incredibly powerful for group coaching. It allows you to maintain a cohesive program for the group while still providing hyper-personalized support to each individual. You can spot collective trends (e.g., "readiness scores dipped for everyone after the quarterly review") while also seeing which person might need a private check-in. It helps you scale your impact without losing the personal touch.',
+      'Yes, it’s powerful for group coaching — spot collective trends (e.g., "readiness dipped after review") while supporting individuals personally.',
   },
   {
-    question: "How does the AI co-pilot, Preslie™, actually work?",
+    question: "How does Preslie™ actually work?",
     answer:
-      "Think of Preslie™ as your associate coach, working 24/7 to support your clients between sessions. For your client, it helps them build self-awareness and unblock challenges with their habits in real-time.\n\nFor you, it analyzes all that data and surfaces the most important, coachable moments. It flags early signs of burnout and suggests topics for your next session, so you walk in already knowing where to focus to make the biggest impact.",
+      "Preslie™ acts like your assistant coach — tracking and surfacing key coachable moments, suggesting topics, and flagging burnout early.",
   },
   {
-    question: "Is my client's data secure on your platform?",
+    question: "Is my client's data secure?",
     answer:
-      "Absolutely. Trust and confidentiality are the bedrock of coaching, and we treat your client's data with the highest level of security and privacy. All information is encrypted, and only you and your client have access to their personal data. You can coach with complete peace of mind.",
+      "Absolutely. All client data is encrypted and private — only you and your client have access.",
   },
   {
     question: "What kind of data do you track?",
     answer:
-      "We track validated wellness scores across four key areas: wellbeing, sleep, activity, and readiness without requiring clients to buy new hardware.",
+      "We track validated wellness scores across wellbeing, sleep, activity, and readiness — no new hardware needed.",
   },
 ];
 
 export default function FAQ({ classname }: { classname?: string }) {
   const [expandedItems, setExpandedItems] = useState<number[]>([]);
+  const [showAll, setShowAll] = useState(false);
 
   const toggleItem = (index: number) => {
     setExpandedItems((prev) =>
@@ -86,116 +84,80 @@ export default function FAQ({ classname }: { classname?: string }) {
   const leftColumnItems = faqData.slice(0, midIndex);
   const rightColumnItems = faqData.slice(midIndex);
 
+  const visibleLeft = showAll ? leftColumnItems : leftColumnItems.slice(0, 3);
+  const visibleRight = showAll
+    ? rightColumnItems
+    : rightColumnItems.slice(0, 3);
+
   return (
     <section
       id="faq"
-      className={`flex flex-col justify-center items-center gap-12 px-4 md:px-16 ${classname}`}
+      className={`flex flex-col justify-center items-center gap-10 px-4 md:px-10 ${classname}`}
     >
-      <div className="text-5xl max-md:text-3xl font-medium">FAQs</div>
-      <div className="w-full max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-6">
-        {/* Left Column */}
-        <div className="space-y-6">
-          {leftColumnItems.map((item, index) => (
-            <motion.div
-              key={index}
-              className="flex flex-col bg-[#1a1a1a] text-white border-white/20 rounded-3xl border overflow-hidden cursor-pointer"
-              initial={false}
-              onClick={() => toggleItem(index)}
-            >
-              <div className="p-8 max-md:p-5 flex flex-col flex-1 min-h-[100px]  max-md:h-[60px]">
-                <div className="flex items-center justify-between">
-                  <h3 className="text-xl max-md:text-lg font-medium pr-4 max-md:pr-3 line-clamp-3 ">
-                    {item.question}
-                  </h3>
-                  <motion.div
-                    animate={{
-                      rotate: expandedItems.includes(index) ? 180 : 0,
-                    }}
-                    transition={{ duration: 0.2 }}
-                  >
-                    <ChevronDown className="w-6 h-6 max-md:w-4 max-md:h-4 text-zinc-400 flex-shrink-0" />
-                  </motion.div>
-                </div>
+      <div className="lg:text-5xl md:text-4xl text-3xl font-medium">FAQs</div>
 
-                <AnimatePresence initial={false}>
-                  {expandedItems.includes(index) && (
-                    <motion.div
-                      initial="collapsed"
-                      animate="open"
-                      exit="collapsed"
-                      variants={{
-                        open: { opacity: 1, height: "auto" },
-                        collapsed: { opacity: 0, height: 0 },
-                      }}
-                      transition={{
-                        duration: 0.3,
-                        ease: [0.04, 0.62, 0.23, 0.98],
-                      }}
-                    >
-                      <div className="pt-4 max-md:pt-2 text-zinc-300 text-lg max-md:text-base leading-[1.7]">
-                        {item.answer}
-                      </div>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </div>
-            </motion.div>
-          ))}
-        </div>
+      <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-5">
+        {[visibleLeft, visibleRight].map((col, colIndex) => (
+          <div key={colIndex} className="space-y-5">
+            {col.map((item, index) => {
+              const actualIndex = colIndex === 0 ? index : index + midIndex;
+              const isExpanded = expandedItems.includes(actualIndex);
 
-        {/* Right Column */}
-        <div className="space-y-6">
-          {rightColumnItems.map((item, index) => {
-            const actualIndex = index + midIndex;
-            return (
-              <motion.div
-                key={actualIndex}
-                className="flex flex-col bg-[#1a1a1a] text-white border-white/20 rounded-3xl border overflow-hidden cursor-pointer"
-                initial={false}
-                onClick={() => toggleItem(actualIndex)}
-              >
-                <div className="p-8 max-md:p-5 flex flex-col flex-1 min-h-[100px] max-md:h-[60px]">
-                  <div className="flex items-center justify-between">
-                    <h3 className="text-xl max-md:text-lg font-medium pr-4 max-md:pr-3 line-clamp-3">
-                      {item.question}
-                    </h3>
-                    <motion.div
-                      animate={{
-                        rotate: expandedItems.includes(actualIndex) ? 180 : 0,
-                      }}
-                      transition={{ duration: 0.2 }}
-                    >
-                      <ChevronDown className="w-6 h-6 max-md:w-4 max-md:h-4 text-zinc-400 flex-shrink-0" />
-                    </motion.div>
-                  </div>
-
-                  <AnimatePresence initial={false}>
-                    {expandedItems.includes(actualIndex) && (
+              return (
+                <motion.div
+                  key={actualIndex}
+                  className={`flex flex-col bg-[#1a1a1a] h-24 text-white border border-white/20 rounded-2xl overflow-hidden cursor-pointer transition-all duration-300 ${
+                    isExpanded ? "h-auto" : ""
+                  }`}
+                  onClick={() => toggleItem(actualIndex)}
+                  initial={false}
+                >
+                  <div className="p-5 flex flex-col justify-center flex-1">
+                    <div className="flex items-center justify-between">
+                      <h3 className="text-base md:text-lg pr-3 tracking-wide">{item.question}</h3>
                       <motion.div
-                        initial="collapsed"
-                        animate="open"
-                        exit="collapsed"
-                        variants={{
-                          open: { opacity: 1, height: "auto" },
-                          collapsed: { opacity: 0, height: 0 },
-                        }}
-                        transition={{
-                          duration: 0.3,
-                          ease: [0.04, 0.62, 0.23, 0.98],
-                        }}
+                        animate={{ rotate: isExpanded ? 180 : 0 }}
+                        transition={{ duration: 0.2 }}
                       >
-                        <div className="pt-4 max-md:pt-2 text-zinc-300 text-lg max-md:text-base leading-[1.7]">
-                          {item.answer}
-                        </div>
+                        <ChevronDown className="w-5 h-5 text-zinc-400 flex-shrink-0" />
                       </motion.div>
-                    )}
-                  </AnimatePresence>
-                </div>
-              </motion.div>
-            );
-          })}
-        </div>
+                    </div>
+
+                    <AnimatePresence initial={false}>
+                      {isExpanded && (
+                        <motion.div
+                          initial="collapsed"
+                          animate="open"
+                          exit="collapsed"
+                          variants={{
+                            open: { opacity: 1, height: "auto" },
+                            collapsed: { opacity: 0, height: 0 },
+                          }}
+                          transition={{
+                            duration: 0.3,
+                            ease: [0.04, 0.62, 0.23, 0.98],
+                          }}
+                        >
+                          <div className="pt-3 text-zinc-300 text-base md:text-lg leading-relaxed tracking-wide">
+                            {item.answer}
+                          </div>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </div>
+                </motion.div>
+              );
+            })}
+          </div>
+        ))}
       </div>
+
+      <button
+        onClick={() => setShowAll(!showAll)}
+        className="px-6 py-2 text-white border border-white/30 rounded-full hover:bg-white/10 transition-all"
+      >
+        {showAll ? "View Less" : "View More"}
+      </button>
     </section>
   );
 }

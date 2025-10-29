@@ -50,9 +50,9 @@ const testimonials = [
 
 export default function TestimonialsSection() {
   return (
-    <section className="flex flex-col items-center gap-10 max-md:gap-6">
+    <section className="flex flex-col items-center gap-10 max-md:gap-6 overflow-hidden">
       <FadeRise>
-        <div className="text-5xl max-md:text-2xl text-center font-medium">
+        <div className="lg:text-5xl md:text-4xl text-3xl text-center font-medium">
           What Other <span className="text-theme">Coaches</span> Are Saying
         </div>
       </FadeRise>
@@ -78,7 +78,7 @@ export default function TestimonialsSection() {
       </Marquee>
 
       <FadeRise delay={0.25}>
-        <div className="text-lg max-md:text-base text-center">
+        <div className="text-lg md:text-xl text-center tracking-wide">
           Let us show you how to multiply your revenue, not your workload.
         </div>
       </FadeRise>
