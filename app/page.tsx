@@ -1,121 +1,916 @@
-"use client";
-import Explain from "@/components/Explain";
-import FAQ from "@/components/FAQ";
-import { MagicCard } from "@/components/MagicCard";
-import { Marquee } from "@/components/Marquee";
-import { NumberTicker } from "@/components/NumberTicker";
-import { Activity, Cog, Heart } from "lucide-react";
-import {
-  Crown,
-  Eye,
-  User,
-  Timer,
-  Lightbulb,
-  Target,
-  MessageCircleQuestion,
-} from "lucide-react";
-import Image from "next/image";
-import { motion } from "motion/react";
-import React from "react";
-import { Title } from "@/components/Title";
-import { Newsletter } from "@/components/Newsletter";
-import { FadeRise } from "@/components/FadeRise";
-//@ts-expect-error: JS COMPATIBILITY
-import { Splide, SplideSlide } from "@splidejs/react-splide";
-import "@splidejs/react-splide/css";
-import CTA from "@/components/CTA";
-import TestimonialsSection from "@/components/Testimonials";
-import { TestimonialsCarousel } from "@/components/CoachCarousel";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
-import { PhoneDashboard } from "@/components/phone-dashboard";
-import { PhoneDashboardSplide } from "@/components/phone-dashboard-splide";
-import { MakeYouHuman } from "@/components/MakeYouHuman";
-import { MeetingTheUrgentDemand } from "@/components/MeetingTheUrgentDemand";
-import { AmplifyHumanTouch } from "@/components/AmplifyHumanTouch";
+// "use client";
+// import Explain from "@/components/Explain";
+// import FAQ from "@/components/FAQ";
+// import { MagicCard } from "@/components/MagicCard";
+// import { Marquee } from "@/components/Marquee";
+// import { NumberTicker } from "@/components/NumberTicker";
+// import { Activity, Cog, Heart } from "lucide-react";
+// import {
+//   Crown,
+//   Eye,
+//   User,
+//   Timer,
+//   Lightbulb,
+//   Target,
+//   MessageCircleQuestion,
+// } from "lucide-react";
+// import Image from "next/image";
+// import { motion } from "motion/react";
+// import React from "react";
+// import { Title } from "@/components/Title";
+// import { Newsletter } from "@/components/Newsletter";
+// import { FadeRise } from "@/components/FadeRise";
+// //@ts-expect-error: JS COMPATIBILITY
+// import { Splide, SplideSlide } from "@splidejs/react-splide";
+// import "@splidejs/react-splide/css";
+// import CTA from "@/components/CTA";
+// import TestimonialsSection from "@/components/Testimonials";
+// import { TestimonialsCarousel } from "@/components/CoachCarousel";
+// import {
+//   Carousel,
+//   CarouselContent,
+//   CarouselItem,
+//   CarouselNext,
+//   CarouselPrevious,
+// } from "@/components/ui/carousel";
+// import { PhoneDashboard } from "@/components/phone-dashboard";
+// import { PhoneDashboardSplide } from "@/components/phone-dashboard-splide";
+// import { MakeYouHuman } from "@/components/MakeYouHuman";
+// import { MeetingTheUrgentDemand } from "@/components/MeetingTheUrgentDemand";
+// import { AmplifyHumanTouch } from "@/components/AmplifyHumanTouch";
 
-// Mild, performant animation helper
-const list = [
-  "Let's be honest.",
-  "The rise of AI has many coaches wondering about their future.",
-  "But most tech solutions are designed to remove the human element, not enhance it.",
-  "We believe that’s a flawed approach.",
-  "Your intuition, empathy, and connection are the most powerful assets in coaching and technology should serve them, not sideline them.",
-  "PrescribeLife.AI is the first platform designed not as a replacement, but as an amplifier for your humanity.",
-  "It gives you the insights to make your connections deeper and your impact undeniable.",
+// // Mild, performant animation helper
+// const list = [
+//   "Let's be honest.",
+//   "The rise of AI has many coaches wondering about their future.",
+//   "But most tech solutions are designed to remove the human element, not enhance it.",
+//   "We believe that’s a flawed approach.",
+//   "Your intuition, empathy, and connection are the most powerful assets in coaching and technology should serve them, not sideline them.",
+//   "PrescribeLife.AI is the first platform designed not as a replacement, but as an amplifier for your humanity.",
+//   "It gives you the insights to make your connections deeper and your impact undeniable.",
+// ];
+
+// export default function Home() {
+//   const steps = [
+//     {
+//       id: "01",
+//       title: "Invite Your Client",
+//       description:
+//         "They download the PrescribeLife.AI app and connect their existing wearables in minutes.",
+//       subtitle: "No extra hardware, no tech headaches.",
+//       icon: User,
+//     },
+//     {
+//       id: "02",
+//       title: "Coach with Confidence",
+//       description: "Walk into every session already knowing where to focus.",
+//       subtitle:
+//         "Use data-informed topics to guide powerful conversations, prevent burnout, and create breakthroughs.",
+//       icon: Eye,
+//     },
+//     {
+//       id: "03",
+//       title: "Uncover Hidden Patterns",
+//       description:
+//         "We translate real-time biometric and behavioral data into simple, actionable insights.",
+//       subtitle: "See readiness, recovery, and resilience patterns instantly.",
+//       icon: Crown,
+//     },
+//   ];
+
+//   return (
+//     <main className="space-y-14 max-md:space-y-10 relative overflow-hidden max-w-full min-w-0 px-4 max-md:px-2">
+//       <Image
+//         className="absolute inset-0 w-full md:h-[150vh] max-md:h-[80vh] object-cover md:rotate-30 rotate-animation-slow md:scale-110 max-md:scale-100 z-[-1] overflow-visible pointer-events-none"
+//         src="/bggradient.png"
+//         width={300}
+//         height={300}
+//         alt="bg"
+//       />
+
+//       {/* HERO */}
+
+//       <section
+//         id="hero"
+//         className="flex flex-col  max-md:pt-4 px-6 max-md:px-2"
+//       >
+//         <motion.div
+//           initial={{ y: 32, filter: "blur(6px)", opacity: 0 }}
+//           animate={{ y: 0, filter: "blur(0px)", opacity: 1 }}
+//           transition={{ duration: 1, delay: 0.45 }}
+//           className="w-full pb-0 max-md:pb-0 min-h-[80vh] pt-16 max-md:min-h-[72vh] flex justify-center items-center max-md:items-center max-md:justify-center max-md:mt-6"
+//         >
+//           {/* Two-column grid */}
+//           <div className="flex flex-col md:flex-row items-start justify-center gap-6 max-tablet:gap-2 w-full max-tablet:mt-1 ">
+//             {/* Left-side text */}
+//             <div className="flex w-full md:w-1/2 flex-col items-start justify-center text-left max-md:text-center max-md:items-center space-y-4 max-md:space-y-4 order-1 max-md:mb-16 ">
+//               <motion.h1
+//                 className="text-6xl max-md:text-2xl font-semibold"
+//                 initial={{ y: 30, filter: "blur(4px)", opacity: 0 }}
+//                 animate={{ y: 0, filter: "blur(0px)", opacity: 1 }}
+//                 transition={{ duration: 0.8, ease: "easeOut" }}
+//               >
+//                 Set the new standard in <br />
+//                 <span className="text-gradient">performance coaching</span>
+//               </motion.h1>
+
+//               <motion.p
+//                 className="text-xl max-md:text-base inter"
+//                 initial={{ y: 24, filter: "blur(4px)", opacity: 0 }}
+//                 animate={{ y: 0, filter: "blur(0px)", opacity: 1 }}
+//                 transition={{ duration: 0.75, delay: 0.15, ease: "easeOut" }}
+//               >
+//                 Resilience coaching that adapts in real time to evolving client
+//                 needs, powered by behavioral science and biometric
+//                 precision—because burnout should not be the cost of performance.
+//               </motion.p>
+
+//               {/* Button only on desktop */}
+//               <motion.div className="flex">
+//                 <CTA />
+//               </motion.div>
+//             </div>
+
+//             {/* Right-side image */}
+//             <div className="flex w-full md:w-1/2 flex-col items-center justify-start order-2 space-y-4 max-md:space-y-2">
+//               <Image
+//                 src="/result.png"
+//                 width={900}
+//                 height={900}
+//                 alt="platform"
+//                 className="w-full h-auto"
+//               />
+
+//               {/* Button only on mobile */}
+//             </div>
+//           </div>
+//         </motion.div>
+//         <motion.div
+//           initial={{ y: 32, filter: "blur(6px)", opacity: 0 }}
+//           animate={{ y: 0, filter: "blur(0px)", opacity: 1 }}
+//           transition={{ duration: 1, delay: 0.45 }}
+//           className="w-full pb-0 max-md:pb-0 space-y-6 max-md:space-y-4 max-md:mt-2"
+//         >
+//           <p className="text-5xl max-md:text-2xl text-center font-semibold px-2">
+//             Trusted by Performance Coaches Behind Today's <br />
+//             <span className="text-theme">Most Influential Leaders</span>
+//           </p>
+//           <section className="mt-0">
+//             <TestimonialsCarousel />
+//             <div className="flex items-center justify-center mt-7">
+//               <Image
+//                 src="/security.png"
+//                 width={400}
+//                 height={400}
+//                 alt="security"
+//               />
+//             </div>
+//           </section>
+//         </motion.div>
+//       </section>
+//       <MeetingTheUrgentDemand />
+//       {/* GAP NARRATIVE */}
+//       <section className="max-w-6xl mx-auto px-8 max-md:px-4 space-y-8 max-md:space-y-6">
+//         {/* First block */}
+//         <div className="space-y-12 max-md:space-y-8 max-md:text-center">
+//           <FadeRise>
+//             <h2 className="text-5xl max-md:text-3xl leading-tight font-semibold text-center">
+//               Are Weekly Check-ins and Client Self-Reporting Still Enough?
+//             </h2>
+//           </FadeRise>
+
+//           <div className="relative grid md:grid-cols-2 gap-12 items-start max-md:items-center">
+//             {/* Text - Now on the left */}
+//             <FadeRise delay={0.05}>
+//               <div className="space-y-5 max-md:space-y-3 text-base max-md:text-sm leading-relaxed">
+//                 <h3 className="text-3xl max-md:text-xl font-semibold">
+//                   You excel in the moment
+//                 </h3>
+//                 <p className="text-base max-md:text-sm inter">
+//                   During a call, you see the shifts, hear the hesitations, and
+//                   guide breakthroughs. Your expertise is undeniable.
+//                 </p>
+//                 <p className="text-base max-md:text-sm inter">
+//                   But what happens when the call ends?
+//                 </p>
+//                 <p className="text-base max-md:text-sm inter">
+//                   Your client steps back into a 24/7 reality of hidden
+//                   stressors, fluctuating energy shifts, and invisible mindset
+//                   blocks.
+//                 </p>
+//                 <p className="text-base max-md:text-sm inter">
+//                   You're left with week-old self-reporting, piecing together an
+//                   incomplete puzzle.
+//                 </p>
+//                 <p className="italic text-theme font-bold inter">
+//                   "You're coaching the person who shows up to the session, not
+//                   the whole person living their life".
+//                 </p>
+//                 <p className="text-base max-md:text-sm inter">
+//                   This isn't a flaw in your method—it's a limitation of the
+//                   traditional model.
+//                 </p>
+//               </div>
+//             </FadeRise>
+
+//             {/* Image - Now on the right */}
+//             <FadeRise delay={0.12} className="max-md:hidden">
+//               <div className="relative z-10 flex justify-center items-start h-full">
+//                 <Image
+//                   src="/coaching-in-dark.png"
+//                   alt="Coaching in the Dark - Before PrescribeLife.AI"
+//                   width={600}
+//                   height={700}
+//                   className="rounded-3xl w-full h-full object-cover max-h-[500px]"
+//                 />
+//               </div>
+//             </FadeRise>
+//           </div>
+//         </div>
+
+//         {/* Second block stays the same */}
+//         <div className="grid md:grid-cols-2 gap-12 items-start">
+//           <FadeRise>
+//             <div className="space-y-8 max-md:text-center mt-12 max-md:mt-8">
+//               <h3 className="text-3xl max-md:text-xl font-semibold">
+//                 <span className="text-theme/80">PrescribeLife.AI</span> closes
+//                 that gap.
+//               </h3>
+//               <p className="text-base max-md:text-sm inter">
+//                 We surface real-time, objective data on resilience, recovery,
+//                 and behavior patterns—fuel for your intuition to drive lasting
+//                 change.
+//               </p>
+//               <div className="flex justify-start max-md:justify-center">
+//                 <CTA classname="w-2xs" />
+//               </div>
+//             </div>
+//           </FadeRise>
+
+//           <FadeRise delay={0.1} className="max-md:hidden">
+//             <div className="relative h-full">
+//               <div className="relative z-10 flex flex-col items-center justify-start h-full">
+//                 <Image
+//                   src="/coaching-clarity.png"
+//                   alt="Coaching with Clarity - After PrescribeLife.AI"
+//                   width={600}
+//                   height={700}
+//                   className="rounded-3xl w-full h-full object-cover max-h-[500px]"
+//                 />
+//               </div>
+//             </div>
+//           </FadeRise>
+//         </div>
+//       </section>
+//       {/* STEPS */}
+//       <section className="flex flex-col items-center space-y-8 max-md:space-y-4">
+//         <FadeRise>
+//           <Title
+//             text="Powerful Insights, Radically Simple to Use"
+//             className="text-5xl max-md:text-3xl mx-5 text-center"
+//           />
+//         </FadeRise>
+//         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl w-full px-6 max-md:px-4">
+//           {steps.map((step, i) => (
+//             <FadeRise key={step.id} delay={i * 0.12}>
+//               <MagicCard>
+//                 <div className="h-[400px] max-md:h-full rounded-2xl p-8 border border-white/10 relative overflow-hidden space-y-6 max-md:space-y-4">
+//                   <div className="absolute top-6 right-6 text-6xl max-md:text-4xl font-bold text-white/30 opacity-50">
+//                     {step.id}
+//                   </div>
+//                   <step.icon size={60} className="text-theme" />
+//                   <h3 className="text-[20px] max-md:text-2xl font-semibold text-white">
+//                     {step.title}
+//                   </h3>
+//                   <p className="text-base max-md:text-sm inter">
+//                     {step.description}
+//                   </p>
+//                   <p className="text-base max-md:text-sm font-medium inter">
+//                     {step.subtitle}
+//                   </p>
+//                 </div>
+//               </MagicCard>
+//             </FadeRise>
+//           ))}
+//         </div>
+//       </section>
+//       <section className="relative max-w-5xl mx-auto px-8 max-md:px-5 text-center space-y-4 sm:space-y-6">
+//         <FadeRise>
+//           <p className="text-lg max-md:text-base inter">
+//             The International Coach Federation (ICF) reports that 85% of coaches
+//             are hearing increased demand for mental well-being support.
+//           </p>
+//         </FadeRise>
+//         <FadeRise delay={0.06}>
+//           <p className="text-lg max-md:text-base inter">
+//             Mercer's Global Talent Trends report shares that 80% of
+//             professionals are at risk of burnout.
+//           </p>
+//         </FadeRise>
+//         <FadeRise delay={0.12}>
+//           <p className="text-theme text-3xl max-md:text-3xl font-semibold">
+//             "PrescribeLife.Ai was built to help coaches meet this urgent need
+//             head on."
+//           </p>
+//         </FadeRise>
+//         <FadeRise delay={0.18}>
+//           <p className="text-lg max-md:text-base inter">
+//             Whether you coach executives, leaders, founders or already focus on
+//             resilience, mental fitness and burnout — PrescribeLife.AI is
+//             designed for you.
+//           </p>
+//         </FadeRise>
+//       </section>
+//       {/* TRUSTED */}
+//       {/* <section className="flex flex-col items-center min-h-[50vh] space-y-10 text-center">
+//         <FadeRise>
+//           <Title text="Trusted by Performance Coaches Behind Today's Most Influential Leaders" />
+//         </FadeRise>
+
+//       </section> */}
+
+//       {/* MAKE YOU HUMAN */}
+//       <MakeYouHuman />
+//       <div className="max-md:hidden"></div>
+//       {/* <div className="hidden max-md:block">
+//         <div className="w-full flex-col justify-center items-center hidden max-md:flex mb-16">
+//           <Splide
+//             options={{
+//               type: "loop",
+//               focus: "center",
+//               interval: 2000,
+//               direction: "ttb",
+//               autoplay: true,
+//               height: "30rem",
+//               perPage: 3,
+//               arrows: false,
+//               pagination: false,
+//               gap: "0px",
+//               pauseOnHover: false,
+//               wheel: false,
+//               drag: false,
+//             }}
+//           >
+//             {list.map((x, i) => (
+//               <SplideSlide key={i}>
+//                 <motion.div
+//                   style={{
+//                     animation: `rotateBG 5s linear infinite`,
+//                     animationDelay: "6s",
+//                   }}
+//                   className="text-center text-lg text-white w-full bg-black"
+//                 >
+//                   {x}
+//                 </motion.div>
+//               </SplideSlide>
+//             ))}
+//           </Splide>
+
+//           <motion.div
+//             whileInView={{
+//               opacity: 1,
+//             }}
+//             initial={{
+//               opacity: 0.2,
+//             }}
+//             style={{
+//               animation: `rotateBG 4s linear infinite`,
+//               fontSize: "3em",
+//             }}
+//             className="floatingText red-text floating-main z-[9]"
+//           ></motion.div>
+//         </div>
+//       </div> */}
+
+//       {/* Comparison Illustration (new section) */}
+//       {/* <section className="relative mx-auto max-w-7xl px-8 max-md:px-4 py-12 max-md:py-8 rounded-[48px] bg-gradient-to-b from-white/10 via-white/5 to-pink-500/10 border border-white/20 shadow-[0_8px_40px_-12px_rgba(236,72,153,0.25)] overflow-hidden flex flex-col md:flex-row justify-start items-start max-md:space-y-8 max-md:mx-5">
+//         <div className="pointer-events-none absolute -top-32 -left-32 w-[420px] h-[420px] bg-gradient-to-br from-theme/30 to-pink-500/30 blur-3xl opacity-40" />
+//         <div className="pointer-events-none absolute bottom-0 -right-20 w-[360px] h-[360px] bg-gradient-to-br from-pink-400/40 to-blue-400/40 blur-3xl opacity-40" />
+//         <div className="relative space-y-10 w-full md:w-1/2 text-left">
+//           <FadeRise>
+//             <h2 className="text-5xl max-md:text-3xl font-semibold leading-tight">
+//               Set the New Standard in Coaching with Evidence-Based AI Insights &
+//               Signals:
+//             </h2>
+//             <p className="text-lg max-md:text-base text-white/80 max-w-xl leading-relaxed mt-6 max-md:mt-4 inter">
+//               Where your coaching genius meets real-time data intelligence.
+//             </p>
+//             <FadeRise
+//               delay={0.4}
+//               className="flex justify-left max-md:justify-center mt-24 max-md:mt-12"
+//             >
+//               <CTA classname="" />{" "}
+//             </FadeRise>
+//           </FadeRise>
+//         </div>
+//         <div className="relative w-full md:w-1/2 space-y-10 max-md:space-y-6 pl-16 max-md:pl-0">
+//           <FadeRise className="space-y-4" delay={0.15}>
+//             <h3 className="text-3xl max-md:text-xl font-semibold">
+//               Without Prescribelife.AI
+//             </h3>
+//             <div className="flex flex-col items-start gap-10 ">
+//               <ul className="space-y-5 max-md:space-y-3 text-base max-md:text-sm font-medium text-zinc-200 ">
+//                 {["Clients Self Reporting", "Your Expertise & Guidance"].map(
+//                   (item, i) => (
+//                     <li key={i} className="relative pl-5">
+//                       <span className="absolute left-0 top-2 w-3 h-[2px] bg-gradient-to-r from-theme to-pink-500" />
+//                       {item}
+//                     </li>
+//                   )
+//                 )}
+//               </ul>
+//             </div>
+//           </FadeRise>
+//           <FadeRise className="space-y-4" delay={0.15}>
+//             <h3 className="text-3xl max-md:text-xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-theme to-pink-600">
+//               With Prescribelife.AI
+//             </h3>
+//             <ul className="space-y-4 max-md:space-y-2 text-base max-md:text-sm font-medium  text-zinc-200">
+//               {[
+//                 "Client Reporting with Prompts on Automation",
+//                 "Real-Time Recovery & Stress Levels",
+//                 "Daily Patterns of Action & Inaction",
+//                 "Early Burnout & Fatigue Warnings",
+//                 "Hidden Mindset & Motivation Blockers",
+//                 "AI-Generated Evidence Based Topics for Your Next Session",
+//                 "Your Expertise & Guidance",
+//               ].map((item, i) => (
+//                 <li key={i} className="relative pl-6 leading-snug">
+//                   <span className="absolute left-0 top-2 w-4 h-[2px] bg-gradient-to-r from-theme via-pink-500 to-blue-500" />
+//                   {item}
+//                 </li>
+//               ))}
+//             </ul>
+//           </FadeRise>
+//         </div>
+//       </section> */}
+//       <AmplifyHumanTouch />
+
+//       {/* PHONE / DASHBOARD */}
+//       <PhoneDashboardSplide />
+
+//       {/* BEFORE / AFTER */}
+//       <section className="grid grid-cols-1 md:grid-cols-2 gap-8 max-md:gap-4 max-w-6xl mx-auto px-8 max-md:px-4">
+//         {/* Left column: Before image */}
+//         <FadeRise className="h-full" delay={0.15}>
+//           <div className="w-full h-full flex items-center justify-center">
+//             <Image
+//               src="/before.png"
+//               alt="Before - The Manual, Reactive Grind"
+//               width={800}
+//               height={600}
+//               className="w-full h-auto rounded-3xl"
+//             />
+//           </div>
+//         </FadeRise>
+
+//         {/* Right column: After image */}
+//         <FadeRise className="h-full">
+//           <div className="w-full h-full flex items-center justify-center">
+//             <Image
+//               src="/after.png"
+//               alt="After - The Automatic, Proactive System"
+//               width={800}
+//               height={600}
+//               className="w-full h-auto rounded-3xl"
+//             />
+//           </div>
+//         </FadeRise>
+//       </section>
+
+//       {/* METRICS */}
+//       <section className="flex flex-col items-center gap-16 max-md:gap-8">
+//         <FadeRise>
+//           <Title text="Powered By" className="text-5xl max-md:text-3xl" />
+//         </FadeRise>
+//         <div className="flex flex-col  md:flex-row justify-center items-stretch w-full max-w-6xl divide-y md:divide-y-0 md:divide-x divide-white/20">
+//           {[
+//             { v: 8, label: "Days of real-world behavioral data", suffix: "M+" },
+//             { v: 500, label: "User profiles analyzed", suffix: "K+" },
+//             {
+//               v: 50,
+//               label: "Clinical assessments training models",
+//               suffix: "K+",
+//             },
+//           ].map((m, i) => (
+//             <FadeRise
+//               key={i}
+//               delay={i * 0.15}
+//               className="flex-1 flex flex-col items-center py-6 max-md:py-4 px-4 max-md:px-2 gap-4"
+//             >
+//               <div className="text-6xl max-md:text-4xl font-semibold">
+//                 <NumberTicker value={m.v} />
+//                 {m.suffix}
+//               </div>
+//               <p className="text-white/60 text-center max-w-xs text-base max-md:text-sm inter">
+//                 {m.label}
+//               </p>
+//             </FadeRise>
+//           ))}
+//         </div>
+//       </section>
+
+//       {/* SIMPLE MARQUEE (placeholder) */}
+//       <section className="overflow-x-hidden w-full min-w-0">
+//         <FadeRise>
+//           <div className="overflow-x-hidden w-full">
+//             <Marquee className="[--duration:20s]">
+//               {[
+//                 { name: "Oura", src: "/oura.png" },
+//                 { name: "Fitbit", src: "/fitbit.png" },
+//                 { name: "Garmin", src: "/garmin.png" },
+//                 { name: "Apple Health", src: "/apple-health.png" },
+//                 { name: "Google Fit", src: "/google-fit.png" },
+//                 { name: "Health Connect", src: "/health-connect.png" },
+//                 { name: "MyFitnessPal", src: "/myfitnesspal.png" },
+//                 { name: "Peloton", src: "/peloton.png" },
+//                 { name: "Samsung Health", src: "/samsung-health.png" },
+//                 { name: "Strava", src: "/strava.png" },
+//                 { name: "Whoop", src: "/whoop.png" },
+//               ].map((app) => (
+//                 <div
+//                   key={app.name}
+//                   className="bg-white w-64 max-md:w-[45vw] p-7 max-md:p-5 rounded-xl border-2 border-white/20 flex flex-col items-center gap-3 max-md:gap-2 shrink-0 shadow-md"
+//                 >
+//                   <img
+//                     src={app.src}
+//                     alt={app.name}
+//                     className="w-16 h-16 max-md:w-12 max-md:h-12 rounded-full object-contain"
+//                   />
+//                   <div className="text-base max-md:text-sm text-gray-900">
+//                     {app.name}
+//                   </div>
+//                 </div>
+//               ))}
+//             </Marquee>
+//           </div>
+//         </FadeRise>
+//       </section>
+
+//       {/* COMPARISON CARDS (Problem / Solution) */}
+//       <section className="flex flex-col items-center">
+//         <FadeRise>
+//           <Title
+//             text="Your Next Coaching Session Could Be Your Best Ever."
+//             className="text-5xl max-md:text-3xl mx-5 text-center"
+//           />
+//         </FadeRise>
+//         <FadeRise delay={0.1}>
+//           <Title
+//             text="Here's How"
+//             className="text-theme mb-16 mt-7 font-bold"
+//           />
+//         </FadeRise>
+//         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-md:gap-6 max-w-6xl w-full px-8 max-md:px-4 mb-5 max-md:mb-4">
+//           <FadeRise className="h-full">
+//             <div className="bg-gradient-to-br from-red-900/20 to-red-800/20 rounded-3xl p-8 max-md:p-6 border border-red-500/20 backdrop-blur-sm h-full space-y-6 max-md:space-y-4">
+//               <div className="flex items-center gap-4 mb-2">
+//                 <div className="min-w-16 h-16 bg-red-500/20 rounded-2xl flex items-center justify-center">
+//                   <MessageCircleQuestion className="w-8 h-8 text-red-400" />
+//                 </div>
+//                 <h3 className="text-3xl max-md:text-xl font-semibold text-white">
+//                   How many sessions start the same way?
+//                 </h3>
+//               </div>
+//               {[
+//                 "Your client shows up exhausted…",
+//                 "They say, \"I don't know, I'm tired.\"",
+//                 "First 20 minutes just finding a starting point.",
+//                 "Time lost navigating fog & incomplete recall.",
+//               ].map((t, i) => (
+//                 <p
+//                   key={i}
+//                   className={
+//                     i === 1
+//                       ? "text-lg max-md:text-base font-medium   text-red-400 bg-red-500/10 p-4 max-md:p-3 rounded-xl border border-red-500/20"
+//                       : "text-lg max-md:text-base text-white mt-5 leading-relaxed"
+//                   }
+//                 >
+//                   {t}
+//                 </p>
+//               ))}
+//             </div>
+//           </FadeRise>
+//           <FadeRise delay={0.15}>
+//             <div className="bg-gradient-to-br from-green-900/20 to-emerald-800/20 rounded-3xl p-8 max-md:p-6 border border-green-500/20 backdrop-blur-sm space-y-6 max-md:space-y-4">
+//               <div className="flex items-center gap-4 mb-">
+//                 <div className="min-w-16 h-16 bg-green-500/20 rounded-2xl flex items-center justify-center">
+//                   <Lightbulb className="w-8 h-8 text-green-400" />
+//                 </div>
+//                 <h3 className="text-3xl max-md:text-xl font-semibold text-white">
+//                   The PrescribeLife.AI Way
+//                 </h3>
+//               </div>
+//               <p className="text-white leading-relaxed text-lg max-md:text-base">
+//                 Before your next call you open your dashboard.
+//               </p>
+//               <p className="text-white leading-relaxed text-lg max-md:text-base">
+//                 You instantly see readiness dips and disrupted patterns.
+//               </p>
+//               <p className="text-white leading-relaxed text-lg max-md:text-base">
+//                 Contextual notes surfaced by AI reveal cognitive themes.
+//               </p>
+//               <p className="text-lg max-md:text-base font-medium text-green-400 bg-green-500/10 p-4 max-md:p-3 rounded-xl border border-green-500/20">
+//                 “Let’s go straight into the pattern that showed up.”
+//               </p>
+//               <p className="text-white leading-relaxed text-lg max-md:text-base">
+//                 You bypass fog and create decisive movement.
+//               </p>
+//             </div>
+//           </FadeRise>
+//         </div>{" "}
+//         <FadeRise>
+//           <Title
+//             text="In Your First 10-14 Days, You Will"
+//             className="text-5xl max-md:text-3xl mx-5 text-left my-5"
+//           />
+//         </FadeRise>
+//       </section>
+
+//       {/* ONBOARD BENEFITS */}
+
+//       <section className="flex flex-col items-center mx-32 max-md:mx-0 px-6 max-md:px-5 -mt-20 max-md:-mt-8 py-16 pb-28 max-md:py-0">
+//         <div className="w-full px-8 max-md:px-5 mt-8 max-md:mt-4">
+//           <div className="relative flex w-full max-w-3xl mx-auto place-items-center gap-6 max-md:flex-col">
+//             {[
+//               {
+//                 icon: Timer,
+//                 title: "Eliminate Wasted Time",
+//                 text: "Go from 'What's on your mind?' to data-informed clarity.",
+//                 gridClass: "md:col-start-1 md:row-start-3",
+//               },
+//               {
+//                 icon: Lightbulb,
+//                 title: "Unlock Deeper Insights",
+//                 text: "Surface challenges happening between sessions.",
+//                 gridClass: "md:col-start-2 md:row-start-2",
+//               },
+//               {
+//                 icon: Target,
+//                 title: "Lead With Precision",
+//                 text: "Guide the conversation when clients can't articulate needs.",
+//                 gridClass: "md:col-start-3 md:row-start-1",
+//               },
+//             ].map((c, i) => (
+//               <FadeRise
+//                 key={c.title}
+//                 delay={i * 0.12}
+//                 className={`${
+//                   i === 2
+//                     ? "md:translate-y-0"
+//                     : i === 1
+//                     ? "md:translate-y-12"
+//                     : i === 0
+//                     ? "md:translate-y-24"
+//                     : ""
+//                 }  rounded-2xl border border-white/30 bg-gradient-to-b from-white/10 to-black/80 p-6 flex flex-col justify-center items-center text-center w-60 h-60 md:w-60 md:h-60 `}
+//               >
+//                 <c.icon className="w-10 h-10 text-theme mb-3" />
+//                 <h3 className="text-2xl font-semibold text-white mb-2">
+//                   {c.title}
+//                 </h3>
+//                 <p className="text-sm leading-tight inter text-white/80">
+//                   {c.text}
+//                 </p>
+//               </FadeRise>
+//             ))}
+//           </div>
+//         </div>
+//       </section>
+
+//       {/* CTA CURVE */}
+//       <section className="relative flex flex-col md:flex-row items-start md:items-center justify-start gap-8 max-md:gap-6 px-6 md:px-12">
+//         {/* White Curve Card */}
+//         <FadeRise className="bg-white text-black rounded-2xl md:rounded-r-[300px] p-12 max-md:p-6 flex flex-col items-center justify-center relative overflow-hidden min-h-[400px] max-md:min-h-[300px] w-full md:w-[65%] lg:w-[60%] xl:w-[55%] max-md:translate-x-0 -translate-x-8 md:-translate-x-16">
+//           <h2 className="text-5xl max-md:text-3xl font-semibold text-center leading-tight mb-6 max-w-3xl">
+//             Turn Your Expertise into a potential 5x to 10x Return
+//           </h2>
+//           <a
+//             href="/booking"
+//             target="_blank"
+//             rel="noopener noreferrer"
+//             className="bg-gradient-to-r from-theme to-pink-600 text-white font-semibold px-12 py-5 rounded-full text-lg shadow-xl hover:shadow-2xl transition-all mb-8 max-md:text-center"
+//           >
+//             Book a Personalized Demo Call
+//           </a>
+//           <p className="text-base text-zinc-600 text-center max-w-lg inter">
+//             Let us show you how to multiply your revenue, not your workload.
+//           </p>
+//         </FadeRise>
+
+//         {/* Right-side column */}
+//         <div className="flex flex-col gap-4 max-md:gap-3 w-full md:w-[35%] lg:w-[40%] xl:w-[45%] items-start max-md:items-center">
+//           {[
+//             "Instantly add high-value, data-driven programs.",
+//             "Confidently introduce premium revenue streams.",
+//           ].map((t, i) => (
+//             <FadeRise
+//               delay={0.15 + i * 0.1}
+//               key={i}
+//               className="bg-[#1a1a1a] border border-white/20 rounded-3xl px-6 max-md:px-4 py-4 max-md:py-3 relative w-full max-w-[360px] md:max-w-[400px] lg:max-w-[440px] transition-all"
+//             >
+//               <div className="absolute left-6 top-6 w-[3px] h-12 max-md:h-10 bg-theme rounded-full" />
+//               <p className="pl-10 text-lg max-md:text-base leading-relaxed text-white">
+//                 <span className="text-pink-400 font-semibold">
+//                   {t.split(" ")[0]}
+//                 </span>{" "}
+//                 {t.split(" ").slice(1).join(" ")}
+//               </p>
+//             </FadeRise>
+//           ))}
+//           <Image
+//             src="/security.png"
+//             width={400}
+//             height={400}
+//             alt="security"
+//             className="mt-6"
+//           />
+//         </div>
+//       </section>
+
+//       {/* TESTIMONIALS */}
+//       <TestimonialsSection />
+//       <div id="faq">
+//         <FAQ></FAQ>
+//       </div>
+//       {/* RESULTS */}
+//       <section className="flex flex-col items-center text-center">
+//         <FadeRise>
+//           <Title
+//             text="Your Proven Framework + Adaptive Intelligence"
+//             className="text-5xl max-md:text-3xl"
+//           />
+//         </FadeRise>
+//         <FadeRise delay={0.1}>
+//           <Title
+//             text="= Unstoppable Results"
+//             className="text-theme text-5xl max-md:text-3xl"
+//           />
+//         </FadeRise>
+//         <FadeRise className="flex justify-center items-center" delay={0.2}>
+//           <img
+//             className="w-2/3 max-md:w-full mt-16 max-md:mt-8 -translate-x-16 max-md:-translate-x-0"
+//             src="/hero.png"
+//             alt="result"
+//           />
+//         </FadeRise>
+//       </section>
+
+//       {/* POSITIONING */}
+
+//       <section className="flex flex-col items-center space-y-10 max-md:space-y-6">
+//         <FadeRise>
+//           <div className="max-w-7xl text-lg max-md:text-base text-center inter">
+//             You're here to create lasting change. Transformation happens between
+//             sessions. To guide that journey you need visibility—an adaptive,
+//             intelligent layer over your framework.
+//           </div>
+//         </FadeRise>
+//         <div className="grid grid-cols-1 md:grid-cols-3 gap-3 max-md:gap-2 max-w-6xl w-full px-4 max-md:px-3 mt-6 max-md:mt-3">
+//           {[
+//             {
+//               icon: Activity,
+//               title: "Evidence-Based",
+//               body: "Real-time insight into physiology & mindset.",
+//             },
+//             {
+//               icon: Cog,
+//               title: "Systematized",
+//               body: "Behavioral change engine supports follow-through.",
+//             },
+//             {
+//               icon: Heart,
+//               title: "Deeply Human",
+//               body: "Frees you to focus on irreplaceable transformation.",
+//             },
+//           ].map((c, i) => (
+//             <FadeRise
+//               key={c.title}
+//               delay={i * 0.12}
+//               className="bg-gradient-to-b from-zinc-900 to-black rounded-3xl p-4 max-md:p-3 max-md:h-auto max-md:min-h-44 border border-white/20 space-y-2 max-md:space-y-2"
+//             >
+//               <div className="w-9 h-9 max-md:w-8 max-md:h-8 bg-theme/20 rounded-lg flex items-center justify-center">
+//                 <c.icon className="w-4 h-4 max-md:w-4 max-md:h-4 text-theme" />
+//               </div>
+//               <h3 className="text-xl md:text-2xl max-md:text-lg font-semibold">
+//                 {c.title}
+//               </h3>
+//               <p className="text-zinc-400 text-sm leading-tight inter">
+//                 {c.body}
+//               </p>
+//             </FadeRise>
+//           ))}
+//         </div>
+//         <FadeRise delay={0.4}>
+//           <div className="max-w-4xl text-lg max-md:text-base text-center inter">
+//             Not replacing your method—amplifying it. Adaptive, precise,
+//             profoundly effective.
+//           </div>
+//         </FadeRise>
+//         <FadeRise delay={0.5}>
+//           <CTA />
+//         </FadeRise>
+//         <FadeRise delay={0.6}>
+//           <div className="text-2xl max-md:text-base text-center inter">
+//             Multiply impact without multiplying hours. <br />
+//             Take a peek into the <span className="text-theme">FUTURE</span>
+//           </div>
+//         </FadeRise>
+//       </section>
+
+//       {/* NEWSLETTER */}
+//     </main>
+//   );
+// }
+"use client";
+import { motion } from "framer-motion";
+import CTA from "@/components/CTA";
+import Image from "next/image";
+import React from "react";
+import { GlassmorphicCard, WholeTextCard } from "@/components/Glowcard";
+import { Crown, Dna, Eye, Sparkle, User } from "lucide-react";
+import { MagicCard } from "@/components/MagicCard";
+import { FadeRise } from "@/components/FadeRise";
+import { TestimonialsCarousel } from "@/components/CoachCarousel";
+import { Title } from "@/components/Title";
+import { NumberTicker } from "@/components/NumberTicker";
+import { Marquee } from "@/components/Marquee";
+import TestimonialsSection from "@/components/Testimonials";
+import FAQ from "@/components/FAQ";
+import ImpactGrid from "@/components/ImpactGrid";
+import HolisticGrid from "@/components/ImpactGrid";
+
+const steps = [
+  {
+    id: "01",
+    title: "Personalized Behavioral Change System",
+    description:
+      "Facilitates self-awareness, better decision-making, and adaptive strategies to help your clients drive measurable resilience and performance gains — aligned with your unique coaching style.",
+    icon: null,
+    image: "/behaviours.png",
+  },
+  {
+    id: "02",
+    title: "Biometric Data + Habitual Insights",
+    description:
+      "Captures real-time physiological and emotional resilience markers, tracking trends across sleep, readiness, activity, and wellbeing—without requiring new hardware. Every small choice adds up. With Habitual Insights, coaches and clients see the hidden patterns driving performance and burnout.",
+    icon: Dna,
+    image: null,
+  },
+];
+const steps2 = [
+  {
+    id: "01",
+    title: "Invite Your Client",
+    description:
+      "They download the PrescribeLife.AI app and connect their existing wearables in minutes.",
+    subtitle: "No extra hardware, no tech headaches.",
+    icon: User,
+  },
+  {
+    id: "02",
+    title: "Coach with Confidence",
+    description: "Walk into every session already knowing where to focus.",
+    subtitle:
+      "Use data-informed topics to guide powerful conversations, prevent burnout, and create breakthroughs.",
+    icon: Eye,
+  },
+  {
+    id: "03",
+    title: "Uncover Hidden Patterns",
+    description:
+      "We translate real-time biometric and behavioral data into simple, actionable insights.",
+    subtitle: "See readiness, recovery, and resilience patterns instantly.",
+    icon: Crown,
+  },
 ];
 
-export default function Home() {
-  const steps = [
-    {
-      id: "01",
-      title: "Invite Your Client",
-      description:
-        "They download the PrescribeLife.AI app and connect their existing wearables in minutes.",
-      subtitle: "No extra hardware, no tech headaches.",
-      icon: User,
-    },
-    {
-      id: "02",
-      title: "Coach with Confidence",
-      description: "Walk into every session already knowing where to focus.",
-      subtitle:
-        "Use data-informed topics to guide powerful conversations, prevent burnout, and create breakthroughs.",
-      icon: Eye,
-    },
-    {
-      id: "03",
-      title: "Uncover Hidden Patterns",
-      description:
-        "We translate real-time biometric and behavioral data into simple, actionable insights.",
-      subtitle: "See readiness, recovery, and resilience patterns instantly.",
-      icon: Crown,
-    },
-  ];
-
+export default function UpdatedHome() {
   return (
-    <main className="space-y-14 max-md:space-y-10 relative overflow-hidden max-w-full min-w-0 px-4 max-md:px-2">
-      <Image
-        className="absolute inset-0 w-full md:h-[150vh] max-md:h-[80vh] object-cover md:rotate-30 rotate-animation-slow md:scale-110 max-md:scale-100 z-[-1] overflow-visible pointer-events-none"
-        src="/bggradient.png"
-        width={300}
-        height={300}
-        alt="bg"
-      />
-
-      {/* HERO */}
-
-      <section
-        id="hero"
-        className="flex flex-col  max-md:pt-4 px-6 max-md:px-2"
-      >
+    <section className="flex flex-col gap-32 max-md:gap-24">
+      {/* Hero Section */}
+      <section id="hero" className="flex flex-col pt-20 lg:pt-6 px-4 md:px-10">
         <motion.div
           initial={{ y: 32, filter: "blur(6px)", opacity: 0 }}
           animate={{ y: 0, filter: "blur(0px)", opacity: 1 }}
           transition={{ duration: 1, delay: 0.45 }}
-          className="w-full pb-0 max-md:pb-0 min-h-[80vh] pt-16 max-md:min-h-[72vh] flex justify-center items-center max-md:items-center max-md:justify-center max-md:mt-6"
+          className="w-full pb-0 md:min-h-[90vh] flex justify-center items-center"
         >
-          {/* Two-column grid */}
-          <div className="flex flex-col md:flex-row items-start justify-center gap-6 max-tablet:gap-2 w-full max-tablet:mt-1 ">
-            {/* Left-side text */}
-            <div className="flex w-full md:w-1/2 flex-col items-start justify-center text-left max-md:text-center max-md:items-center space-y-4 max-md:space-y-4 order-1 max-md:mb-16 ">
+          <div className="flex flex-col lg:flex-row items-center lg:items-center justify-center gap-6 sm:gap-8 w-full mt-2">
+            {/* Left Text */}
+            <div className="flex w-full lg:w-1/2 flex-col lg:items-start gap-6 lg:text-left text-center items-center space-y-4 lg:space-y-4 order-1">
               <motion.h1
-                className="text-6xl max-md:text-2xl font-semibold"
+                className="font-semibold text-3xl md:text-6xl leading-tight"
                 initial={{ y: 30, filter: "blur(4px)", opacity: 0 }}
                 animate={{ y: 0, filter: "blur(0px)", opacity: 1 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
               >
-                Set the new standard in <br />
+                Set the new standard in <br className="hidden md:block" />
                 <span className="text-gradient">performance coaching</span>
               </motion.h1>
 
               <motion.p
-                className="text-xl max-md:text-base inter"
+                className="inter text-base sm:text-lg md:text-2xl text-muted-foreground"
                 initial={{ y: 24, filter: "blur(4px)", opacity: 0 }}
                 animate={{ y: 0, filter: "blur(0px)", opacity: 1 }}
                 transition={{ duration: 0.75, delay: 0.15, ease: "easeOut" }}
@@ -125,167 +920,438 @@ export default function Home() {
                 precision—because burnout should not be the cost of performance.
               </motion.p>
 
-              {/* Button only on desktop */}
-              <motion.div className="flex">
+              <motion.div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto justify-center md:justify-start">
                 <CTA />
               </motion.div>
             </div>
 
-            {/* Right-side image */}
-            <div className="flex w-full md:w-1/2 flex-col items-center justify-start order-2 space-y-4 max-md:space-y-2">
+            {/* Right Image */}
+            <div className="flex w-full md:w-1/2 flex-col items-center justify-start order-2 space-y-4">
               <Image
                 src="/result.png"
                 width={900}
                 height={900}
                 alt="platform"
-                className="w-full h-auto"
+                className="w-full max-w-[480px] sm:max-w-[560px] md:max-w-none h-auto"
+                sizes="(max-width: 640px) 92vw, (max-width: 768px) 540px, 50vw"
               />
-
-              {/* Button only on mobile */}
             </div>
           </div>
-        </motion.div>
-        <motion.div
-          initial={{ y: 32, filter: "blur(6px)", opacity: 0 }}
-          animate={{ y: 0, filter: "blur(0px)", opacity: 1 }}
-          transition={{ duration: 1, delay: 0.45 }}
-          className="w-full pb-0 max-md:pb-0 space-y-6 max-md:space-y-4 max-md:mt-2"
-        >
-          <p className="text-5xl max-md:text-2xl text-center font-semibold px-2">
-            Trusted by Performance Coaches Behind Today's <br />
-            <span className="text-theme">Most Influential Leaders</span>
-          </p>
-          <section className="mt-0">
-            <TestimonialsCarousel />
-            <div className="flex items-center justify-center mt-7">
-              <Image
-                src="/security.png"
-                width={400}
-                height={400}
-                alt="security"
-              />
-            </div>
-          </section>
         </motion.div>
       </section>
-      <MeetingTheUrgentDemand />
-      {/* GAP NARRATIVE */}
-      <section className="max-w-6xl mx-auto px-8 max-md:px-4 space-y-8 max-md:space-y-6">
-        {/* First block */}
-        <div className="space-y-12 max-md:space-y-8 max-md:text-center">
-          <FadeRise>
-            <h2 className="text-5xl max-md:text-3xl leading-tight font-semibold text-center">
-              Are Weekly Check-ins and Client Self-Reporting Still Enough?
-            </h2>
-          </FadeRise>
 
-          <div className="relative grid md:grid-cols-2 gap-12 items-start max-md:items-center">
-            {/* Text - Now on the left */}
-            <FadeRise delay={0.05}>
-              <div className="space-y-5 max-md:space-y-3 text-base max-md:text-sm leading-relaxed">
-                <h3 className="text-3xl max-md:text-xl font-semibold">
-                  You excel in the moment
-                </h3>
-                <p className="text-base max-md:text-sm inter">
-                  During a call, you see the shifts, hear the hesitations, and
-                  guide breakthroughs. Your expertise is undeniable.
-                </p>
-                <p className="text-base max-md:text-sm inter">
-                  But what happens when the call ends?
-                </p>
-                <p className="text-base max-md:text-sm inter">
-                  Your client steps back into a 24/7 reality of hidden
-                  stressors, fluctuating energy shifts, and invisible mindset
-                  blocks.
-                </p>
-                <p className="text-base max-md:text-sm inter">
-                  You're left with week-old self-reporting, piecing together an
-                  incomplete puzzle.
-                </p>
-                <p className="italic text-theme font-bold inter">
-                  "You're coaching the person who shows up to the session, not
-                  the whole person living their life".
-                </p>
-                <p className="text-base max-md:text-sm inter">
-                  This isn't a flaw in your method—it's a limitation of the
-                  traditional model.
-                </p>
-              </div>
-            </FadeRise>
+      {/* Burnout + Thesis Section */}
+      <section className="flex flex-col gap-16 px-4 md:px-10">
+        {/* Burnout */}
+        <section className="flex flex-col gap-10">
+          <h1 className="text-3xl md:text-5xl tracking-wide font-semibold text-center md:text-left">
+            <span className="text-theme">Burnout &nbsp;</span>
+            is one the most Defining <br />
+            Challenges of our Time
+          </h1>
 
-            {/* Image - Now on the right */}
-            <FadeRise delay={0.12} className="max-md:hidden">
-              <div className="relative z-10 flex justify-center items-start h-full">
-                <Image
-                  src="/coaching-in-dark.png"
-                  alt="Coaching in the Dark - Before PrescribeLife.AI"
-                  width={600}
-                  height={700}
-                  className="rounded-3xl w-full h-full object-cover max-h-[500px]"
-                />
-              </div>
-            </FadeRise>
-          </div>
-        </div>
-
-        {/* Second block stays the same */}
-        <div className="grid md:grid-cols-2 gap-12 items-start">
-          <FadeRise>
-            <div className="space-y-8 max-md:text-center mt-12 max-md:mt-8">
-              <h3 className="text-3xl max-md:text-xl font-semibold">
-                <span className="text-theme/80">PrescribeLife.AI</span> closes
-                that gap.
-              </h3>
-              <p className="text-base max-md:text-sm inter">
-                We surface real-time, objective data on resilience, recovery,
-                and behavior patterns—fuel for your intuition to drive lasting
-                change.
+          <div className="grid grid-cols-1 md:grid-cols-2 text-base md:text-xl align-start gap-4 md:gap-2">
+            <div className="flex tracking-wide justify-center md:justify-start items-center text-center md:text-left">
+              <p>
+                85% of coaches say clients are seeking more support for
+                well-being.
+                <br />
+                80% of professionals are at{" "}
+                <span className="text-theme">risk of burnout.</span>
               </p>
-              <div className="flex justify-start max-md:justify-center">
-                <CTA classname="w-2xs" />
-              </div>
             </div>
-          </FadeRise>
 
-          <FadeRise delay={0.1} className="max-md:hidden">
-            <div className="relative h-full">
-              <div className="relative z-10 flex flex-col items-center justify-start h-full">
-                <Image
-                  src="/coaching-clarity.png"
-                  alt="Coaching with Clarity - After PrescribeLife.AI"
-                  width={600}
-                  height={700}
-                  className="rounded-3xl w-full h-full object-cover max-h-[500px]"
-                />
-              </div>
+            <div className="flex justify-center md:justify-end items-center">
+              {/* <GlowCard className="min-h-[100px] flex justify-center items-center max-w-2xl">
+                <p>
+                  <span className="text-pink-400 font-semibold">
+                    PrescribeLife.AI
+                  </span>{" "}
+                  was built to help you meet this urgent need head-on.
+                </p>
+              </GlowCard> */}
+              <WholeTextCard
+                title="PrescribeLife.AI"
+                secondaryLine="was built to help you meet this urgent need head-on"
+                titleCn="max-w-xl p-10"
+              />
             </div>
-          </FadeRise>
+          </div>
+        </section>
+
+        {/* Thesis */}
+        <section className="flex flex-col gap-10">
+          <h1 className="text-3xl md:text-5xl tracking-wide font-semibold text-center md:text-left">
+            Our Founding&nbsp;
+            <span className="text-theme">Thesis</span>
+          </h1>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 text-base md:text-xl align-start gap-4 md:gap-2">
+            <div className="flex tracking-wide justify-center md:justify-start items-center text-center md:text-left">
+              <p>
+                Built by a team of doctors, neuroscientists, and ICF-accredited
+                <br />
+                resilience coaches, we believe the future of coaching is
+                adaptive,
+                <br />
+                personalized, and always-on.
+              </p>
+            </div>
+
+            <div className="flex justify-center md:justify-end items-end">
+              <span className="border-1 border-white px-6 py-2 rounded-3xl tracking-wide">
+                Here's what we mean:
+              </span>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section>
+        <HolisticGrid />
+      </section>
+
+      {/* 360 View */}
+      <section className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 px-4 md:px-10">
+        <div className="flex justify-center md:justify-between items-center">
+          <Image
+            src={"/360view.png"}
+            height={800}
+            width={800}
+            alt="360View"
+            className="w-full max-w-[520px] md:max-w-none h-auto"
+            sizes="(max-width: 768px) 90vw, 50vw"
+          />
+        </div>
+
+        <div className="flex flex-col gap-4 md:gap-6 justify-between text-center md:text-left items-center md:items-start">
+          <h1 className="font-semibold text-3xl md:text-5xl tracking-wide leading-tight">
+            The <span className="text-theme">PrescribeLife.AI</span>
+            <br />
+            Platform
+          </h1>
+          <p className="text-base md:text-2xl tracking-wide">
+            Resilience coaching that adapts in real time to evolving
+            <br className="hidden md:block" />
+            client needs, powered by{" "}
+            <span className="text-theme">
+              behavioral science and
+              <br className="hidden md:block" /> biometric precision,&nbsp;
+            </span>
+            because burnout should not be the
+            <br className="hidden md:block" /> cost of performance.
+          </p>
         </div>
       </section>
-      {/* STEPS */}
-      <section className="flex flex-col items-center space-y-8 max-md:space-y-4">
-        <FadeRise>
-          <Title
-            text="Powerful Insights, Radically Simple to Use"
-            className="text-5xl max-md:text-3xl mx-5 text-center"
-          />
-        </FadeRise>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl w-full px-6 max-md:px-4">
-          {steps.map((step, i) => (
+
+      {/* How It Works */}
+
+      <section className="flex flex-col gap-12 pt-10 px-4 md:px-10">
+        <div className="text-3xl md:text-5xl tracking-wide text-center font-semibold">
+          How <span className="text-theme">PrescribeLife.AI</span> Works
+        </div>
+
+        <div className="flex items-center justify-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 w-full items-stretch">
+            {steps.map((step, i) => (
+              <FadeRise key={step.id} delay={i * 0.1}>
+                <MagicCard className="h-full">
+                  <div className="rounded-2xl h-full flex flex-col p-8 max-md:p-6 bg-white/10 shadow-lg border border-white/10">
+                    <div className="flex justify-between items-start mb-4">
+                      {step.image ? (
+                        <Image
+                          src={step.image}
+                          alt={step.title}
+                          width={56}
+                          height={56}
+                          className="flex-shrink-0"
+                        />
+                      ) : step.icon ? (
+                        React.createElement(step.icon, {
+                          size: 56,
+                          className: "text-theme flex-shrink-0",
+                        })
+                      ) : null}
+                      <div className="text-5xl max-md:text-3xl font-semibold text-white/30">
+                        {step.id}
+                      </div>
+                    </div>
+                    <div>
+                      <h3 className="text-2xl max-md:text-xl font-semibold text-white mb-3">
+                        {step.title}
+                      </h3>
+                      <p className="text-zinc-300 text-base max-md:text-sm leading-relaxed">
+                        {step.description}
+                      </p>
+                    </div>
+                  </div>
+                </MagicCard>
+              </FadeRise>
+            ))}
+          </div>
+        </div>
+
+        <div className="flex items-center justify-center">
+          <div className="w-full">
+            <FadeRise delay={0.2}>
+              <MagicCard className="h-full">
+                <div className="rounded-2xl h-full flex flex-col p-8 max-md:p-6 bg-white/10 shadow-lg border border-white/10 relative overflow-hidden text-center md:text-left">
+                  <div className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20" />
+                  <div className="flex justify-between items-start mb-6 relative z-10">
+                    <Sparkle size={56} className="text-theme flex-shrink-0" />
+                    <div className="text-5xl max-md:text-3xl font-semibold text-white/30">
+                      03
+                    </div>
+                  </div>
+
+                  <h3 className="text-2xl max-md:text-xl font-semibold text-white mb-6 relative z-10">
+                    24/7 Adaptive Coaching Support (Preslie.AI™)
+                  </h3>
+
+                  <div className="bg-[#FFFFFF1A] border border-white/10 rounded-xl p-6 mb-6 relative z-10">
+                    <h4 className="text-theme font-semibold mb-3">
+                      Who is Preslie.AI™?
+                    </h4>
+                    <p className="text-zinc-300 text-sm leading-relaxed">
+                      Preslie™ is our mobile app & your AI co-pilot—making
+                      complex data simple and actionable. It quietly tracks
+                      resilience patterns, flags early warning signs, and
+                      suggests micro-strategies between sessions.
+                    </p>
+                  </div>
+
+                  <p className="text-white font-medium mb-6 leading-relaxed relative z-10">
+                    This evidence-based system gives you continuous visibility
+                    into a client's mental, physical, and emotional resilience
+                    profile.
+                  </p>
+
+                  <div className="space-y-6 max-w-xl">
+                    <h4 className="text-theme font-semibold text-lg">
+                      With this clarity, you can:
+                    </h4>
+                    <div className="space-y-4">
+                      {[
+                        "Spot stress and recovery patterns before they escalate.",
+                        "Adapt strategies to each client's current resilience stage.",
+                        "Scale personalization without adding manual workload.",
+                      ].map((text, idx) => (
+                        <div key={idx} className="flex items-start gap-4">
+                          <div className="flex flex-col items-center">
+                            <div className="w-1 h-6 bg-theme rounded-full" />
+                          </div>
+                          <p className="text-zinc-300 text-base leading-relaxed">
+                            {text}
+                          </p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </MagicCard>
+            </FadeRise>
+          </div>
+        </div>
+      </section>
+
+      {/* Personalized daily support */}
+      <section className="flex flex-col space-y-10 px-4 md:px-10">
+        <div className="text-3xl md:text-5xl tracking-wide max-w-6xl mx-auto leading-tight text-center font-semibold">
+          <span className="text-theme">Personalized daily support </span>
+          that keeps clients engaged and making progress.
+        </div>
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          <div className="flex flex-col justify-between items-center space-y-5">
+            <div>
+              <Image
+                src={"/phone4.png"}
+                height={50}
+                width={250}
+                alt="phone-screenshot"
+                className="w-full max-w-[220px] md:max-w-[250px] h-auto"
+                sizes="(max-width: 768px) 70vw, 25vw"
+              />
+            </div>
+            <div>
+              {/* <GlowCard>
+                Build awareness <br />
+                Self-Assess Resillience Drivers
+              </GlowCard> */}
+              <GlassmorphicCard
+                title="Build awareness"
+                secondaryLine=" Self-Assess Resillience Drivers"
+              ></GlassmorphicCard>{" "}
+            </div>
+          </div>
+          <div className="flex flex-col justify-between items-center">
+            <div>
+              <Image
+                src={"/phone5.png"}
+                height={50}
+                width={250}
+                alt="phone-screenshot"
+                className="w-full max-w-[220px] md:max-w-[250px] h-auto"
+                sizes="(max-width: 768px) 70vw, 25vw"
+              />
+            </div>
+            <div>
+              <GlassmorphicCard
+                title="Commit to action"
+                secondaryLine="Track & unblock follow through"
+              />
+            </div>
+          </div>
+          <div className="flex flex-col justify-between items-center space-y-5">
+            <div>
+              <Image
+                src={"/phone4.png"}
+                height={50}
+                width={250}
+                alt="phone-screenshot"
+                className="w-full max-w-[220px] md:max-w-[250px] h-auto"
+                sizes="(max-width: 768px) 70vw, 25vw"
+              />
+            </div>
+            <div>
+              {/* <GlowCard>
+                Build awareness <br />
+                Self-Assess Resillience Drivers
+              </GlowCard> */}
+              <GlassmorphicCard
+                title="Stay Engaged"
+                secondaryLine={
+                  <>Share reflections & get personalized performance tips</>
+                }
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Biometric Insights */}
+      <section className="flex flex-col items-center justify-start gap-10 px-4 md:px-10">
+        <div className="text-3xl md:text-5xl tracking-wide max-w-6xl leading-tight text-center font-semibold">
+          Mobile App captures{" "}
+          <span className="text-theme">
+            Biometric Insights & Key Resilience &nbsp;
+          </span>
+          Indicators
+        </div>
+        <div className="flex items-center justify-center gap-8 md:gap-10 max-md:flex-col">
+          <section className="flex-1 w-full tracking-wide flex flex-col gap-8 md:gap-16 text-base md:text-xl items-center md:items-start mb-6 md:mb-0 text-center md:text-left">
+            <div>
+              Resilience coaching that adapts in real time to evolving client
+              needs, powered by behavioral science and biometric
+              precision—because burnout should not be the cost of performance.
+            </div>
+            <div>
+              No extra hardware needed —{" "}
+              <span className="text-theme">
+                integrates with major wearables
+              </span>
+            </div>
+            <CTA classname=" text-base" />
+          </section>
+          <div className="flex justify-center md:justify-start">
+            <img
+              src={"/biometric-insight.png"}
+              className="h-auto w-full max-w-[260px] md:max-w-[280px]"
+              alt="phone"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Your coaching portal */}
+      <section>
+        <div className="container py-16 px-4 md:px-10">
+          {/* Header */}
+          <div className="text-center mb-12 md:mb-20">
+            <h1 className="text-3xl md:text-5xl tracking-wide font-bold mb-8">
+              <span className="text-theme"> Your </span>
+              <span>Coaching Portal</span>
+            </h1>
+            <p className="text-2xl md:text-3xl tracking-wide font-medium">
+              A 360° view of every client's resilience and communication in one
+              place.
+            </p>
+          </div>
+
+          {/* Content Section */}
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center px-4">
+            {/* Left side - Text content */}
+            <div className="max-w-md space-y-6 md:space-y-8 text-center md:text-left">
+              <div>
+                <p className="text-lg md:text-xl tracking-wide leading-relaxed">
+                  AI-powered insights help you spark deeper coaching
+                  conversations.
+                </p>
+              </div>
+
+              <div>
+                <p className="text-lg md:text-xl tracking-wide leading-relaxed">
+                  Send client updates, assignments, and messages directly inside
+                  the portal.
+                </p>
+              </div>
+            </div>
+
+            {/* Right side - Dashboard mockup */}
+            <div className="relative flex justify-center md:justify-start">
+              <img
+                src="/result.png"
+                alt="Coaching Portal Dashboard"
+                className="w-full max-w-[520px] md:max-w-none h-auto"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="px-4 md:px-16">
+        <GlassmorphicCard
+          title="Walk into every session with real-time insights on your client’s
+          goals, habitual insights, and biometric data."
+          titleCn="w-full"
+        />
+      </section>
+
+      <section className="flex flex-col gap-20 px-4 md:px-20">
+        <div className="flex items-center justify-center">
+          <div className="text-center text-3xl md:text-5xl tracking-wide font-semibold max-w-5xl">
+            Trusted by Performance Coaches Behind Today's{" "}
+            <span className="text-theme">Most Influential Leaders </span>
+          </div>
+        </div>
+        <TestimonialsCarousel />
+        <div className="flex items-center justify-center w-full ">
+          <CTA classname="" />
+        </div>
+      </section>
+
+      {/* Powerful Insights */}
+
+      <section className="flex flex-col items-center space-y-8 max-md:space-y-4 px-4 md:px-10">
+        <div className="text-center text-3xl md:text-5xl tracking-wide font-semibold max-w-5xl">
+          <span className="text-theme">PrescribeLife.AI </span>is simple to set
+          up for 1-1, group or team coaching.
+        </div>
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 w-full">
+          {steps2.map((step, i) => (
             <FadeRise key={step.id} delay={i * 0.12}>
               <MagicCard>
-                <div className="h-[400px] max-md:h-full rounded-2xl p-8 border border-white/10 relative overflow-hidden space-y-6 max-md:space-y-4">
+                <div className="min-h-[320px] md:min-h-[400px] rounded-2xl p-8 max-md:p-6 border border-white/10 relative overflow-hidden space-y-6 max-md:space-y-4">
                   <div className="absolute top-6 right-6 text-6xl max-md:text-4xl font-bold text-white/30 opacity-50">
                     {step.id}
                   </div>
                   <step.icon size={60} className="text-theme" />
-                  <h3 className="text-[20px] max-md:text-2xl font-semibold text-white">
+                  <h3 className="mt-4 text-lg md:text-2xl lg:text-3xl tracking-wide font-semibold text-white">
                     {step.title}
                   </h3>
-                  <p className="text-base max-md:text-sm inter">
+                  <p className="text-base md:text-lg tracking-wide inter">
                     {step.description}
                   </p>
-                  <p className="text-base max-md:text-sm font-medium inter">
+                  <p className="text-base md:text-lg tracking-wide font-medium inter">
                     {step.subtitle}
                   </p>
                 </div>
@@ -294,194 +1360,26 @@ export default function Home() {
           ))}
         </div>
       </section>
-      <section className="relative max-w-5xl mx-auto px-8 max-md:px-5 text-center space-y-4 sm:space-y-6">
+
+      {/* Build on 8M+/ metrics section */}
+      <section className="flex flex-col items-center gap-12 md:gap-16 px-4 md:px-10">
         <FadeRise>
-          <p className="text-lg max-md:text-base inter">
-            The International Coach Federation (ICF) reports that 85% of coaches
-            are hearing increased demand for mental well-being support.
-          </p>
-        </FadeRise>
-        <FadeRise delay={0.06}>
-          <p className="text-lg max-md:text-base inter">
-            Mercer's Global Talent Trends report shares that 80% of
-            professionals are at risk of burnout.
-          </p>
-        </FadeRise>
-        <FadeRise delay={0.12}>
-          <p className="text-theme text-3xl max-md:text-3xl font-semibold">
-            "PrescribeLife.Ai was built to help coaches meet this urgent need
-            head on."
-          </p>
-        </FadeRise>
-        <FadeRise delay={0.18}>
-          <p className="text-lg max-md:text-base inter">
-            Whether you coach executives, leaders, founders or already focus on
-            resilience, mental fitness and burnout — PrescribeLife.AI is
-            designed for you.
-          </p>
-        </FadeRise>
-      </section>
-      {/* TRUSTED */}
-      {/* <section className="flex flex-col items-center min-h-[50vh] space-y-10 text-center">
-        <FadeRise>
-          <Title text="Trusted by Performance Coaches Behind Today's Most Influential Leaders" />
-        </FadeRise>
-        
-      </section> */}
-
-      {/* MAKE YOU HUMAN */}
-      <MakeYouHuman />
-      <div className="max-md:hidden"></div>
-      {/* <div className="hidden max-md:block">
-        <div className="w-full flex-col justify-center items-center hidden max-md:flex mb-16">
-          <Splide
-            options={{
-              type: "loop",
-              focus: "center",
-              interval: 2000,
-              direction: "ttb",
-              autoplay: true,
-              height: "30rem",
-              perPage: 3,
-              arrows: false,
-              pagination: false,
-              gap: "0px",
-              pauseOnHover: false,
-              wheel: false,
-              drag: false,
-            }}
-          >
-            {list.map((x, i) => (
-              <SplideSlide key={i}>
-                <motion.div
-                  style={{
-                    animation: `rotateBG 5s linear infinite`,
-                    animationDelay: "6s",
-                  }}
-                  className="text-center text-lg text-white w-full bg-black"
-                >
-                  {x}
-                </motion.div>
-              </SplideSlide>
-            ))}
-          </Splide>
-
-          <motion.div
-            whileInView={{
-              opacity: 1,
-            }}
-            initial={{
-              opacity: 0.2,
-            }}
-            style={{
-              animation: `rotateBG 4s linear infinite`,
-              fontSize: "3em",
-            }}
-            className="floatingText red-text floating-main z-[9]"
-          ></motion.div>
-        </div>
-      </div> */}
-
-      {/* Comparison Illustration (new section) */}
-      {/* <section className="relative mx-auto max-w-7xl px-8 max-md:px-4 py-12 max-md:py-8 rounded-[48px] bg-gradient-to-b from-white/10 via-white/5 to-pink-500/10 border border-white/20 shadow-[0_8px_40px_-12px_rgba(236,72,153,0.25)] overflow-hidden flex flex-col md:flex-row justify-start items-start max-md:space-y-8 max-md:mx-5">
-        <div className="pointer-events-none absolute -top-32 -left-32 w-[420px] h-[420px] bg-gradient-to-br from-theme/30 to-pink-500/30 blur-3xl opacity-40" />
-        <div className="pointer-events-none absolute bottom-0 -right-20 w-[360px] h-[360px] bg-gradient-to-br from-pink-400/40 to-blue-400/40 blur-3xl opacity-40" />
-        <div className="relative space-y-10 w-full md:w-1/2 text-left">
-          <FadeRise>
-            <h2 className="text-5xl max-md:text-3xl font-semibold leading-tight">
-              Set the New Standard in Coaching with Evidence-Based AI Insights &
-              Signals:
-            </h2>
-            <p className="text-lg max-md:text-base text-white/80 max-w-xl leading-relaxed mt-6 max-md:mt-4 inter">
-              Where your coaching genius meets real-time data intelligence.
-            </p>
-            <FadeRise
-              delay={0.4}
-              className="flex justify-left max-md:justify-center mt-24 max-md:mt-12"
-            >
-              <CTA classname="" />{" "}
-            </FadeRise>
-          </FadeRise>
-        </div>
-        <div className="relative w-full md:w-1/2 space-y-10 max-md:space-y-6 pl-16 max-md:pl-0">
-          <FadeRise className="space-y-4" delay={0.15}>
-            <h3 className="text-3xl max-md:text-xl font-semibold">
-              Without Prescribelife.AI
-            </h3>
-            <div className="flex flex-col items-start gap-10 ">
-              <ul className="space-y-5 max-md:space-y-3 text-base max-md:text-sm font-medium text-zinc-200 ">
-                {["Clients Self Reporting", "Your Expertise & Guidance"].map(
-                  (item, i) => (
-                    <li key={i} className="relative pl-5">
-                      <span className="absolute left-0 top-2 w-3 h-[2px] bg-gradient-to-r from-theme to-pink-500" />
-                      {item}
-                    </li>
-                  )
-                )}
-              </ul>
+          <div className="max-w-5xl space-y-8 md:space-y-10">
+            <div className="text-3xl md:text-5xl tracking-wide text-center leading-tight">
+              Built on <span className="text-theme"> 8M+ </span>
+              days of behavioral data and
+              <span className="text-theme"> 50K+ </span>
+              validated assessment models.
             </div>
-          </FadeRise>
-          <FadeRise className="space-y-4" delay={0.15}>
-            <h3 className="text-3xl max-md:text-xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-theme to-pink-600">
-              With Prescribelife.AI
-            </h3>
-            <ul className="space-y-4 max-md:space-y-2 text-base max-md:text-sm font-medium  text-zinc-200">
-              {[
-                "Client Reporting with Prompts on Automation",
-                "Real-Time Recovery & Stress Levels",
-                "Daily Patterns of Action & Inaction",
-                "Early Burnout & Fatigue Warnings",
-                "Hidden Mindset & Motivation Blockers",
-                "AI-Generated Evidence Based Topics for Your Next Session",
-                "Your Expertise & Guidance",
-              ].map((item, i) => (
-                <li key={i} className="relative pl-6 leading-snug">
-                  <span className="absolute left-0 top-2 w-4 h-[2px] bg-gradient-to-r from-theme via-pink-500 to-blue-500" />
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </FadeRise>
-        </div>
-      </section> */}
-      <AmplifyHumanTouch />
-
-      {/* PHONE / DASHBOARD */}
-      <PhoneDashboardSplide />
-
-      {/* BEFORE / AFTER */}
-      <section className="grid grid-cols-1 md:grid-cols-2 gap-8 max-md:gap-4 max-w-6xl mx-auto px-8 max-md:px-4">
-        {/* Left column: Before image */}
-        <FadeRise className="h-full" delay={0.15}>
-          <div className="w-full h-full flex items-center justify-center">
-            <Image
-              src="/before.png"
-              alt="Before - The Manual, Reactive Grind"
-              width={800}
-              height={600}
-              className="w-full h-auto rounded-3xl"
-            />
+            <div className="text-base md:text-xl tracking-wide text-center">
+              We combine behavioral science and biometric data to measure what
+              truly drives resilience and performance — powered by trusted
+              integrations like Garmin, Apple Health, Google Fit, and more.
+            </div>
+            <h1 className="text-2xl md:text-3xl tracking-wide font-semibold text-center">
+              Powered by
+            </h1>
           </div>
-        </FadeRise>
-
-        {/* Right column: After image */}
-        <FadeRise className="h-full">
-          <div className="w-full h-full flex items-center justify-center">
-            <Image
-              src="/after.png"
-              alt="After - The Automatic, Proactive System"
-              width={800}
-              height={600}
-              className="w-full h-auto rounded-3xl"
-            />
-          </div>
-        </FadeRise>
-      </section>
-
-      {/* METRICS */}
-      <section className="flex flex-col items-center gap-16 max-md:gap-8">
-        <FadeRise>
-          <Title text="Powered By" className="text-5xl max-md:text-3xl" />
         </FadeRise>
         <div className="flex flex-col  md:flex-row justify-center items-stretch w-full max-w-6xl divide-y md:divide-y-0 md:divide-x divide-white/20">
           {[
@@ -498,18 +1396,17 @@ export default function Home() {
               delay={i * 0.15}
               className="flex-1 flex flex-col items-center py-6 max-md:py-4 px-4 max-md:px-2 gap-4"
             >
-              <div className="text-6xl max-md:text-4xl font-semibold">
+              <div className="text-6xl max-md:text-4xl tracking-wide font-semibold">
                 <NumberTicker value={m.v} />
                 {m.suffix}
               </div>
-              <p className="text-white/60 text-center max-w-xs text-base max-md:text-sm inter">
+              <p className="text-white/60 text-center max-w-xs text-base max-md:text-sm tracking-wide inter">
                 {m.label}
               </p>
             </FadeRise>
           ))}
         </div>
       </section>
-
       {/* SIMPLE MARQUEE (placeholder) */}
       <section className="overflow-x-hidden w-full min-w-0">
         <FadeRise>
@@ -530,14 +1427,14 @@ export default function Home() {
               ].map((app) => (
                 <div
                   key={app.name}
-                  className="bg-white w-64 max-md:w-[45vw] p-7 max-md:p-5 rounded-xl border-2 border-white/20 flex flex-col items-center gap-3 max-md:gap-2 shrink-0 shadow-md"
+                  className="bg-white/24 w-64 max-md:w-[45vw] p-7 max-md:p-5 rounded-2xl border-2 border-white/20 flex flex-col items-center gap-3 max-md:gap-2 shrink-0 shadow-md"
                 >
                   <img
                     src={app.src}
                     alt={app.name}
                     className="w-16 h-16 max-md:w-12 max-md:h-12 rounded-full object-contain"
                   />
-                  <div className="text-base max-md:text-sm text-gray-900">
+                  <div className="text-base max-md:text-sm text-white">
                     {app.name}
                   </div>
                 </div>
@@ -547,159 +1444,36 @@ export default function Home() {
         </FadeRise>
       </section>
 
-      {/* COMPARISON CARDS (Problem / Solution) */}
-      <section className="flex flex-col items-center">
-        <FadeRise>
-          <Title
-            text="Your Next Coaching Session Could Be Your Best Ever."
-            className="text-5xl max-md:text-3xl mx-5 text-center"
-          />
-        </FadeRise>
-        <FadeRise delay={0.1}>
-          <Title
-            text="Here's How"
-            className="text-theme mb-16 mt-7 font-bold"
-          />
-        </FadeRise>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-md:gap-6 max-w-6xl w-full px-8 max-md:px-4 mb-5 max-md:mb-4">
-          <FadeRise className="h-full">
-            <div className="bg-gradient-to-br from-red-900/20 to-red-800/20 rounded-3xl p-8 max-md:p-6 border border-red-500/20 backdrop-blur-sm h-full space-y-6 max-md:space-y-4">
-              <div className="flex items-center gap-4 mb-2">
-                <div className="min-w-16 h-16 bg-red-500/20 rounded-2xl flex items-center justify-center">
-                  <MessageCircleQuestion className="w-8 h-8 text-red-400" />
-                </div>
-                <h3 className="text-3xl max-md:text-xl font-semibold text-white">
-                  How many sessions start the same way?
-                </h3>
-              </div>
-              {[
-                "Your client shows up exhausted…",
-                "They say, \"I don't know, I'm tired.\"",
-                "First 20 minutes just finding a starting point.",
-                "Time lost navigating fog & incomplete recall.",
-              ].map((t, i) => (
-                <p
-                  key={i}
-                  className={
-                    i === 1
-                      ? "text-lg max-md:text-base font-medium   text-red-400 bg-red-500/10 p-4 max-md:p-3 rounded-xl border border-red-500/20"
-                      : "text-lg max-md:text-base text-white mt-5 leading-relaxed"
-                  }
-                >
-                  {t}
-                </p>
-              ))}
-            </div>
-          </FadeRise>
-          <FadeRise delay={0.15}>
-            <div className="bg-gradient-to-br from-green-900/20 to-emerald-800/20 rounded-3xl p-8 max-md:p-6 border border-green-500/20 backdrop-blur-sm space-y-6 max-md:space-y-4">
-              <div className="flex items-center gap-4 mb-">
-                <div className="min-w-16 h-16 bg-green-500/20 rounded-2xl flex items-center justify-center">
-                  <Lightbulb className="w-8 h-8 text-green-400" />
-                </div>
-                <h3 className="text-3xl max-md:text-xl font-semibold text-white">
-                  The PrescribeLife.AI Way
-                </h3>
-              </div>
-              <p className="text-white leading-relaxed text-lg max-md:text-base">
-                Before your next call you open your dashboard.
-              </p>
-              <p className="text-white leading-relaxed text-lg max-md:text-base">
-                You instantly see readiness dips and disrupted patterns.
-              </p>
-              <p className="text-white leading-relaxed text-lg max-md:text-base">
-                Contextual notes surfaced by AI reveal cognitive themes.
-              </p>
-              <p className="text-lg max-md:text-base font-medium text-green-400 bg-green-500/10 p-4 max-md:p-3 rounded-xl border border-green-500/20">
-                “Let’s go straight into the pattern that showed up.”
-              </p>
-              <p className="text-white leading-relaxed text-lg max-md:text-base">
-                You bypass fog and create decisive movement.
-              </p>
-            </div>
-          </FadeRise>
-        </div>{" "}
-        <FadeRise>
-          <Title
-            text="In Your First 10-14 Days, You Will"
-            className="text-5xl max-md:text-3xl mx-5 text-left my-5"
-          />
-        </FadeRise>
-      </section>
-
-      {/* ONBOARD BENEFITS */}
-
-      <section className="flex flex-col items-center mx-32 max-md:mx-0 px-6 max-md:px-5 -mt-20 max-md:-mt-8 py-16 pb-28 max-md:py-0">
-        <div className="w-full px-8 max-md:px-5 mt-8 max-md:mt-4">
-          <div className="relative flex w-full max-w-3xl mx-auto place-items-center gap-6 max-md:flex-col">
-            {[
-              {
-                icon: Timer,
-                title: "Eliminate Wasted Time",
-                text: "Go from 'What's on your mind?' to data-informed clarity.",
-                gridClass: "md:col-start-1 md:row-start-3",
-              },
-              {
-                icon: Lightbulb,
-                title: "Unlock Deeper Insights",
-                text: "Surface challenges happening between sessions.",
-                gridClass: "md:col-start-2 md:row-start-2",
-              },
-              {
-                icon: Target,
-                title: "Lead With Precision",
-                text: "Guide the conversation when clients can't articulate needs.",
-                gridClass: "md:col-start-3 md:row-start-1",
-              },
-            ].map((c, i) => (
-              <FadeRise
-                key={c.title}
-                delay={i * 0.12}
-                className={`${
-                  i === 2
-                    ? "md:translate-y-0"
-                    : i === 1
-                    ? "md:translate-y-12"
-                    : i === 0
-                    ? "md:translate-y-24"
-                    : ""
-                }  rounded-2xl border border-white/30 bg-gradient-to-b from-white/10 to-black/80 p-6 flex flex-col justify-center items-center text-center w-60 h-60 md:w-60 md:h-60 `}
-              >
-                <c.icon className="w-10 h-10 text-theme mb-3" />
-                <h3 className="text-2xl font-semibold text-white mb-2">
-                  {c.title}
-                </h3>
-                <p className="text-sm leading-tight inter text-white/80">
-                  {c.text}
-                </p>
-              </FadeRise>
-            ))}
-          </div>
+      <div className="flex items-center justify-center px-4 md:px-10">
+        <div className="text-center lg:text-5xl md:text-4xl text-3xl tracking-wide font-semibold max-w-6xl">
+          Meet the rising demand for{" "}
+          <span className="text-theme">resilience-focused</span> coaching and
+          expand your impact.
         </div>
-      </section>
+      </div>
 
-      {/* CTA CURVE */}
-      <section className="relative flex flex-col md:flex-row items-start md:items-center justify-start gap-8 max-md:gap-6 px-6 md:px-12">
+      {/* CTA CUrve */}
+      <section className="relative flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8 max-md:gap-6 px-6 lg:px-12">
         {/* White Curve Card */}
-        <FadeRise className="bg-white text-black rounded-2xl md:rounded-r-[300px] p-12 max-md:p-6 flex flex-col items-center justify-center relative overflow-hidden min-h-[400px] max-md:min-h-[300px] w-full md:w-[65%] lg:w-[60%] xl:w-[55%] max-md:translate-x-0 -translate-x-8 md:-translate-x-16">
-          <h2 className="text-5xl max-md:text-3xl font-semibold text-center leading-tight mb-6 max-w-3xl">
-            Turn Your Expertise into a potential 5x to 10x Return
+        <FadeRise className="bg-white text-black rounded-2xl lg:rounded-r-[300px] p-12 max-md:p-6 flex flex-col items-center justify-center relative overflow-hidden min-h-[400px] max-md:min-h-[300px] w-full lg:w-[70%] xl:w-[60%] max-md:translate-x-0 -translate-x-8 lg:-translate-x-16">
+          <h2 className="text-5xl max-md:text-3xl tracking-wide font-semibold text-center leading-tight mb-6 max-w-3xl">
+            Amplify your Impact & Grow Your Practice.
           </h2>
           <a
             href="/booking"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-gradient-to-r from-theme to-pink-600 text-white font-semibold px-12 py-5 rounded-full text-lg shadow-xl hover:shadow-2xl transition-all mb-8 max-md:text-center"
+            className="bg-gradient-to-r from-theme to-pink-600 text-white font-semibold px-6 md:px-12 py-5 rounded-full text-sm md:text-lg shadow-xl hover:shadow-2xl transition-all mb-8 w-full sm:w-auto text-center"
           >
             Book a Personalized Demo Call
           </a>
-          <p className="text-base text-zinc-600 text-center max-w-lg inter">
-            Let us show you how to multiply your revenue, not your workload.
+          <p className="text-base text-zinc-600 text-center max-w-lg tracking-wide inter">
+            Projected potential ROI of 5x to 10x minimum
           </p>
         </FadeRise>
 
         {/* Right-side column */}
-        <div className="flex flex-col gap-4 max-md:gap-3 w-full md:w-[35%] lg:w-[40%] xl:w-[45%] items-start max-md:items-center">
+        <div className="flex flex-col gap-4 max-md:gap-3 w-full lg:w-[35%] xl:w-[40%] lg:items-start items-center">
           {[
             "Instantly add high-value, data-driven programs.",
             "Confidently introduce premium revenue streams.",
@@ -709,116 +1483,29 @@ export default function Home() {
               key={i}
               className="bg-[#1a1a1a] border border-white/20 rounded-3xl px-6 max-md:px-4 py-4 max-md:py-3 relative w-full max-w-[360px] md:max-w-[400px] lg:max-w-[440px] transition-all"
             >
-              <div className="absolute left-6 top-6 w-[3px] h-12 max-md:h-10 bg-theme rounded-full" />
-              <p className="pl-10 text-lg max-md:text-base leading-relaxed text-white">
-                <span className="text-pink-400 font-semibold">
+              <p className="text-lg text-center text-md md:text-lg tracking-wide leading-relaxed text-white">
+                <span className="text-pink-400 tracking-wide font-semibold">
                   {t.split(" ")[0]}
                 </span>{" "}
                 {t.split(" ").slice(1).join(" ")}
               </p>
             </FadeRise>
           ))}
-          <Image
-            src="/security.png"
-            width={400}
-            height={400}
-            alt="security"
-            className="mt-6"
-          />
         </div>
       </section>
 
-      {/* TESTIMONIALS */}
+      <Image
+        src="/security.png"
+        width={400}
+        height={400}
+        alt="security"
+        className="mx-auto w-full max-w-[260px] md:max-w-[600px] h-auto"
+        sizes="(max-width: 768px) 70vw, 33vw"
+      />
       <TestimonialsSection />
       <div id="faq">
         <FAQ></FAQ>
       </div>
-      {/* RESULTS */}
-      <section className="flex flex-col items-center text-center">
-        <FadeRise>
-          <Title
-            text="Your Proven Framework + Adaptive Intelligence"
-            className="text-5xl max-md:text-3xl"
-          />
-        </FadeRise>
-        <FadeRise delay={0.1}>
-          <Title
-            text="= Unstoppable Results"
-            className="text-theme text-5xl max-md:text-3xl"
-          />
-        </FadeRise>
-        <FadeRise className="flex justify-center items-center" delay={0.2}>
-          <img
-            className="w-2/3 max-md:w-full mt-16 max-md:mt-8 -translate-x-16 max-md:-translate-x-0"
-            src="/hero.png"
-            alt="result"
-          />
-        </FadeRise>
-      </section>
-
-      {/* POSITIONING */}
-
-      <section className="flex flex-col items-center space-y-10 max-md:space-y-6">
-        <FadeRise>
-          <div className="max-w-7xl text-lg max-md:text-base text-center inter">
-            You're here to create lasting change. Transformation happens between
-            sessions. To guide that journey you need visibility—an adaptive,
-            intelligent layer over your framework.
-          </div>
-        </FadeRise>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-3 max-md:gap-2 max-w-6xl w-full px-4 max-md:px-3 mt-6 max-md:mt-3">
-          {[
-            {
-              icon: Activity,
-              title: "Evidence-Based",
-              body: "Real-time insight into physiology & mindset.",
-            },
-            {
-              icon: Cog,
-              title: "Systematized",
-              body: "Behavioral change engine supports follow-through.",
-            },
-            {
-              icon: Heart,
-              title: "Deeply Human",
-              body: "Frees you to focus on irreplaceable transformation.",
-            },
-          ].map((c, i) => (
-            <FadeRise
-              key={c.title}
-              delay={i * 0.12}
-              className="bg-gradient-to-b from-zinc-900 to-black rounded-3xl p-4 max-md:p-3 max-md:h-auto max-md:min-h-44 border border-white/20 space-y-2 max-md:space-y-2"
-            >
-              <div className="w-9 h-9 max-md:w-8 max-md:h-8 bg-theme/20 rounded-lg flex items-center justify-center">
-                <c.icon className="w-4 h-4 max-md:w-4 max-md:h-4 text-theme" />
-              </div>
-              <h3 className="text-xl md:text-2xl max-md:text-lg font-semibold">
-                {c.title}
-              </h3>
-              <p className="text-zinc-400 text-sm leading-tight inter">
-                {c.body}
-              </p>
-            </FadeRise>
-          ))}
-        </div>
-        <FadeRise delay={0.4}>
-          <div className="max-w-4xl text-lg max-md:text-base text-center inter">
-            Not replacing your method—amplifying it. Adaptive, precise,
-            profoundly effective.
-          </div>
-        </FadeRise>
-        <FadeRise delay={0.5}>
-          <CTA />
-        </FadeRise>
-        <FadeRise delay={0.6}>
-          <div className="text-2xl max-md:text-base text-center inter">
-            Multiply impact without multiplying hours. <br />
-            Take a peek into the <span className="text-theme">FUTURE</span>
-          </div>
-        </FadeRise>
-      </section>
-
-      {/* NEWSLETTER */}
-    </main>
+    </section>
   );
 }
