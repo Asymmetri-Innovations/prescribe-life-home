@@ -114,7 +114,7 @@ export default function FAQ({ classname }: { classname?: string }) {
                 >
                   <div className="p-5 flex flex-col flex-1">
                     <div className="flex items-center justify-between">
-                      <h3 className="text-base md:text-lg pr-3">{item.question}</h3>
+                      <h3 className="text-base md:text-lg pr-3 tracking-wide">{item.question}</h3>
                       <motion.div
                         animate={{ rotate: isExpanded ? 180 : 0 }}
                         transition={{ duration: 0.2 }}
@@ -138,7 +138,7 @@ export default function FAQ({ classname }: { classname?: string }) {
                             ease: [0.04, 0.62, 0.23, 0.98],
                           }}
                         >
-                          <div className="pt-3 text-zinc-300 text-base md:text-lg leading-relaxed">
+                          <div className="pt-3 text-zinc-300 text-base md:text-lg leading-relaxed tracking-wide">
                             {item.answer}
                           </div>
                         </motion.div>

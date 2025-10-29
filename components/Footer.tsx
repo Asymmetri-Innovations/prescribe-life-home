@@ -35,17 +35,17 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-[#1a1a1a] text-white py-16 px-4 md:px-16 mt-20">
+    <footer className="bg-[#1a1a1a] text-white pt-16 pb-6 px-4 md:px-16 mt-20">
       <div className="">
         {/* Main footer content */}
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-10 md:gap-12 mb-10 md:mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 md:gap-12 mb-10 md:mb-12">
           {/* Logo and tagline */}
-          <div className="flex md:block items-center md:items-start gap-3 md:gap-4">
+          <div className="flex flex-col items-center md:items-start gap-3 md:gap-4">
             <div className="flex items-center gap-3">
             <img className="w-10 h-10 rounded-md" src="/logo.jpg" alt="Prescribe Life logo" />
               <div className="text-xl font-medium">PrescribeLife.AI</div>
             </div>
-            <div className="text-md text-white mt-6 tracking-wide">
+            <div className="text-md text-white md:mt-6 tracking-wide">
               Your New Health <span className="text-theme">Coach</span>
             </div>
           </div>

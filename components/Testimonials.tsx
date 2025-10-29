@@ -80,7 +80,7 @@ export default function TestimonialsSection() {
       </Marquee>
 
       <FadeRise delay={0.25}>
-        <div className="text-lg max-md:text-base text-center">
+        <div className="text-lg md:text-xl text-center tracking-wide">
           Let us show you how to multiply your revenue, not your workload.
         </div>
       </FadeRise>
