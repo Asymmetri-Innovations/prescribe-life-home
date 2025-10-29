@@ -92,11 +92,11 @@ export default function FAQ({ classname }: { classname?: string }) {
   return (
     <section
       id="faq"
-      className={`flex flex-col justify-center items-center gap-10 px-4 md:px-16 ${classname}`}
+      className={`flex flex-col justify-center items-center gap-10 px-4 md:px-10 ${classname}`}
     >
-      <div className="text-5xl max-md:text-3xl font-medium">FAQs</div>
+      <div className="lg:text-5xl md:text-4xl text-3xl font-medium">FAQs</div>
 
-      <div className="w-full max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-5">
+      <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-5">
         {[visibleLeft, visibleRight].map((col, colIndex) => (
           <div key={colIndex} className="space-y-5">
             {col.map((item, index) => {
@@ -106,7 +106,7 @@ export default function FAQ({ classname }: { classname?: string }) {
               return (
                 <motion.div
                   key={actualIndex}
-                  className={`flex flex-col bg-[#1a1a1a] text-white border border-white/20 rounded-2xl overflow-hidden cursor-pointer h-[100px] transition-all duration-300 ${
+                  className={`flex flex-col bg-[#1a1a1a] text-white border border-white/20 rounded-2xl overflow-hidden cursor-pointer transition-all duration-300 ${
                     isExpanded ? "h-auto" : ""
                   }`}
                   onClick={() => toggleItem(actualIndex)}
@@ -114,7 +114,7 @@ export default function FAQ({ classname }: { classname?: string }) {
                 >
                   <div className="p-5 flex flex-col flex-1">
                     <div className="flex items-center justify-between">
-                      <h3 className=" text-lg pr-3">{item.question}</h3>
+                      <h3 className="text-base md:text-lg pr-3">{item.question}</h3>
                       <motion.div
                         animate={{ rotate: isExpanded ? 180 : 0 }}
                         transition={{ duration: 0.2 }}
@@ -138,7 +138,7 @@ export default function FAQ({ classname }: { classname?: string }) {
                             ease: [0.04, 0.62, 0.23, 0.98],
                           }}
                         >
-                          <div className="pt-3 text-zinc-300 text-lg leading-relaxed">
+                          <div className="pt-3 text-zinc-300 text-base md:text-lg leading-relaxed">
                             {item.answer}
                           </div>
                         </motion.div>

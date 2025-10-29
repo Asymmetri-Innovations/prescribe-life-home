@@ -36,18 +36,23 @@ export default function Footer() {
 
   return (
     <footer className="bg-[#1a1a1a] text-white py-16 px-4 md:px-16 mt-20">
-      <div className="max-w-7xl mx-auto">
+      <div className="">
         {/* Main footer content */}
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-12 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-10 md:gap-12 mb-10 md:mb-12">
           {/* Logo and tagline */}
-          <div className="flex justify-center items-center gap-3">
-            <img className="w-10 rounded-md" src="/logo.jpg" alt="" />
-            <div>PrescribeLife.AI</div>
+          <div className="flex md:block items-center md:items-start gap-3 md:gap-4">
+            <div className="flex items-center gap-3">
+            <img className="w-10 h-10 rounded-md" src="/logo.jpg" alt="Prescribe Life logo" />
+              <div className="text-xl font-medium">PrescribeLife.AI</div>
+            </div>
+            <div className="text-md text-white mt-6 tracking-wide">
+              Your New Health <span className="text-theme">Coach</span>
+            </div>
           </div>
 
           {/* Company */}
           <div className="space-y-4">
-            <h3 className="text-zinc-400 font-semibold text-sm">Company</h3>
+            <h3 className="text-white/40 font-semibold text-lg">Company</h3>
             <ul className="space-y-3">
               <li>
                 <a
@@ -87,7 +92,7 @@ export default function Footer() {
 
           {/* Solutions */}
           <div className="space-y-4">
-            <h3 className="text-zinc-400 font-semibold text-sm">Solutions</h3>
+            <h3 className="text-white/40 font-semibold text-lg">Solutions</h3>
             <ul className="space-y-3">
               <li>
                 <a
@@ -118,7 +123,7 @@ export default function Footer() {
 
           {/* Resources */}
           <div className="space-y-4">
-            <h3 className="text-zinc-400 font-semibold text-sm">Resources</h3>
+            <h3 className="text-white/40 font-semibold text-lg">Resources</h3>
             <ul className="space-y-3">
               <li>
                 <a
@@ -149,7 +154,7 @@ export default function Footer() {
 
           {/* Legal */}
           <div className="space-y-4">
-            <h3 className="text-zinc-400 font-semibold text-sm">Legal</h3>
+            <h3 className="text-white/40 font-semibold text-lg">Legal</h3>
             <ul className="space-y-3">
               <li>
                 <a
@@ -157,18 +162,28 @@ export default function Footer() {
                   href="https://sites.google.com/asymmetri.in/prescribe-life-policies/home"
                   className="text-white hover:text-theme transition-colors"
                 >
-                  Policies and Terms
+                  Privacy Policy
+                </a>
+              </li>
+              <li>
+                <a
+                  target="_blank"
+                  href="https://sites.google.com/asymmetri.in/prescribe-life-policies/home"
+                  className="text-white hover:text-theme transition-colors"
+                >
+                  Terms of Use
                 </a>
               </li>
             </ul>
           </div>
         </div>
 
-        <div className="flex items-center justify-between w-full max-w-7xl mx-auto pt-8 border-t border-zinc-800 max-md:flex-col max-md:items-center max-md:gap-4">
-          {/* Social icons */}
+        {/* Social icons row */}
+        <div className="pt-2 pb-8">
           <div className="flex items-center gap-4">
             <a
               href="#"
+              aria-label="X"
               className="w-12 h-12 bg-zinc-800 rounded-full flex items-center justify-center hover:bg-zinc-700 transition-colors"
             >
               <div className="w-6 h-6 text-white">
@@ -179,24 +194,44 @@ export default function Footer() {
             </a>
             <a
               href="#"
+              aria-label="Instagram"
               className="w-12 h-12 bg-zinc-800 rounded-full flex items-center justify-center hover:bg-zinc-700 transition-colors"
             >
               <Instagram className="w-6 h-6 text-white" />
             </a>
             <a
               href="#"
+              aria-label="Facebook"
               className="w-12 h-12 bg-zinc-800 rounded-full flex items-center justify-center hover:bg-zinc-700 transition-colors"
             >
               <Facebook className="w-6 h-6 text-white" />
             </a>
           </div>
+        </div>
 
-          {/* Copyright text */}
-          <div>
-            <p className="text-zinc-500 text-sm text-right max-md:text-center">
-              © 2025 PrescribeLife.AI. All rights reserved.
-            </p>
+        {/* Bottom bar */}
+        <div className="flex flex-col md:flex-row items-center md:items-start justify-between w-full pt-8 border-t border-zinc-800 gap-4">
+          <div className="flex items-center gap-3 tracking-wide text-md text-zinc-400">
+            <a
+              target="_blank"
+              href="https://sites.google.com/asymmetri.in/prescribe-life-policies/home"
+              className="hover:text-white transition-colors"
+            >
+              Privacy Policy
+            </a>
+            <span className="text-zinc-600">|</span>
+            <a
+              target="_blank"
+              href="https://sites.google.com/asymmetri.in/prescribe-life-policies/home"
+              className="hover:text-white transition-colors"
+            >
+              Terms of Use
+            </a>
           </div>
+
+          <p className="text-zinc-500 text-md tracking-wide md:text-right w-full md:w-auto">
+            © 2025 Prescribe Life. All rights reserved.
+          </p>
         </div>
 
         {/* Bottom section

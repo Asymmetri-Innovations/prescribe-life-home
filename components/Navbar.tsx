@@ -1,12 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import {
-  motion,
-  useMotionValueEvent,
-  useScroll,
-  AnimatePresence,
-} from "motion/react";
+import { motion, useMotionValueEvent, useScroll, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 
@@ -28,7 +23,7 @@ export default function Navbar() {
     setMobileMenuOpen(false);
   }, [path]);
 
-  useMotionValueEvent(scrollY, "change", (latest) => {
+  useMotionValueEvent(scrollY, "change", (latest: number) => {
     const diff = latest - lastScrollY;
     setHidden(diff > 0);
     setLastScrollY(latest);
@@ -43,7 +38,7 @@ export default function Navbar() {
 
   return (
     <motion.div
-      className={`fixed top-3 left-1/2 -translate-x-1/2 w-11/12 md:w-[95%] rounded-2xl p-1.5 md:p-3 bg-gradient-to-r from-white/16 via-white/10 to-white/20 border-[0.5px] border-white/30 backdrop-blur-lg flex items-center justify-between text-sm font-semibold z-[99999] duration-300 ${
+      className={`fixed top-3 inset-x-0 mx-auto w-11/12 md:w-[95%] rounded-2xl p-1.5 md:p-3 bg-gradient-to-r from-white/16 via-white/10 to-white/20 border-[0.5px] border-white/30 backdrop-blur-lg flex items-center justify-between text-sm font-semibold z-[99999] duration-300 ${
         hidden ? "-translate-y-full" : "translate-y-0"
       }`}
       initial={{ y: -20, filter: "blur(8px)", opacity: 0 }}
@@ -84,7 +79,7 @@ export default function Navbar() {
             whileHover={{ y: -2 }}
             transition={{ duration: 0.2 }}
           >
-            <a href={href} aria-current={isActive(href) ? "page" : undefined}>
+            <Link href={href} aria-current={isActive(href) ? "page" : undefined}>
               <motion.span
                 className={`inline-block cursor-pointer transition-colors duration-200 ${
                   isActive(href) ? "text-theme" : "text-white hover:text-theme"
@@ -92,7 +87,7 @@ export default function Navbar() {
               >
                 {label}
               </motion.span>
-            </a>
+            </Link>
           </motion.div>
         ))}
       </motion.div>
@@ -103,7 +98,7 @@ export default function Navbar() {
           href="/booking"
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-gradient-to-r from-theme to-pink-600 rounded-full py-1 px-2 sm:py-1.5 sm:px-3 text-white text-[10px] sm:text-sm whitespace-nowrap"
+          className="hidden md:inline-flex bg-gradient-to-r from-theme to-pink-600 rounded-full py-1 px-2 sm:py-1.5 sm:px-3 text-white text-[10px] sm:text-sm whitespace-nowrap"
           initial={{ y: -10, filter: "blur(6px)", opacity: 0 }}
           animate={{ y: 0, filter: "blur(0px)", opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.3, ease: "easeOut" }}
@@ -152,38 +147,53 @@ export default function Navbar() {
         </motion.button>
       </motion.div>
 
-      {/* Mobile dropdown menu */}
+      {/* Mobile dropdown menu (height animation similar to please-bee) */}
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div
             id="mobile-menu"
             key="mobile-menu"
-            initial={{ opacity: 0, y: -8 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -8 }}
-            transition={{ duration: 0.2 }}
-            className="absolute left-0 right-0 top-[calc(100%+8px)] md:hidden rounded-xl p-3 bg-zinc-800 border-[0.5px] border-white/30 backdrop-blur-xl"
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.25, ease: "easeInOut" }}
+            className="absolute left-0 right-0 top-[calc(100%+8px)] md:hidden overflow-hidden overflow-x-hidden rounded-xl bg-zinc-800/95 border-[0.5px] border-white/30 backdrop-blur-xl max-h-[70vh] overflow-y-auto"
           >
-            <nav className="flex flex-col gap-3">
+            <motion.nav
+              className="flex flex-col gap-1 py-2"
+              initial={{ opacity: 0, y: -6 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.2, ease: "easeOut" }}
+            >
               {navLinks.map(({ href, label }) => (
-                <a
+                <Link
                   key={href}
                   href={href}
                   onClick={() => setMobileMenuOpen(false)}
                   aria-current={isActive(href) ? "page" : undefined}
+                  className="px-4 py-2"
                 >
                   <span
-                    className={`inline-block cursor-pointer max-sm:text-[10px] ${
-                      isActive(href)
-                        ? "text-white font-semibold"
-                        : "text-white/80"
+                    className={`inline-block cursor-pointer text-sm ${
+                      isActive(href) ? "text-white font-semibold" : "text-white/80"
                     }`}
                   >
                     {label}
                   </span>
-                </a>
+                </Link>
               ))}
-            </nav>
+              <div className="px-4 py-2">
+                <a
+                  href="/booking"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="block w-full text-center rounded-full bg-gradient-to-r from-theme to-pink-600 py-2 text-white text-sm"
+                >
+                  Request a Demo
+                </a>
+              </div>
+            </motion.nav>
           </motion.div>
         )}
       </AnimatePresence>

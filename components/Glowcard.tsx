@@ -6,10 +6,10 @@ type Props = {
 
 export function GlassmorphicCard({ title, secondaryLine, titleCn }: Props) {
   return (
-    <div className="bg-black flex items-center justify-center p-4">
+    <div className="bg-black flex items-center justify-center w-full">
       <div
         className={`flex flex-col items-start p-6 gap-16 rounded-2xl ${
-          titleCn ?? "w-[350px] min-h-[132px]"
+          titleCn ?? "w-full min-h-[132px]"
         }`}
         style={{
           background:
@@ -18,7 +18,7 @@ export function GlassmorphicCard({ title, secondaryLine, titleCn }: Props) {
         }}
       >
         <div className="flex flex-col items-start w-full ">
-          <h2 className="text-2xl font-bold text-white text-center w-full leading-relaxed tracking-wide">
+          <h2 className="text-md md:text-2xl font-bold text-white text-center w-full leading-relaxed tracking-wide">
             {title}
           </h2>
           {secondaryLine && (

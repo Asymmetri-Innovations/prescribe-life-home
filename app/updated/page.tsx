@@ -1,5 +1,5 @@
 "use client";
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 import CTA from "@/components/CTA";
 import Image from "next/image";
 import React from "react";
@@ -63,30 +63,30 @@ const steps2 = [
 
 export default function UpdatedHome() {
   return (
-    <section className="mx-12 flex flex-col gap-32 max-md:gap-24">
+    <section className="flex flex-col gap-32 max-md:gap-24">
       {/* Hero Section */}
-      <section id="hero" className="flex flex-col max-md:pt-4 px-6 max-md:px-5">
+      <section id="hero" className="flex flex-col pt-20 lg:pt-6 px-4 md:px-10">
         <motion.div
           initial={{ y: 32, filter: "blur(6px)", opacity: 0 }}
           animate={{ y: 0, filter: "blur(0px)", opacity: 1 }}
           transition={{ duration: 1, delay: 0.45 }}
-          className="w-full pb-0 max-md:pb-0 min-h-[90vh] flex justify-center items-center max-md:items-center max-md:justify-center"
+          className="w-full pb-0 md:min-h-[90vh] flex justify-center items-center"
         >
-          <div className="flex flex-col md:flex-row items-start justify-center gap-6 max-md:gap-4 w-full max-md:mt-1">
+          <div className="flex flex-col lg:flex-row items-center lg:items-center justify-center gap-6 sm:gap-8 w-full mt-2">
             {/* Left Text */}
-            <div className="flex w-full md:w-1/2 flex-col items-start justify-center text-left max-md:text-center max-md:items-center space-y-4 max-md:space-y-4 order-1">
+            <div className="flex w-full lg:w-1/2 flex-col lg:items-start gap-6 lg:text-left text-center items-center space-y-4 lg:space-y-4 order-1">
               <motion.h1
-                className="text-6xl max-md:text-3xl font-semibold"
+                className="font-semibold text-3xl md:text-6xl leading-tight"
                 initial={{ y: 30, filter: "blur(4px)", opacity: 0 }}
                 animate={{ y: 0, filter: "blur(0px)", opacity: 1 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
               >
-                Set the new standard in <br />
+                Set the new standard in <br className="hidden md:block" />
                 <span className="text-gradient">performance coaching</span>
               </motion.h1>
 
               <motion.p
-                className="text-xl max-md:text-base inter"
+                className="inter text-base sm:text-lg md:text-2xl text-muted-foreground"
                 initial={{ y: 24, filter: "blur(4px)", opacity: 0 }}
                 animate={{ y: 0, filter: "blur(0px)", opacity: 1 }}
                 transition={{ duration: 0.75, delay: 0.15, ease: "easeOut" }}
@@ -96,19 +96,20 @@ export default function UpdatedHome() {
                 precision—because burnout should not be the cost of performance.
               </motion.p>
 
-              <motion.div className="flex">
+              <motion.div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto justify-center md:justify-start">
                 <CTA />
               </motion.div>
             </div>
 
             {/* Right Image */}
-            <div className="flex w-full md:w-1/2 flex-col items-center justify-start order-2 space-y-4 max-md:space-y-2">
+            <div className="flex w-full md:w-1/2 flex-col items-center justify-start order-2 space-y-4">
               <Image
                 src="/result.png"
                 width={900}
                 height={900}
                 alt="platform"
-                className="w-full h-auto"
+                className="w-full max-w-[480px] sm:max-w-[560px] md:max-w-none h-auto"
+                sizes="(max-width: 640px) 92vw, (max-width: 768px) 540px, 50vw"
               />
             </div>
           </div>
@@ -116,17 +117,17 @@ export default function UpdatedHome() {
       </section>
 
       {/* Burnout + Thesis Section */}
-      <section className="flex flex-col gap-16 mx-20 max-md:mx-10">
+      <section className="flex flex-col gap-16 px-4 md:px-10">
         {/* Burnout */}
         <section className="flex flex-col gap-10">
-          <h1 className="text-5xl font-semibold">
+          <h1 className="text-3xl md:text-5xl font-semibold text-center md:text-left">
             <span className="text-theme">Burnout &nbsp;</span>
             is one the most Defining <br />
             Challenges of our Time
           </h1>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 text-xl align-start max-md:gap-5 gap-2">
-            <div className="flex justify-start items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 text-base md:text-xl align-start gap-4 md:gap-2">
+            <div className="flex justify-center md:justify-start items-center text-center md:text-left">
               <p>
                 85% of coaches say clients are seeking more support for
                 well-being.
@@ -136,7 +137,7 @@ export default function UpdatedHome() {
               </p>
             </div>
 
-            <div className="flex justify-end items-center">
+            <div className="flex justify-center md:justify-end items-center">
               {/* <GlowCard className="min-h-[100px] flex justify-center items-center max-w-2xl">
                 <p>
                   <span className="text-pink-400 font-semibold">
@@ -156,13 +157,13 @@ export default function UpdatedHome() {
 
         {/* Thesis */}
         <section className="flex flex-col gap-10">
-          <h1 className="text-5xl font-semibold">
+          <h1 className="text-3xl md:text-5xl font-semibold text-center md:text-left">
             Our Founding&nbsp;
             <span className="text-theme">Thesis</span>
           </h1>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 text-xl align-start max-md:gap-5 gap-2">
-            <div className="flex justify-start items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 text-base md:text-xl align-start gap-4 md:gap-2">
+            <div className="flex justify-center md:justify-start items-center text-center md:text-left">
               <p>
                 Built by a team of doctors, neuroscientists, and ICF-accredited
                 <br />
@@ -173,7 +174,7 @@ export default function UpdatedHome() {
               </p>
             </div>
 
-            <div className="flex justify-end items-end max-md:justify-center">
+            <div className="flex justify-center md:justify-end items-end">
               <span className="border-1 border-white px-6 py-2 rounded-3xl">
                 Here's what we mean:
               </span>
@@ -187,37 +188,47 @@ export default function UpdatedHome() {
       </section>
 
       {/* 360 View */}
-      <section className="grid grid-cols-1 md:grid-cols-2 gap-10">
-        <div className="flex justify-end items-center">
-          <Image src={"/360view.png"} height={500} width={500} alt="360View" />
+      <section className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 px-4 md:px-10">
+        <div className="flex justify-center md:justify-between items-center">
+          <Image
+            src={"/360view.png"}
+            height={800}
+            width={800}
+            alt="360View"
+            className="w-full max-w-[520px] md:max-w-none h-auto"
+            sizes="(max-width: 768px) 90vw, 50vw"
+          />
         </div>
 
-        <div className="flex flex-col justify-between">
-          <h1 className="text-5xl font-semibold">
+        <div className="flex flex-col gap-4 md:gap-6 justify-between text-center md:text-left items-center md:items-start">
+          <h1 className="font-semibold text-3xl md:text-5xl leading-tight">
             The <span className="text-theme">PrescribeLife.AI</span>
             <br />
             Platform
           </h1>
-          <p className="text-xl">
-            Resilience coaching that adapts in real time to evolving <br />
+          <p className="text-base md:text-xl">
+            Resilience coaching that adapts in real time to evolving
+            <br className="hidden md:block" />
             client needs, powered by{" "}
             <span className="text-theme">
-              behavioral science and <br /> biometric precision,&nbsp;
+              behavioral science and
+              <br className="hidden md:block" /> biometric precision,&nbsp;
             </span>
-            because burnout should not be the <br /> cost of performance.
+            because burnout should not be the
+            <br className="hidden md:block" /> cost of performance.
           </p>
         </div>
       </section>
 
       {/* How It Works */}
 
-      <section className="flex flex-col gap-12 pt-10">
-        <div className="text-5xl text-center font-semibold">
+      <section className="flex flex-col gap-12 pt-10 px-4 md:px-10">
+        <div className="text-3xl md:text-5xl text-center font-semibold">
           How <span className="text-theme">PrescribeLife.AI</span> Works
         </div>
 
         <div className="flex items-center justify-center">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-6xl w-full items-stretch">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 w-full items-stretch">
             {steps.map((step, i) => (
               <FadeRise key={step.id} delay={i * 0.1}>
                 <MagicCard className="h-full">
@@ -256,11 +267,11 @@ export default function UpdatedHome() {
           </div>
         </div>
 
-        <div className="flex items-center justify-center">
-          <div className="max-w-6xl w-full">
+          <div className="flex items-center justify-center">
+          <div className="w-full">
             <FadeRise delay={0.2}>
               <MagicCard className="h-full">
-                <div className="rounded-2xl h-full flex flex-col p-8 max-md:p-6 bg-white/10 shadow-lg border border-white/10 relative overflow-hidden">
+                <div className="rounded-2xl h-full flex flex-col p-8 max-md:p-6 bg-white/10 shadow-lg border border-white/10 relative overflow-hidden text-center md:text-left">
                   <div className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20" />
                   <div className="flex justify-between items-start mb-6 relative z-10">
                     <Sparkle size={56} className="text-theme flex-shrink-0" />
@@ -320,14 +331,13 @@ export default function UpdatedHome() {
       </section>
 
       {/* Personalized daily support */}
-      <section className="flex flex-col space-y-10">
-        <div className="text-5xl text-center font-semibold">
+      <section className="flex flex-col space-y-10 px-4 md:px-10">
+        <div className="text-3xl md:text-5xl max-w-6xl mx-auto leading-tight text-center font-semibold">
           <span className="text-theme">Personalized daily support </span>
           that keeps clients engaged
-          <br />
           and making progress.
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-24 mx-auto ">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-24 ">
           <div className="flex flex-col justify-between items-center space-y-5">
             <div>
               <Image
@@ -335,6 +345,8 @@ export default function UpdatedHome() {
                 height={50}
                 width={250}
                 alt="phone-screenshot"
+                className="w-full max-w-[220px] md:max-w-[250px] h-auto"
+                sizes="(max-width: 768px) 70vw, 25vw"
               />
             </div>
             <div>
@@ -355,6 +367,8 @@ export default function UpdatedHome() {
                 height={50}
                 width={250}
                 alt="phone-screenshot"
+                className="w-full max-w-[220px] md:max-w-[250px] h-auto"
+                sizes="(max-width: 768px) 70vw, 25vw"
               />
             </div>
             <div>
@@ -371,6 +385,8 @@ export default function UpdatedHome() {
                 height={50}
                 width={250}
                 alt="phone-screenshot"
+                className="w-full max-w-[220px] md:max-w-[250px] h-auto"
+                sizes="(max-width: 768px) 70vw, 25vw"
               />
             </div>
             <div>
@@ -392,16 +408,16 @@ export default function UpdatedHome() {
       </section>
 
       {/* Biometric Insights */}
-      <section className="flex flex-col items-center justify-start gap-10">
-        <div className="text-5xl max-w-7xl text-center font-semibold">
+      <section className="flex flex-col items-center justify-start gap-10 px-4 md:px-10">
+        <div className="text-3xl md:text-5xl max-w-6xl leading-tight text-center font-semibold">
           Mobile App captures{" "}
           <span className="text-theme">
             Biometric Insights & Key Resilience &nbsp;
           </span>
           Indicators
         </div>
-        <div className=" flex  items-center justify-center  max-md:flex-col">
-          <section className="max-w-5xl flex flex-col gap-16 text-xl max-md:items-center max-md:mb-5">
+        <div className="flex items-center justify-center gap-8 md:gap-10 max-md:flex-col">
+          <section className="w-full md:max-w-5xl flex flex-col gap-8 md:gap-16 text-base md:text-xl items-center md:items-start mb-6 md:mb-0 text-center md:text-left">
             <div>
               Resilience coaching that adapts in real time to evolving client
               needs, powered by behavioral science and biometric
@@ -410,12 +426,12 @@ export default function UpdatedHome() {
             <div>
               No extra hardware needed — integrates with major wearables
             </div>
-            <CTA classname="max-w-60 text-base" />
+            <CTA classname=" text-base" />
           </section>
-          <div>
+          <div className="flex justify-center md:justify-start">
             <img
               src={"/biometric-insight.png"}
-              className="h-auto w-auto max-w-[250px]"
+              className="h-auto w-full max-w-[260px] md:max-w-[280px]"
               alt="phone"
             />
           </div>
@@ -424,10 +440,10 @@ export default function UpdatedHome() {
 
       {/* Your coaching portal */}
       <section>
-        <div className="container mx-auto px-8 py-16">
+        <div className="container py-16 px-4 md:px-10">
           {/* Header */}
-          <div className="text-center mb-20">
-            <h1 className="text-5xl md:text-6xl font-bold mb-8">
+          <div className="text-center mb-12 md:mb-20">
+            <h1 className="text-3xl md:text-5xl font-bold mb-8">
               <span className="text-theme"> Your </span>
               <span>Coaching Portal</span>
             </h1>
@@ -438,9 +454,9 @@ export default function UpdatedHome() {
           </div>
 
           {/* Content Section */}
-          <div className="grid md:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center px-4">
             {/* Left side - Text content */}
-            <div className="space-y-8">
+            <div className="space-y-6 md:space-y-8 text-center md:text-left">
               <div>
                 <p className="text-lg md:text-xl leading-relaxed">
                   AI-powered insights help you spark deeper coaching
@@ -457,52 +473,52 @@ export default function UpdatedHome() {
             </div>
 
             {/* Right side - Dashboard mockup */}
-            <div className="relative">
+            <div className="relative flex justify-center md:justify-start">
               <img
                 src="/result.png"
                 alt="Coaching Portal Dashboard"
-                className="w-full h-auto"
+                className="w-full max-w-[520px] md:max-w-none h-auto"
               />
             </div>
           </div>
         </div>
       </section>
 
-      <section>
+      <section className="px-4 md:px-16">
         <GlassmorphicCard
           title="Walk into every session with real-time insights on your client’s
           goals, habitual insights, and biometric data."
-          titleCn="max-w-9xl"
+          titleCn="w-full"
         />
       </section>
 
-      <section className="flex flex-col gap-20">
+      <section className="flex flex-col gap-20 px-4 md:px-20">
         <div className="flex items-center justify-center">
-          <div className="text-center text-5xl font-semibold max-w-5xl">
+          <div className="text-center text-3xl md:text-5xl font-semibold max-w-5xl">
             <span className="text-theme">PrescribeLife.AI </span>
             simple to set up for 1-1, group or team coaching.
           </div>
         </div>
         <TestimonialsCarousel />
         <div className="flex items-center justify-center w-full ">
-          <CTA classname="max-w-60 " />
+          <CTA classname="" />
         </div>
       </section>
 
       {/* Powerful Insights */}
 
-      <section className="flex flex-col items-center space-y-8 max-md:space-y-4">
+      <section className="flex flex-col items-center space-y-8 max-md:space-y-4 px-4 md:px-10">
         <FadeRise>
           <Title
             text="Powerful Insights, Radically Simple to Use"
             className="text-5xl max-md:text-3xl mx-5 text-center"
           />
         </FadeRise>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl w-full px-6 max-md:px-4">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 w-full">
           {steps2.map((step, i) => (
             <FadeRise key={step.id} delay={i * 0.12}>
               <MagicCard>
-                <div className="h-[400px] rounded-2xl p-8 border border-white/10 relative overflow-hidden space-y-6 max-md:space-y-4">
+                <div className="min-h-[320px] md:min-h-[400px] rounded-2xl p-8 max-md:p-6 border border-white/10 relative overflow-hidden space-y-6 max-md:space-y-4">
                   <div className="absolute top-6 right-6 text-6xl max-md:text-4xl font-bold text-white/30 opacity-50">
                     {step.id}
                   </div>
@@ -524,21 +540,21 @@ export default function UpdatedHome() {
       </section>
 
       {/* Build on 8M+/ metrics section */}
-      <section className="flex flex-col items-center gap-16 max-md:gap-8">
+      <section className="flex flex-col items-center gap-12 md:gap-16 px-4 md:px-10">
         <FadeRise>
-          <div className="max-w-5xl space-y-10">
-            <div className="text-5xl text-center">
+          <div className="max-w-5xl space-y-8 md:space-y-10">
+            <div className="text-3xl md:text-5xl text-center leading-tight">
               Built on <span className="text-theme"> 8M+ </span>
               days of behavioral data and
               <span className="text-theme"> 50K+ </span>
               validated assessment models.
             </div>
-            <div className="text-xl text-center">
+            <div className="text-base md:text-xl text-center">
               We combine behavioral science and biometric data to measure what
               truly drives resilience and performance — powered by trusted
               integrations like Garmin, Apple Health, Google Fit, and more.
             </div>
-            <h1 className="text-3xl font-semibold text-center">Powered by</h1>
+            <h1 className="text-2xl md:text-3xl font-semibold text-center">Powered by</h1>
           </div>
         </FadeRise>
         <div className="flex flex-col  md:flex-row justify-center items-stretch w-full max-w-6xl divide-y md:divide-y-0 md:divide-x divide-white/20">
@@ -604,8 +620,8 @@ export default function UpdatedHome() {
         </FadeRise>
       </section>
 
-      <div className="flex items-center justify-center">
-        <div className="text-center text-5xl font-semibold max-w-6xl">
+      <div className="flex items-center justify-center px-4 md:px-10">
+        <div className="text-center lg:text-5xl md:text-4xl text-3xl font-semibold max-w-6xl">
           Meet the rising demand for{" "}
           <span className="text-theme">resilience-focused</span> coaching and
           expand your impact.
@@ -613,9 +629,9 @@ export default function UpdatedHome() {
       </div>
 
       {/* CTA CUrve */}
-      <section className="relative flex flex-col md:flex-row items-start md:items-center justify-start gap-8 max-md:gap-6 px-6 md:px-12">
+      <section className="relative flex flex-col lg:flex-row items-start lg:items-center justify-start gap-8 max-md:gap-6 px-6 lg:px-12">
         {/* White Curve Card */}
-        <FadeRise className="bg-white text-black rounded-2xl md:rounded-r-[300px] p-12 max-md:p-6 flex flex-col items-center justify-center relative overflow-hidden min-h-[400px] max-md:min-h-[300px] w-full md:w-[65%] lg:w-[60%] xl:w-[55%] max-md:translate-x-0 -translate-x-8 md:-translate-x-16">
+        <FadeRise className="bg-white text-black rounded-2xl lg:rounded-r-[300px] p-12 max-md:p-6 flex flex-col items-center justify-center relative overflow-hidden min-h-[400px] max-md:min-h-[300px] w-full lg:w-[65%] lg:w-[60%] xl:w-[55%] max-md:translate-x-0 -translate-x-8 lg:-translate-x-16">
           <h2 className="text-5xl max-md:text-3xl font-semibold text-center leading-tight mb-6 max-w-3xl">
             Amplify your Impact & Grow Your Practice.
           </h2>
@@ -623,7 +639,7 @@ export default function UpdatedHome() {
             href="/booking"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-gradient-to-r from-theme to-pink-600 text-white font-semibold px-12 py-5 rounded-full text-lg shadow-xl hover:shadow-2xl transition-all mb-8 max-md:text-center"
+            className="bg-gradient-to-r from-theme to-pink-600 text-white font-semibold px-6 md:px-12 py-5 rounded-full text-sm md:text-lg shadow-xl hover:shadow-2xl transition-all mb-8 w-full sm:w-auto text-center"
           >
             Book a Personalized Demo Call
           </a>
@@ -633,7 +649,7 @@ export default function UpdatedHome() {
         </FadeRise>
 
         {/* Right-side column */}
-        <div className="flex flex-col gap-4 max-md:gap-3 w-full md:w-[35%] lg:w-[40%] xl:w-[45%] items-start max-md:items-center">
+        <div className="flex flex-col gap-4 max-md:gap-3 w-full lg:w-[35%] lg:w-[40%] xl:w-[45%] items-start max-md:items-center">
           {[
             "Instantly add high-value, data-driven programs.",
             "Confidently introduce premium revenue streams.",
@@ -656,7 +672,8 @@ export default function UpdatedHome() {
             width={400}
             height={400}
             alt="security"
-            className="mt-6"
+            className="mt-6 w-full max-w-[260px] md:max-w-[400px] h-auto"
+            sizes="(max-width: 768px) 70vw, 33vw"
           />
         </div>
       </section>
