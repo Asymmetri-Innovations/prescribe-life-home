@@ -31,7 +31,7 @@ export default function Navbar() {
   });
 
   const navLinks = [
-    { href: "/new-standard", label: "New Standard" },
+    // { href: "/new-standard", label: "New Standard" },
     { href: "/our-story", label: "Our Story" },
     { href: "/our-team", label: "Our Team" },
   ];

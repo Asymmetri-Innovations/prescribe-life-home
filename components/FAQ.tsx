@@ -106,13 +106,13 @@ export default function FAQ({ classname }: { classname?: string }) {
               return (
                 <motion.div
                   key={actualIndex}
-                  className={`flex flex-col bg-[#1a1a1a] text-white border border-white/20 rounded-2xl overflow-hidden cursor-pointer transition-all duration-300 ${
+                  className={`flex flex-col bg-[#1a1a1a] h-24 text-white border border-white/20 rounded-2xl overflow-hidden cursor-pointer transition-all duration-300 ${
                     isExpanded ? "h-auto" : ""
                   }`}
                   onClick={() => toggleItem(actualIndex)}
                   initial={false}
                 >
-                  <div className="p-5 flex flex-col flex-1">
+                  <div className="p-5 flex flex-col justify-center flex-1">
                     <div className="flex items-center justify-between">
                       <h3 className="text-base md:text-lg pr-3 tracking-wide">{item.question}</h3>
                       <motion.div
