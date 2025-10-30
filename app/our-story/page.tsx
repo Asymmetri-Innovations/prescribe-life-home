@@ -9,6 +9,7 @@ import GradientCard from "@/components/GradientCard";
 import { User, Eye, Dna, Sparkles } from "lucide-react";
 import { AvatarStack } from "@/components/ui/avatar-stack";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import HoverGlowContainer from "@/components/HoverGlowContainer";
 
 export default function BookingPage() {
   const steps = [

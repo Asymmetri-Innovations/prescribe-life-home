@@ -164,6 +164,7 @@ import Image from "next/image";
 import { FadeRise } from "@/components/FadeRise";
 import { motion } from "motion/react";
 import { MagicCard } from "@/components/MagicCard";
+import HoverGlowContainer from "@/components/HoverGlowContainer";
 export default function TeamPage() {
   return (
     <main className="space-y-32 relative pt-16 overflow-x-hidden max-w-full">
