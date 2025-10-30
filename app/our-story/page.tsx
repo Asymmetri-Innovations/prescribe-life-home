@@ -68,7 +68,7 @@ export default function BookingPage() {
         </FadeRise>
 
         <FadeRise className="flex justify-center items-stretch gap-4 max-md:flex-col mx-3">
-          <MagicCard>
+          <HoverGlowContainer>
             <div className="rounded-2xl p-6 max-md:p-4 bg-gradient-to-b from-zinc-900/70 to-black/80 border border-white/10 ring-1 ring-white/10 shadow-[0_8px_32px_-16px_rgba(0,0,0,0.6)] flex flex-col space-y-3 max-w-xl w-auto h-full">
               <div className="flex items-center space-x-4">
                 <Image
@@ -91,9 +91,9 @@ export default function BookingPage() {
                 }}
               />
             </div>
-          </MagicCard>
+          </HoverGlowContainer>
 
-          <MagicCard>
+          <HoverGlowContainer>
             <div className="rounded-2xl p-6 max-md:p-4 bg-gradient-to-b from-zinc-900/70 to-black/80 border border-white/10 ring-1 ring-white/10 shadow-[0_8px_32px_-16px_rgba(0,0,0,0.6)] flex flex-col space-y-3 max-w-xl w-auto h-full">
               <div className="flex items-center space-x-4">
                 <Image
@@ -116,7 +116,7 @@ export default function BookingPage() {
                 }}
               />
             </div>
-          </MagicCard>
+          </HoverGlowContainer>
         </FadeRise>
       </section>
 
@@ -183,7 +183,7 @@ export default function BookingPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5 max-w-6xl w-full">
           {steps.map((step, i) => (
             <FadeRise key={step.id} delay={i * 0.08}>
-              <MagicCard>
+              <HoverGlowContainer>
                 <div className="rounded-2xl p-5 bg-white/10 shadow-lg border border-white/10 space-y-4 h-52 flex flex-col">
                   <div className="flex justify-between items-center">
                     <step.icon size={48} className="text-theme" />
@@ -200,7 +200,7 @@ export default function BookingPage() {
                     </p>
                   </div>
                 </div>
-              </MagicCard>
+              </HoverGlowContainer>
             </FadeRise>
           ))}
         </div>

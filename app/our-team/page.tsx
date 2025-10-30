@@ -95,7 +95,7 @@ const advisors = [
 //         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-7xl w-full">
 //           {teamMembers.map((member, i) => (
 //             <FadeRise key={i} delay={i * 0.1}>
-//               <MagicCard>
+//               <HoverGlowContainer>
 //                 <div className="rounded-2xl p-8 max-md:p-6 bg-gradient-to-b from-zinc-900/70 to-black/80 border border-white/10 ring-1 ring-white/10 shadow-[0_16px_48px_-20px_rgba(0,0,0,0.6)] flex flex-col items-center text-center space-y-4 h-full">
 //                   <Image
 //                     src={member.image}
@@ -114,7 +114,7 @@ const advisors = [
 //                     {member.description}
 //                   </p>
 //                 </div>
-//               </MagicCard>
+//               </HoverGlowContainer>
 //             </FadeRise>
 //           ))}
 //         </div>
@@ -131,7 +131,7 @@ const advisors = [
 //         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-7xl w-full">
 //           {advisors.map((advisor, i) => (
 //             <FadeRise key={i} delay={i * 0.1}>
-//               <MagicCard>
+//               <HoverGlowContainer>
 //                 <div className="rounded-2xl p-8 max-md:p-6 bg-gradient-to-b from-zinc-900/70 to-black/80 border border-white/10 ring-1 ring-white/10 shadow-[0_16px_48px_-20px_rgba(0,0,0,0.6)] flex flex-col items-center text-center space-y-4 h-full">
 //                   <Image
 //                     src={advisor.image}
@@ -150,7 +150,7 @@ const advisors = [
 //                     {advisor.description}
 //                   </p>
 //                 </div>
-//               </MagicCard>
+//               </HoverGlowContainer>
 //             </FadeRise>
 //           ))}
 //         </div>
@@ -189,7 +189,7 @@ export default function TeamPage() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-7xl w-full items-stretch">
           {teamMembers.map((member, i) => (
             <FadeRise key={i} delay={i * 0.05}>
-              <MagicCard className="h-full">
+              <HoverGlowContainer className="h-full">
                 <div
                   className="rounded-2xl p-8 max-md:p-6 bg-gradient-to-b from-zinc-900/70 to-black/80 
             border border-white/10 ring-1 ring-white/10 shadow-[0_16px_48px_-20px_rgba(0,0,0,0.6)] 
@@ -212,7 +212,7 @@ export default function TeamPage() {
                     {member.description}
                   </p>
                 </div>
-              </MagicCard>
+              </HoverGlowContainer>
             </FadeRise>
           ))}
         </div>
@@ -231,7 +231,7 @@ export default function TeamPage() {
         <div className="flex flex-wrap justify-center gap-6 max-w-7xl w-full">
           {advisors.map((advisor, i) => (
             <FadeRise key={i} delay={i * 0.1} className="w-full max-w-sm">
-              <MagicCard>
+              <HoverGlowContainer>
                 <div className="rounded-2xl p-8 max-md:p-6 bg-gradient-to-b from-zinc-900/70 to-black/80 border border-white/10 ring-1 ring-white/10 shadow-[0_16px_48px_-20px_rgba(0,0,0,0.6)] flex flex-col items-center text-center space-y-4 h-full">
                   <Image
                     src={advisor.image}
@@ -250,7 +250,7 @@ export default function TeamPage() {
                     {advisor.description}
                   </p>
                 </div>
-              </MagicCard>
+              </HoverGlowContainer>
             </FadeRise>
           ))}
         </div>

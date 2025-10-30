@@ -12,6 +12,7 @@ import Autoplay from "embla-carousel-autoplay";
 import { MagicCard } from "@/components/MagicCard";
 
 import Image from "next/image";
+import HoverGlowContainer from "./HoverGlowContainer";
 const testimonials = [
   {
     highlight: "truly bespoke and personalized",
@@ -67,11 +68,8 @@ export function TestimonialsCarousel() {
       >
         <CarouselContent className="">
           {testimonials.map((testimonial, index) => (
-            <CarouselItem
-              key={index}
-              className="md:basis-1/2 lg:basis-1/3"
-            >
-              <MagicCard className="h-full">
+            <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+              <HoverGlowContainer className="h-full">
                 <div className="p-10 flex flex-col items-start text-left h-full max-md:p-4 mt-  max-md:space-y-5">
                   <div className="flex justify-start items-center  max-md:gap-3">
                     {/* Profile Image */}
@@ -114,7 +112,7 @@ export function TestimonialsCarousel() {
                     </p>
                   </div>
                 </div>
-              </MagicCard>
+              </HoverGlowContainer>
             </CarouselItem>
           ))}
         </CarouselContent>

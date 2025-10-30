@@ -69,7 +69,7 @@ export function TestimonialsCarouselSplide() {
       >
         {testimonials.map((testimonial, index) => (
           <SplideSlide key={index}>
-            <MagicCard className="h-full">
+            <HoverGlowContainer className="h-full">
               <div className="p-10 flex flex-col items-start text-left h-full">
                 {/* Profile Image */}
                 <div className="w-20 h-20 rounded-full overflow-hidden mb-6 border-4 border-white shadow-md">
@@ -102,7 +102,7 @@ export function TestimonialsCarouselSplide() {
                   </p>
                 </div>
               </div>
-            </MagicCard>
+            </HoverGlowContainer>
           </SplideSlide>
         ))}
 

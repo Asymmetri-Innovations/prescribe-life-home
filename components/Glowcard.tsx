@@ -6,15 +6,21 @@ type Props = {
 
 export function GlassmorphicCard({ title, secondaryLine, titleCn }: Props) {
   return (
-    <div className="bg-black flex items-center justify-center w-full">
+    <div className=" flex items-center justify-center w-full">
       <div
-        className={`flex flex-col items-center p-10 gap-16 rounded-2xl ${
+        className={`flex flex-col items-center p-10 gap-16 rounded-2xl transition-all duration-300 ${
           titleCn ?? "w-full min-h-[132px]"
         }`}
         style={{
           background:
             "linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, rgba(0, 0, 0, 0) 125.17%)",
-          boxShadow: "inset 0px 4px 25px #D557AD",
+          boxShadow: "inset 0px 0px 0px transparent",
+        }}
+        onMouseEnter={(e) => {
+          e.currentTarget.style.boxShadow = "inset 0px 4px 25px #D557AD";
+        }}
+        onMouseLeave={(e) => {
+          e.currentTarget.style.boxShadow = "inset 0px 0px 0px transparent";
         }}
       >
         <div className="flex flex-col items-start w-full ">
@@ -32,24 +38,26 @@ export function GlassmorphicCard({ title, secondaryLine, titleCn }: Props) {
   );
 }
 
-
 export function WholeTextCard({ title, secondaryLine, titleCn }: Props) {
   return (
-    <div className="bg-black flex items-center justify-center w-full">
+    <div className="flex items-center justify-center w-full">
       <div
-        className={`flex flex-col items-start text-lg p-6 gap-16 rounded-2xl ${titleCn}`}
+        className={`flex flex-col items-start text-lg p-6 gap-16 rounded-2xl transition-all duration-300 ${titleCn}`}
         style={{
           background:
             "linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, rgba(0, 0, 0, 0) 125.17%)",
-          boxShadow: "inset 0px 4px 25px #D557AD",
+          boxShadow: "inset 0px 0px 0px transparent",
+        }}
+        onMouseEnter={(e) => {
+          e.currentTarget.style.boxShadow = "inset 0px 4px 25px #D557AD";
+        }}
+        onMouseLeave={(e) => {
+          e.currentTarget.style.boxShadow = "inset 0px 0px 0px transparent";
         }}
       >
         <div className="flex flex-col items-start w-full ">
           <h2 className="font-medium text-theme text-center w-full leading-relaxed tracking-wide">
-            {title} {" "}
-            <span className="text-white">
-            {secondaryLine}
-            </span>
+            {title} <span className="text-white">{secondaryLine}</span>
           </h2>
         </div>
       </div>

@@ -239,7 +239,7 @@ export default function NewStandard() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-6xl w-full items-stretch">
             {steps.map((step, i) => (
               <FadeRise key={step.id} delay={i * 0.1}>
-                <MagicCard className="h-full">
+                <HoverGlowContainer className="h-full">
                   <div className="rounded-2xl h-full flex flex-col p-8 max-md:p-6 bg-white/10 shadow-lg border border-white/10">
                     <div className="flex justify-between items-start mb-4">
                       {step.image ? (
@@ -269,7 +269,7 @@ export default function NewStandard() {
                       </p>
                     </div>
                   </div>
-                </MagicCard>
+                </HoverGlowContainer>
               </FadeRise>
             ))}
           </div>
@@ -279,7 +279,7 @@ export default function NewStandard() {
         <div className="flex items-center justify-center">
           <div className="max-w-6xl w-full">
             <FadeRise delay={0.2}>
-              <MagicCard className="h-full">
+              <HoverGlowContainer className="h-full">
                 <div className="rounded-2xl h-full flex flex-col p-8 max-md:p-6 bg-white/10 shadow-lg border border-white/10 relative overflow-hidden">
                   <div
                     className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
@@ -335,7 +335,7 @@ export default function NewStandard() {
                     </div>
                   </div>
                 </div>
-              </MagicCard>
+              </HoverGlowContainer>
             </FadeRise>
           </div>
         </div>

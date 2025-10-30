@@ -35,7 +35,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-[#1a1a1a] text-white pt-16 pb-6 px-4 md:px-16 mt-20">
+    <footer className="bg-[#1a1a1a] text-white pt-16 pb-6 px-4 md:px-16 pt-16">
       <div className="">
         {/* Main footer content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 md:gap-12 mb-10 md:mb-12">
@@ -63,14 +63,7 @@ export default function Footer() {
                   Home
                 </a>
               </li>
-              <li>
-                <a
-                  href="/new-standard"
-                  className="text-white hover:text-theme transition-colors"
-                >
-                  New Standard
-                </a>
-              </li>
+
               <li>
                 <a
                   href="/our-story"

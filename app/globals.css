@@ -9,7 +9,6 @@
 
 @theme inline {
   --breakpoint-tablet: 36rem;
-
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-theme: #d557ad;
@@ -174,5 +173,208 @@ html {
   }
   .mobile-hehe.splide__slide.splide__slide--clone.is-visible.is-prev {
     height: 100%;
+  }
+}
+
+.blob {
+  filter: blur(3em);
+  z-index: -1 !important;
+  background: linear-gradient(
+    180deg,
+    var(--color-pink-950),
+    var(--color-theme),
+    var(--color-pink-950)
+  );
+  border-radius: 52% 48% 51% 49% / 50% 50% 48% 52%;
+  z-index: 9999999999;
+
+  /*  Optional  */
+  /*   box-shadow: inset 50px 50px 17px 0px #ff588b,
+    inset 100px 100px 17px 0px #66319f; */
+}
+
+@keyframes animateCore {
+  from {
+    rotate: 0deg;
+  }
+  to {
+    rotate: 360deg;
+  }
+}
+
+@keyframes animate {
+  0% {
+    translate: 40% -25%;
+    border-radius: 48% 52% 47% 53% / 51% 49% 51% 49%;
+    rotate: 0deg;
+  }
+  25% {
+    border-radius: 46% 54% 52% 48% / 49% 51% 47% 53%;
+    rotate: 25deg;
+  }
+  50% {
+    translate: 0% 13%;
+    border-radius: 51% 49% 48% 52% / 53% 47% 52% 48%;
+    rotate: 41deg;
+    scale: 1.15;
+  }
+  75% {
+    border-radius: 49% 51% 50% 50% / 48% 52% 49% 51%;
+    rotate: -15deg;
+  }
+  100% {
+    translate: -45% 39%;
+    border-radius: 52% 48% 51% 49% / 50% 50% 48% 52%;
+    rotate: -60deg;
+    scale: 1.05;
+  }
+}
+
+@keyframes animate2 {
+  0% {
+    translate: -30% 45%;
+    border-radius: 47% 53% 49% 51% / 52% 48% 50% 50%;
+    rotate: 0deg;
+  }
+  25% {
+    border-radius: 53% 47% 48% 52% / 49% 51% 51% 49%;
+    rotate: -35deg;
+  }
+  50% {
+    translate: 25% -18%;
+    border-radius: 50% 50% 52% 48% / 48% 52% 49% 51%;
+    rotate: 52deg;
+    scale: 1.22;
+  }
+  75% {
+    border-radius: 48% 52% 51% 49% / 51% 49% 52% 48%;
+    rotate: 28deg;
+  }
+  100% {
+    translate: 52% -33%;
+    border-radius: 51% 49% 49% 51% / 50% 50% 48% 52%;
+    rotate: 75deg;
+    scale: 0.95;
+  }
+}
+
+@keyframes animate3 {
+  0% {
+    translate: 15% 28%;
+    border-radius: 49% 51% 52% 48% / 48% 52% 51% 49%;
+    rotate: 0deg;
+  }
+  25% {
+    border-radius: 52% 48% 47% 53% / 51% 49% 50% 50%;
+    rotate: 48deg;
+  }
+  50% {
+    translate: -42% 8%;
+    border-radius: 48% 52% 50% 50% / 49% 51% 48% 52%;
+    rotate: -29deg;
+    scale: 1.08;
+  }
+  75% {
+    border-radius: 50% 50% 51% 49% / 52% 48% 49% 51%;
+    rotate: -67deg;
+  }
+  100% {
+    translate: 33% -51%;
+    border-radius: 51% 49% 48% 52% / 50% 50% 51% 49%;
+    rotate: 92deg;
+    scale: 1.18;
+  }
+}
+
+@keyframes animate4 {
+  0% {
+    translate: -48% -12%;
+    border-radius: 47% 53% 51% 49% / 49% 51% 52% 48%;
+    rotate: 0deg;
+  }
+  25% {
+    border-radius: 52% 48% 49% 51% / 48% 52% 50% 50%;
+    rotate: -52deg;
+  }
+  50% {
+    translate: 19% 37%;
+    border-radius: 49% 51% 50% 50% / 51% 49% 48% 52%;
+    rotate: 31deg;
+    scale: 0.88;
+  }
+  75% {
+    border-radius: 50% 50% 52% 48% / 49% 51% 51% 49%;
+    rotate: 88deg;
+  }
+  100% {
+    translate: -29% 44%;
+    border-radius: 48% 52% 51% 49% / 50% 50% 49% 51%;
+    rotate: -43deg;
+    scale: 1.12;
+  }
+}
+
+@keyframes animate5 {
+  0% {
+    translate: 38% -41%;
+    border-radius: 51% 49% 48% 52% / 52% 48% 50% 50%;
+    rotate: 0deg;
+  }
+  25% {
+    border-radius: 49% 51% 52% 48% / 48% 52% 49% 51%;
+    rotate: 64deg;
+  }
+  50% {
+    translate: -21% 15%;
+    border-radius: 50% 50% 49% 51% / 51% 49% 52% 48%;
+    rotate: -38deg;
+    scale: 1.28;
+  }
+  75% {
+    border-radius: 52% 48% 50% 50% / 49% 51% 48% 52%;
+    rotate: 17deg;
+  }
+  100% {
+    translate: 47% 29%;
+    border-radius: 48% 52% 51% 49% / 50% 50% 51% 49%;
+    rotate: -71deg;
+    scale: 0.92;
+  }
+}
+
+@keyframes animate6 {
+  0% {
+    translate: -35% 22%;
+    border-radius: 50% 50% 52% 48% / 48% 52% 49% 51%;
+    rotate: 0deg;
+  }
+  25% {
+    border-radius: 49% 51% 48% 52% / 51% 49% 50% 50%;
+    rotate: -58deg;
+  }
+  50% {
+    translate: 51% -27%;
+    border-radius: 51% 49% 50% 50% / 49% 51% 52% 48%;
+    rotate: 45deg;
+    scale: 1.16;
+  }
+  75% {
+    border-radius: 48% 52% 51% 49% / 50% 50% 48% 52%;
+    rotate: -84deg;
+  }
+  100% {
+    translate: -14% -46%;
+    border-radius: 52% 48% 49% 51% / 51% 49% 50% 50%;
+    rotate: 56deg;
+    scale: 1.03;
+  }
+}
+
+@keyframes spin {
+  from {
+    rotate: 0deg;
+  }
+  to {
+    rotate: 360deg;
   }
 }
