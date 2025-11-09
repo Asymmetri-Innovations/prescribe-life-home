@@ -53,7 +53,7 @@ export default function TestimonialsSection() {
     <section className="flex flex-col items-center gap-10 max-md:gap-6 overflow-hidden">
       <FadeRise>
         <div className="lg:text-5xl md:text-4xl text-3xl text-center font-medium">
-          What Other <span className="text-theme">Coaches</span> Are Saying
+          What Other <span className="text-gradient">Coaches</span> Are Saying
         </div>
       </FadeRise>
 

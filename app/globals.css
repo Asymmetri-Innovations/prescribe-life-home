@@ -154,6 +154,20 @@ html {
   }
 }
 
+/* Tablet portrait (768px - 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* Adjust hero section padding */
+  #hero {
+    padding-top: 2rem !important;
+  }
+
+  /* Reduce blob sizes on tablets */
+  .blob,
+  .sblob {
+    filter: blur(2.5em) !important;
+  }
+}
+
 @media (min-width: 768px) {
   .splide__slide {
     transition: 0.7s;
@@ -183,12 +197,7 @@ html {
 .blob {
   filter: blur(3em);
   z-index: -1 !important;
-  background: linear-gradient(
-    180deg,
-    var(--color-pink-950),
-    var(--color-theme),
-    var(--color-pink-950)
-  );
+  background: linear-gradient(180deg, #d557ad4d, var(--color-theme), #d557ad4d);
   border-radius: 52% 48% 51% 49% / 50% 50% 48% 52%;
   z-index: 9999999999;
 
@@ -204,6 +213,22 @@ html {
     var(--color-pink-950),
     var(--color-theme),
     var(--color-pink-950)
+  );
+  border-radius: 52% 48% 51% 49% / 50% 50% 48% 52%;
+  z-index: 9999999999;
+
+  /*  Optional  */
+  /*   box-shadow: inset 50px 50px 17px 0px #ff588b,
+    inset 100px 100px 17px 0px #66319f; */
+}
+.nblob {
+  /* filter: blur(3em); */
+  z-index: -1 !important;
+  background: linear-gradient(
+    180deg,
+    black,
+    #d557ad50,
+    black /* var(--color-pink-950) */
   );
   border-radius: 52% 48% 51% 49% / 50% 50% 48% 52%;
   z-index: 9999999999;
@@ -397,4 +422,26 @@ html {
   to {
     rotate: 360deg;
   }
+}
+
+@keyframes ripple {
+  0% {
+    transform: translate(-50%, -50%) scale(0.8);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(2);
+    opacity: 0;
+  }
+}
+
+.ripple-circle {
+  position: absolute;
+  border-radius: 50%;
+  border: 2px solid rgba(213, 87, 173, 0.4);
+  animation: ripple 4s ease-out infinite;
+  pointer-events: none;
 }

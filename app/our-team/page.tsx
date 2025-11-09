@@ -159,15 +159,14 @@ const advisors = [
 //   );
 // }
 
-import { Newsletter } from "@/components/Newsletter";
 import Image from "next/image";
 import { FadeRise } from "@/components/FadeRise";
-import { motion } from "motion/react";
-import { MagicCard } from "@/components/MagicCard";
 import HoverGlowContainer from "@/components/HoverGlowContainer";
+
 export default function TeamPage() {
   return (
-    <main className="space-y-32 relative pt-16 overflow-x-hidden max-w-full">
+    <main className="space-y-8 relative pt-8 overflow-hidden max-w-full">
+      {/* Background */}
       <Image
         className="w-[150vw] h-[150vh] absolute rotate-30 rotate-animation-slow scale-110 z-[-1] overflow-x-hidden max-w-full"
         src="/bggradient.png"
@@ -175,41 +174,39 @@ export default function TeamPage() {
         height={300}
         alt="bg"
       />
-      <section className="flex flex-col items-center justify-center space-y-10 max-md:space-y-6 pt-16 max-md:pt-8 px-4 max-md:px-2 mx-5">
+
+      {/* Team Section */}
+      <section className="flex flex-col justify-center items-center min-h-[80vh] space-y-4 max-md:space-y-3 pt-6 max-md:pt-6 px-4 max-md:px-2 mx-4">
         <FadeRise delay={0.05}>
-          <div className="text-6xl max-md:text-3xl font-semibold text-center mb-6">
-            Meet the <span className="text-theme">Team!</span>
+          <div className="text-6xl max-md:text-4xl font-semibold flex flex-col items-center mb-4 mt-10 max-md:text-center">
+            Meet the <span className="text-theme">Team</span>
           </div>
-          <p className="text-lg max-md:text-base inter text-center max-w-3xl  ">
-            The experts and innovators behind PrescribeLife.ai, bringing
+          <p className="text-zinc-300 mt-2 max-w-4xl mx-auto text-center text-lg max-md:text-base leading-relaxed px-4 max-md:px-2 mb-3">
+            The experts and innovators behind PrescribeLife.AI, bringing
             together neuroscience, technology, and coaching expertise to help
             you perform better and lead with resilience.
           </p>
         </FadeRise>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-7xl w-full items-stretch">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 max-w-6xl w-full">
           {teamMembers.map((member, i) => (
-            <FadeRise key={i} delay={i * 0.05}>
-              <HoverGlowContainer className="h-full">
-                <div
-                  className="rounded-2xl p-8 max-md:p-6 bg-gradient-to-b from-zinc-900/70 to-black/80 
-            border border-white/10 ring-1 ring-white/10 shadow-[0_16px_48px_-20px_rgba(0,0,0,0.6)] 
-            flex flex-col items-center text-center space-y-4 h-full"
-                >
+            <FadeRise key={i} delay={i * 0.08}>
+              <HoverGlowContainer>
+                <div className="rounded-2xl p-6 max-md:p-4 bg-gradient-to-b from-zinc-900/70 to-black/80 border border-white/10 ring-1 ring-white/10 shadow-[0_8px_32px_-16px_rgba(0,0,0,0.6)] flex flex-col items-center text-center space-y-3 h-full">
                   <Image
                     src={member.image}
                     alt={member.name}
-                    width={96}
-                    height={96}
-                    className="w-24 h-24 object-cover object-top rounded-full"
+                    width={80}
+                    height={80}
+                    className="w-20 h-20 object-cover object-top rounded-full"
                   />
-                  <h3 className="text-2xl max-md:text-xl text-white font-bold leading-snug">
+                  <h3 className="text-white text-2xl max-md:text-xl font-semibold leading-snug">
                     {member.name}
                   </h3>
-                  <p className="text-theme text-sm max-md:text-xs font-medium">
+                  <p className="text-theme text-sm font-medium">
                     {member.title}
                   </p>
-                  <p className="text-base max-md:text-sm inter text-white mt-5 p-2">
+                  <p className="text-zinc-300 mt-2 leading-relaxed text-sm inter">
                     {member.description}
                   </p>
                 </div>
@@ -218,36 +215,38 @@ export default function TeamPage() {
           ))}
         </div>
       </section>
-      <section className="flex flex-col items-center justify-center space-y-6 max-md:space-y-4 pt-4 max-md:pt-8 px-4 max-md:px-2 mx-5 -mb-32 -mt-20 ">
-        <FadeRise delay={0.05}>
-          <div className="text-5xl max-md:text-3xl font-semibold flex flex-col items-center mb-6">
+
+      {/* Advisors Section */}
+      <section className="flex flex-col items-center justify-center py-14 max-md:py-10 px-6 max-md:px-3 space-y-6 bg-black">
+        <FadeRise>
+          <h2 className="text-4xl max-md:text-3xl font-semibold text-white text-center">
             <span className="text-theme">Advisors</span>
-          </div>
-          <p className="text-lg max-md:text-base inter max-w-3xl text-center">
-            The experts and innovators behind PrescribeLife.ai, bringing
-            together neuroscience, technology, and coaching expertise to help
-            you perform better and lead with resilience.
+          </h2>
+          <p className="text-zinc-300 text-lg mt-3 leading-relaxed text-center max-w-4xl">
+            World-class experts in neuroscience, coaching, and behavioral change
+            guiding our mission.
           </p>
         </FadeRise>
-        <div className="flex flex-wrap justify-center gap-6 max-w-7xl w-full">
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 max-w-6xl w-full">
           {advisors.map((advisor, i) => (
-            <FadeRise key={i} delay={i * 0.1} className="w-full max-w-sm">
+            <FadeRise key={i} delay={i * 0.08}>
               <HoverGlowContainer>
-                <div className="rounded-2xl p-8 max-md:p-6 bg-gradient-to-b from-zinc-900/70 to-black/80 border border-white/10 ring-1 ring-white/10 shadow-[0_16px_48px_-20px_rgba(0,0,0,0.6)] flex flex-col items-center text-center space-y-4 h-full">
+                <div className="rounded-2xl p-6 max-md:p-4 bg-gradient-to-b from-zinc-900/70 to-black/80 border border-white/10 ring-1 ring-white/10 shadow-[0_8px_32px_-16px_rgba(0,0,0,0.6)] flex flex-col items-center text-center space-y-3 h-full">
                   <Image
                     src={advisor.image}
                     alt={advisor.name}
-                    width={96}
-                    height={96}
-                    className="w-24 h-24 object-cover rounded-full"
+                    width={80}
+                    height={80}
+                    className="w-20 h-20 object-cover rounded-full"
                   />
-                  <h3 className="text-2xl max-md:text-xl text-white font-bold leading-snug ">
+                  <h3 className="text-white text-2xl max-md:text-xl font-semibold leading-snug">
                     {advisor.name}
                   </h3>
-                  <p className="text-theme text-sm max-md:text-xs font-medium">
+                  <p className="text-theme text-sm font-medium">
                     {advisor.title}
                   </p>
-                  <p className="text-base max-md:text-sm inter text-white mt-5 ">
+                  <p className="text-zinc-300 mt-2 leading-relaxed text-sm inter">
                     {advisor.description}
                   </p>
                 </div>
@@ -256,13 +255,6 @@ export default function TeamPage() {
           ))}
         </div>
       </section>
-
-      <section>
-        <FadeRise>
-          <Newsletter />
-        </FadeRise>
-      </section>
-      <section></section>
     </main>
   );
 }

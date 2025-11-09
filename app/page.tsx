@@ -9,7 +9,7 @@ import CTA from "@/components/CTA";
 import Image from "next/image";
 import React, { useRef, useState, useEffect, useMemo } from "react";
 import { GlassmorphicCard, WholeTextCard } from "@/components/Glowcard";
-import { Brain, Crown, Dna, Eye, Sparkle, User } from "lucide-react";
+import { ArrowDown, Brain, Crown, Dna, Eye, Sparkle, User } from "lucide-react";
 import { MagicCard } from "@/components/MagicCard";
 import { FadeRise } from "@/components/FadeRise";
 import { TestimonialsCarousel } from "@/components/CoachCarousel";
@@ -132,9 +132,9 @@ export default function UpdatedHome() {
             ? `animateCore 6s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite alternate-reverse forwards`
             : "none",
         }}
-        className="blob rounded-full  absolute -translate-x-1/2 -translate-y-1/2 pointer-events-none"
+        className="blob rounded-full  absolute -translate-x-1/2 -translate-y-1/2 pointer-events-none "
         initial={{ opacity: 0 }}
-        animate={{ opacity: 0.6 }}
+        animate={{ opacity: 0.4 }}
         transition={{ duration: 2 }}
       />
 
@@ -160,19 +160,36 @@ export default function UpdatedHome() {
       {/* Hero Section */}
       <section
         id="hero"
-        className="flex flex-col pt-20 lg:pt-6 px-4 md:px-10 max-w-[85rem] mx-auto w-full"
+        className="flex flex-col pt-20 md:pt-12 lg:pt-6 px-4 md:px-8 lg:px-10 max-w-[85rem] mx-auto w-full relative"
       >
+        {/* Concentric Ripple Circles */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full pointer-events-none overflow-hidden z-0">
+          {[0, 1, 2, 3, 4, 5].map((index) => (
+            <div
+              key={index}
+              className="ripple-circle"
+              style={{
+                width: `${300 + index * 100}px`,
+                height: `${300 + index * 100}px`,
+                top: "50%",
+                left: "50%",
+                // animationDelay: `${index * 0.8}s`,
+              }}
+            />
+          ))}
+        </div>
+
         <motion.div
           initial={{ y: 32, filter: "blur(6px)", opacity: 0 }}
           animate={{ y: 0, filter: "blur(0px)", opacity: 1 }}
           transition={{ duration: 1, delay: 0.45 }}
-          className="w-full pb-0 md:min-h-[90vh] flex justify-center items-center"
+          className="w-full pb-0 md:min-h-[70vh] lg:min-h-[90vh] flex justify-center items-center relative z-10"
         >
-          <div className="flex flex-col lg:flex-row items-center lg:items-center justify-center gap-6 sm:gap-8 w-full mt-2">
+          <div className="flex flex-col md:flex-row lg:flex-row items-center md:items-center lg:items-center justify-center gap-6 sm:gap-8 md:gap-10 w-full mt-2">
             {/* Left Text */}
-            <div className="flex w-full lg:w-1/2 flex-col lg:items-start gap-6 lg:text-left text-center items-center space-y-4 lg:space-y-4 order-1">
+            <div className="flex w-full md:w-1/2 lg:w-1/2 flex-col md:items-start lg:items-start gap-6 md:text-left lg:text-left text-center items-center space-y-4 lg:space-y-4 order-1">
               <motion.h1
-                className="font-semibold text-3xl md:text-5xl lg:text-5xl leading-tight"
+                className="font-semibold text-3xl md:text-4xl lg:text-5xl leading-tight"
                 initial={{ y: 30, filter: "blur(4px)", opacity: 0 }}
                 animate={{ y: 0, filter: "blur(0px)", opacity: 1 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
@@ -226,8 +243,8 @@ export default function UpdatedHome() {
             </span>
           </h1>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 text-xl md:text-3xl align-start gap-4 md:gap-6 font-semibold">
-            <div className="flex tracking-wide justify-center md:justify-start items-center text-center md:text-left border-1 border-white/50 px-16 py-10 rounded-3xl">
+          <div className="grid grid-cols-1 md:grid-cols-2 text-xl md:text-2xl lg:text-3xl align-start gap-4 md:gap-6 font-semibold">
+            <div className="flex tracking-wide justify-center md:justify-start items-center text-center md:text-left border-1 border-white/50 px-8 md:px-12 lg:px-16 py-8 md:py-10 rounded-3xl">
               <div className="space-y-10">
                 <p className="">
                   <span className="text-theme">
@@ -329,10 +346,7 @@ export default function UpdatedHome() {
 
       <section className="flex flex-col gap-12 pt-10 px-4 md:px-10 max-w-[85rem] mx-auto w-full">
         <div className="text-2xl md:text-4xl lg:text-5xl tracking-wide text-center font-semibold">
-          How{" "}
-          <span className="text-white relative after:left-0 after:content-[] after:absolute after:bottom-0 after:w-full after:bg-theme after:h-[3px] after:rounded-lg">
-            PrescribeLife.AI
-          </span>{" "}
+          How <span className="text-white text-gradient">PrescribeLife.AI</span>{" "}
           Works
         </div>
 
@@ -376,54 +390,49 @@ export default function UpdatedHome() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 w-full items-stretch">
-          <div className="">
-            <FadeRise delay={0.2}>
-              <HoverGlowContainer className="h-full rounded-2xl  flex flex-col p-8 max-md:p-6 shadow-lg ">
-                <div>
-                  <div className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20" />
-                  <div className="flex justify-between items-start mb-6 relative z-10">
-                    <Sparkle size={56} className="text-theme flex-shrink-0" />
-                    <div className="text-4xl md:text-5xl font-semibold text-white/30">
-                      03
-                    </div>
-                  </div>
-
-                  <h3 className="text-xl md:text-2xl font-semibold text-white mb-6 relative z-10">
-                    24/7 Adaptive Coaching Support (Preslie.AI™)
-                  </h3>
-
-                  <div className="bg-[#FFFFFF1A] border border-white/10 rounded-xl p-6 mb-6 relative z-10">
-                    <h4 className="text-theme font-semibold mb-3 text-base md:text-lg">
-                      Who is Preslie.AI™?
-                    </h4>
-                    <p className="text-zinc-300 text-sm md:text-base leading-relaxed">
-                      Preslie™ is our mobile app & your AI co-pilot—making
-                      complex data simple and actionable. It quietly tracks
-                      resilience patterns, flags early warning signs, and
-                      suggests micro-strategies between sessions.
-                    </p>
-                  </div>
-
-                  <p className="text-white font-medium mb-6 leading-relaxed relative z-10 text-sm md:text-base">
-                    This evidence-based system gives you continuous visibility
-                    into a client's mental, physical, and emotional resilience
-                    profile.
-                  </p>
-
-                  <div className="space-y-6 max-w-xl">
-                    <h4 className="text-theme font-semibold text-base md:text-lg">
-                      With this clarity, you can:
-                    </h4>
+        <div className="flex gap-8 md:gap-10 lg:gap-12 h-full items-stretch max-md:flex-col">
+          <FadeRise delay={0.2} className="w-full md:w-1/2">
+            <HoverGlowContainer className="h-full rounded-2xl flex flex-col p-6 md:p-8 shadow-lg">
+              <div className="h-full">
+                <div className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20" />
+                <div className="flex justify-between items-start mb-6 relative z-10">
+                  <Sparkle size={56} className="text-theme flex-shrink-0" />
+                  <div className="text-4xl md:text-5xl font-semibold text-white/30">
+                    03
                   </div>
                 </div>
-              </HoverGlowContainer>
-            </FadeRise>
-          </div>
-          <div className="space-y-6">
-            <div>With this clarity, you can</div>
+
+                <h3 className="text-xl md:text-2xl font-semibold text-white mb-6 relative z-10">
+                  24/7 Adaptive Coaching Support (Preslie.AI™)
+                </h3>
+
+                <div className="bg-[#FFFFFF1A] border border-white/10 rounded-xl p-6 mb-6 relative z-10">
+                  <h4 className="text-theme font-semibold mb-3 text-base md:text-lg">
+                    Who is Preslie.AI™?
+                  </h4>
+                  <p className="text-zinc-300 text-sm md:text-base leading-relaxed">
+                    Preslie™ is our mobile app & your AI co-pilot—making complex
+                    data simple and actionable. It quietly tracks resilience
+                    patterns, flags early warning signs, and suggests
+                    micro-strategies between sessions.
+                  </p>
+                </div>
+
+                <p className="text-white font-medium mb-6 leading-relaxed relative z-10 text-sm md:text-base">
+                  This evidence-based system gives you continuous visibility
+                  into a client's mental, physical, and emotional resilience
+                  profile.
+                </p>
+              </div>
+            </HoverGlowContainer>
+          </FadeRise>
+
+          <div className="space-y-4 md:space-y-6 w-full md:w-1/2">
+            <div className="text-base md:text-lg">
+              With this clarity, you can
+            </div>
             <FadeRise delay={0.2}>
-              <div className="space-y-4 relative">
+              <div className="space-y-3 md:space-y-4 relative grid grid-rows-3 gap-4 md:gap-6">
                 {[
                   "Spot stress and recovery patterns before they escalate.",
                   "Adapt strategies to each client's current resilience stage.",
@@ -431,20 +440,20 @@ export default function UpdatedHome() {
                 ].map((text, idx) => (
                   <div
                     key={idx}
-                    className="flex items-start gap-4 bg- flex-col p-8 rounded-3xl relative border-2 border-white/10 overflow-hidden"
+                    className="flex items-start gap-4 flex-col p-6 md:p-8 rounded-3xl relative border-2 border-white/20 overflow-hidden h-full"
                   >
                     {[1, 2, 3, 4].map((x) => (
                       <div
                         style={{
-                          top: `${x * 10}%`,
-                          left: `${x * 2 * 10}%`,
+                          top: `${x * idx * 10}%`,
+                          left: `${x * idx * 20}%`,
                           width: "16rem",
                           aspectRatio: "1/1",
                           // animationDuration: Math.random() * 10 + 6 + "s",
                           animation:
                             "animateCore 3s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite alternate-reverse forwards",
                         }}
-                        className="sblob rounded-full  absolute -translate-x-1/2 -translate-y-1/2 pointer-events-none opacity-35"
+                        className="sblob rounded-full  absolute -translate-x-1/2 -translate-y-1/2 pointer-events-none opacity-10"
                       />
                     ))}
 
@@ -463,15 +472,17 @@ export default function UpdatedHome() {
       </section>
 
       {/* Personalized daily support */}
-      <section className="flex flex-col space-y-10 px-4 md:px-10 max-w-[85rem] mx-auto w-full">
+
+      <section className="flex flex-col space-y-10 px-4 md:px-10 max-w-[85rem] mx-auto w-full relative">
         <div className="text-2xl md:text-4xl lg:text-5xl tracking-wide max-w-6xl mx-auto leading-tight text-center font-semibold">
-          <span className="text-white relative after:left-0 after:content-[] after:absolute after:bottom-0 after:w-full after:bg-theme after:h-[3px] after:rounded-lg">
+          <span className="text-white text-gradient">
             Personalized daily support{" "}
           </span>
           that keeps clients engaged and making progress.
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          <div className="flex flex-col justify-between items-center space-y-5">
+        <div className="w-full h-96 bg-gradient-to-b from-transparent via-black to-black absolute left-0 bottom-0 z-[999]"></div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+          <div className="flex flex-col relative justify-between items-center space-y-5">
             <div>
               <Image
                 src={"/phone4.png"}
@@ -482,15 +493,9 @@ export default function UpdatedHome() {
                 sizes="(max-width: 768px) 70vw, 25vw"
               />
             </div>
-            <div>
-              {/* <GlowCard>
-                Build awareness <br />
-                Self-Assess Resillience Drivers
-              </GlowCard> */}
-              <GlassmorphicCard
-                title="Build awareness"
-                secondaryLine=" Self-Assess Resillience Drivers"
-              ></GlassmorphicCard>{" "}
+            <div className="flex flex-col text-center min-h-36 justify-start items-center gap-4 z-[9999]">
+              <div className="text-2xl font-semibold">Build awareness</div>
+              <div>Self-Assess Resillience Drivers</div>
             </div>
           </div>
           <div className="flex flex-col justify-between items-center space-y-5">
@@ -504,11 +509,9 @@ export default function UpdatedHome() {
                 sizes="(max-width: 768px) 70vw, 25vw"
               />
             </div>
-            <div>
-              <GlassmorphicCard
-                title="Commit to action"
-                secondaryLine="Track & unblock follow through"
-              />
+            <div className="flex flex-col text-center min-h-36 justify-start items-center gap-4 z-[9999]">
+              <div className="text-2xl font-semibold">Commit to action</div>
+              <div>Track & unblock follow through</div>
             </div>
           </div>
           <div className="flex flex-col justify-between items-center space-y-5">
@@ -518,21 +521,13 @@ export default function UpdatedHome() {
                 height={50}
                 width={250}
                 alt="phone-screenshot"
-                className="w-full max-w-xs h-auto"
+                className="w-full max-w-xs h-auto "
                 sizes="(max-width: 768px) 70vw, 25vw"
               />
             </div>
-            <div>
-              {/* <GlowCard>
-                Build awareness <br />
-                Self-Assess Resillience Drivers
-              </GlowCard> */}
-              <GlassmorphicCard
-                title="Stay Engaged"
-                secondaryLine={
-                  <>Share reflections & get personalized performance tips</>
-                }
-              />
+            <div className="flex flex-col text-center min-h-36 justify-start items-center gap-4 z-[9999]">
+              <div className="text-2xl font-semibold">Stay Engaged</div>
+              <div>Share reflections & get personalized performance tips</div>
             </div>
           </div>
         </div>
@@ -541,34 +536,46 @@ export default function UpdatedHome() {
       {/* Biometric Insights */}
       <section className="flex flex-col items-center justify-start gap-10 px-4 md:px-10 max-w-[85rem] mx-auto w-full">
         <div className="text-2xl md:text-4xl lg:text-5xl tracking-wide max-w-6xl leading-tight text-center font-semibold">
-          Mobile App captures{" "}
-          <span className="relative after:left-0 after:content-[] after:absolute after:bottom-0 after:w-full after:bg-theme after:h-[3px] after:rounded-lg">
-            Biometric Insights
-          </span>{" "}
-          & Key{" "}
-          <span className="relative after:left-0 after:content-[] after:absolute after:bottom-0 after:w-full after:bg-theme after:h-[3px] after:rounded-lg">
-            Resilience Indicators
+          Mobile App captures <br />
+          <span className="relative text-gradient">Biometric Insights</span> &
+          <span className="relative text-gradient">
+            Key Resilience Indicators
           </span>
         </div>
         <div className="flex items-center justify-center gap-8 md:gap-10 max-md:flex-col">
-          <section className="flex-1 w-full tracking-wide flex flex-col gap-8 md:gap-16 text-base md:text-lg items-center md:items-start mb-6 md:mb-0 text-center md:text-left">
-            <div>
+          <section className="flex-1 tracking-wide flex flex-col gap-6 md:gap-10 lg:gap-16 text-base md:text-lg items-center md:items-start mb-6 md:mb-0 text-center md:text-left w-full md:w-1/2">
+            <div className="md:max-w-xl md:text-xl lg:text-2xl">
+              No extra hardware needed-
+              <br />
+              <p className="relative after:left-0 after:content-[] after:absolute after:bottom-0 after:w-full after:bg-theme after:h-[3px] after:rounded-lg">
+                integrates with major wearables
+              </p>
+            </div>
+            <div className="text-base text-white/80">
               Resilience coaching that adapts in real time to evolving client
               needs, powered by behavioral science and biometric
               precision—because burnout should not be the cost of performance.
             </div>
-            <div>
-              No extra hardware needed —{" "}
-              <span className="text-theme">
-                integrates with major wearables
-              </span>
-            </div>
             <CTA classname=" text-base" />
           </section>
-          <div className="flex justify-center md:justify-start">
+          <div className="flex justify-center md:justify-center w-full md:w-1/2 items-center overflow-hidden relative rounded-3xl p-8 md:p-12 lg:p-16 border-2 border-white/40">
+            <div className="z-[99] absolute left-0 top-0 w-full h-full bg-black/50 backdrop-blur-xl"></div>
+            {new Array(10).fill("").map((x, idx) => (
+              <div
+                style={{
+                  left: idx * 10 + "%",
+                  width: "36rem",
+                  aspectRatio: "3/5",
+                  // animationDuration: Math.random() * 10 + 6 + "s",
+                  animation:
+                    "animateCore 10s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite alternate-reverse forwards",
+                }}
+                className="nblob rounded-full  absolute -translate-x-1/2 -translate-y-1/2 pointer-events-none top-1/2 left-0 "
+              />
+            ))}
             <img
               src={"/biometric-insight.png"}
-              className="h-auto w-full max-w-xs"
+              className="h-auto w-full max-w-xs z-[9999999999]"
               alt="phone"
             />
           </div>
@@ -581,10 +588,7 @@ export default function UpdatedHome() {
           {/* Header */}
           <div className="text-center mb-12 md:mb-20">
             <h1 className="text-2xl md:text-4xl lg:text-5xl tracking-wide font-bold mb-8">
-              <span className="text-white relative after:left-0 after:content-[] after:absolute after:bottom-0 after:w-full after:bg-theme after:h-[3px] after:rounded-lg">
-                {" "}
-                Your{" "}
-              </span>
+              <span className="text-white text-gradient"> Your </span>
               <span>Coaching Portal</span>
             </h1>
             <p className="text-xl md:text-2xl lg:text-3xl tracking-wide font-medium">
@@ -594,29 +598,30 @@ export default function UpdatedHome() {
           </div>
 
           {/* Content Section */}
-          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center px-4">
+          <div className="grid md:grid-cols-2 gap-6 md:gap-8 lg:gap-12 items-center px-4">
             {/* Left side - Text content with animated cards */}
-            <div className="space-y-4 relative">
+            <div className="space-y-3 md:space-y-4 relative">
               {[
                 "AI-powered insights help you spark deeper coaching conversations.",
                 "Send client updates, assignments, and messages directly inside the portal.",
+                "Walk into every session with real-time insights on your client's goals, habitual insights, and biometric data",
               ].map((text, idx) => (
                 <div
                   key={idx}
-                  className="flex items-start gap-4 bg- flex-col p-8 rounded-3xl relative border-2 border-white/10 overflow-hidden"
+                  className="flex items-start gap-4 flex-col p-6 py-8 md:p-8 md:py-10 lg:py-12 rounded-3xl relative border-2 border-white/30 overflow-hidden"
                 >
                   {[1, 2, 3, 4].map((x) => (
                     <div
                       key={x}
                       style={{
-                        top: `${x * 10}%`,
-                        left: `${x * 2 * 10}%`,
+                        top: `${x * idx * 10}%`,
+                        left: `${x * idx * 2 * 10}%`,
                         width: "16rem",
                         aspectRatio: "1/1",
                         animation:
                           "animateCore 3s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite alternate-reverse forwards",
                       }}
-                      className="sblob rounded-full  absolute -translate-x-1/2 -translate-y-1/2 pointer-events-none opacity-35"
+                      className="sblob rounded-full  absolute -translate-x-1/2 -translate-y-1/2 pointer-events-none opacity-10"
                     />
                   ))}
 
@@ -630,7 +635,7 @@ export default function UpdatedHome() {
             {/* Right side - Dashboard mockup */}
             <div className="relative flex justify-center md:justify-start">
               <img
-                src="/result.png"
+                src="/computer.png"
                 alt="Coaching Portal Dashboard"
                 className="w-full max-w-xl md:max-w-none h-auto"
               />
@@ -639,19 +644,11 @@ export default function UpdatedHome() {
         </div>
       </section>
 
-      <section className="px-4 md:px-16 max-w-[85rem] mx-auto w-full">
-        <GlassmorphicCard
-          title="Walk into every session with real-time insights on your client's
-          goals, habitual insights, and biometric data."
-          titleCn="w-full"
-        />
-      </section>
-
       <section className="flex flex-col gap-20 px-4 md:px-20 max-w-[85rem] mx-auto w-full">
         <div className="flex items-center justify-center">
           <div className="text-center text-2xl md:text-4xl lg:text-5xl tracking-wide font-semibold max-w-5xl">
             Trusted by Performance Coaches Behind Today's{" "}
-            <span className="text-white relative after:left-0 after:content-[] after:absolute after:bottom-0 after:w-full after:bg-theme after:h-[3px] after:rounded-lg">
+            <span className="text-white text-gradient">
               Most Influential Leaders{" "}
             </span>
           </div>
@@ -664,18 +661,22 @@ export default function UpdatedHome() {
 
       {/* Powerful Insights */}
 
-      <section className="flex flex-col items-center space-y-8 max-md:space-y-4 px-4 md:px-10 max-w-[85rem] mx-auto w-full">
-        <div className="text-center text-2xl md:text-4xl lg:text-5xl tracking-wide font-semibold max-w-5xl">
-          <span className="text-white relative after:left-0 after:content-[] after:absolute after:bottom-0 after:w-full after:bg-theme after:h-[3px] after:rounded-lg">
-            PrescribeLife.AI{" "}
-          </span>
+      <section className="flex flex-col items-center space-y-6 md:space-y-8 px-4 md:px-10 max-w-[85rem] mx-auto w-full">
+        <div className="text-center text-2xl md:text-3xl lg:text-5xl tracking-wide font-semibold max-w-5xl">
+          <span className="text-white text-gradient">PrescribeLife.AI </span>
           is simple to set up for 1-1, group or team coaching.
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-1 gap-6 w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-1 gap-6 md:gap-8 w-full">
           {steps2.map((step, i) => (
             <FadeRise key={step.id} delay={i * 0.12}>
-              <HoverGlowContainer className=" rounded-2xl p-8 max-md:p-6 border  relative overflow-hidden space-y-6 max-md:space-y-4">
-                <div className="absolute top-6 right-6 text-5xl md:text-6xl font-bold text-white/30 opacity-50">
+              {i !== 0 && (
+                <ArrowDown
+                  className="absolute left-1/2 -translate-x-1/2 -top-7"
+                  size={60}
+                ></ArrowDown>
+              )}
+              <HoverGlowContainer className="rounded-2xl p-6 md:p-8 border relative overflow-hidden space-y-4 md:space-y-6">
+                <div className="absolute top-6 right-6 text-4xl md:text-5xl lg:text-6xl font-bold text-white/30 opacity-50">
                   {step.id}
                 </div>
                 <step.icon size={60} className="text-theme" />
@@ -699,11 +700,7 @@ export default function UpdatedHome() {
         <FadeRise>
           <div className="max-w-5xl space-y-8 md:space-y-10">
             <div className="text-2xl md:text-4xl lg:text-5xl tracking-wide text-center leading-tight">
-              Built on{" "}
-              <span className="text-white relative after:left-0 after:content-[] after:absolute after:bottom-0 after:w-full after:bg-theme after:h-[3px] after:rounded-lg">
-                {" "}
-                8M+{" "}
-              </span>
+              Built on <span className="text-white text-gradient"> 8M+ </span>
               days of behavioral data and
               <span className="text-white relative after:left-0 after:content-[] after:absolute after:bottom-0 after:w-full after:bg-theme after:h-[3px] after:rounded-lg">
                 {" "}
@@ -795,27 +792,27 @@ export default function UpdatedHome() {
       </div>
 
       {/* CTA CUrve */}
-      <section className="relative flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8 max-md:gap-6 px-6 lg:px-12 max-w-full mx-auto w-full">
+      <section className="relative flex flex-col md:flex-row lg:flex-row items-center justify-center gap-6 md:gap-8 lg:gap-16 px-6 md:px-8 lg:px-12 max-w-[85rem] mx-auto w-full">
         {/* White Curve Card */}
-        <FadeRise className="bg-white text-black rounded-2xl lg:rounded-r-full p-12 max-md:p-6 flex flex-col items-center justify-center relative overflow-hidden min-h-96 max-md:min-h-80 w-full lg:w-[70%] xl:w-[60%] max-md:translate-x-0 -translate-x-8 lg:-translate-x-16">
-          <h2 className="text-2xl md:text-4xl lg:text-5xl tracking-wide font-semibold text-center leading-tight mb-6 max-w-3xl">
+        <FadeRise className="bg-white text-black rounded-full p-8 flex flex-col items-center justify-center relative overflow-hidden w-[350px] h-[350px] md:w-[400px] md:h-[400px] lg:w-[500px] lg:h-[500px] shrink-0">
+          <h2 className="text-xl md:text-2xl tracking-wide font-semibold text-center leading-tight mb-4">
             Amplify your Impact & Grow Your Practice.
           </h2>
           <a
             href="/booking"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-gradient-to-r from-theme to-pink-600 text-white font-semibold px-6 md:px-12 py-5 rounded-full text-base md:text-lg shadow-xl hover:shadow-2xl transition-all mb-8 w-full sm:w-auto text-center"
+            className="bg-gradient-to-r from-theme to-pink-600 text-white font-semibold px-6 py-3 rounded-full text-sm md:text-base shadow-xl hover:shadow-2xl transition-all mb-4 text-center"
           >
             Book a Personalized Demo Call
           </a>
-          <p className="text-sm md:text-base text-zinc-600 text-center max-w-lg tracking-wide inter">
+          <p className="text-xs md:text-sm text-zinc-600 text-center tracking-wide inter">
             Projected potential ROI of 5x to 10x minimum
           </p>
         </FadeRise>
 
         {/* Right-side column */}
-        <div className="flex flex-col gap-4 max-md:gap-3 w-full lg:w-[35%] xl:w-[40%] lg:items-start items-center">
+        <div className="flex flex-col gap-4 md:gap-5 items-center md:items-start">
           {[
             "Instantly add high-value, data-driven programs.",
             "Confidently introduce premium revenue streams.",
@@ -823,10 +820,10 @@ export default function UpdatedHome() {
             <FadeRise
               delay={0.15 + i * 0.1}
               key={i}
-              className="bg-[#1a1a1a] border border-white/20 rounded-3xl px-6 max-md:px-4 py-4 max-md:py-3 relative w-full max-w-sm md:max-w-md lg:max-w-lg transition-all"
+              className="bg-gradient-to-b from-zinc-950 to-black border border-white/20 rounded-3xl px-6 py-6 md:px-8 md:py-8 relative w-full max-w-sm md:max-w-md lg:max-w-lg transition-all"
             >
               <p className="text-base md:text-lg text-center tracking-wide leading-relaxed text-white">
-                <span className="text-pink-400 tracking-wide font-semibold">
+                <span className="relative after:left-0 after:content-[] after:absolute after:-bottom-1 after:w-full after:bg-theme after:h-[2px] after:rounded-lg">
                   {t.split(" ")[0]}
                 </span>{" "}
                 {t.split(" ").slice(1).join(" ")}
@@ -849,7 +846,7 @@ export default function UpdatedHome() {
       <div className="max-w-full mx-auto w-full">
         <TestimonialsSection />
       </div>
-      <div id="faq" className="max-w-[85rem] mx-auto w-full">
+      <div id="faq" className="max-w-[85rem] mx-auto w-full mb-16">
         <FAQ></FAQ>
       </div>
     </section>
