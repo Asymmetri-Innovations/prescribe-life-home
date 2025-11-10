@@ -35,12 +35,12 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-[#1a1a1a] text-white pt-16 pb-6 px-4 md:px-16 pt-16">
+    <footer className="bg-[#1a1a1a] text-white pt-16 pb-6 px-4 md:px-16">
       <div className="">
         {/* Main footer content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 md:gap-12 mb-10 md:mb-12">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-5 gap-6 md:gap-12 mb-10 md:mb-12">
           {/* Logo and tagline */}
-          <div className="flex flex-col items-center md:items-start gap-3 md:gap-4">
+          <div className="flex flex-col items-start gap-3 md:gap-4 col-span-2 md:col-span-1">
             <div className="flex items-center gap-3">
               <img
                 className="w-10 h-10 rounded-md"
@@ -52,13 +52,15 @@ export default function Footer() {
           </div>
 
           {/* Company */}
-          <div className="space-y-4">
-            <h3 className="text-white/40 font-semibold text-lg">Company</h3>
-            <ul className="space-y-3">
+          <div className="space-y-3 md:space-y-4">
+            <h3 className="text-white/40 font-semibold text-base md:text-lg">
+              Company
+            </h3>
+            <ul className="space-y-2 md:space-y-3">
               <li>
                 <a
                   href="/"
-                  className="text-white hover:text-theme transition-colors"
+                  className="text-white hover:text-theme transition-colors text-sm md:text-base"
                 >
                   Home
                 </a>
@@ -67,7 +69,7 @@ export default function Footer() {
               <li>
                 <a
                   href="/our-story"
-                  className="text-white hover:text-theme transition-colors"
+                  className="text-white hover:text-theme transition-colors text-sm md:text-base"
                 >
                   Our Story
                 </a>
@@ -76,7 +78,7 @@ export default function Footer() {
               <li>
                 <a
                   href="/our-team"
-                  className="text-white hover:text-theme transition-colors"
+                  className="text-white hover:text-theme transition-colors text-sm md:text-base"
                 >
                   Our Team
                 </a>
@@ -85,13 +87,15 @@ export default function Footer() {
           </div>
 
           {/* Solutions */}
-          <div className="space-y-4">
-            <h3 className="text-white/40 font-semibold text-lg">Solutions</h3>
-            <ul className="space-y-3">
+          <div className="space-y-3 md:space-y-4">
+            <h3 className="text-white/40 font-semibold text-base md:text-lg">
+              Solutions
+            </h3>
+            <ul className="space-y-2 md:space-y-3">
               <li>
                 <a
                   href="#"
-                  className="text-white hover:text-theme transition-colors"
+                  className="text-white hover:text-theme transition-colors text-sm md:text-base"
                 >
                   For Coaches
                 </a>
@@ -99,7 +103,7 @@ export default function Footer() {
               <li>
                 <a
                   href="#"
-                  className="text-white hover:text-theme transition-colors"
+                  className="text-white hover:text-theme transition-colors text-sm md:text-base"
                 >
                   For Clients
                 </a>
@@ -107,7 +111,7 @@ export default function Footer() {
               <li>
                 <a
                   href="#"
-                  className="text-white hover:text-theme transition-colors"
+                  className="text-white hover:text-theme transition-colors text-sm md:text-base"
                 >
                   How It Works
                 </a>
@@ -116,13 +120,15 @@ export default function Footer() {
           </div>
 
           {/* Resources */}
-          <div className="space-y-4">
-            <h3 className="text-white/40 font-semibold text-lg">Resources</h3>
-            <ul className="space-y-3">
+          <div className="space-y-3 md:space-y-4">
+            <h3 className="text-white/40 font-semibold text-base md:text-lg">
+              Resources
+            </h3>
+            <ul className="space-y-2 md:space-y-3">
               <li>
                 <a
                   href="/#faq"
-                  className="text-white hover:text-theme transition-colors"
+                  className="text-white hover:text-theme transition-colors text-sm md:text-base"
                 >
                   FAQs
                 </a>
@@ -130,7 +136,7 @@ export default function Footer() {
               <li>
                 <a
                   href="/booking"
-                  className="text-white hover:text-theme transition-colors"
+                  className="text-white hover:text-theme transition-colors text-sm md:text-base"
                 >
                   Book a Demo
                 </a>
@@ -138,7 +144,7 @@ export default function Footer() {
               <li>
                 <a
                   href="#"
-                  className="text-white hover:text-theme transition-colors"
+                  className="text-white hover:text-theme transition-colors text-sm md:text-base"
                 >
                   Newsletter
                 </a>
@@ -147,14 +153,16 @@ export default function Footer() {
           </div>
 
           {/* Legal */}
-          <div className="space-y-4">
-            <h3 className="text-white/40 font-semibold text-lg">Legal</h3>
-            <ul className="space-y-3">
+          <div className="space-y-3 md:space-y-4">
+            <h3 className="text-white/40 font-semibold text-base md:text-lg">
+              Legal
+            </h3>
+            <ul className="space-y-2 md:space-y-3">
               <li>
                 <a
                   target="_blank"
                   href="https://sites.google.com/asymmetri.in/prescribe-life-policies/home"
-                  className="text-white hover:text-theme transition-colors"
+                  className="text-white hover:text-theme transition-colors text-sm md:text-base"
                 >
                   Privacy Policy
                 </a>
@@ -163,7 +171,7 @@ export default function Footer() {
                 <a
                   target="_blank"
                   href="https://sites.google.com/asymmetri.in/prescribe-life-policies/home"
-                  className="text-white hover:text-theme transition-colors"
+                  className="text-white hover:text-theme transition-colors text-sm md:text-base"
                 >
                   Terms of Use
                 </a>

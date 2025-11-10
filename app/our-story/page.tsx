@@ -138,7 +138,7 @@ export default function BookingPage() {
               <span className="text-gradient">PrescribeLife.AI</span>
             </motion.h1>
             <motion.p
-              className="text-zinc-300 max-w-4xl mx-auto text-center text-sm sm:text-base md:text-lg leading-relaxed px-4 md:px-6 max-md:w-full max-md:px-0"
+              className="text-zinc-300 max-w-4xl mx-auto text-center text-base sm:text-base md:text-lg leading-relaxed px-4 md:px-6 max-md:w-full max-md:px-0"
               initial={{ y: 24, filter: "blur(4px)", opacity: 0 }}
               animate={{ y: 0, filter: "blur(0px)", opacity: 1 }}
               transition={{ duration: 0.75, delay: 0.15, ease: "easeOut" }}
@@ -164,7 +164,7 @@ export default function BookingPage() {
                   A Founder's Burnout
                 </h3>
               </div>
-              <p className="text-zinc-300 leading-relaxed text-xs sm:text-sm md:text-base inter">
+              <p className="text-zinc-300 leading-relaxed text-sm sm:text-sm md:text-base inter">
                 <span className="text-theme">Oli Johnson</span>, our Co-founder
                 & CEO, was a high-performing entrepreneur who hit a wall. Even
                 with a business coach and a therapist, burnout took him down. He
@@ -187,7 +187,7 @@ export default function BookingPage() {
                   A Doctor's Frustration
                 </h3>
               </div>
-              <p className="text-zinc-300 leading-relaxed text-xs sm:text-sm md:text-base inter">
+              <p className="text-zinc-300 leading-relaxed text-sm sm:text-sm md:text-base inter">
                 <span className="text-theme">Dr. Neetu Johnson</span>, our
                 Co-founder & Chief Medical Officer, saw patients receiving
                 prescriptions for symptoms rooted in stress and lifestyle. What
@@ -275,7 +275,7 @@ export default function BookingPage() {
                     <span className="text-theme">High Performers </span> <br />
                     Thrive
                   </h2>
-                  <p className="text-zinc-300 text-sm sm:text-base md:text-lg mt-2 md:mt-3 leading-relaxed">
+                  <p className="text-zinc-300 text-base sm:text-base md:text-lg mt-2 md:mt-3 leading-relaxed">
                     Coaches are the key to solving the burnout crisis. You are
                     on the frontlines of human performance, yet you often lack
                     the visibility into what's happening between sessions.
@@ -304,7 +304,7 @@ export default function BookingPage() {
                     <h3 className="text-base sm:text-lg md:text-xl font-semibold text-white">
                       {step.title}
                     </h3>
-                    <p className="text-zinc-300 text-xs sm:text-sm leading-relaxed">
+                    <p className="text-zinc-300 text-sm sm:text-sm leading-relaxed">
                       {step.description}
                     </p>
                   </div>
@@ -337,11 +337,11 @@ export default function BookingPage() {
               <span className="text-theme">Performance Coaching</span>
             </h2>
             <div className="flex flex-col items-center space-y-3 md:space-y-4 text-center max-w-4xl px-4">
-              <p className="text-white/80 text-sm sm:text-base md:text-lg leading-relaxed">
+              <p className="text-white/80 text-base sm:text-base md:text-lg leading-relaxed">
                 The future of coaching is adaptive, data-informed, and deeply
                 human. You, the coach, are at the center of that transformation.
               </p>
-              <p className="text-white/80 text-sm sm:text-base md:text-lg leading-relaxed">
+              <p className="text-white/80 text-base sm:text-base md:text-lg leading-relaxed">
                 Take your sneak peek into the{" "}
                 <span className="text-theme">FUTURE</span>
               </p>
@@ -374,7 +374,7 @@ export default function BookingPage() {
                 Built with <span className="text-theme">Coaches</span>, Shaped
                 by <span className="text-theme">Experts</span>
               </h2>
-              <p className="text-zinc-300 text-sm sm:text-base md:text-lg mt-2 md:mt-3 leading-relaxed">
+              <p className="text-zinc-300 text-base sm:text-base md:text-lg mt-2 md:mt-3 leading-relaxed">
                 PrescribeLife.AI was built in collaboration with medical
                 doctors, neuroscientists, and experienced coaches. Designed by
                 Jessica Malach, a resilience coach with 20+ years of experience,
@@ -417,13 +417,13 @@ export default function BookingPage() {
                       Resilience Coach
                     </p>
                   </div>
-                  <p className="text-zinc-300 text-xs sm:text-sm leading-relaxed">
+                  <p className="text-zinc-300 text-sm sm:text-sm leading-relaxed">
                     Our system was designed by Jessica Malach, a resilience
                     coach with 20+ years of experience building human-centered
                     performance systems.
                   </p>
                   <div className="bg-gradient-to-r from-theme/10 to-pink-500/10 rounded-xl p-3 md:p-4 border border-theme/20">
-                    <p className="text-white text-xs sm:text-sm italic leading-relaxed">
+                    <p className="text-white text-sm sm:text-sm italic leading-relaxed">
                       "The future of coaching isn't about replacing human
                       intuition—it's about amplifying it with data that
                       matters."
