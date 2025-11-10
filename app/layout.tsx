@@ -139,7 +139,7 @@ var timeout = 3000; // Timeout value to remove the flicker (in milliseconds)
         <LS></LS>
         <Navbar></Navbar>
         <Cookie></Cookie>
-        <ScrollToTop></ScrollToTop>
+        {/* <ScrollToTop></ScrollToTop> */}
         {children}
 
         {/* EngageHub form embed */}

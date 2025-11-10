@@ -66,7 +66,7 @@ export default function BookingPage() {
   ];
 
   return (
-    <main className="space-y-8 relative pt-8 overflow-hidden max-w-full">
+    <main className="space-y-6 md:space-y-8 relative pt-6 md:pt-8 overflow-hidden max-w-[90rem] mx-auto">
       {/* Animated Blobs Background */}
       <motion.div
         style={{
@@ -100,7 +100,7 @@ export default function BookingPage() {
       ))}
 
       {/* Founding Story */}
-      <section className="flex flex-col justify-center items-center min-h-[80vh] md:min-h-screen space-y-8 md:space-y-10 pt-20 md:pt-12 lg:pt-6 px-4 md:px-6 lg:px-8 max-w-[85rem] mx-auto w-full relative">
+      <section className="flex flex-col justify-center items-center min-h-[80vh] md:min-h-screen space-y-6 md:space-y-8 lg:space-y-10 pt-16 md:pt-20 lg:pt-6 px-4 md:px-6 lg:px-8 max-w-[90rem] mx-auto w-full relative">
         {/* Concentric Ripple Circles */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full pointer-events-none overflow-hidden z-0">
           {[0, 1, 2, 3, 4, 5].map((index) => (
@@ -122,23 +122,23 @@ export default function BookingPage() {
           initial={{ y: 32, filter: "blur(6px)", opacity: 0 }}
           animate={{ y: 0, filter: "blur(0px)", opacity: 1 }}
           transition={{ duration: 1, delay: 0.45 }}
-          className="flex flex-col pt-20 md:pt-12 lg:pt-6 px-4 md:px-8 lg:px-10 max-w-[85rem] mx-auto w-full relative"
+          className="flex flex-col pt-16 md:pt-20 lg:pt-6 px-4 md:px-6 lg:px-8 max-w-[90rem] mx-auto w-full relative"
         >
           <FadeRise
             delay={0.05}
-            className="flex flex-col items-center space-y-6 md:space-y-8 mb-8 md:mb-12"
+            className="flex flex-col items-center space-y-4 sm:space-y-6 md:space-y-8 mb-6 md:mb-8 lg:mb-12"
           >
             <motion.h1
-              className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold text-center leading-tight"
+              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold text-center leading-tight px-2 max-md:w-full"
               initial={{ y: 30, filter: "blur(4px)", opacity: 0 }}
               animate={{ y: 0, filter: "blur(0px)", opacity: 1 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
               The Founding Story of <br />{" "}
-              <span className="text-theme">PrescribeLife.AI</span>
+              <span className="text-gradient">PrescribeLife.AI</span>
             </motion.h1>
             <motion.p
-              className="text-zinc-300 max-w-4xl mx-auto text-center text-base md:text-lg leading-relaxed px-4 md:px-6"
+              className="text-zinc-300 max-w-4xl mx-auto text-center text-sm sm:text-base md:text-lg leading-relaxed px-4 md:px-6 max-md:w-full max-md:px-0"
               initial={{ y: 24, filter: "blur(4px)", opacity: 0 }}
               animate={{ y: 0, filter: "blur(0px)", opacity: 1 }}
               transition={{ duration: 0.75, delay: 0.15, ease: "easeOut" }}
@@ -150,21 +150,21 @@ export default function BookingPage() {
             </motion.p>
           </FadeRise>
 
-          <FadeRise className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 w-full max-w-6xl">
-            <div className="rounded-2xl p-6 md:p-8 bg-gradient-to-b  from-white/10 to-black/80 backdrop-blur-3xl border border-white/10 ring-1 ring-white/10 shadow-[0_8px_32px_-16px_rgba(0,0,0,0.6)] flex flex-col space-y-4 h-full">
-              <div className="flex items-center gap-4 md:gap-5">
+          <FadeRise className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8 w-full">
+            <div className="rounded-2xl p-4 sm:p-6 md:p-8 bg-gradient-to-b from-white/10 to-black/80 backdrop-blur-3xl border border-white/10 ring-1 ring-white/10 shadow-[0_8px_32px_-16px_rgba(0,0,0,0.6)] flex flex-col space-y-3 sm:space-y-4 h-full">
+              <div className="flex items-center gap-3 sm:gap-4 md:gap-5">
                 <Image
                   src="/oli-johnson.jpg"
                   alt="Oli Johnson"
                   width={80}
                   height={80}
-                  className="w-16 h-16 md:w-20 md:h-20 object-cover rounded-full flex-shrink-0"
+                  className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 object-cover rounded-full flex-shrink-0"
                 />
-                <h3 className="text-white text-xl md:text-2xl font-semibold leading-tight">
+                <h3 className="text-white text-lg sm:text-xl md:text-2xl font-semibold leading-tight">
                   A Founder's Burnout
                 </h3>
               </div>
-              <p className="text-zinc-300 leading-relaxed text-sm md:text-base inter">
+              <p className="text-zinc-300 leading-relaxed text-xs sm:text-sm md:text-base inter">
                 <span className="text-theme">Oli Johnson</span>, our Co-founder
                 & CEO, was a high-performing entrepreneur who hit a wall. Even
                 with a business coach and a therapist, burnout took him down. He
@@ -174,20 +174,20 @@ export default function BookingPage() {
               </p>
             </div>
 
-            <div className="rounded-2xl p-6 md:p-8 bg-gradient-to-b  from-white/10 to-black/80 backdrop-blur-3xl border border-white/10 ring-1 ring-white/10 shadow-[0_8px_32px_-16px_rgba(0,0,0,0.6)] flex flex-col space-y-4 h-full">
-              <div className="flex items-center gap-4 md:gap-5">
+            <div className="rounded-2xl p-4 sm:p-6 md:p-8 bg-gradient-to-b from-white/10 to-black/80 backdrop-blur-3xl border border-white/10 ring-1 ring-white/10 shadow-[0_8px_32px_-16px_rgba(0,0,0,0.6)] flex flex-col space-y-3 sm:space-y-4 h-full">
+              <div className="flex items-center gap-3 sm:gap-4 md:gap-5">
                 <Image
                   src="/neetu-johnson.jpg"
                   alt="Dr. Neetu Johnson"
                   width={80}
                   height={80}
-                  className="w-16 h-16 md:w-20 md:h-20 object-cover rounded-full flex-shrink-0"
+                  className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 object-cover rounded-full flex-shrink-0"
                 />
-                <h3 className="text-white text-xl md:text-2xl font-semibold leading-tight">
+                <h3 className="text-white text-lg sm:text-xl md:text-2xl font-semibold leading-tight">
                   A Doctor's Frustration
                 </h3>
               </div>
-              <p className="text-zinc-300 leading-relaxed text-sm md:text-base inter">
+              <p className="text-zinc-300 leading-relaxed text-xs sm:text-sm md:text-base inter">
                 <span className="text-theme">Dr. Neetu Johnson</span>, our
                 Co-founder & Chief Medical Officer, saw patients receiving
                 prescriptions for symptoms rooted in stress and lifestyle. What
@@ -200,23 +200,29 @@ export default function BookingPage() {
       </section>
 
       {/* The Question */}
-      <section className="flex flex-col items-center justify-center py-14 md:py-16 px-4 md:px-6 lg:px-8 bg-black">
-        <div className="max-w-[85rem] mx-auto w-full">
+      <motion.section
+        initial={{ opacity: 0, y: 40, filter: "blur(10px)" }}
+        whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        viewport={{ once: true, margin: "-100px" }}
+        className="flex flex-col items-center justify-center pb-10 md:pb-14 lg:pb-16 bg-black"
+      >
+        <div className="px-4 md:px-6 lg:px-8 max-w-[90rem] mx-auto w-full">
           <FadeRise>
-            <h2 className="text-3xl md:text-4xl font-semibold text-white text-center mb-10 md:mb-12">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-white text-center mb-8 md:mb-10 lg:mb-12 px-2 max-md:pt-6">
               The question that changed everything
             </h2>
           </FadeRise>
 
-          <FadeRise className="flex items-center gap-8 md:gap-10 lg:gap-12 flex-col lg:flex-row">
+          <FadeRise className="flex items-center gap-6 md:gap-8 lg:gap-10 xl:gap-12 flex-col lg:flex-row">
             <Image
               src="/coach-thinking.png"
               alt="Coach Thinking"
               width={450}
               height={380}
-              className="rounded-2xl shadow-lg w-full max-w-md lg:max-w-lg"
+              className="rounded-2xl shadow-lg w-full max-w-sm sm:max-w-md lg:max-w-lg"
             />
-            <div className="flex flex-col space-y-4 md:space-y-5 relative w-full">
+            <div className="grid grid-rows-3 space-y-3 md:space-y-4 lg:space-y-5 relative w-full h-full gap-4 md:gap-6">
               {[
                 "What if we could help people avoid burnout by coaching resilience with a system that captures the full picture—mental, emotional, and physiological?",
                 "What if the right system could help millions sustain their performance without sacrificing their health?",
@@ -224,7 +230,7 @@ export default function BookingPage() {
               ].map((text, idx) => (
                 <div
                   key={idx}
-                  className="flex items-start gap-4 flex-col p-6 py-6 md:p-8 md:py-8 rounded-3xl relative border-2 border-white/30 overflow-hidden"
+                  className="flex items-start gap-3 md:gap-4 flex-col p-4 py-5 sm:p-6 sm:py-6 md:p-8 md:py-8 rounded-3xl relative border-2 border-white/30 overflow-hidden h-full"
                 >
                   {[1, 2, 3, 4].map((x) => (
                     <div
@@ -241,7 +247,7 @@ export default function BookingPage() {
                     />
                   ))}
 
-                  <p className="text-white text-sm md:text-base leading-relaxed relative z-10">
+                  <p className="text-white text-xs sm:text-sm md:text-base leading-relaxed relative z-10">
                     {text}
                   </p>
                 </div>
@@ -249,21 +255,27 @@ export default function BookingPage() {
             </div>
           </FadeRise>
         </div>
-      </section>
+      </motion.section>
 
       {/* Adaptive Platform */}
-      <section className="flex flex-col items-center justify-center py-10 md:py-14 px-4 md:px-6 lg:px-8 gap-8 bg-black">
-        <div className="max-w-[85rem] mx-auto w-full">
+      <motion.section
+        initial={{ opacity: 0, y: 40, filter: "blur(10px)" }}
+        whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        viewport={{ once: true, margin: "-100px" }}
+        className="flex flex-col items-center justify-center py-8 md:py-10 lg:py-14 gap-6 md:gap-8 bg-black"
+      >
+        <div className="px-4 md:px-6 lg:px-8 max-w-[90rem] mx-auto w-full">
           <FadeRise>
             <section className="flex flex-col justify-center items-center">
               <FadeRise>
-                <div className="max-w-5xl mx-auto text-center px-4 md:px-6 py-10">
-                  <h2 className="text-3xl md:text-4xl font-semibold text-white leading-tight">
+                <div className="max-w-5xl mx-auto text-center px-4 md:px-6 py-6 md:py-8 lg:py-10">
+                  <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-white leading-tight">
                     For Coaches Who Help{" "}
                     <span className="text-theme">High Performers </span> <br />
                     Thrive
                   </h2>
-                  <p className="text-zinc-300 text-base md:text-lg mt-3 leading-relaxed">
+                  <p className="text-zinc-300 text-sm sm:text-base md:text-lg mt-2 md:mt-3 leading-relaxed">
                     Coaches are the key to solving the burnout crisis. You are
                     on the frontlines of human performance, yet you often lack
                     the visibility into what's happening between sessions.
@@ -272,27 +284,27 @@ export default function BookingPage() {
                 </div>
               </FadeRise>
             </section>
-            <h2 className="text-2xl md:text-3xl font-semibold text-white text-center">
+            <h2 className="text-lg sm:text-xl md:text-2xl font-semibold text-white text-center px-2">
               The First Adaptive Performance Coaching{" "}
               <span className="text-theme">Platform</span>
             </h2>
           </FadeRise>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 w-full mt-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5 w-full mt-6 md:mt-8">
             {steps.map((step, i) => (
               <FadeRise key={step.id} delay={i * 0.08}>
-                <div className="rounded-2xl p-5 md:p-6 bg-white/10 shadow-lg border border-white/10 space-y-4 h-52 md:h-56 flex flex-col">
+                <div className="rounded-2xl p-4 sm:p-5 md:p-6 bg-white/10 shadow-lg border border-white/10 space-y-3 md:space-y-4 h-44 sm:h-52 md:h-56 flex flex-col">
                   <div className="flex justify-between items-center">
                     <step.icon size={48} className="text-theme" />
-                    <div className="text-3xl md:text-4xl font-semibold text-white/40">
+                    <div className="text-2xl sm:text-3xl md:text-4xl font-semibold text-white/40">
                       {step.id}
                     </div>
                   </div>
-                  <div className="flex flex-col justify-end h-full space-y-2">
-                    <h3 className="text-lg md:text-xl font-semibold text-white">
+                  <div className="flex flex-col justify-end h-full space-y-1.5 md:space-y-2">
+                    <h3 className="text-base sm:text-lg md:text-xl font-semibold text-white">
                       {step.title}
                     </h3>
-                    <p className="text-zinc-300 text-sm leading-relaxed">
+                    <p className="text-zinc-300 text-xs sm:text-sm leading-relaxed">
                       {step.description}
                     </p>
                   </div>
@@ -301,10 +313,16 @@ export default function BookingPage() {
             ))}
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Future of Coaching */}
-      <section className="relative py-14 max-md:py-10 px-4 md:px-6 lg:px-8 flex flex-col items-center justify-center space-y-10 min-h-[500px] overflow-hidden bg-cover bg-center">
+      <motion.section
+        initial={{ opacity: 0, y: 40, filter: "blur(10px)" }}
+        whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        viewport={{ once: true, margin: "-100px" }}
+        className="relative py-10 md:py-12 lg:py-14 flex flex-col items-center justify-center space-y-6 md:space-y-8 lg:space-y-10 min-h-[400px] md:min-h-[500px] overflow-hidden bg-cover bg-center mx-4 md:mx-6 lg:mx-8"
+      >
         <div
           className="absolute inset-0 z-[-1] bg-cover bg-center"
           style={{
@@ -312,18 +330,18 @@ export default function BookingPage() {
           }}
         />
         <div className="absolute inset-0 z-[-1] bg-black opacity-75" />
-        <div className="max-w-[85rem] mx-auto w-full">
-          <FadeRise className="flex flex-col items-center justify-center space-y-10">
-            <h2 className="text-3xl md:text-4xl font-semibold text-white text-center leading-tight">
+        <div className="px-4 md:px-6 lg:px-8 max-w-[90rem] mx-auto w-full">
+          <FadeRise className="flex flex-col items-center justify-center space-y-6 md:space-y-8 lg:space-y-10">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-white text-center leading-tight px-2">
               This Is the Future of <br />
               <span className="text-theme">Performance Coaching</span>
             </h2>
-            <div className="flex flex-col items-center space-y-4 text-center max-w-4xl px-4">
-              <p className="text-white/80 text-base md:text-lg leading-relaxed">
+            <div className="flex flex-col items-center space-y-3 md:space-y-4 text-center max-w-4xl px-4">
+              <p className="text-white/80 text-sm sm:text-base md:text-lg leading-relaxed">
                 The future of coaching is adaptive, data-informed, and deeply
                 human. You, the coach, are at the center of that transformation.
               </p>
-              <p className="text-white/80 text-base md:text-lg leading-relaxed">
+              <p className="text-white/80 text-sm sm:text-base md:text-lg leading-relaxed">
                 Take your sneak peek into the{" "}
                 <span className="text-theme">FUTURE</span>
               </p>
@@ -332,25 +350,31 @@ export default function BookingPage() {
               href="/booking"
               target="_blank"
               rel="noopener noreferrer"
-              className="relative group bg-gradient-to-r from-theme to-pink-600 text-white font-medium px-6 py-2 rounded-full shadow-lg hover:shadow-theme/30 transition-all"
+              className="relative group bg-gradient-to-r from-theme to-pink-600 text-white font-medium px-5 sm:px-6 py-2 rounded-full shadow-lg hover:shadow-theme/30 transition-all text-sm sm:text-base"
             >
               <span className="relative z-10">Request a Demo Call</span>
               <span className="absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition-opacity bg-white/10" />
             </a>
           </FadeRise>
         </div>
-      </section>
+      </motion.section>
 
       {/* Expert Section */}
-      <section className="py-8 md:py-10 px-4 md:px-6 lg:px-8 bg-black text-center">
-        <div className="max-w-[85rem] mx-auto w-full">
+      <motion.section
+        initial={{ opacity: 0, y: 40, filter: "blur(10px)" }}
+        whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        viewport={{ once: true, margin: "-100px" }}
+        className="py-6 md:py-8 lg:py-10 bg-black text-center"
+      >
+        <div className="px-4 md:px-6 lg:px-8 max-w-[90rem] mx-auto w-full">
           <FadeRise>
-            <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-semibold text-white leading-tight">
+            <div className="max-w-4xl mx-auto px-2">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-white leading-tight">
                 Built with <span className="text-theme">Coaches</span>, Shaped
                 by <span className="text-theme">Experts</span>
               </h2>
-              <p className="text-zinc-300 text-base md:text-lg mt-3 leading-relaxed">
+              <p className="text-zinc-300 text-sm sm:text-base md:text-lg mt-2 md:mt-3 leading-relaxed">
                 PrescribeLife.AI was built in collaboration with medical
                 doctors, neuroscientists, and experienced coaches. Designed by
                 Jessica Malach, a resilience coach with 20+ years of experience,
@@ -360,40 +384,46 @@ export default function BookingPage() {
             </div>
           </FadeRise>
         </div>
-      </section>
+      </motion.section>
 
       {/* Jessica Section */}
-      <section className="py-3 md:py-6 px-4 md:px-6 lg:px-8 bg-black">
-        <div className="max-w-[85rem] mx-auto w-full">
+      <motion.section
+        initial={{ opacity: 0, y: 40, filter: "blur(10px)" }}
+        whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        viewport={{ once: true, margin: "-100px" }}
+        className="py-2 md:py-3 lg:py-6 bg-black"
+      >
+        <div className="px-4 md:px-6 lg:px-8 max-w-[90rem] mx-auto w-full">
           <div className="max-w-4xl mx-auto">
             <FadeRise>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-center">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8 items-center">
                 <div className="flex justify-center md:justify-start">
                   <Image
                     src="/jessica-malach.jpg"
                     alt="Jessica Malach"
                     width={180}
                     height={180}
-                    className="w-40 h-40 md:w-48 md:h-48 object-cover object-top rounded-full border-2 border-theme/20 shadow-xl"
+                    className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 object-cover object-top rounded-full border-2 border-theme/20 shadow-xl"
                   />
                 </div>
-                <div className="space-y-4 text-center md:text-left">
+                <div className="space-y-3 md:space-y-4 text-center md:text-left px-2">
                   <div>
-                    <h3 className="text-xl md:text-2xl font-semibold text-white">
+                    <h3 className="text-base sm:text-lg md:text-xl font-semibold text-white">
                       Jessica Malach
                     </h3>
-                    <p className="text-theme text-sm md:text-base font-medium">
+                    <p className="text-theme text-xs sm:text-sm md:text-base font-medium">
                       - Head of Product & Commercialization, Certified
                       Resilience Coach
                     </p>
                   </div>
-                  <p className="text-zinc-300 text-sm leading-relaxed">
+                  <p className="text-zinc-300 text-xs sm:text-sm leading-relaxed">
                     Our system was designed by Jessica Malach, a resilience
                     coach with 20+ years of experience building human-centered
                     performance systems.
                   </p>
                   <div className="bg-gradient-to-r from-theme/10 to-pink-500/10 rounded-xl p-3 md:p-4 border border-theme/20">
-                    <p className="text-white text-sm italic leading-relaxed">
+                    <p className="text-white text-xs sm:text-sm italic leading-relaxed">
                       "The future of coaching isn't about replacing human
                       intuition—it's about amplifying it with data that
                       matters."
@@ -404,11 +434,17 @@ export default function BookingPage() {
             </FadeRise>
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Avatar Stack */}
-      <section className="py-2 md:py-4 px-4 md:px-6 lg:px-8 bg-black">
-        <div className="max-w-[85rem] mx-auto w-full">
+      <motion.section
+        initial={{ opacity: 0, y: 40, filter: "blur(10px)" }}
+        whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        viewport={{ once: true, margin: "-100px" }}
+        className="py-2 md:py-3 lg:py-4 bg-black"
+      >
+        <div className="px-4 md:px-6 lg:px-8 max-w-[90rem] mx-auto w-full">
           <div className="max-w-4xl mx-auto">
             <FadeRise>
               <AvatarStack className="justify-center">
@@ -423,9 +459,12 @@ export default function BookingPage() {
                   ["professor-rajat-gupta.jpg", "RG"],
                   ["ujwal-kumar.png", "UK"],
                 ].map(([src, fallback]) => (
-                  <Avatar key={fallback} className="w-12 h-12 md:w-16 md:h-16">
+                  <Avatar
+                    key={fallback}
+                    className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16"
+                  >
                     <AvatarImage src={`/${src}`} className="object-cover" />
-                    <AvatarFallback className="text-sm md:text-lg">
+                    <AvatarFallback className="text-xs sm:text-sm md:text-lg">
                       {fallback}
                     </AvatarFallback>
                   </Avatar>
@@ -434,7 +473,7 @@ export default function BookingPage() {
             </FadeRise>
           </div>
         </div>
-      </section>
+      </motion.section>
     </main>
   );
 }

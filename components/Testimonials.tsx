@@ -50,25 +50,25 @@ const testimonials = [
 
 export default function TestimonialsSection() {
   return (
-    <section className="flex flex-col items-center gap-10 max-md:gap-6 overflow-hidden">
+    <section className="flex flex-col items-center gap-6 md:gap-8 lg:gap-10 overflow-hidden px-4 md:px-6">
       <FadeRise>
-        <div className="lg:text-5xl md:text-4xl text-3xl text-center font-medium">
+        <div className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl text-center font-medium px-2">
           What Other <span className="text-gradient">Coaches</span> Are Saying
         </div>
       </FadeRise>
 
       <Marquee pauseOnHover className="[--duration:25s] overflow-x-hidden">
         {testimonials.map((testimonial, i) => (
-          <div className="bg-gradient-to-b from-zinc-800 to-zinc-900 w-96 h-56 max-md:w-80 max-md:min-h-full max-md:h-full p-6 max-md:p-4 rounded-2xl border border-white/10 flex flex-col justify-between gap-4 max-md:gap-3">
-            <p className="text-white text-base max-md:text-sm leading-relaxed">
+          <div key={i} className="bg-gradient-to-b from-zinc-800 to-zinc-900 w-72 sm:w-80 md:w-96 min-h-[200px] sm:h-56 p-4 sm:p-5 md:p-6 rounded-2xl border border-white/10 flex flex-col justify-between gap-3 md:gap-4">
+            <p className="text-white text-xs sm:text-sm md:text-base leading-relaxed">
               "{testimonial.quote}"
             </p>
-            <div className="flex items-center gap-3 mt-2">
+            <div className="flex items-center gap-2 sm:gap-3 mt-1 sm:mt-2">
               <div>
-                <h4 className="text-white font-semibold text-sm max-md:text-xs">
+                <h4 className="text-white font-semibold text-xs sm:text-sm">
                   {testimonial.name}
                 </h4>
-                <p className="text-zinc-400 text-xs max-md:text-2xs">
+                <p className="text-zinc-400 text-[10px] sm:text-xs">
                   {testimonial.title}, {testimonial.location}
                 </p>
               </div>
@@ -78,7 +78,7 @@ export default function TestimonialsSection() {
       </Marquee>
 
       <FadeRise delay={0.25}>
-        <div className="text-lg md:text-xl text-center tracking-wide">
+        <div className="text-sm sm:text-base md:text-lg text-center tracking-wide px-4">
           Let us show you how to multiply your revenue, not your workload.
         </div>
       </FadeRise>

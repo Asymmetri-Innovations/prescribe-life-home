@@ -1,7 +1,12 @@
 "use client";
 
 import Link from "next/link";
-import { motion, useMotionValueEvent, useScroll, AnimatePresence } from "framer-motion";
+import {
+  motion,
+  useMotionValueEvent,
+  useScroll,
+  AnimatePresence,
+} from "framer-motion";
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 
@@ -38,7 +43,7 @@ export default function Navbar() {
 
   return (
     <motion.div
-      className={`fixed top-3 inset-x-0 mx-auto w-11/12 md:w-[95%] rounded-2xl p-1.5 md:p-3 bg-gradient-to-r from-white/16 via-white/10 to-white/20 border-[0.5px] border-white/30 backdrop-blur-lg flex items-center justify-between text-sm font-semibold z-[99999] duration-300 ${
+      className={`fixed top-2 sm:top-3 left-1/2 -translate-x-1/2 rounded-xl sm:rounded-2xl p-1.5 md:p-3 bg-gradient-to-r from-white/16 via-white/10 to-white/20 border-[0.5px] border-white/30 backdrop-blur-lg flex items-center justify-between text-sm font-semibold z-[99999] duration-300 w-[calc(100%-1rem)] sm:w-[calc(100%-2rem)] md:w-full max-w-[90rem] ${
         hidden ? "-translate-y-full" : "translate-y-0"
       }`}
       initial={{ y: -20, filter: "blur(8px)", opacity: 0 }}
@@ -46,17 +51,17 @@ export default function Navbar() {
       transition={{ duration: 0.6, ease: "easeOut" }}
     >
       {/* Logo + Text */}
-      <a href="/" className="flex items-center gap-1 sm:gap-2 flex-shrink-0">
+      <a href="/" className="flex items-center gap-1.5 sm:gap-2 flex-shrink-0">
         <motion.img
           src="/logo.jpg"
           alt="logo"
-          className="w-6 sm:w-8 md:w-10 rounded-md"
+          className="w-7 sm:w-8 md:w-10 rounded-md"
           initial={{ y: -10, filter: "blur(6px)", opacity: 0 }}
           animate={{ y: 0, filter: "blur(0px)", opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.1, ease: "easeOut" }}
         />
         <motion.span
-          className="text-white font-medium text-[12px] sm:text-sm whitespace-nowrap"
+          className="text-white font-medium text-[11px] sm:text-sm whitespace-nowrap"
           initial={{ y: -10, filter: "blur(6px)", opacity: 0 }}
           animate={{ y: 0, filter: "blur(0px)", opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.15, ease: "easeOut" }}
@@ -79,7 +84,10 @@ export default function Navbar() {
             whileHover={{ y: -2 }}
             transition={{ duration: 0.2 }}
           >
-            <Link href={href} aria-current={isActive(href) ? "page" : undefined}>
+            <a
+              href={href}
+              // aria-current={isActive(href) ? "page" : undefined}
+            >
               <motion.span
                 className={`inline-block cursor-pointer transition-colors duration-200 ${
                   isActive(href) ? "text-theme" : "text-white hover:text-theme"
@@ -87,18 +95,18 @@ export default function Navbar() {
               >
                 {label}
               </motion.span>
-            </Link>
+            </a>
           </motion.div>
         ))}
       </motion.div>
 
       {/* Right side: CTA + Mobile menu */}
-      <motion.div className="flex items-center gap-1 sm:gap-2 flex-shrink-0">
+      <motion.div className="flex items-center gap-1.5 sm:gap-2 flex-shrink-0">
         <motion.a
           href="/booking"
           target="_blank"
           rel="noopener noreferrer"
-          className="hidden md:inline-flex bg-gradient-to-r from-theme to-pink-600 rounded-full py-1 px-2 sm:py-1.5 sm:px-3 text-white text-[10px] sm:text-sm whitespace-nowrap"
+          className="hidden md:inline-flex bg-gradient-to-r from-theme to-pink-600 rounded-full py-1.5 px-3 md:py-2 md:px-4 text-white text-xs md:text-sm whitespace-nowrap"
           initial={{ y: -10, filter: "blur(6px)", opacity: 0 }}
           animate={{ y: 0, filter: "blur(0px)", opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.3, ease: "easeOut" }}
@@ -113,13 +121,13 @@ export default function Navbar() {
           aria-controls="mobile-menu"
           aria-expanded={mobileMenuOpen}
           onClick={() => setMobileMenuOpen((v) => !v)}
-          className="md:hidden inline-flex items-center justify-center rounded-full p-1.5 border border-white/30 bg-white/10 hover:bg-white/20 transition"
+          className="md:hidden inline-flex items-center justify-center rounded-full p-1.5 sm:p-2 border border-white/30 bg-white/10 hover:bg-white/20 transition"
           whileTap={{ scale: 0.95 }}
         >
           {mobileMenuOpen ? (
             <svg
-              width="18"
-              height="18"
+              width="16"
+              height="16"
               viewBox="0 0 24 24"
               fill="none"
               stroke="white"
@@ -131,8 +139,8 @@ export default function Navbar() {
             </svg>
           ) : (
             <svg
-              width="18"
-              height="18"
+              width="16"
+              height="16"
               viewBox="0 0 24 24"
               fill="none"
               stroke="white"
@@ -175,7 +183,9 @@ export default function Navbar() {
                 >
                   <span
                     className={`inline-block cursor-pointer text-sm ${
-                      isActive(href) ? "text-white font-semibold" : "text-white/80"
+                      isActive(href)
+                        ? "text-white font-semibold"
+                        : "text-white/80"
                     }`}
                   >
                     {label}

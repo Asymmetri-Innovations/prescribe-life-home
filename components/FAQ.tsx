@@ -92,13 +92,13 @@ export default function FAQ({ classname }: { classname?: string }) {
   return (
     <section
       id="faq"
-      className={`flex flex-col justify-center items-center gap-10 px-4 md:px-10 ${classname}`}
+      className={`flex flex-col justify-center items-center gap-6 md:gap-8 lg:gap-10 px-4 md:px-6 lg:px-10 ${classname}`}
     >
-      <div className="lg:text-5xl md:text-4xl text-3xl font-medium">FAQs</div>
+      <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium">FAQs</div>
 
-      <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-5">
+      <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5">
         {[visibleLeft, visibleRight].map((col, colIndex) => (
-          <div key={colIndex} className="space-y-5">
+          <div key={colIndex} className="space-y-4 md:space-y-5">
             {col.map((item, index) => {
               const actualIndex = colIndex === 0 ? index : index + midIndex;
               const isExpanded = expandedItems.includes(actualIndex);
@@ -106,20 +106,20 @@ export default function FAQ({ classname }: { classname?: string }) {
               return (
                 <motion.div
                   key={actualIndex}
-                  className={`flex flex-col bg-[#1a1a1a] h-24 text-white border border-white/20 rounded-2xl overflow-hidden cursor-pointer transition-all duration-300 ${
+                  className={`flex flex-col bg-[#1a1a1a] h-20 sm:h-24 text-white border border-white/20 rounded-xl sm:rounded-2xl overflow-hidden cursor-pointer transition-all duration-300 ${
                     isExpanded ? "h-auto" : ""
                   }`}
                   onClick={() => toggleItem(actualIndex)}
                   initial={false}
                 >
-                  <div className="p-5 flex flex-col justify-center flex-1">
-                    <div className="flex items-center justify-between">
-                      <h3 className="text-base md:text-lg pr-3 tracking-wide">{item.question}</h3>
+                  <div className="p-3 sm:p-4 md:p-5 flex flex-col justify-center flex-1">
+                    <div className="flex items-center justify-between gap-2">
+                      <h3 className="text-xs sm:text-sm md:text-base pr-2 sm:pr-3 tracking-wide">{item.question}</h3>
                       <motion.div
                         animate={{ rotate: isExpanded ? 180 : 0 }}
                         transition={{ duration: 0.2 }}
                       >
-                        <ChevronDown className="w-5 h-5 text-zinc-400 flex-shrink-0" />
+                        <ChevronDown className="w-4 h-4 sm:w-5 sm:h-5 text-zinc-400 flex-shrink-0" />
                       </motion.div>
                     </div>
 
@@ -138,7 +138,7 @@ export default function FAQ({ classname }: { classname?: string }) {
                             ease: [0.04, 0.62, 0.23, 0.98],
                           }}
                         >
-                          <div className="pt-3 text-zinc-300 text-base md:text-lg leading-relaxed tracking-wide">
+                          <div className="pt-2 sm:pt-3 text-zinc-300 text-xs sm:text-sm md:text-base leading-relaxed tracking-wide">
                             {item.answer}
                           </div>
                         </motion.div>
@@ -154,7 +154,7 @@ export default function FAQ({ classname }: { classname?: string }) {
 
       <button
         onClick={() => setShowAll(!showAll)}
-        className="px-6 py-2 text-white border border-white/30 rounded-full hover:bg-white/10 transition-all"
+        className="px-4 sm:px-6 py-1.5 sm:py-2 text-white border border-white/30 rounded-full hover:bg-white/10 transition-all text-sm sm:text-base"
       >
         {showAll ? "View Less" : "View More"}
       </button>
