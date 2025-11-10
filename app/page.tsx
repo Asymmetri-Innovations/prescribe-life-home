@@ -413,7 +413,11 @@ export default function UpdatedHome() {
                         />
                       ) : step.icon ? (
                         React.createElement(step.icon, {
-                          size: window.innerWidth < 640 ? 40 : 56,
+                          size:
+                            typeof window !== "undefined" &&
+                            window.innerWidth < 640
+                              ? 40
+                              : 56,
                           className: "text-theme flex-shrink-0",
                         })
                       ) : null}
@@ -443,7 +447,11 @@ export default function UpdatedHome() {
                 <div className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20" />
                 <div className="flex justify-between items-start mb-4 md:mb-6 relative z-10">
                   <Sparkle
-                    size={window.innerWidth < 640 ? 40 : 56}
+                    size={
+                      typeof window !== "undefined" && window.innerWidth < 640
+                        ? 40
+                        : 56
+                    }
                     className="text-theme flex-shrink-0"
                   />
                   <div className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white/30">
@@ -508,7 +516,14 @@ export default function UpdatedHome() {
                     ))}
 
                     <div>
-                      <Brain size={window.innerWidth < 640 ? 20 : 24}></Brain>
+                      <Brain
+                        size={
+                          typeof window !== "undefined" &&
+                          window.innerWidth < 640
+                            ? 20
+                            : 24
+                        }
+                      ></Brain>
                     </div>
                     <p className="text-zinc-300 text-xs sm:text-sm md:text-base leading-relaxed">
                       {text}
@@ -765,7 +780,11 @@ export default function UpdatedHome() {
               {i !== 0 && (
                 <ChevronDown
                   className="absolute left-1/2 -translate-x-1/2 -top-6 md:-top-8"
-                  size={window.innerWidth < 640 ? 32 : 40}
+                  size={
+                    typeof window !== "undefined" && window.innerWidth < 640
+                      ? 32
+                      : 40
+                  }
                 ></ChevronDown>
               )}
               <HoverGlowContainer className="rounded-2xl p-4 sm:p-6 md:p-8 border relative overflow-hidden space-y-3 sm:space-y-4 md:space-y-6">
@@ -774,10 +793,12 @@ export default function UpdatedHome() {
                 </div>
                 <step.icon
                   size={
-                    window.innerWidth < 640
-                      ? 40
-                      : window.innerWidth < 768
-                      ? 50
+                    typeof window !== "undefined"
+                      ? window.innerWidth < 640
+                        ? 40
+                        : window.innerWidth < 768
+                        ? 50
+                        : 60
                       : 60
                   }
                   className="text-theme"
