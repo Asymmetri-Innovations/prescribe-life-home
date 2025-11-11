@@ -83,31 +83,31 @@ export function TestimonialsCarousel() {
                       />
                     </div>
                     <div className="hidden max-md:flex items-start justify-start flex-col max-md:full ">
-                      <p className="font-semibold text-foreground text-sm">
+                      <p className="font-card-desc font-semibold text-foreground">
                         {testimonial.name}
                       </p>
-                      <p className="text-muted-foreground text-sm mt-1">
+                      <p className="font-card-desc text-muted-foreground mt-1">
                         {testimonial.title}
                       </p>
                     </div>
                   </div>
 
                   {/* Highlighted Text */}
-                  <h3 className="text-[20px] capitalize font-bold text-foreground mb-6 leading-tight">
+                  <h3 className="font-card-title capitalize text-foreground mb-6">
                     {testimonial.highlight}
                   </h3>
 
                   {/* Quote */}
-                  <blockquote className="text-muted-foreground italic text-base leading-relaxed mb-8 flex-grow">
+                  <blockquote className="font-card-desc text-muted-foreground italic mb-8 flex-grow">
                     {testimonial.text}
                   </blockquote>
 
                   {/* Author Info */}
                   <div className="mt-auto max-md:hidden">
-                    <p className="font-semibold text-foreground text-sm">
+                    <p className="font-card-desc font-semibold text-foreground">
                       {testimonial.name}
                     </p>
-                    <p className="text-muted-foreground text-sm mt-1">
+                    <p className="font-card-desc text-muted-foreground mt-1">
                       {testimonial.title}
                     </p>
                   </div>
