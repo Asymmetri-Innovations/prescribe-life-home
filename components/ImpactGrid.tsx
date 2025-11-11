@@ -10,10 +10,10 @@ export default function HolisticGrid() {
         <HoverGlowContainer className=" flex flex-col justify-center gap-6 p-6 md:p-8 bg-gradient-to-b from-zinc-900 to-black">
           <TrendingUp className="w-8 h-8 md:w-10 md:h-10 text-theme flex-shrink-0" />
           <div className="mt-x">
-            <h2 className="text-theme text-lg tracking-wide md:text-2xl font-semibold leading-tight">
+            <h2 className="text-theme text-lg tracking-wide md:text-2xl font-semibold leading-tight font-card-title">
               Extend impact beyond sessions
             </h2>
-            <p className="text-white text-base md:text-lg tracking-wide mt-2">
+            <p className="text-white text-base md:text-lg tracking-wide mt-2 font-section-desc">
               with always-on support.
             </p>
           </div>
@@ -23,10 +23,10 @@ export default function HolisticGrid() {
         <HoverGlowContainer className=" flex flex-col justify-center gap-6 p-6 md:p-8 bg-gradient-to-b from-zinc-900 to-black">
           <Eye className="w-8 h-8 md:w-10 md:h-10 text-theme flex-shrink-0" />
           <div className="mt-x">
-            <h2 className="text-theme text-lg md:text-2xl tracking-wide font-semibold leading-tight">
+            <h2 className="text-theme text-lg md:text-2xl tracking-wide font-semibold leading-tight font-card-title">
               Adopt a holistic lens
             </h2>
-            <p className="text-white text-base md:text-lg tracking-wide leading-relaxed mt-2">
+            <p className="text-white text-base md:text-lg tracking-wide leading-relaxed mt-2 font-section-desc">
               integrating cognitive, emotional, behavioral, and physiological
               factors to unlock sustained performance.
             </p>
@@ -41,10 +41,10 @@ export default function HolisticGrid() {
             className="w-8 h-8 md:w-10 md:h-10 object-cover flex-shrink-0"
           />
           <div className="mt-x">
-            <h2 className="text-theme text-lg tracking-wide md:text-2xl font-semibold leading-tight">
+            <h2 className="text-theme text-lg tracking-wide md:text-2xl font-semibold leading-tight font-card-title">
               Adapt in real time
             </h2>
-            <p className="text-white text-base md:text-lg tracking-wide leading-relaxed mt-2">
+            <p className="text-white text-base md:text-lg tracking-wide leading-relaxed mt-2 font-section-desc">
               each client's evolving needs and resilience stage.
             </p>
           </div>
@@ -58,10 +58,10 @@ export default function HolisticGrid() {
             className="w-8 h-8 md:w-10 md:h-10 object-cover flex-shrink-0"
           />
           <div className="mt-x">
-            <h2 className="text-theme text-lg tracking-wide md:text-2xl font-semibold">
+            <h2 className="text-theme text-lg tracking-wide md:text-2xl font-semibold font-card-title">
               Personalize every strategy
             </h2>
-            <p className="text-white text-base md:text-lg tracking-wide mt-2">
+            <p className="text-white text-base md:text-lg tracking-wide mt-2 font-section-desc">
               because no two people thrive the same way.
             </p>
           </div>

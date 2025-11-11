@@ -269,18 +269,18 @@ export default function UpdatedHome() {
             <div className="flex tracking-wide justify-center lg:justify-start items-center text-center lg:text-left border-1 border-white/50 px-6 sm:px-8 lg:px-12 xl:px-16 py-6 sm:py-8 lg:py-10 rounded-3xl">
               <div className="space-y-6 sm:space-y-8 lg:space-y-10">
                 <p className="">
-                  <span className="text-theme">
+                  <span className="text-gradient font-card-title">
                     85% of coaches <br />
                   </span>{" "}
-                  <p className="text-base sm:text-base lg:text-lg xl:text-xl font-normal mt-2">
+                  <p className="text-base sm:text-base lg:text-lg xl:text-xl font-normal mt-2 font-section-desc">
                     say clients are seeking more support for well-being.
                   </p>
                 </p>
                 <p>
-                  <span className="text-theme">
+                  <span className="text-gradient font-card-title">
                     80% of professionals <br />
                   </span>{" "}
-                  <p className="text-base sm:text-base lg:text-lg xl:text-xl font-normal mt-2">
+                  <p className="text-base sm:text-base lg:text-lg xl:text-xl font-normal mt-2 font-section-desc">
                     are at risk of burnout.
                   </p>
                 </p>
@@ -288,11 +288,11 @@ export default function UpdatedHome() {
             </div>
 
             <div className="flex justify-center items-center border-1 border-white/50 rounded-3xl bg-gradient-to-b from-black to-theme/50">
-              <div className="p-8 sm:p-12 lg:p-16 space-y-4 lg:space-y-6">
-                <div className="text-center text-lg sm:text-xl lg:text-2xl">
+              <div className="p-8 sm:p-12 lg:p-10 space-y-4 lg:space-y-6">
+                <div className="text-center text-lg sm:text-xl lg:text-2xl font-card-title">
                   PrescribeLife.AI
                 </div>
-                <div className="text-center text-base sm:text-base">
+                <div className="text-center  font-section-desc">
                   was built to help you meet this urgent need head-on
                 </div>
               </div>
@@ -571,7 +571,7 @@ export default function UpdatedHome() {
             ].map((item, i) => (
               <div
                 key={i}
-                className="flex flex-col items-center space-y-4 mx-4 min-w-[240px]"
+                className="flex flex-col items-center space-y-4 mx-4 min-w-[240px] max-md:mx-0"
               >
                 <div>
                   <Image
@@ -584,8 +584,12 @@ export default function UpdatedHome() {
                   />
                 </div>
                 <div className="flex flex-col text-center items-center gap-3 px-2">
-                  <div className="text-base font-semibold">{item.title}</div>
-                  <div className="text-base">{item.description}</div>
+                  <div className="text-base font-semibold font-card-title">
+                    {item.title}
+                  </div>
+                  <div className="text-base font-card-desc max-md:max-w-48">
+                    {item.description}
+                  </div>
                 </div>
               </div>
             ))}
@@ -606,10 +610,10 @@ export default function UpdatedHome() {
               />
             </div>
             <div className="flex flex-col text-center min-h-24 lg:min-h-36 justify-start items-center gap-3 lg:gap-4 z-[9999] px-2">
-              <div className="text-base sm:text-lg lg:text-xl font-semibold">
+              <div className="text-base sm:text-lg lg:text-xl font-semibold font-card-title">
                 Build awareness
               </div>
-              <div className="text-base sm:text-base">
+              <div className="text-base sm:text-base font-card-desc">
                 Self-Assess Resillience Drivers
               </div>
             </div>
@@ -626,10 +630,10 @@ export default function UpdatedHome() {
               />
             </div>
             <div className="flex flex-col text-center min-h-24 lg:min-h-36 justify-start items-center gap-3 lg:gap-4 z-[9999] px-2">
-              <div className="text-base sm:text-lg lg:text-xl font-semibold">
+              <div className="text-base sm:text-lg lg:text-xl font-semibold font-card-title">
                 Commit to action
               </div>
-              <div className="text-base sm:text-base">
+              <div className="text-base sm:text-base font-card-desc">
                 Track & unblock follow through
               </div>
             </div>
@@ -646,10 +650,10 @@ export default function UpdatedHome() {
               />
             </div>
             <div className="flex flex-col text-center min-h-24 lg:min-h-36 justify-start items-center gap-3 lg:gap-4 z-[9999] px-2">
-              <div className="text-base sm:text-lg lg:text-xl font-semibold">
+              <div className="text-base sm:text-lg lg:text-xl font-semibold font-card-title">
                 Stay Engaged
               </div>
-              <div className="text-base sm:text-base">
+              <div className="text-base sm:text-base font-card-desc">
                 Share reflections & get personalized performance tips
               </div>
             </div>
@@ -909,7 +913,11 @@ export default function UpdatedHome() {
 
         {/* Mobile Marquee View */}
         <div className="lg:hidden w-full overflow-hidden">
-          <Marquee reverse={true} pauseOnHover className="[--duration:10s]">
+          <Marquee
+            reverse={true}
+            pauseOnHover
+            className="[--duration:10s] max-md:gap-0"
+          >
             {[
               {
                 v: 8,
@@ -925,7 +933,7 @@ export default function UpdatedHome() {
             ].map((m, i) => (
               <div
                 key={i}
-                className="flex flex-col items-center justify-center bg-white/5 border border-white/10 rounded-2xl p-6 mx-2 min-w-[280px] gap-3"
+                className="flex flex-col items-center justify-center bg-white/5 border border-white/10 rounded-2xl p-6 mx-2 min-w-[280px] gap-3 max-md:gap-0"
               >
                 <div className="text-3xl sm:text-4xl font-semibold">
                   <NumberTicker value={m.v} />
