@@ -973,7 +973,7 @@ export default function UpdatedHome() {
               ].map((app) => (
                 <div
                   key={app.name}
-                  className="bg-white/24 w-48 sm:w-56 lg:w-64 p-5 sm:p-6 lg:p-7 rounded-2xl border-2 border-white/20 flex flex-col items-center gap-2 sm:gap-3 shrink-0 shadow-md"
+                  className="bg-white/24 w-48 sm:w-56 lg:w-64 p-5 sm:p-6 lg:p-7 rounded-2xl border-2 border-white/20 flex flex-col items-center gap-2 sm:gap-3 shrink-0 shadow-md max-md:mx-3"
                 >
                   <img
                     src={app.src}

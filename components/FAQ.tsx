@@ -72,7 +72,7 @@ const faqData: FAQItem[] = [
 
 export default function FAQ({ classname }: { classname?: string }) {
   const [expandedItems, setExpandedItems] = useState<number[]>([]);
-  const [showAll, setShowAll] = useState(false);
+  const [showAll, setShowAll] = useState(true);
 
   const toggleItem = (index: number) => {
     setExpandedItems((prev) =>
@@ -106,15 +106,17 @@ export default function FAQ({ classname }: { classname?: string }) {
               return (
                 <motion.div
                   key={actualIndex}
-                  className={`flex flex-col bg-[#1a1a1a] h-20 sm:h-24 text-white border border-white/20 rounded-xl sm:rounded-2xl overflow-hidden cursor-pointer transition-all duration-300 ${
-                    isExpanded ? "h-auto" : ""
+                  className={`flex flex-col bg-[#1a1a1a] text-white border border-white/20 rounded-xl sm:rounded-2xl overflow-hidden cursor-pointer transition-all duration-300 ${
+                    isExpanded ? "h-auto" : "h-20 sm:h-24"
                   }`}
                   onClick={() => toggleItem(actualIndex)}
                   initial={false}
                 >
                   <div className="p-3 sm:p-4 md:p-5 flex flex-col justify-center flex-1">
                     <div className="flex items-center justify-between gap-2">
-                      <h3 className="font-card-desc pr-2 sm:pr-3">{item.question}</h3>
+                      <h3 className="font-card-desc pr-2 sm:pr-3">
+                        {item.question}
+                      </h3>
                       <motion.div
                         animate={{ rotate: isExpanded ? 180 : 0 }}
                         transition={{ duration: 0.2 }}
@@ -154,7 +156,7 @@ export default function FAQ({ classname }: { classname?: string }) {
 
       <button
         onClick={() => setShowAll(!showAll)}
-        className="font-cta px-4 sm:px-6 py-1.5 sm:py-2 text-white border border-white/30 rounded-full hover:bg-white/10 transition-all"
+        className="font-cta px-4 sm:px-6 py-1.5 sm:py-2 text-white border border-white/30 rounded-full hover:bg-white/10 transition-all hidden"
       >
         {showAll ? "View Less" : "View More"}
       </button>

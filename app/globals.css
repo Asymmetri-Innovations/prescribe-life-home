@@ -544,7 +544,7 @@ html {
   line-height: 1.6;
   letter-spacing: 0;
   /* Mobile: Base size */
-  font-size: 1rem; /* 16px */
+  font-size: 0.875rem; /* 14px */
 }
 
 @media (min-width: 768px) {
