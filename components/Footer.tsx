@@ -47,20 +47,20 @@ export default function Footer() {
                 src="/logo.jpg"
                 alt="Prescribe Life logo"
               />
-              <div className="text-xl font-medium">PrescribeLife.AI</div>
+              <div className="font-card-title">PrescribeLife.AI</div>
             </div>
           </div>
 
           {/* Company */}
           <div className="space-y-3 md:space-y-4">
-            <h3 className="text-white/40 font-semibold text-base md:text-lg">
+            <h3 className="font-card-title text-white/40">
               Company
             </h3>
             <ul className="space-y-2 md:space-y-3">
               <li>
                 <a
                   href="/"
-                  className="text-white hover:text-theme transition-colors text-sm md:text-base"
+                  className="font-card-desc text-white hover:text-theme transition-colors"
                 >
                   Home
                 </a>
@@ -69,7 +69,7 @@ export default function Footer() {
               <li>
                 <a
                   href="/our-story"
-                  className="text-white hover:text-theme transition-colors text-sm md:text-base"
+                  className="font-card-desc text-white hover:text-theme transition-colors"
                 >
                   Our Story
                 </a>
@@ -78,7 +78,7 @@ export default function Footer() {
               <li>
                 <a
                   href="/our-team"
-                  className="text-white hover:text-theme transition-colors text-sm md:text-base"
+                  className="font-card-desc text-white hover:text-theme transition-colors"
                 >
                   Our Team
                 </a>
@@ -88,14 +88,14 @@ export default function Footer() {
 
           {/* Solutions */}
           <div className="space-y-3 md:space-y-4">
-            <h3 className="text-white/40 font-semibold text-base md:text-lg">
+            <h3 className="font-card-title text-white/40">
               Solutions
             </h3>
             <ul className="space-y-2 md:space-y-3">
               <li>
                 <a
                   href="#"
-                  className="text-white hover:text-theme transition-colors text-sm md:text-base"
+                  className="font-card-desc text-white hover:text-theme transition-colors"
                 >
                   For Coaches
                 </a>
@@ -103,7 +103,7 @@ export default function Footer() {
               <li>
                 <a
                   href="#"
-                  className="text-white hover:text-theme transition-colors text-sm md:text-base"
+                  className="font-card-desc text-white hover:text-theme transition-colors"
                 >
                   For Clients
                 </a>
@@ -111,7 +111,7 @@ export default function Footer() {
               <li>
                 <a
                   href="#"
-                  className="text-white hover:text-theme transition-colors text-sm md:text-base"
+                  className="font-card-desc text-white hover:text-theme transition-colors"
                 >
                   How It Works
                 </a>
@@ -121,14 +121,14 @@ export default function Footer() {
 
           {/* Resources */}
           <div className="space-y-3 md:space-y-4">
-            <h3 className="text-white/40 font-semibold text-base md:text-lg">
+            <h3 className="font-card-title text-white/40">
               Resources
             </h3>
             <ul className="space-y-2 md:space-y-3">
               <li>
                 <a
                   href="/#faq"
-                  className="text-white hover:text-theme transition-colors text-sm md:text-base"
+                  className="font-card-desc text-white hover:text-theme transition-colors"
                 >
                   FAQs
                 </a>
@@ -136,7 +136,7 @@ export default function Footer() {
               <li>
                 <a
                   href="/booking"
-                  className="text-white hover:text-theme transition-colors text-sm md:text-base"
+                  className="font-card-desc text-white hover:text-theme transition-colors"
                 >
                   Book a Demo
                 </a>
@@ -144,7 +144,7 @@ export default function Footer() {
               <li>
                 <a
                   href="#"
-                  className="text-white hover:text-theme transition-colors text-sm md:text-base"
+                  className="font-card-desc text-white hover:text-theme transition-colors"
                 >
                   Newsletter
                 </a>
@@ -154,7 +154,7 @@ export default function Footer() {
 
           {/* Legal */}
           <div className="space-y-3 md:space-y-4">
-            <h3 className="text-white/40 font-semibold text-base md:text-lg">
+            <h3 className="font-card-title text-white/40">
               Legal
             </h3>
             <ul className="space-y-2 md:space-y-3">
@@ -162,7 +162,7 @@ export default function Footer() {
                 <a
                   target="_blank"
                   href="https://sites.google.com/asymmetri.in/prescribe-life-policies/home"
-                  className="text-white hover:text-theme transition-colors text-sm md:text-base"
+                  className="font-card-desc text-white hover:text-theme transition-colors"
                 >
                   Privacy Policy
                 </a>
@@ -171,7 +171,7 @@ export default function Footer() {
                 <a
                   target="_blank"
                   href="https://sites.google.com/asymmetri.in/prescribe-life-policies/home"
-                  className="text-white hover:text-theme transition-colors text-sm md:text-base"
+                  className="font-card-desc text-white hover:text-theme transition-colors"
                 >
                   Terms of Use
                 </a>
@@ -213,7 +213,7 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="flex flex-col md:flex-row items-center md:items-start justify-between w-full pt-8 border-t border-zinc-800 gap-4">
-          <div className="flex items-center gap-3 tracking-wide text-md text-zinc-400">
+          <div className="flex items-center gap-3 tracking-wide font-card-desc text-zinc-400">
             <a
               target="_blank"
               href="https://sites.google.com/asymmetri.in/prescribe-life-policies/home"
@@ -231,7 +231,7 @@ export default function Footer() {
             </a>
           </div>
 
-          <p className="text-zinc-500 text-md tracking-wide md:text-right w-full md:w-auto">
+          <p className="font-card-desc text-zinc-500 tracking-wide md:text-right w-full md:w-auto">
             © 2025 Prescribe Life. All rights reserved.
           </p>
         </div>

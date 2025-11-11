@@ -445,3 +445,166 @@ html {
   animation: ripple 4s ease-out infinite;
   pointer-events: none;
 }
+
+/* ====================================
+   STANDARDIZED FONT SYSTEM
+   ==================================== */
+
+/* Hero Title */
+.font-hero-title {
+  font-size: 2rem; /* 32px - Mobile */
+  line-height: 1.2;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+@media (min-width: 768px) {
+  .font-hero-title {
+    font-size: 3rem; /* 48px - Tablet */
+  }
+}
+
+@media (min-width: 1024px) {
+  .font-hero-title {
+    font-size: 3.8rem; /* 64px - Desktop */
+  }
+}
+
+/* Hero Description */
+.font-hero-desc {
+  font-size: 1rem; /* 16px - Mobile */
+  line-height: 1.6;
+  font-weight: 400;
+  font-family: "Inter", sans-serif;
+}
+
+@media (min-width: 768px) {
+  .font-hero-desc {
+    font-size: 1.125rem; /* 18px - Tablet */
+  }
+}
+
+@media (min-width: 1024px) {
+  .font-hero-desc {
+    font-size: 1.25rem; /* 20px - Desktop */
+  }
+}
+
+/* Section Title */
+.font-section-title {
+  font-size: 1.5rem; /* 24px - Mobile */
+  line-height: 1.3;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+@media (min-width: 768px) {
+  .font-section-title {
+    font-size: 2rem; /* 32px - Tablet */
+  }
+}
+
+@media (min-width: 1024px) {
+  .font-section-title {
+    font-size: 2.5rem; /* 40px - Desktop */
+  }
+}
+
+/* Section Description */
+.font-section-desc {
+  font-size: 0.875rem; /* 14px - Mobile */
+  line-height: 1.6;
+  font-weight: 400;
+  font-family: "Inter", sans-serif;
+}
+
+@media (min-width: 768px) {
+  .font-section-desc {
+    font-size: 1rem; /* 16px - Tablet */
+  }
+}
+
+@media (min-width: 1024px) {
+  .font-section-desc {
+    font-size: 1.125rem; /* 18px - Desktop */
+  }
+}
+
+/* Card Title */
+.font-card-title {
+  font-size: 1rem; /* 16px - Mobile */
+  line-height: 1.4;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+@media (min-width: 768px) {
+  .font-card-title {
+    font-size: 1.125rem; /* 18px - Tablet */
+  }
+}
+
+@media (min-width: 1024px) {
+  .font-card-title {
+    font-size: 1.25rem; /* 20px - Desktop */
+  }
+}
+
+/* Card Description */
+.font-card-desc {
+  font-size: 0.75rem; /* 12px - Mobile */
+  line-height: 1.5;
+  font-weight: 400;
+  font-family: "Inter", sans-serif;
+}
+
+@media (min-width: 768px) {
+  .font-card-desc {
+    font-size: 0.875rem; /* 14px - Tablet */
+  }
+}
+
+@media (min-width: 1024px) {
+  .font-card-desc {
+    font-size: 0.9375rem; /* 15px - Desktop */
+  }
+}
+
+/* CTA / Button Text */
+.font-cta {
+  font-size: 0.875rem; /* 14px - Mobile */
+  line-height: 1.4;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+@media (min-width: 768px) {
+  .font-cta {
+    font-size: 0.9375rem; /* 15px - Tablet */
+  }
+}
+
+@media (min-width: 1024px) {
+  .font-cta {
+    font-size: 1rem; /* 16px - Desktop */
+  }
+}
+
+@media (min-width: 1024px) and (min-height: 1300px) {
+  .home-hero {
+    flex-direction: column;
+  }
+  .home-hero_1 {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 6em;
+  }
+  .navbar {
+    max-width: 90%;
+  }
+  .home-img {
+    max-width: 80%;
+  }
+}

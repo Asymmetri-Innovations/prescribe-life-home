@@ -116,10 +116,10 @@ export default function TeamPage() {
       {/* Team Section */}
       <section className="flex flex-col justify-center items-center min-h-[80vh] space-y-4 max-md:space-y-3 pt-6 max-md:pt-6 px-4 max-md:px-2 mx-4">
         <FadeRise delay={0.05}>
-          <div className="text-6xl max-md:text-4xl font-semibold flex flex-col items-center mb-4 mt-10 max-md:text-center">
+          <div className="font-hero-title flex flex-col items-center mb-4 mt-10 max-md:text-center">
             Meet the <span className="text-theme">Team</span>
           </div>
-          <p className="text-zinc-300 mt-2 max-w-4xl mx-auto text-center text-lg max-md:text-base leading-relaxed px-4 max-md:px-2 mb-3">
+          <p className="font-hero-desc text-zinc-300 mt-2 max-w-4xl mx-auto text-center px-4 max-md:px-2 mb-3">
             The experts and innovators behind PrescribeLife.AI, bringing
             together neuroscience, technology, and coaching expertise to help
             you perform better and lead with resilience.
@@ -137,11 +137,11 @@ export default function TeamPage() {
                   height={80}
                   className="w-20 h-20 object-cover object-top rounded-full"
                 />
-                <h3 className="text-white text-2xl max-md:text-xl font-semibold leading-snug">
+                <h3 className="font-card-title text-white">
                   {member.name}
                 </h3>
-                <p className="text-theme text-sm font-medium">{member.title}</p>
-                <p className="text-zinc-300 mt-2 leading-relaxed text-sm inter">
+                <p className="font-card-desc text-theme font-medium">{member.title}</p>
+                <p className="font-card-desc text-zinc-300 mt-2">
                   {member.description}
                 </p>
               </div>
@@ -153,10 +153,10 @@ export default function TeamPage() {
       {/* Advisors Section */}
       <section className="flex flex-col items-center justify-center py-14 max-md:py-10 px-6 max-md:px-3 space-y-6 bg-black">
         <FadeRise>
-          <h2 className="text-4xl max-md:text-3xl font-semibold text-white text-center">
+          <h2 className="font-section-title text-white text-center">
             <span className="text-theme">Advisors</span>
           </h2>
-          <p className="text-zinc-300 text-lg mt-3 leading-relaxed text-center max-w-4xl">
+          <p className="font-section-desc text-zinc-300 mt-3 text-center max-w-4xl">
             World-class experts in neuroscience, coaching, and behavioral change
             guiding our mission.
           </p>
@@ -173,13 +173,13 @@ export default function TeamPage() {
                   height={80}
                   className="w-20 h-20 object-cover rounded-full"
                 />
-                <h3 className="text-white text-2xl max-md:text-xl font-semibold leading-snug">
+                <h3 className="font-card-title text-white">
                   {advisor.name}
                 </h3>
-                <p className="text-theme text-sm font-medium">
+                <p className="font-card-desc text-theme font-medium">
                   {advisor.title}
                 </p>
-                <p className="text-zinc-300 mt-2 leading-relaxed text-sm inter">
+                <p className="font-card-desc text-zinc-300 mt-2">
                   {advisor.description}
                 </p>
               </div>

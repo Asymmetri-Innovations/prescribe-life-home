@@ -66,7 +66,7 @@ export default function BookingPage() {
   ];
 
   return (
-    <main className="space-y-6 md:space-y-8 relative pt-6 md:pt-8 overflow-hidden max-w-[90rem] mx-auto">
+    <main className="space-y-6 md:space-y-8 relative pt-6 md:pt-8 overflow-hidden  mx-auto">
       {/* Animated Blobs Background */}
       <motion.div
         style={{
@@ -100,7 +100,7 @@ export default function BookingPage() {
       ))}
 
       {/* Founding Story */}
-      <section className="flex flex-col justify-center items-center min-h-[80vh] md:min-h-screen space-y-6 md:space-y-8 lg:space-y-10 pt-16 md:pt-20 lg:pt-6 px-4 md:px-6 lg:px-8 max-w-[90rem] mx-auto w-full relative">
+      <section className="flex flex-col justify-center items-center min-h-[80vh] md:min-h-screen space-y-6 md:space-y-8 lg:space-y-10 pt-16 md:pt-20 lg:pt-6 px-4 md:px-6 lg:px-8  mx-auto w-full relative overflow-visible">
         {/* Concentric Ripple Circles */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full pointer-events-none overflow-hidden z-0">
           {[0, 1, 2, 3, 4, 5].map((index) => (
@@ -122,14 +122,14 @@ export default function BookingPage() {
           initial={{ y: 32, filter: "blur(6px)", opacity: 0 }}
           animate={{ y: 0, filter: "blur(0px)", opacity: 1 }}
           transition={{ duration: 1, delay: 0.45 }}
-          className="flex flex-col pt-16 md:pt-20 lg:pt-6 px-4 md:px-6 lg:px-8 max-w-[90rem] mx-auto w-full relative"
+          className="flex flex-col pt-16 md:pt-20 lg:pt-6 px-4 md:px-6 lg:px-8 max-w-[75rem] mx-auto w-full relative"
         >
           <FadeRise
             delay={0.05}
             className="flex flex-col items-center space-y-4 sm:space-y-6 md:space-y-8 mb-6 md:mb-8 lg:mb-12"
           >
             <motion.h1
-              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold text-center leading-tight px-2 max-md:w-full"
+              className="font-hero-title text-center px-2 max-md:w-full"
               initial={{ y: 30, filter: "blur(4px)", opacity: 0 }}
               animate={{ y: 0, filter: "blur(0px)", opacity: 1 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
@@ -138,7 +138,7 @@ export default function BookingPage() {
               <span className="text-gradient">PrescribeLife.AI</span>
             </motion.h1>
             <motion.p
-              className="text-zinc-300 max-w-4xl mx-auto text-center text-base sm:text-base md:text-lg leading-relaxed px-4 md:px-6 max-md:w-full max-md:px-0"
+              className="font-hero-desc text-zinc-300 max-w-4xl mx-auto text-center px-4 md:px-6 max-md:w-full max-md:px-0"
               initial={{ y: 24, filter: "blur(4px)", opacity: 0 }}
               animate={{ y: 0, filter: "blur(0px)", opacity: 1 }}
               transition={{ duration: 0.75, delay: 0.15, ease: "easeOut" }}
@@ -160,11 +160,11 @@ export default function BookingPage() {
                   height={80}
                   className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 object-cover rounded-full flex-shrink-0"
                 />
-                <h3 className="text-white text-lg sm:text-xl md:text-2xl font-semibold leading-tight">
+                <h3 className="font-card-title text-white">
                   A Founder's Burnout
                 </h3>
               </div>
-              <p className="text-zinc-300 leading-relaxed text-sm sm:text-sm md:text-base inter">
+              <p className="font-card-desc text-zinc-300">
                 <span className="text-theme">Oli Johnson</span>, our Co-founder
                 & CEO, was a high-performing entrepreneur who hit a wall. Even
                 with a business coach and a therapist, burnout took him down. He
@@ -183,11 +183,11 @@ export default function BookingPage() {
                   height={80}
                   className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 object-cover rounded-full flex-shrink-0"
                 />
-                <h3 className="text-white text-lg sm:text-xl md:text-2xl font-semibold leading-tight">
+                <h3 className="font-card-title text-white">
                   A Doctor's Frustration
                 </h3>
               </div>
-              <p className="text-zinc-300 leading-relaxed text-sm sm:text-sm md:text-base inter">
+              <p className="font-card-desc text-zinc-300">
                 <span className="text-theme">Dr. Neetu Johnson</span>, our
                 Co-founder & Chief Medical Officer, saw patients receiving
                 prescriptions for symptoms rooted in stress and lifestyle. What
@@ -207,9 +207,9 @@ export default function BookingPage() {
         viewport={{ once: true, margin: "-100px" }}
         className="flex flex-col items-center justify-center pb-10 md:pb-14 lg:pb-16 bg-black"
       >
-        <div className="px-4 md:px-6 lg:px-8 max-w-[90rem] mx-auto w-full">
+        <div className="px-4 md:px-6 lg:px-8 max-w-[75rem] mx-auto w-full">
           <FadeRise>
-            <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-white text-center mb-8 md:mb-10 lg:mb-12 px-2 max-md:pt-6">
+            <h2 className="font-section-title text-white text-center mb-8 md:mb-10 lg:mb-12 px-2 max-md:pt-6">
               The question that changed everything
             </h2>
           </FadeRise>
@@ -247,7 +247,7 @@ export default function BookingPage() {
                     />
                   ))}
 
-                  <p className="text-white text-xs sm:text-sm md:text-base leading-relaxed relative z-10">
+                  <p className="font-card-desc text-white relative z-10">
                     {text}
                   </p>
                 </div>
@@ -265,17 +265,17 @@ export default function BookingPage() {
         viewport={{ once: true, margin: "-100px" }}
         className="flex flex-col items-center justify-center py-8 md:py-10 lg:py-14 gap-6 md:gap-8 bg-black"
       >
-        <div className="px-4 md:px-6 lg:px-8 max-w-[90rem] mx-auto w-full">
+        <div className="px-4 md:px-6 lg:px-8 max-w-[75rem] mx-auto w-full">
           <FadeRise>
             <section className="flex flex-col justify-center items-center">
               <FadeRise>
                 <div className="max-w-5xl mx-auto text-center px-4 md:px-6 py-6 md:py-8 lg:py-10">
-                  <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-white leading-tight">
+                  <h2 className="font-section-title text-white">
                     For Coaches Who Help{" "}
                     <span className="text-theme">High Performers </span> <br />
                     Thrive
                   </h2>
-                  <p className="text-zinc-300 text-base sm:text-base md:text-lg mt-2 md:mt-3 leading-relaxed">
+                  <p className="font-section-desc text-zinc-300 mt-2 md:mt-3">
                     Coaches are the key to solving the burnout crisis. You are
                     on the frontlines of human performance, yet you often lack
                     the visibility into what's happening between sessions.
@@ -284,7 +284,7 @@ export default function BookingPage() {
                 </div>
               </FadeRise>
             </section>
-            <h2 className="text-lg sm:text-xl md:text-2xl font-semibold text-white text-center px-2">
+            <h2 className="font-section-title text-white text-center px-2">
               The First Adaptive Performance Coaching{" "}
               <span className="text-theme">Platform</span>
             </h2>
@@ -301,10 +301,8 @@ export default function BookingPage() {
                     </div>
                   </div>
                   <div className="flex flex-col justify-end h-full space-y-1.5 md:space-y-2">
-                    <h3 className="text-base sm:text-lg md:text-xl font-semibold text-white">
-                      {step.title}
-                    </h3>
-                    <p className="text-zinc-300 text-sm sm:text-sm leading-relaxed">
+                    <h3 className="font-card-title text-white">{step.title}</h3>
+                    <p className="font-card-desc text-zinc-300">
                       {step.description}
                     </p>
                   </div>
@@ -321,27 +319,27 @@ export default function BookingPage() {
         whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         viewport={{ once: true, margin: "-100px" }}
-        className="relative py-10 md:py-12 lg:py-14 flex flex-col items-center justify-center space-y-6 md:space-y-8 lg:space-y-10 min-h-[400px] md:min-h-[500px] overflow-hidden bg-cover bg-center mx-4 md:mx-6 lg:mx-8"
+        className="relative py-10 md:py-12 lg:py-14 flex flex-col items-center justify-center space-y-6 md:space-y-8 lg:space-y-10 min-h-[400px] md:min-h-[500px] overflow-hidden bg-cover bg-center mx-4 md:mx-6 lg:mx-8 "
       >
         <div
-          className="absolute inset-0 z-[-1] bg-cover bg-center"
+          className="absolute inset-0 z-[-1] bg-cover bg-center max-w-[74rem] mx-auto"
           style={{
             backgroundImage: `url('/future-performance-coaching.png')`,
           }}
         />
         <div className="absolute inset-0 z-[-1] bg-black opacity-75" />
-        <div className="px-4 md:px-6 lg:px-8 max-w-[90rem] mx-auto w-full">
+        <div className="px-4 md:px-6 lg:px-8 max-w-[75rem] mx-auto w-full">
           <FadeRise className="flex flex-col items-center justify-center space-y-6 md:space-y-8 lg:space-y-10">
-            <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-white text-center leading-tight px-2">
+            <h2 className="font-section-title text-white text-center px-2">
               This Is the Future of <br />
               <span className="text-theme">Performance Coaching</span>
             </h2>
             <div className="flex flex-col items-center space-y-3 md:space-y-4 text-center max-w-4xl px-4">
-              <p className="text-white/80 text-base sm:text-base md:text-lg leading-relaxed">
+              <p className="font-section-desc text-white/80">
                 The future of coaching is adaptive, data-informed, and deeply
                 human. You, the coach, are at the center of that transformation.
               </p>
-              <p className="text-white/80 text-base sm:text-base md:text-lg leading-relaxed">
+              <p className="font-section-desc text-white/80">
                 Take your sneak peek into the{" "}
                 <span className="text-theme">FUTURE</span>
               </p>
@@ -350,7 +348,7 @@ export default function BookingPage() {
               href="/booking"
               target="_blank"
               rel="noopener noreferrer"
-              className="relative group bg-gradient-to-r from-theme to-pink-600 text-white font-medium px-5 sm:px-6 py-2 rounded-full shadow-lg hover:shadow-theme/30 transition-all text-sm sm:text-base"
+              className="font-cta relative group bg-gradient-to-r from-theme to-pink-600 text-white font-medium px-5 sm:px-6 py-2 rounded-full shadow-lg hover:shadow-theme/30 transition-all"
             >
               <span className="relative z-10">Request a Demo Call</span>
               <span className="absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition-opacity bg-white/10" />
@@ -367,14 +365,14 @@ export default function BookingPage() {
         viewport={{ once: true, margin: "-100px" }}
         className="py-6 md:py-8 lg:py-10 bg-black text-center"
       >
-        <div className="px-4 md:px-6 lg:px-8 max-w-[90rem] mx-auto w-full">
+        <div className="px-4 md:px-6 lg:px-8 max-w-[75rem] mx-auto w-full">
           <FadeRise>
             <div className="max-w-4xl mx-auto px-2">
-              <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-white leading-tight">
+              <h2 className="font-section-title text-white">
                 Built with <span className="text-theme">Coaches</span>, Shaped
                 by <span className="text-theme">Experts</span>
               </h2>
-              <p className="text-zinc-300 text-base sm:text-base md:text-lg mt-2 md:mt-3 leading-relaxed">
+              <p className="font-section-desc text-zinc-300 mt-2 md:mt-3">
                 PrescribeLife.AI was built in collaboration with medical
                 doctors, neuroscientists, and experienced coaches. Designed by
                 Jessica Malach, a resilience coach with 20+ years of experience,
@@ -394,7 +392,7 @@ export default function BookingPage() {
         viewport={{ once: true, margin: "-100px" }}
         className="py-2 md:py-3 lg:py-6 bg-black"
       >
-        <div className="px-4 md:px-6 lg:px-8 max-w-[90rem] mx-auto w-full">
+        <div className="px-4 md:px-6 lg:px-8 max-w-[75rem] mx-auto w-full">
           <div className="max-w-4xl mx-auto">
             <FadeRise>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8 items-center">
@@ -409,21 +407,21 @@ export default function BookingPage() {
                 </div>
                 <div className="space-y-3 md:space-y-4 text-center md:text-left px-2">
                   <div>
-                    <h3 className="text-base sm:text-lg md:text-xl font-semibold text-white">
+                    <h3 className="font-card-title text-white">
                       Jessica Malach
                     </h3>
-                    <p className="text-theme text-xs sm:text-sm md:text-base font-medium">
+                    <p className="font-card-desc text-theme font-medium">
                       - Head of Product & Commercialization, Certified
                       Resilience Coach
                     </p>
                   </div>
-                  <p className="text-zinc-300 text-sm sm:text-sm leading-relaxed">
+                  <p className="font-card-desc text-zinc-300">
                     Our system was designed by Jessica Malach, a resilience
                     coach with 20+ years of experience building human-centered
                     performance systems.
                   </p>
                   <div className="bg-gradient-to-r from-theme/10 to-pink-500/10 rounded-xl p-3 md:p-4 border border-theme/20">
-                    <p className="text-white text-sm sm:text-sm italic leading-relaxed">
+                    <p className="font-card-desc text-white italic">
                       "The future of coaching isn't about replacing human
                       intuition—it's about amplifying it with data that
                       matters."
@@ -444,7 +442,7 @@ export default function BookingPage() {
         viewport={{ once: true, margin: "-100px" }}
         className="py-2 md:py-3 lg:py-4 bg-black"
       >
-        <div className="px-4 md:px-6 lg:px-8 max-w-[90rem] mx-auto w-full">
+        <div className="px-4 md:px-6 lg:px-8 max-w-[75rem] mx-auto w-full">
           <div className="max-w-4xl mx-auto">
             <FadeRise>
               <AvatarStack className="justify-center">

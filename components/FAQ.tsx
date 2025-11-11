@@ -94,7 +94,7 @@ export default function FAQ({ classname }: { classname?: string }) {
       id="faq"
       className={`flex flex-col justify-center items-center gap-6 md:gap-8 lg:gap-10 px-4 md:px-6 lg:px-10 ${classname}`}
     >
-      <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium">FAQs</div>
+      <div className="font-section-title">FAQs</div>
 
       <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5">
         {[visibleLeft, visibleRight].map((col, colIndex) => (
@@ -114,7 +114,7 @@ export default function FAQ({ classname }: { classname?: string }) {
                 >
                   <div className="p-3 sm:p-4 md:p-5 flex flex-col justify-center flex-1">
                     <div className="flex items-center justify-between gap-2">
-                      <h3 className="text-xs sm:text-sm md:text-base pr-2 sm:pr-3 tracking-wide">{item.question}</h3>
+                      <h3 className="font-card-desc pr-2 sm:pr-3">{item.question}</h3>
                       <motion.div
                         animate={{ rotate: isExpanded ? 180 : 0 }}
                         transition={{ duration: 0.2 }}
@@ -138,7 +138,7 @@ export default function FAQ({ classname }: { classname?: string }) {
                             ease: [0.04, 0.62, 0.23, 0.98],
                           }}
                         >
-                          <div className="pt-2 sm:pt-3 text-zinc-300 text-xs sm:text-sm md:text-base leading-relaxed tracking-wide">
+                          <div className="font-card-desc pt-2 sm:pt-3 text-zinc-300">
                             {item.answer}
                           </div>
                         </motion.div>
@@ -154,7 +154,7 @@ export default function FAQ({ classname }: { classname?: string }) {
 
       <button
         onClick={() => setShowAll(!showAll)}
-        className="px-4 sm:px-6 py-1.5 sm:py-2 text-white border border-white/30 rounded-full hover:bg-white/10 transition-all text-sm sm:text-base"
+        className="font-cta px-4 sm:px-6 py-1.5 sm:py-2 text-white border border-white/30 rounded-full hover:bg-white/10 transition-all"
       >
         {showAll ? "View Less" : "View More"}
       </button>

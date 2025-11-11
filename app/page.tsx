@@ -169,7 +169,7 @@ export default function UpdatedHome() {
       {/* Hero Section */}
       <section
         id="hero"
-        className="flex flex-col pt-8 sm:pt-12 md:pt-20 lg:pt-16 xl:pt-6 pb-8 sm:pb-12 md:pb-20 lg:pb-16 px-4 sm:px-6 md:px-10 lg:px-8 xl:px-10 max-w-[90rem] mx-auto w-full relative  min-h-screen "
+        className="flex flex-col pt-8 sm:pt-12 md:pt-20 lg:pt-16 xl:pt-6 pb-8 sm:pb-12 md:pb-20 lg:pb-16 px-3 max-w-[75rem] mx-auto w-full relative  min-h-screen overflow-x-visible"
       >
         {/* Concentric Ripple Circles */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full pointer-events-none overflow-hidden z-0 opacity-60 lg:opacity-100">
@@ -192,20 +192,18 @@ export default function UpdatedHome() {
           initial={{ y: 32, filter: "blur(6px)", opacity: 0 }}
           animate={{ y: 0, filter: "blur(0px)", opacity: 1 }}
           transition={{ duration: 1, delay: 0.45 }}
-          className="w-full flex justify-center items-center relative z-10 flex-1 max-lg:flex-col max-lg:gap-10 md:gap-12 lg:gap-8"
+          className="w-full flex justify-center items-center relative z-10 flex-1 max-lg:flex-col max-lg:gap-10 md:gap-12 lg:gap-8 pt-16"
         >
-          <div className="flex flex-col lg:flex-row items-center justify-center gap-8 sm:gap-10 md:gap-14 lg:gap-12 xl:gap-16 w-full">
+          <div className="flex flex-col lg:flex-row items-center justify-center gap-8 sm:gap-10 md:gap-14 lg:gap-12 xl:gap-16 w-full home-hero">
             {/* Left Text */}
-            <div className="flex w-full lg:w-1/2 flex-col lg:items-start gap-5 sm:gap-6 md:gap-8 lg:gap-7 lg:text-left text-center items-center order-1 lg:order-1 ">
+            <div className="flex w-full lg:w-1/2 flex-col lg:items-start gap-5 sm:gap-6 md:gap-8 lg:gap-7 lg:text-left text-center items-center order-1 lg:order-1 home-hero_1">
               <motion.h1
-                className="font-semibold text-[2rem] md:text-[2.75rem] lg:text-4xl xl:text-5xl 2xl:text-6xl md:leading-tight lg:leading-tight xl:leading-tight whitespace-nowrap"
+                className="font-hero-title whitespace-nowrap"
                 initial={{ y: 30, filter: "blur(4px)", opacity: 0 }}
                 animate={{ y: 0, filter: "blur(0px)", opacity: 1 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
               >
-                <span className="max-md:text-[1.5rem] /md:text-[2rem] /lg:text-[2rem]">
-                  Set the new standard in
-                </span>
+                <span>Set the new standard in</span>
                 <br className="" />
                 <span className="text-gradient capitalize">
                   performance coaching
@@ -213,7 +211,7 @@ export default function UpdatedHome() {
               </motion.h1>
 
               <motion.p
-                className="inter text-base leading-relaxed sm:text-base md:text-xl lg:text-lg xl:text-xl text-muted-foreground max-w-xl lg:max-w-full"
+                className="font-hero-desc text-muted-foreground max-w-xl lg:max-w-full"
                 initial={{ y: 24, filter: "blur(4px)", opacity: 0 }}
                 animate={{ y: 0, filter: "blur(0px)", opacity: 1 }}
                 transition={{ duration: 0.75, delay: 0.15, ease: "easeOut" }}
@@ -229,13 +227,13 @@ export default function UpdatedHome() {
             </div>
 
             {/* Right Image */}
-            <div className="flex w-full lg:w-1/2 items-center justify-center order-2 lg:order-2">
+            <div className="flex w-full lg:w-1/2 items-center justify-center order-2 lg:order-2 home-hero_1">
               <Image
                 src="/result.png"
                 width={900}
                 height={900}
                 alt="platform"
-                className="w-full max-w-[280px] sm:max-w-sm md:max-w-lg lg:max-w-md xl:max-w-lg 2xl:max-w-none h-auto"
+                className="w-full max-w-[280px] sm:max-w-sm md:max-w-lg lg:max-w-md xl:max-w-lg 2xl:max-w-none h-auto home-img"
                 sizes="(max-width: 640px) 280px, (max-width: 768px) 500px, 50vw"
                 priority
               />
@@ -253,11 +251,11 @@ export default function UpdatedHome() {
         whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         viewport={{ once: true, margin: "-100px" }}
-        className="flex flex-col gap-12 lg:gap-16 px-4 lg:px-6 xl:px-8 max-w-[90rem] mx-auto w-full"
+        className="flex flex-col gap-12 lg:gap-16 px-3 px-4-lg:px-6-xl:px-8 max-w-[75rem] mx-auto w-full"
       >
         {/* Burnout */}
         <section className="flex flex-col gap-8 lg:gap-10 justify-center items-center">
-          <h1 className="text-base sm:text-lg lg:text-xl xl:text-2xl tracking-wide font-semibold text-center px-4">
+          <h1 className="font-section-title text-center px-4">
             <span className="text-white relative after:left-0 after:content-[] after:absolute after:bottom-0 after:w-full after:bg-theme after:h-[3px] after:rounded-lg mr-2">
               Burnout
             </span>
@@ -304,7 +302,7 @@ export default function UpdatedHome() {
 
         {/* Thesis */}
         <section className="flex flex-col gap-8 lg:gap-10 px-4">
-          <h1 className="text-lg sm:text-xl lg:text-3xl xl:text-4xl tracking-wide font-semibold text-center">
+          <h1 className="font-section-title text-center">
             Our Founding&nbsp;
             <span className="text-white relative after:left-0 after:content-[] after:absolute after:bottom-0 after:w-full after:bg-theme after:h-[3px] after:rounded-lg">
               Thesis
@@ -313,7 +311,7 @@ export default function UpdatedHome() {
 
           <div className="flex justify-center items-center w-full">
             <div className="flex tracking-wide justify-center lg:justify-center items-center text-center">
-              <p className="w-full text-sm sm:text-base lg:text-lg max-w-[95%] lg:max-w-full">
+              <p className="font-section-desc w-full max-w-[95%] lg:max-w-full">
                 Built by a team of doctors, neuroscientists, and ICF-accredited
                 <br className="hidden lg:block" />
                 resilience coaches, we believe the future of coaching is
@@ -336,7 +334,7 @@ export default function UpdatedHome() {
         whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         viewport={{ once: true, margin: "-100px" }}
-        className="px-4 lg:px-6 xl:px-8 max-w-[90rem] mx-auto w-full"
+        className="px-3 px-4-lg:px-6-xl:px-8 max-w-[75rem] mx-auto w-full"
       >
         <HolisticGrid />
       </motion.section>
@@ -347,10 +345,10 @@ export default function UpdatedHome() {
         whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         viewport={{ once: true, margin: "-100px" }}
-        className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 xl:gap-10 px-4 lg:px-6 xl:px-8 max-w-[90rem] mx-auto w-full"
+        className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 xl:gap-10 px-3 px-4-lg:px-6-xl:px-8 max-w-[75rem] mx-auto w-full"
       >
         <div className="flex flex-col gap-4 lg:gap-6 justify-center text-center lg:text-left items-center lg:items-start px-2">
-          <h1 className="font-semibold text-lg sm:text-xl lg:text-2xl xl:text-4xl tracking-wide leading-tight">
+          <h1 className="font-section-title leading-tight">
             The{" "}
             <span className="text-white relative after:left-0 after:content-[] after:absolute after:bottom-0 after:w-full after:bg-theme after:h-[3px] after:rounded-lg">
               PrescribeLife.AI
@@ -358,7 +356,7 @@ export default function UpdatedHome() {
             <br />
             Platform
           </h1>
-          <p className="text-base sm:text-base lg:text-lg xl:text-xl tracking-wide max-w-[95%] lg:max-w-full">
+          <p className="font-section-desc max-w-[95%] lg:max-w-full">
             Resilience coaching that adapts in real time to evolving
             <br className="hidden lg:block" />
             client needs, powered by{" "}
@@ -389,9 +387,9 @@ export default function UpdatedHome() {
         whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         viewport={{ once: true, margin: "-100px" }}
-        className="flex flex-col gap-8 lg:gap-12 pt-6 lg:pt-10 px-4 lg:px-6 xl:px-8 max-w-[90rem] mx-auto w-full"
+        className="flex flex-col gap-8 lg:gap-12 pt-6 lg:pt-10 px-3 px-4-lg:px-6-xl:px-8 max-w-[75rem] mx-auto w-full"
       >
-        <div className="text-lg sm:text-xl lg:text-2xl xl:text-4xl tracking-wide text-center font-semibold px-2">
+        <div className="font-section-title text-center px-2">
           How <span className="text-white text-gradient">PrescribeLife.AI</span>{" "}
           Works
         </div>
@@ -426,10 +424,10 @@ export default function UpdatedHome() {
                       </div>
                     </div>
                     <div>
-                      <h3 className="text-base sm:text-lg lg:text-xl font-semibold text-white mb-2 lg:mb-3">
+                      <h3 className="font-card-title text-white mb-2 lg:mb-3">
                         {step.title}
                       </h3>
-                      <p className="text-zinc-300 text-xs sm:text-sm lg:text-base leading-relaxed">
+                      <p className="font-card-desc text-zinc-300">
                         {step.description}
                       </p>
                     </div>
@@ -459,15 +457,15 @@ export default function UpdatedHome() {
                   </div>
                 </div>
 
-                <h3 className="text-base sm:text-lg lg:text-xl font-semibold text-white mb-4 lg:mb-6 relative z-10">
+                <h3 className="font-card-title text-white mb-4 lg:mb-6 relative z-10">
                   24/7 Adaptive Coaching Support (Preslie.AI™)
                 </h3>
 
                 <div className="bg-[#FFFFFF1A] border border-white/10 rounded-xl p-4 sm:p-6 mb-4 lg:mb-6 relative z-10">
-                  <h4 className="text-theme font-semibold mb-2 lg:mb-3 text-sm sm:text-base lg:text-lg">
+                  <h4 className="font-card-title text-theme mb-2 lg:mb-3">
                     Who is Preslie.AI™?
                   </h4>
-                  <p className="text-zinc-300 text-xs sm:text-sm lg:text-base leading-relaxed">
+                  <p className="font-card-desc text-zinc-300">
                     Preslie™ is our mobile app & your AI co-pilot—making complex
                     data simple and actionable. It quietly tracks resilience
                     patterns, flags early warning signs, and suggests
@@ -475,7 +473,7 @@ export default function UpdatedHome() {
                   </p>
                 </div>
 
-                <p className="text-white font-medium mb-4 lg:mb-6 leading-relaxed relative z-10 text-xs sm:text-sm lg:text-base">
+                <p className="font-card-desc text-white font-medium mb-4 lg:mb-6 relative z-10">
                   This evidence-based system gives you continuous visibility
                   into a client's mental, physical, and emotional resilience
                   profile.
@@ -485,7 +483,7 @@ export default function UpdatedHome() {
           </FadeRise>
 
           <div className="space-y-3 lg:space-y-4 xl:space-y-6 w-full lg:w-1/2">
-            <div className="text-sm sm:text-base lg:text-lg px-2">
+            <div className="font-card-desc px-2">
               With this clarity, you can
             </div>
             <FadeRise delay={0.2}>
@@ -525,9 +523,7 @@ export default function UpdatedHome() {
                         }
                       ></Brain>
                     </div>
-                    <p className="text-zinc-300 text-xs sm:text-sm lg:text-base leading-relaxed">
-                      {text}
-                    </p>
+                    <p className="font-card-desc text-zinc-300">{text}</p>
                   </div>
                 ))}
               </div>
@@ -543,15 +539,15 @@ export default function UpdatedHome() {
         whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         viewport={{ once: true, margin: "-100px" }}
-        className="flex flex-col space-y-8 lg:space-y-10 px-4 lg:px-6 xl:px-8 max-w-[90rem] mx-auto w-full relative"
+        className="flex flex-col space-y-8 lg:space-y-10 px-3 px-4-lg:px-6-xl:px-8 max-w-[75rem] mx-auto w-full relative"
       >
-        <div className="text-lg sm:text-xl lg:text-2xl xl:text-4xl tracking-wide max-w-6xl mx-auto leading-tight text-center font-semibold px-2">
+        <div className="font-section-title max-w-6xl mx-auto text-center px-2">
           <span className="text-white text-gradient">
             Personalized daily support{" "}
           </span>
           that keeps clients engaged and making progress.
         </div>
-        <div className="w-full h-96 bg-gradient-to-b from-transparent via-black to-black absolute left-0 bottom-0 z-[999] max-lg:hidden"></div>
+        <div className="w-full h-96 bg-gradient-to-b from-transparent via-black to-black absolute left-0 bottom-0 z-[999] max-xl:hidden"></div>
         {/* Mobile Marquee View */}
         <div className="lg:hidden w-full overflow-hidden">
           <Marquee pauseOnHover className="[--duration:25s]">
@@ -667,9 +663,9 @@ export default function UpdatedHome() {
         whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         viewport={{ once: true, margin: "-100px" }}
-        className="flex flex-col items-center justify-start gap-8 lg:gap-10 px-4 lg:px-6 xl:px-8 max-w-[90rem] mx-auto w-full"
+        className="flex flex-col items-center justify-start gap-8 lg:gap-10 px-3 px-4-lg:px-6-xl:px-8 max-w-[75rem] mx-auto w-full"
       >
-        <div className="text-lg sm:text-xl lg:text-2xl xl:text-4xl tracking-wide max-w-6xl leading-tight text-center font-semibold px-2">
+        <div className="font-section-title max-w-6xl text-center px-2">
           Mobile App captures <br />
           <span className="relative text-gradient">Biometric Insights</span> &
           <span className="relative text-gradient">
@@ -677,15 +673,15 @@ export default function UpdatedHome() {
           </span>
         </div>
         <div className="flex items-center justify-center gap-6 lg:gap-8 xl:gap-10 max-lg:flex-col">
-          <section className="flex-1 tracking-wide flex flex-col gap-4 sm:gap-6 lg:gap-10 xl:gap-16 text-sm sm:text-base lg:text-lg items-center lg:items-start mb-6 lg:mb-0 text-center lg:text-left w-full lg:w-1/2">
-            <div className="lg:max-w-xl text-base sm:text-lg lg:text-lg xl:text-xl px-2">
+          <section className="flex-1 tracking-wide flex flex-col gap-4 sm:gap-6 lg:gap-10 xl:gap-16 items-center lg:items-start mb-6 lg:mb-0 text-center lg:text-left w-full lg:w-1/2">
+            <div className="font-section-desc lg:max-w-xl px-2">
               No extra hardware needed-
               <br />
               <p className="relative after:left-0 after:content-[] after:absolute after:bottom-0 after:w-full after:bg-theme after:h-[3px] after:rounded-lg">
                 integrates with major wearables
               </p>
             </div>
-            <div className="text-sm sm:text-sm lg:text-base text-white/80 px-2">
+            <div className="font-section-desc text-white/80 px-2">
               Resilience coaching that adapts in real time to evolving client
               needs, powered by behavioral science and biometric
               precision—because burnout should not be the cost of performance.
@@ -723,16 +719,16 @@ export default function UpdatedHome() {
         whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         viewport={{ once: true, margin: "-100px" }}
-        className="px-4 lg:px-6 xl:px-8 max-w-[90rem] mx-auto w-full"
+        className="px-3 px-4-lg:px-6-xl:px-8 max-w-[75rem] mx-auto w-full"
       >
         <div className="py-12 lg:py-16">
           {/* Header */}
           <div className="text-center mb-10 lg:mb-12 xl:mb-20 px-2">
-            <h1 className="text-lg sm:text-xl lg:text-2xl xl:text-4xl tracking-wide font-bold mb-4 lg:mb-6 xl:mb-8">
+            <h1 className="font-section-title mb-4 lg:mb-6 xl:mb-8">
               <span className="text-white text-gradient"> Your </span>
               <span>Coaching Portal</span>
             </h1>
-            <p className="text-base sm:text-lg lg:text-xl xl:text-2xl tracking-wide font-medium">
+            <p className="font-section-desc">
               A 360° view of every client's resilience and communication in one
               place.
             </p>
@@ -766,9 +762,7 @@ export default function UpdatedHome() {
                     />
                   ))}
 
-                  <p className="text-zinc-300 text-xs sm:text-sm lg:text-base leading-relaxed">
-                    {text}
-                  </p>
+                  <p className="font-card-desc text-zinc-300">{text}</p>
                 </div>
               ))}
             </div>
@@ -790,10 +784,10 @@ export default function UpdatedHome() {
         whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         viewport={{ once: true, margin: "-100px" }}
-        className="flex flex-col gap-12 lg:gap-16 xl:gap-20 px-4 lg:px-6 xl:px-8 max-w-[90rem] mx-auto w-full"
+        className="flex flex-col gap-12 lg:gap-16 xl:gap-20 px-3 px-4-lg:px-6-xl:px-8 max-w-[75rem] mx-auto w-full"
       >
         <div className="flex items-center justify-center px-2">
-          <div className="text-center text-lg sm:text-xl lg:text-2xl xl:text-4xl tracking-wide font-semibold max-w-5xl">
+          <div className="font-section-title text-center max-w-5xl">
             Trusted by Performance Coaches Behind Today's{" "}
             <span className="text-white text-gradient">
               Most Influential Leaders{" "}
@@ -813,9 +807,9 @@ export default function UpdatedHome() {
         whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         viewport={{ once: true, margin: "-100px" }}
-        className="flex flex-col items-center space-y-6 lg:space-y-8 px-4 lg:px-6 xl:px-8 max-w-[90rem] mx-auto w-full"
+        className="flex flex-col items-center space-y-6 lg:space-y-8 px-3 px-4-lg:px-6-xl:px-8 max-w-[75rem] mx-auto w-full"
       >
-        <div className="text-center text-base sm:text-lg lg:text-xl xl:text-2xl 2xl:text-4xl tracking-wide font-semibold max-w-5xl px-2">
+        <div className="font-section-title text-center max-w-5xl px-2">
           <span className="text-white text-gradient">PrescribeLife.AI </span>
           is simple to set up for 1-1, group or team coaching.
         </div>
@@ -848,15 +842,11 @@ export default function UpdatedHome() {
                   }
                   className="text-theme"
                 />
-                <h3 className="mt-3 sm:mt-4 text-base sm:text-lg lg:text-xl xl:text-2xl tracking-wide font-semibold text-white">
+                <h3 className="font-card-title mt-3 sm:mt-4 text-white">
                   {step.title}
                 </h3>
-                <p className="text-xs sm:text-sm lg:text-base xl:text-lg tracking-wide inter">
-                  {step.description}
-                </p>
-                <p className="text-xs sm:text-sm lg:text-base xl:text-lg tracking-wide font-medium inter">
-                  {step.subtitle}
-                </p>
+                <p className="font-card-desc">{step.description}</p>
+                <p className="font-card-desc font-medium">{step.subtitle}</p>
               </HoverGlowContainer>
             </FadeRise>
           ))}
@@ -869,11 +859,11 @@ export default function UpdatedHome() {
         whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         viewport={{ once: true, margin: "-100px" }}
-        className="flex flex-col items-center gap-10 lg:gap-12 xl:gap-16 px-4 lg:px-6 xl:px-8 max-w-[90rem] mx-auto w-full"
+        className="flex flex-col items-center gap-10 lg:gap-12 xl:gap-16 px-3 px-4-lg:px-6-xl:px-8 max-w-[75rem] mx-auto w-full"
       >
         <FadeRise>
           <div className="max-w-5xl space-y-6 lg:space-y-8 xl:space-y-10 px-2">
-            <div className="text-lg sm:text-xl lg:text-2xl xl:text-4xl tracking-wide text-center leading-tight">
+            <div className="font-section-title text-center">
               Built on <span className="text-white text-gradient"> 8M+ </span>
               days of behavioral data and
               <span className="text-white relative after:left-0 after:content-[] after:absolute after:bottom-0 after:w-full after:bg-theme after:h-[3px] after:rounded-lg">
@@ -882,14 +872,12 @@ export default function UpdatedHome() {
               </span>
               validated assessment models.
             </div>
-            <div className="text-base sm:text-base lg:text-lg tracking-wide text-center">
+            <div className="font-section-desc text-center">
               We combine behavioral science and biometric data to measure what
               truly drives resilience and performance — powered by trusted
               integrations like Garmin, Apple Health, Google Fit, and more.
             </div>
-            <h1 className="text-base sm:text-lg lg:text-xl xl:text-2xl tracking-wide font-semibold text-center">
-              Powered by
-            </h1>
+            <h1 className="font-card-title text-center">Powered by</h1>
           </div>
         </FadeRise>
         {/* Desktop Grid View */}
@@ -999,9 +987,9 @@ export default function UpdatedHome() {
         whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         viewport={{ once: true, margin: "-100px" }}
-        className="flex items-center justify-center px-4 lg:px-6 xl:px-8 max-w-[90rem] mx-auto w-full"
+        className="flex items-center justify-center px-3 px-4-lg:px-6-xl:px-8 max-w-[75rem] mx-auto w-full"
       >
-        <div className="text-center text-lg sm:text-xl lg:text-2xl xl:text-4xl tracking-wide font-semibold max-w-6xl px-2">
+        <div className="font-section-title text-center max-w-6xl px-2">
           Meet the rising demand for{" "}
           <span className="text-white relative after:left-0 after:content-[] after:absolute after:bottom-0 after:w-full after:bg-theme after:h-[3px] after:rounded-lg">
             resilience-focused
@@ -1016,22 +1004,22 @@ export default function UpdatedHome() {
         whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         viewport={{ once: true, margin: "-100px" }}
-        className="relative flex flex-col lg:flex-row xl:flex-row items-center justify-center gap-6 lg:gap-8 xl:gap-16 px-4 lg:px-6 xl:px-8 max-w-[90rem] mx-auto w-full"
+        className="relative flex flex-col lg:flex-row xl:flex-row items-center justify-center gap-6 lg:gap-8 xl:gap-16 px-3 px-4-lg:px-6-xl:px-8 max-w-[75rem] mx-auto w-full"
       >
         {/* White Curve Card */}
         <FadeRise className="bg-white text-black rounded-full p-6 sm:p-8 flex flex-col items-center justify-center relative overflow-hidden w-[280px] h-[280px] sm:w-[350px] sm:h-[350px] lg:w-[400px] lg:h-[400px] xl:w-[500px] xl:h-[500px] shrink-0">
-          <h2 className="text-base sm:text-lg lg:text-xl tracking-wide font-semibold text-center leading-tight mb-3 sm:mb-4 px-2">
+          <h2 className="font-card-title text-center mb-3 sm:mb-4 px-2">
             Amplify your Impact & Grow Your Practice.
           </h2>
           <a
             href="/booking"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-gradient-to-r from-theme to-pink-600 text-white font-semibold px-4 sm:px-6 py-2 sm:py-3 rounded-full text-xs sm:text-sm lg:text-base shadow-xl hover:shadow-2xl transition-all mb-3 sm:mb-4 text-center"
+            className="font-cta bg-gradient-to-r from-theme to-pink-600 text-white font-semibold px-4 sm:px-6 py-2 sm:py-3 rounded-full shadow-xl hover:shadow-2xl transition-all mb-3 sm:mb-4 text-center"
           >
             Book a Personalized Demo Call
           </a>
-          <p className="text-xs sm:text-xs lg:text-sm text-zinc-600 text-center tracking-wide inter px-2">
+          <p className="font-card-desc text-zinc-600 text-center px-2">
             Projected potential ROI of 5x to 10x minimum
           </p>
         </FadeRise>
@@ -1047,7 +1035,7 @@ export default function UpdatedHome() {
               key={i}
               className="bg-gradient-to-b from-zinc-950 to-black border border-white/20 rounded-3xl px-4 py-5 sm:px-6 sm:py-6 lg:px-8 lg:py-8 relative w-full max-w-sm lg:max-w-md xl:max-w-lg transition-all"
             >
-              <p className="text-sm sm:text-base lg:text-lg text-center tracking-wide leading-relaxed text-white">
+              <p className="font-card-desc text-center text-white">
                 <span className="relative after:left-0 after:content-[] after:absolute after:-bottom-1 after:w-full after:bg-theme after:h-[2px] after:rounded-lg">
                   {t.split(" ")[0]}
                 </span>{" "}
@@ -1063,7 +1051,7 @@ export default function UpdatedHome() {
         whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         viewport={{ once: true, margin: "-100px" }}
-        className="px-4 lg:px-6 xl:px-8 max-w-[90rem] mx-auto w-full"
+        className="px-3 px-4-lg:px-6-xl:px-8 max-w-[75rem] mx-auto w-full"
       >
         <Image
           src="/security.png"
@@ -1089,7 +1077,7 @@ export default function UpdatedHome() {
         transition={{ duration: 0.8, ease: "easeOut" }}
         viewport={{ once: true, margin: "-100px" }}
         id="faq"
-        className="px-4 lg:px-6 xl:px-8 max-w-[90rem] mx-auto w-full mb-12 lg:mb-16"
+        className="px-3 px-4-lg:px-6-xl:px-8 max-w-[75rem] mx-auto w-full mb-12 lg:mb-16"
       >
         <FAQ></FAQ>
       </motion.div>

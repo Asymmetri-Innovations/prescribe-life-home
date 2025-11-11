@@ -52,7 +52,7 @@ export default function TestimonialsSection() {
   return (
     <section className="flex flex-col items-center gap-6 md:gap-8 lg:gap-10 overflow-hidden px-4 md:px-6">
       <FadeRise>
-        <div className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl text-center font-medium px-2">
+        <div className="font-section-title text-center px-2">
           What Other <span className="text-gradient">Coaches</span> Are Saying
         </div>
       </FadeRise>
@@ -60,15 +60,15 @@ export default function TestimonialsSection() {
       <Marquee pauseOnHover className="[--duration:25s] overflow-x-hidden">
         {testimonials.map((testimonial, i) => (
           <div key={i} className="bg-gradient-to-b from-zinc-800 to-zinc-900 w-72 sm:w-80 md:w-96 min-h-[200px] sm:h-56 p-4 sm:p-5 md:p-6 rounded-2xl border border-white/10 flex flex-col justify-between gap-3 md:gap-4">
-            <p className="text-white text-xs sm:text-sm md:text-base leading-relaxed">
+            <p className="font-card-desc text-white">
               "{testimonial.quote}"
             </p>
             <div className="flex items-center gap-2 sm:gap-3 mt-1 sm:mt-2">
               <div>
-                <h4 className="text-white font-semibold text-xs sm:text-sm">
+                <h4 className="font-card-desc text-white font-semibold">
                   {testimonial.name}
                 </h4>
-                <p className="text-zinc-400 text-[10px] sm:text-xs">
+                <p className="font-card-desc text-zinc-400">
                   {testimonial.title}, {testimonial.location}
                 </p>
               </div>
@@ -78,7 +78,7 @@ export default function TestimonialsSection() {
       </Marquee>
 
       <FadeRise delay={0.25}>
-        <div className="text-sm sm:text-base md:text-lg text-center tracking-wide px-4">
+        <div className="font-section-desc text-center px-4">
           Let us show you how to multiply your revenue, not your workload.
         </div>
       </FadeRise>
