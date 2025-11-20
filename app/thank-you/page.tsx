@@ -5,7 +5,22 @@ import { Newsletter } from "@/components/Newsletter";
 
 export default function ConfirmationPage() {
   return (
-    <main className="relative overflow-hidden max-w-full min-w-0 px-4 max-md:px-2">
+    <main className="relative overflow-hidden max-w-full min-w-0 px-4 max-lg:max-w-3xl max-lg:mx-auto max-lg:px-3 h-screen">
+      {/* Desktop first */}
+      <div
+        className="
+      max-w-5xl mx-auto px-18 text-4xl 
+      max-md:max-w-2xl max-md:px-6 max-md:text-xl
+      "
+      ></div>
+      {/* Mobile first */}
+      <div
+        className="
+      md:max-w-5xl md:mx-auto md:px-18 md:text-4xl 
+      max-w-2xl px-6 text-xl
+      "
+      ></div>
+
       {/* Background */}
       <Image
         className="absolute inset-0 w-full h-full object-cover animate-slow-rotate scale-110 z-[-1]"
@@ -19,7 +34,58 @@ export default function ConfirmationPage() {
       {/* HERO (Confirmation) */}
       <section
         id="hero"
-        className="min-h-screen flex flex-col items-center justify-center px-6 max-md:px-4"
+        className="min-h-screen flex flex-col items-center justify-center px-6 max-md:px-4 max-md:hidden"
+      >
+        <motion.div
+          initial={{ y: 32, filter: "blur(6px)", opacity: 0 }}
+          animate={{ y: 0, filter: "blur(0px)", opacity: 1 }}
+          transition={{ duration: 1, delay: 0.45 }}
+          className="w-full"
+        >
+          <div className="flex flex-col items-center text-center space-y-6 max-md:space-y-4">
+            <motion.h1
+              className="text-6xl max-md:text-4xl font-medium text-white"
+              initial={{ y: 30, filter: "blur(4px)", opacity: 0 }}
+              animate={{ y: 0, filter: "blur(0px)", opacity: 1 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+            >
+              <span className="text-gradient">Thanks for confirming!</span>
+            </motion.h1>
+
+            <motion.p
+              className="text-lg max-md:text-base text-zinc-300 max-w-2xl leading-relaxed"
+              initial={{ y: 24, filter: "blur(4px)", opacity: 0 }}
+              animate={{ y: 0, filter: "blur(0px)", opacity: 1 }}
+              transition={{ duration: 0.75, delay: 0.15, ease: "easeOut" }}
+            >
+              Your Platform preview call is all set. Keep an eye on your inbox
+              for the confirmation and details about the meeting. We’ll send you
+              some reminders as the date gets closer. <br />
+              <br />
+              If you have any questions before then, just shoot an email to{" "}
+              <a
+                href="mailto:team@prescribelife.ai"
+                className="text-theme underline"
+              >
+                team@prescribelife.ai
+              </a>
+              .
+            </motion.p>
+
+            <motion.p
+              className="text-theme font-semibold text-xl"
+              initial={{ y: 20, filter: "blur(4px)", opacity: 0 }}
+              animate={{ y: 0, filter: "blur(0px)", opacity: 1 }}
+              transition={{ duration: 0.7, delay: 0.3 }}
+            >
+              Looking forward to chatting with you!
+            </motion.p>
+          </div>
+        </motion.div>
+      </section>
+      <section
+        id="hero"
+        className="min-h-screen flex-col items-center justify-center px-6 max-md:px-4 hidden max-md:flex"
       >
         <motion.div
           initial={{ y: 32, filter: "blur(6px)", opacity: 0 }}

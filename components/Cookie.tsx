@@ -46,9 +46,9 @@ export default function Cookie() {
               <p className="text-sm text-white/90 leading-relaxed md:flex-1">
                 We use cookies to enhance your experience, analyze traffic, and
                 improve our services. By clicking "Accept," you agree to our use
-                of cookies. See our{" "}
+                of cookies. See our &nbsp;{" "}
                 <a
-                  href="/privacy"
+                  href="/policies"
                   className="underline underline-offset-4 hover:text-white"
                 >
                   Privacy Policy

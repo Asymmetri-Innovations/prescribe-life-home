@@ -629,3 +629,13 @@ html {
     font-size: 1rem; /* 16px */
   }
 }
+
+/* 2560 x 1440 */
+@media (min-width: 2560px) and (min-height: 1440px) {
+  #hero {
+    max-width: 100rem !important;
+  }
+  .blob {
+    width: 100rem !important;
+  }
+}

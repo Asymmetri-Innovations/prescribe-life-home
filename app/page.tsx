@@ -192,7 +192,7 @@ export default function UpdatedHome() {
           initial={{ y: 32, filter: "blur(6px)", opacity: 0 }}
           animate={{ y: 0, filter: "blur(0px)", opacity: 1 }}
           transition={{ duration: 1, delay: 0.45 }}
-          className="w-full flex justify-center items-center relative z-10 flex-1 max-lg:flex-col max-lg:gap-10 md:gap-12 lg:gap-8 pt-16"
+          className="w-full flex justify-center items-center relative z-10 flex-1 max-lg:flex-col max-lg:gap-10 md:gap-12 lg:gap-8 pt-16 container-for-sm"
         >
           <div className="flex flex-col lg:flex-row items-center justify-center gap-8 sm:gap-10 md:gap-14 lg:gap-12 xl:gap-16 w-full home-hero">
             {/* Left Text */}
@@ -671,7 +671,8 @@ export default function UpdatedHome() {
       >
         <div className="font-section-title max-w-6xl text-center px-2">
           Mobile App captures <br />
-          <span className="relative text-gradient">Biometric Insights</span> &
+          <span className="relative text-gradient">Biometric Insights</span>
+          <p>&</p>
           <span className="relative text-gradient">
             Key Resilience Indicators
           </span>
