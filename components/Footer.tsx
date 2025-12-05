@@ -53,9 +53,7 @@ export default function Footer() {
 
           {/* Company */}
           <div className="space-y-3 md:space-y-4">
-            <h3 className="font-card-title text-white/40">
-              Company
-            </h3>
+            <h3 className="font-card-title text-white/40">Company</h3>
             <ul className="space-y-2 md:space-y-3">
               <li>
                 <a
@@ -88,9 +86,7 @@ export default function Footer() {
 
           {/* Solutions */}
           <div className="space-y-3 md:space-y-4">
-            <h3 className="font-card-title text-white/40">
-              Solutions
-            </h3>
+            <h3 className="font-card-title text-white/40">Solutions</h3>
             <ul className="space-y-2 md:space-y-3">
               <li>
                 <a
@@ -121,9 +117,7 @@ export default function Footer() {
 
           {/* Resources */}
           <div className="space-y-3 md:space-y-4">
-            <h3 className="font-card-title text-white/40">
-              Resources
-            </h3>
+            <h3 className="font-card-title text-white/40">Resources</h3>
             <ul className="space-y-2 md:space-y-3">
               <li>
                 <a
@@ -153,10 +147,8 @@ export default function Footer() {
           </div>
 
           {/* Legal */}
-          <div className="space-y-3 md:space-y-4">
-            <h3 className="font-card-title text-white/40">
-              Legal
-            </h3>
+          <div className="space-y-3 md:space-y-4 hidden">
+            <h3 className="font-card-title text-white/40">Legal</h3>
             <ul className="space-y-2 md:space-y-3">
               <li>
                 <a
