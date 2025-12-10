@@ -6,7 +6,7 @@ import {
   useMotionValueEvent,
   useScroll,
   AnimatePresence,
-} from "framer-motion";
+} from "motion/react";
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 
