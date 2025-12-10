@@ -204,7 +204,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="flex flex-col md:flex-row items-center md:items-start justify-between w-full pt-8 border-t border-zinc-800 gap-4">
+        <div className="flex flex-col md:flex-row items-center md:items-start justify-between w-full pt-8 border-t border-zinc-800 gap-4 hidden">
           <div className="flex items-center gap-3 tracking-wide font-card-desc text-zinc-400">
             <a
               target="_blank"
