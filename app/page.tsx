@@ -203,11 +203,9 @@ export default function UpdatedHome() {
                 animate={{ y: 0, filter: "blur(0px)", opacity: 1 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
               >
-                <span>Set the new standard in</span>
+                <span>Resilience coaching</span>
                 <br className="" />
-                <span className="text-gradient capitalize">
-                  performance coaching
-                </span>
+                <span className="text-gradient capitalize">Made Simple</span>
               </motion.h1>
 
               <motion.p
@@ -216,9 +214,17 @@ export default function UpdatedHome() {
                 animate={{ y: 0, filter: "blur(0px)", opacity: 1 }}
                 transition={{ duration: 0.75, delay: 0.15, ease: "easeOut" }}
               >
-                Resilience coaching that adapts in real time to evolving client
-                needs, powered by behavioral science and biometric
-                precision—because burnout should not be the cost of performance.
+                Help clients adopt foundational Resilience Habits and Gain a
+                360° view of their wellbeing and behavior With personalized,
+                AI-adapted support between sessions
+              </motion.p>
+              <motion.p
+                className="font-hero-desc text-muted-foreground max-w-xl lg:max-w-full"
+                initial={{ y: 24, filter: "blur(4px)", opacity: 0 }}
+                animate={{ y: 0, filter: "blur(0px)", opacity: 1 }}
+                transition={{ duration: 0.75, delay: 0.15, ease: "easeOut" }}
+              >
+                ...That keeps them engaged and performing at their best.
               </motion.p>
 
               <motion.div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto justify-center lg:justify-start mt-2 max-lg:hidden">
