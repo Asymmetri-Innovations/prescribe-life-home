@@ -235,7 +235,7 @@ export default function UpdatedHome() {
             {/* Right Image */}
             <div className="flex w-full lg:w-1/2 items-center justify-center order-2 lg:order-2 home-hero_1">
               <Image
-                src="/result.png"
+                src="/hero.svg"
                 width={900}
                 height={900}
                 alt="platform"
@@ -376,11 +376,11 @@ export default function UpdatedHome() {
         </div>
         <div className="flex justify-center lg:justify-between items-center">
           <Image
-            src={"/360view.png"}
+            src={"/overview.jpg"}
             height={800}
             width={800}
             alt="360View"
-            className="w-full max-w-sm sm:max-w-md lg:max-w-xl xl:max-w-none h-auto"
+            className="w-full max-w-sm sm:max-w-md lg:max-w-xl xl:max-w-none h-auto rounded-xl"
             sizes="(max-width: 768px) 90vw, 50vw"
           />
         </div>
@@ -716,7 +716,7 @@ export default function UpdatedHome() {
               />
             ))}
             <img
-              src={"/biometric-insight.png"}
+              src={"/vitals.png"}
               className="h-auto w-full max-w-[200px] sm:max-w-xs z-[999]"
               alt="phone"
             />
@@ -781,9 +781,9 @@ export default function UpdatedHome() {
             {/* Right side - Dashboard mockup */}
             <div className="relative flex justify-center lg:justify-start">
               <img
-                src="/computer.png"
+                src="/progress.jpg"
                 alt="Coaching Portal Dashboard"
-                className="w-full max-w-sm sm:max-w-md lg:max-w-xl xl:max-w-none h-auto"
+                className="w-full max-w-sm sm:max-w-md lg:max-w-xl xl:max-w-none h-auto rounded-xl"
               />
             </div>
           </div>
