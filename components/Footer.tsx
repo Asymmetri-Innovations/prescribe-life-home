@@ -131,19 +131,7 @@ export default function Footer() {
               </li>
             </ul>
           </div>
-          <div className="space-y-3 md:space-y-4">
-            <h3 className="font-card-title text-white/40">Social</h3>
-            <ul className="space-y-2 md:space-y-3">
-              <li>
-                <a
-                  href="https://www.linkedin.com/company/prescribelifeai/"
-                  className="font-card-desc text-white hover:text-theme transition-colors"
-                >
-                  Linkedin
-                </a>
-              </li>
-            </ul>
-          </div>
+
           {/* Legal */}
 
           <div className="space-y-3 md:space-y-4 ">
@@ -165,6 +153,19 @@ export default function Footer() {
                   className="font-card-desc text-white hover:text-theme transition-colors"
                 >
                   Terms of Use
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div className="space-y-3 md:space-y-4">
+            <h3 className="font-card-title text-white/40">Social</h3>
+            <ul className="space-y-2 md:space-y-3">
+              <li>
+                <a
+                  href="https://www.linkedin.com/company/prescribelifeai/"
+                  className="font-card-desc text-white hover:text-theme transition-colors"
+                >
+                  Linkedin
                 </a>
               </li>
             </ul>
