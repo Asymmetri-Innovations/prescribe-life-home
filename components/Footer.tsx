@@ -219,7 +219,7 @@ export default function Footer() {
               href="https://sites.google.com/asymmetri.in/prescribe-life-policies/home"
               className="hover:text-white transition-colors"
             >
-              Terms of Use
+              Terms & Conditions
             </a>
           </div>
 
