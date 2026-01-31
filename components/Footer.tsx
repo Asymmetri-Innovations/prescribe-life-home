@@ -85,31 +85,25 @@ export default function Footer() {
           </div>
 
           {/* Solutions */}
-          <div className="space-y-3 md:space-y-4">
-            <h3 className="font-card-title text-white/40">Solutions</h3>
+          <div className="space-y-3 md:space-y-4 hidden">
+            <h3 className="font-card-title text-white/40">Legal</h3>
             <ul className="space-y-2 md:space-y-3">
               <li>
                 <a
-                  href="#"
+                  target="_blank"
+                  href="https://sites.google.com/asymmetri.in/prescribe-life-policies/home"
                   className="font-card-desc text-white hover:text-theme transition-colors"
                 >
-                  For Coaches
+                  Privacy Policy
                 </a>
               </li>
               <li>
                 <a
-                  href="#"
+                  target="_blank"
+                  href="https://sites.google.com/asymmetri.in/prescribe-life-policies/home"
                   className="font-card-desc text-white hover:text-theme transition-colors"
                 >
-                  For Clients
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="font-card-desc text-white hover:text-theme transition-colors"
-                >
-                  How It Works
+                  Terms of Use
                 </a>
               </li>
             </ul>
@@ -135,19 +129,24 @@ export default function Footer() {
                   Book a Demo
                 </a>
               </li>
+            </ul>
+          </div>
+          <div className="space-y-3 md:space-y-4">
+            <h3 className="font-card-title text-white/40">Social</h3>
+            <ul className="space-y-2 md:space-y-3">
               <li>
                 <a
-                  href="#"
+                  href="https://www.linkedin.com/company/prescribelifeai/"
                   className="font-card-desc text-white hover:text-theme transition-colors"
                 >
-                  Newsletter
+                  Linkedin
                 </a>
               </li>
             </ul>
           </div>
-
           {/* Legal */}
-          <div className="space-y-3 md:space-y-4 hidden">
+
+          <div className="space-y-3 md:space-y-4 ">
             <h3 className="font-card-title text-white/40">Legal</h3>
             <ul className="space-y-2 md:space-y-3">
               <li>
@@ -162,7 +161,7 @@ export default function Footer() {
               <li>
                 <a
                   target="_blank"
-                  href="https://sites.google.com/asymmetri.in/prescribe-life-policies/home"
+                  href="https://sites.google.com/asymmetri.in/prescribe-life-policies/terms-and-conditions"
                   className="font-card-desc text-white hover:text-theme transition-colors"
                 >
                   Terms of Use
@@ -173,7 +172,7 @@ export default function Footer() {
         </div>
 
         {/* Social icons row */}
-        <div className="pt-2 pb-8">
+        <div className="pt-2 pb-8 hidden">
           <div className="flex items-center gap-4">
             <a
               href="#"
@@ -224,7 +223,7 @@ export default function Footer() {
           </div>
 
           <p className="font-card-desc text-zinc-500 tracking-wide md:text-right w-full md:w-auto">
-            © 2025 Prescribe Life. All rights reserved.
+            © 2025 PrescribeLife.AI. All rights reserved.
           </p>
         </div>
 
