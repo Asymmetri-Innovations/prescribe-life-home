@@ -250,6 +250,10 @@ export default function Footer() {
           </p>
         </div> */}
       </div>
+      <div className="text-center text-white/50 text-sm">
+        PrescribeLife.AI / Preslie is a coaching support platform and does not
+        provide medical, clinical, or diagnostic advice.
+      </div>
     </footer>
   );
 }
