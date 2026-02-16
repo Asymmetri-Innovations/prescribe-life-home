@@ -203,10 +203,10 @@ export default function UpdatedHome() {
                 animate={{ y: 0, filter: "blur(0px)", opacity: 1 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
               >
-                The performance intelligence platform <br />
-                Built for leadership coaches <br />
-                <p className="text-2xl my-3">
-                  Powered by Resilience data and behavioral change
+                The Performance Intelligence Platform <br />
+                Built for Leadership Coaches <br />
+                <p className="text-2xl my-3 ">
+                  Powered by Resilience Data and Behavioral Change
                 </p>
               </motion.h1>
 
