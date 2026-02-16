@@ -8,7 +8,7 @@ export default function CTA({ classname, titleText }: Props) {
       href="/booking"
       target="_blank"
       rel="noopener noreferrer"
-      className={`${classname} flex items-center justify-center relative group bg-gradient-to-r from-theme to-pink-600 text-white font-medium px-5 sm:px-6 md:px-8 py-2 sm:py-2.5 md:py-3 rounded-full shadow-lg hover:shadow-theme/30 transition-all border sm:border-2 border-white`}
+      className={`${classname} flex items-center justify-center relative group bg-white text-black font-medium px-5 sm:px-6 md:px-8 py-2 sm:py-2.5 md:py-3 rounded-full shadow-lg hover:shadow-theme/30 transition-all border sm:border-2 `}
     >
       <span className="relative z-10 text-sm sm:text-base whitespace-nowrap">
         {titleText ? `${titleText}` : "Request a Demo Call"}

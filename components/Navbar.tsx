@@ -43,7 +43,7 @@ export default function Navbar() {
 
   return (
     <motion.div
-      className={`fixed top-2 sm:top-3 left-1/2 -translate-x-1/2 rounded-xl sm:rounded-2xl p-1.5 md:p-2 lg:p-3 bg-gradient-to-r from-white/16 via-white/10 to-white/20 border-[0.5px] border-white/30 backdrop-blur-lg flex items-center justify-between text-sm font-semibold z-[99999] duration-300 w-[calc(100%-1rem)] sm:w-[calc(100%-2rem)] lg:w-full max-w-[75rem] navbar ${
+      className={`fixed top-2 sm:top-3 left-1/2 -translate-x-1/2 rounded-xl sm:rounded-2xl p-1.5 md:p-2 lg:p-3 bg-gradient-to-r from-white/16 via-white/10 to-white/20 border-[0.5px] border-white/30 backdrop-blur-lg flex items-center justify-between text-sm font-semibold z-[99999] duration-300 w-[calc(100%-1rem)] sm:w-[calc(100%-2rem)] lg:w-full max-w-[85rem] //  navbar ${
         hidden ? "-translate-y-full" : "translate-y-0"
       }`}
       initial={{ y: -20, filter: "blur(8px)", opacity: 0 }}
@@ -109,7 +109,7 @@ export default function Navbar() {
           href="/booking"
           target="_blank"
           rel="noopener noreferrer"
-          className="font-cta hidden lg:inline-flex bg-gradient-to-r from-theme to-pink-600 rounded-full py-1.5 px-3 lg:py-2 lg:px-4 text-white whitespace-nowrap"
+          className="font-cta hidden lg:inline-flex bg-white rounded-full py-1.5 px-3 lg:py-2 lg:px-4 text-black whitespace-nowrap"
           initial={{ y: -10, filter: "blur(6px)", opacity: 0 }}
           animate={{ y: 0, filter: "blur(0px)", opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.3, ease: "easeOut" }}

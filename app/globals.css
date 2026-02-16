@@ -475,7 +475,7 @@ html {
   line-height: 1.1;
   letter-spacing: -0.02em;
   /* Mobile: Base size */
-  font-size: 2rem; /* 32px */
+  font-size: 1rem; /* 32px */
 }
 
 @media (min-width: 768px) {
@@ -488,7 +488,7 @@ html {
 @media (min-width: 1024px) {
   .font-hero-title {
     /* Desktop */
-    font-size: 3.75rem; /* 64px */
+    font-size: 2.6rem; /* 64px */
   }
 }
 
@@ -596,14 +596,14 @@ html {
 @media (min-width: 768px) {
   .font-hero-desc {
     /* Tablet */
-    font-size: 1.125rem; /* 18px */
+    font-size: 1rem; /* 18px */
   }
 }
 
 @media (min-width: 1024px) {
   .font-hero-desc {
     /* Desktop */
-    font-size: 1.125rem; /* 18px */
+    font-size: 1rem; /* 18px */
   }
 }
 

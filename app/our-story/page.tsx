@@ -122,7 +122,7 @@ export default function BookingPage() {
           initial={{ y: 32, filter: "blur(6px)", opacity: 0 }}
           animate={{ y: 0, filter: "blur(0px)", opacity: 1 }}
           transition={{ duration: 1, delay: 0.45 }}
-          className="flex flex-col pt-16 md:pt-20 lg:pt-6 px-4 md:px-6 lg:px-8 max-w-[75rem] mx-auto w-full relative"
+          className="flex flex-col pt-16 md:pt-20 lg:pt-6 px-4 md:px-6 lg:px-8 max-w-[85rem] //  mx-auto w-full relative"
         >
           <FadeRise
             delay={0.05}
@@ -207,7 +207,7 @@ export default function BookingPage() {
         viewport={{ once: true, margin: "-100px" }}
         className="flex flex-col items-center justify-center pb-10 md:pb-14 lg:pb-16 bg-black"
       >
-        <div className="px-4 md:px-6 lg:px-8 max-w-[75rem] mx-auto w-full">
+        <div className="px-4 md:px-6 lg:px-8 max-w-[85rem] //  mx-auto w-full">
           <FadeRise>
             <h2 className="font-section-title text-white text-center mb-8 md:mb-10 lg:mb-12 px-2 max-md:pt-6">
               The question that changed everything
@@ -265,7 +265,7 @@ export default function BookingPage() {
         viewport={{ once: true, margin: "-100px" }}
         className="flex flex-col items-center justify-center py-8 md:py-10 lg:py-14 gap-6 md:gap-8 bg-black"
       >
-        <div className="px-4 md:px-6 lg:px-8 max-w-[75rem] mx-auto w-full">
+        <div className="px-4 md:px-6 lg:px-8 max-w-[85rem] //  mx-auto w-full">
           <FadeRise>
             <section className="flex flex-col justify-center items-center">
               <FadeRise>
@@ -328,7 +328,7 @@ export default function BookingPage() {
           }}
         />
         <div className="absolute inset-0 z-[-1] bg-black opacity-75" />
-        <div className="px-4 md:px-6 lg:px-8 max-w-[75rem] mx-auto w-full">
+        <div className="px-4 md:px-6 lg:px-8 max-w-[85rem] //  mx-auto w-full">
           <FadeRise className="flex flex-col items-center justify-center space-y-6 md:space-y-8 lg:space-y-10">
             <h2 className="font-section-title text-white text-center px-2">
               This Is the Future of <br />
@@ -348,7 +348,7 @@ export default function BookingPage() {
               href="/booking"
               target="_blank"
               rel="noopener noreferrer"
-              className="font-cta relative group bg-gradient-to-r from-theme to-pink-600 text-white font-medium px-5 sm:px-6 py-2 rounded-full shadow-lg hover:shadow-theme/30 transition-all"
+              className="font-cta relative group bg-white text-black font-medium px-5 sm:px-6 py-2 rounded-full shadow-lg hover:shadow-theme/30 transition-all"
             >
               <span className="relative z-10">Request a Demo Call</span>
               <span className="absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition-opacity bg-white/10" />
@@ -365,7 +365,7 @@ export default function BookingPage() {
         viewport={{ once: true, margin: "-100px" }}
         className="py-6 md:py-8 lg:py-10 bg-black text-center"
       >
-        <div className="px-4 md:px-6 lg:px-8 max-w-[75rem] mx-auto w-full">
+        <div className="px-4 md:px-6 lg:px-8 max-w-[85rem] //  mx-auto w-full">
           <FadeRise>
             <div className="max-w-4xl mx-auto px-2">
               <h2 className="font-section-title text-white">
@@ -392,7 +392,7 @@ export default function BookingPage() {
         viewport={{ once: true, margin: "-100px" }}
         className="py-2 md:py-3 lg:py-6 bg-black"
       >
-        <div className="px-4 md:px-6 lg:px-8 max-w-[75rem] mx-auto w-full">
+        <div className="px-4 md:px-6 lg:px-8 max-w-[85rem] //  mx-auto w-full">
           <div className="max-w-4xl mx-auto">
             <FadeRise>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8 items-center">
@@ -442,7 +442,7 @@ export default function BookingPage() {
         viewport={{ once: true, margin: "-100px" }}
         className="py-2 md:py-3 lg:py-4 bg-black"
       >
-        <div className="px-4 md:px-6 lg:px-8 max-w-[75rem] mx-auto w-full">
+        <div className="px-4 md:px-6 lg:px-8 max-w-[85rem] //  mx-auto w-full">
           <div className="max-w-4xl mx-auto">
             <FadeRise>
               <AvatarStack className="justify-center">

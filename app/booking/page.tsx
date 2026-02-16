@@ -208,7 +208,7 @@ export default function BookingPage() {
             <div className="mt-8 max-md:mt-4 sm:mt-10 flex justify-center">
               <button
                 onClick={scrollToCalendly}
-                className="flex items-center justify-center relative group bg-gradient-to-r from-theme to-pink-600 text-white font-medium px-8 py-3 rounded-full shadow-lg hover:shadow-theme/30 transition-all cursor-pointer"
+                className="flex items-center justify-center relative group bg-white text-black font-medium px-8 py-3 rounded-full shadow-lg hover:shadow-theme/30 transition-all cursor-pointer"
               >
                 <span className="relative z-10">Request a Demo Call</span>
                 <span className="absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition-opacity bg-white/10" />

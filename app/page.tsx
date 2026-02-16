@@ -169,7 +169,7 @@ export default function UpdatedHome() {
       {/* Hero Section */}
       <section
         id="hero"
-        className="flex flex-col pt-8 sm:pt-12 md:pt-20 lg:pt-16 xl:pt-6 pb-8 sm:pb-12 md:pb-20 lg:pb-16 px-3 max-w-[75rem] mx-auto w-full relative  min-h-screen overflow-x-visible"
+        className="flex flex-col pt-8 sm:pt-12 md:pt-20 lg:pt-16 xl:pt-6 pb-8 sm:pb-12 md:pb-20 lg:pb-16 px-3 max-w-[85rem] //  mx-auto w-full relative  min-h-screen overflow-x-visible "
       >
         {/* Concentric Ripple Circles */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full pointer-events-none overflow-hidden z-0 opacity-60 lg:opacity-100">
@@ -203,12 +203,14 @@ export default function UpdatedHome() {
                 animate={{ y: 0, filter: "blur(0px)", opacity: 1 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
               >
-                <span>Resilience coaching</span>
-                <br className="" />
-                <span className="text-gradient capitalize">Made Simple</span>
+                The performance intelligence platform <br />
+                Built for leadership coaches <br />
+                <p className="text-2xl my-3">
+                  Powered by Resilience data and behavioral change
+                </p>
               </motion.h1>
 
-              <motion.p
+              {/* <motion.p
                 className="font-hero-desc text-muted-foreground max-w-xl lg:max-w-full"
                 initial={{ y: 24, filter: "blur(4px)", opacity: 0 }}
                 animate={{ y: 0, filter: "blur(0px)", opacity: 1 }}
@@ -217,14 +219,18 @@ export default function UpdatedHome() {
                 Help clients adopt foundational Resilience Habits and Gain a
                 360° view of their wellbeing and behavior With personalized,
                 AI-adapted support between sessions
-              </motion.p>
+              </motion.p> */}
               <motion.p
                 className="font-hero-desc text-muted-foreground max-w-xl lg:max-w-full"
                 initial={{ y: 24, filter: "blur(4px)", opacity: 0 }}
                 animate={{ y: 0, filter: "blur(0px)", opacity: 1 }}
                 transition={{ duration: 0.75, delay: 0.15, ease: "easeOut" }}
               >
-                ...That keeps them engaged and performing at their best.
+                PrescribeLife.AI gives leadership coaches clear visibility into
+                what’s driving performance between sessions, turning recovery,
+                capacity, and resilience signals into performance intelligence -
+                so you can deliver better client outcomes and clearly
+                demonstrate the value of your coaching.
               </motion.p>
 
               <motion.div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto justify-center lg:justify-start mt-2 max-lg:hidden">
@@ -257,18 +263,15 @@ export default function UpdatedHome() {
         whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         viewport={{ once: true, margin: "-100px" }}
-        className="flex flex-col gap-12 lg:gap-16 px-3 px-4-lg:px-6-xl:px-8 max-w-[75rem] mx-auto w-full"
+        className="flex flex-col gap-12 lg:gap-16 px-3 px-4-lg:px-6-xl:px-8 max-w-[85rem] //  mx-auto w-full"
       >
         {/* Burnout */}
         <section className="flex flex-col gap-8 lg:gap-10 justify-center items-center">
-          <h1 className="font-section-title text-center px-4">
-            <span className="text-white relative after:left-0 after:content-[] after:absolute after:bottom-0 after:w-full after:bg-theme after:h-[3px] after:rounded-lg mr-2">
-              Burnout
-            </span>
-            <span>
-              is one the most Defining <br />
-              Challenges of our Time
-            </span>
+          <h1 className=" text-center px-4 text-xl font-semibold max-w-4xl">
+            Leadership performance doesn’t break overnight - it declines long
+            before it becomes visible. PrescribeLife.AI makes these changes
+            visible early, turning recovery, capacity, and resilience signals
+            into clear performance intelligence for coaches.
           </h1>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 text-base sm:text-lg lg:text-xl xl:text-2xl align-start gap-4 lg:gap-6 font-semibold w-full">
@@ -279,7 +282,8 @@ export default function UpdatedHome() {
                     85% of coaches <br />
                   </span>{" "}
                   <p className="text-base sm:text-base lg:text-lg xl:text-xl font-normal mt-2 font-section-desc">
-                    say clients are seeking more support for well-being.
+                    report growing demand for support around sustaining
+                    performance and resilience
                   </p>
                 </p>
                 <p>
@@ -340,7 +344,7 @@ export default function UpdatedHome() {
         whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         viewport={{ once: true, margin: "-100px" }}
-        className="px-3 px-4-lg:px-6-xl:px-8 max-w-[75rem] mx-auto w-full"
+        className="px-3 px-4-lg:px-6-xl:px-8 max-w-[85rem] //  mx-auto w-full"
       >
         <HolisticGrid />
       </motion.section>
@@ -351,7 +355,7 @@ export default function UpdatedHome() {
         whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         viewport={{ once: true, margin: "-100px" }}
-        className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 xl:gap-10 px-3 px-4-lg:px-6-xl:px-8 max-w-[75rem] mx-auto w-full"
+        className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 xl:gap-10 px-3 px-4-lg:px-6-xl:px-8 max-w-[85rem] //  mx-auto w-full"
       >
         <div className="flex flex-col gap-4 lg:gap-6 justify-center text-center lg:text-left items-center lg:items-start px-2">
           <h1 className="font-section-title leading-tight">
@@ -393,7 +397,7 @@ export default function UpdatedHome() {
         whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         viewport={{ once: true, margin: "-100px" }}
-        className="flex flex-col gap-8 lg:gap-12 pt-6 lg:pt-10 px-3 px-4-lg:px-6-xl:px-8 max-w-[75rem] mx-auto w-full"
+        className="flex flex-col gap-8 lg:gap-12 pt-6 lg:pt-10 px-3 px-4-lg:px-6-xl:px-8 max-w-[85rem] //  mx-auto w-full"
       >
         <div className="font-section-title text-center px-2">
           How <span className="text-white text-gradient">PrescribeLife.AI</span>{" "}
@@ -545,7 +549,7 @@ export default function UpdatedHome() {
         whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         viewport={{ once: true, margin: "-100px" }}
-        className="flex flex-col space-y-8 lg:space-y-10 px-3 px-4-lg:px-6-xl:px-8 max-w-[75rem] mx-auto w-full relative"
+        className="flex flex-col space-y-8 lg:space-y-10 px-3 px-4-lg:px-6-xl:px-8 max-w-[85rem] //  mx-auto w-full relative"
       >
         <div className="font-section-title max-w-6xl mx-auto text-center px-2">
           <span className="text-white text-gradient">
@@ -673,7 +677,7 @@ export default function UpdatedHome() {
         whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         viewport={{ once: true, margin: "-100px" }}
-        className="flex flex-col items-center justify-start gap-8 lg:gap-10 px-3 px-4-lg:px-6-xl:px-8 max-w-[75rem] mx-auto w-full"
+        className="flex flex-col items-center justify-start gap-8 lg:gap-10 px-3 px-4-lg:px-6-xl:px-8 max-w-[85rem] //  mx-auto w-full"
       >
         <div className="font-section-title max-w-6xl text-center px-2">
           Mobile App captures <br />
@@ -730,7 +734,7 @@ export default function UpdatedHome() {
         whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         viewport={{ once: true, margin: "-100px" }}
-        className="px-3 px-4-lg:px-6-xl:px-8 max-w-[75rem] mx-auto w-full"
+        className="px-3 px-4-lg:px-6-xl:px-8 max-w-[85rem] //  mx-auto w-full"
       >
         <div className="py-12 lg:py-16">
           {/* Header */}
@@ -795,7 +799,7 @@ export default function UpdatedHome() {
         whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         viewport={{ once: true, margin: "-100px" }}
-        className="flex flex-col gap-12 lg:gap-16 xl:gap-20 px-3 px-4-lg:px-6-xl:px-8 max-w-[75rem] mx-auto w-full"
+        className="flex flex-col gap-12 lg:gap-16 xl:gap-20 px-3 px-4-lg:px-6-xl:px-8 max-w-[85rem] //  mx-auto w-full"
       >
         <div className="flex items-center justify-center px-2">
           <div className="font-section-title text-center max-w-5xl">
@@ -818,7 +822,7 @@ export default function UpdatedHome() {
         whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         viewport={{ once: true, margin: "-100px" }}
-        className="flex flex-col items-center space-y-6 lg:space-y-8 px-3 px-4-lg:px-6-xl:px-8 max-w-[75rem] mx-auto w-full"
+        className="flex flex-col items-center space-y-6 lg:space-y-8 px-3 px-4-lg:px-6-xl:px-8 max-w-[85rem] //  mx-auto w-full"
       >
         <div className="font-section-title text-center max-w-5xl px-2">
           <span className="text-white text-gradient">PrescribeLife.AI </span>
@@ -847,8 +851,8 @@ export default function UpdatedHome() {
                       ? window.innerWidth < 640
                         ? 40
                         : window.innerWidth < 1024
-                        ? 50
-                        : 60
+                          ? 50
+                          : 60
                       : 60
                   }
                   className="text-theme"
@@ -870,7 +874,7 @@ export default function UpdatedHome() {
         whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         viewport={{ once: true, margin: "-100px" }}
-        className="flex flex-col items-center gap-10 lg:gap-12 xl:gap-16 px-3 px-4-lg:px-6-xl:px-8 max-w-[75rem] mx-auto w-full"
+        className="flex flex-col items-center gap-10 lg:gap-12 xl:gap-16 px-3 px-4-lg:px-6-xl:px-8 max-w-[85rem] //  mx-auto w-full"
       >
         <FadeRise>
           <div className="max-w-5xl space-y-6 lg:space-y-8 xl:space-y-10 px-2">
@@ -1002,7 +1006,7 @@ export default function UpdatedHome() {
         whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         viewport={{ once: true, margin: "-100px" }}
-        className="flex items-center justify-center px-3 px-4-lg:px-6-xl:px-8 max-w-[75rem] mx-auto w-full"
+        className="flex items-center justify-center px-3 px-4-lg:px-6-xl:px-8 max-w-[85rem] //  mx-auto w-full"
       >
         <div className="font-section-title text-center max-w-6xl px-2">
           Meet the rising demand for{" "}
@@ -1019,7 +1023,7 @@ export default function UpdatedHome() {
         whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         viewport={{ once: true, margin: "-100px" }}
-        className="relative flex flex-col lg:flex-row xl:flex-row items-center justify-center gap-6 lg:gap-8 xl:gap-16 px-3 px-4-lg:px-6-xl:px-8 max-w-[75rem] mx-auto w-full"
+        className="relative flex flex-col lg:flex-row xl:flex-row items-center justify-center gap-6 lg:gap-8 xl:gap-16 px-3 px-4-lg:px-6-xl:px-8 max-w-[85rem] //  mx-auto w-full"
       >
         {/* White Curve Card */}
         <FadeRise className="bg-white text-black rounded-full p-6 sm:p-8 flex flex-col items-center justify-center relative overflow-hidden w-[280px] h-[280px] sm:w-[350px] sm:h-[350px] lg:w-[400px] lg:h-[400px] xl:w-[500px] xl:h-[500px] shrink-0">
@@ -1066,7 +1070,7 @@ export default function UpdatedHome() {
         whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         viewport={{ once: true, margin: "-100px" }}
-        className="px-3 px-4-lg:px-6-xl:px-8 max-w-[75rem] mx-auto w-full"
+        className="px-3 px-4-lg:px-6-xl:px-8 max-w-[85rem] //  mx-auto w-full"
       >
         <Image
           src="/security.png"
@@ -1092,7 +1096,7 @@ export default function UpdatedHome() {
         transition={{ duration: 0.8, ease: "easeOut" }}
         viewport={{ once: true, margin: "-100px" }}
         id="faq"
-        className="px-3 px-4-lg:px-6-xl:px-8 max-w-[75rem] mx-auto w-full mb-12 lg:mb-16"
+        className="px-3 px-4-lg:px-6-xl:px-8 max-w-[85rem] //  mx-auto w-full mb-12 lg:mb-16"
       >
         <FAQ></FAQ>
       </motion.div>
