@@ -194,18 +194,20 @@ export default function UpdatedHome() {
           transition={{ duration: 1, delay: 0.45 }}
           className="w-full flex justify-center items-center relative z-10 flex-1 max-lg:flex-col max-lg:gap-10 md:gap-12 lg:gap-8 pt-16 container-for-sm"
         >
-          <div className="flex flex-col lg:flex-row items-center justify-center gap-8 sm:gap-10 md:gap-14 lg:gap-12 xl:gap-16 w-full home-hero">
+          <div className="flex flex-col lg:flex-row items-center justify-center gap-8 sm:gap-10 md:gap-14 lg:gap-12 xl:gap-16 w-full home-hero px-4 sm:px-0 max-md:px-0">
             {/* Left Text */}
             <div className="flex w-full lg:w-1/2 flex-col lg:items-start gap-5 sm:gap-6 md:gap-8 lg:gap-7 lg:text-left text-center items-center order-1 lg:order-1 home-hero_1">
               <motion.h1
-                className="font-hero-title whitespace-nowrap"
+                className="font-hero-title max-w-full break-words"
                 initial={{ y: 30, filter: "blur(4px)", opacity: 0 }}
                 animate={{ y: 0, filter: "blur(0px)", opacity: 1 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
               >
-                The Performance Intelligence Platform <br />
-                Built for Leadership Coaches <br />
-                <p className="text-2xl my-3 ">
+                <span className="block">
+                  The Performance Intelligence Platform
+                </span>
+                <span className="block">Built for Leadership Coaches</span>
+                <p className="text-base sm:text-xl md:text-2xl mt-3 mb-0 font-normal">
                   Powered by Resilience Data and Behavioral Change
                 </p>
               </motion.h1>
@@ -221,7 +223,7 @@ export default function UpdatedHome() {
                 AI-adapted support between sessions
               </motion.p> */}
               <motion.p
-                className="font-hero-desc text-muted-foreground max-w-xl lg:max-w-full"
+                className="font-hero-desc text-muted-foreground max-w-xl lg:max-w-full px-2 sm:px-0"
                 initial={{ y: 24, filter: "blur(4px)", opacity: 0 }}
                 animate={{ y: 0, filter: "blur(0px)", opacity: 1 }}
                 transition={{ duration: 0.75, delay: 0.15, ease: "easeOut" }}
@@ -233,25 +235,25 @@ export default function UpdatedHome() {
                 demonstrate the value of your coaching.
               </motion.p>
 
-              <motion.div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto justify-center lg:justify-start mt-2 max-lg:hidden">
+              <motion.div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto justify-center lg:justify-start mt-2 max-lg:hidden px-2 sm:px-0">
                 <CTA />
               </motion.div>
             </div>
 
             {/* Right Image */}
-            <div className="flex w-full lg:w-1/2 items-center justify-center order-2 lg:order-2 home-hero_1">
+            <div className="flex w-full lg:w-1/2 items-center justify-center order-2 lg:order-2 home-hero_1 px-4 sm:px-0">
               <Image
                 src="/hero.svg"
                 width={900}
                 height={900}
                 alt="platform"
-                className="w-full max-w-[280px] sm:max-w-sm md:max-w-lg lg:max-w-md xl:max-w-lg 2xl:max-w-none h-auto home-img"
+                className="w-full max-w-[240px] xs:max-w-[280px] sm:max-w-sm md:max-w-lg lg:max-w-md xl:max-w-lg 2xl:max-w-none h-auto home-img"
                 sizes="(max-width: 640px) 280px, (max-width: 768px) 500px, 50vw"
                 priority
               />
             </div>
           </div>
-          <motion.div className="flex-col sm:flex-row gap-3 w-full sm:w-auto justify-center lg:justify-start mt-2 md:mt-6 lg:mt-2 hidden max-lg:flex">
+          <motion.div className="flex-col sm:flex-row gap-3 w-full sm:w-auto justify-center lg:justify-start mt-2 md:mt-6 lg:mt-2 hidden max-lg:flex px-2 sm:px-0">
             <CTA />
           </motion.div>
         </motion.div>

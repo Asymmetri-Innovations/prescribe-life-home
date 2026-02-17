@@ -475,7 +475,7 @@ html {
   line-height: 1.1;
   letter-spacing: -0.02em;
   /* Mobile: Base size */
-  font-size: 1rem; /* 32px */
+  font-size: 1.2rem; /* 32px */
 }
 
 @media (min-width: 768px) {
