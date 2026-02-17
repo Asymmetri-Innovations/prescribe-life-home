@@ -85,6 +85,8 @@ html {
 
 .text-gradient {
   position: relative;
+  border-bottom: 3px solid var(--color-theme);
+  /* position: relative;
   animation: textGradient 5s linear infinite;
   animation-delay: 1s;
   background: linear-gradient(90.67deg, #ffffff, #f17eb4, #e70a69, #ffffff);
@@ -92,7 +94,7 @@ html {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  /* transition: cubic-bezier(0.175, 0.885, 0.32, 1.275); */
+  transition: cubic-bezier(0.175, 0.885, 0.32, 1.275); */
 }
 
 .font {
