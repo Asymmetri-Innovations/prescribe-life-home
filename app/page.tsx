@@ -194,9 +194,9 @@ export default function UpdatedHome() {
           transition={{ duration: 1, delay: 0.45 }}
           className="w-full flex justify-center items-center relative z-10 flex-1 max-lg:flex-col max-lg:gap-10 md:gap-12 lg:gap-8 pt-16 container-for-sm"
         >
-          <div className="flex flex-col lg:flex-row items-center justify-center gap-8 sm:gap-10 md:gap-14 lg:gap-12 xl:gap-16 w-full home-hero px-4 sm:px-0 max-md:px-0">
+          <div className="flex flex-col lg:flex-row items-center justify-center gap-8 sm:gap-10 md:gap-14 lg:gap-12 xl:gap-0 w-full home-hero px-4 sm:px-0 max-md:px-0">
             {/* Left Text */}
-            <div className="flex w-full lg:w-1/2 flex-col lg:items-start gap-5 sm:gap-6 md:gap-8 lg:gap-7 lg:text-left text-center items-center order-1 lg:order-1 home-hero_1">
+            <div className="flex w-full lg:w-2/3 flex-col lg:items-start gap-5 sm:gap-6 md:gap-8 lg:gap-7 lg:text-left text-center items-center order-1 lg:order-1 home-hero_1">
               <motion.h1
                 className="font-hero-title max-w-full break-words"
                 initial={{ y: 30, filter: "blur(4px)", opacity: 0 }}
@@ -247,7 +247,7 @@ export default function UpdatedHome() {
                 width={900}
                 height={900}
                 alt="platform"
-                className="w-full max-w-[240px] xs:max-w-[280px] sm:max-w-sm md:max-w-lg lg:max-w-md xl:max-w-lg 2xl:max-w-none h-auto home-img"
+                className="w-full max-w-[240px] xs:max-w-[280px] sm:max-w-sm md:max-w-lg lg:max-w-md xl:max-w-lg 2xl:max-w-none h-auto home-img md:scale-90"
                 sizes="(max-width: 640px) 280px, (max-width: 768px) 500px, 50vw"
                 priority
               />
