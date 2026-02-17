@@ -243,7 +243,7 @@ export default function UpdatedHome() {
             {/* Right Image */}
             <div className="flex w-full lg:w-1/2 items-center justify-center order-2 lg:order-2 home-hero_1 px-4 sm:px-0">
               <Image
-                src="/hero.svg"
+                src="/hero-small.png"
                 width={900}
                 height={900}
                 alt="platform"
