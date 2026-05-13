@@ -12,61 +12,61 @@ interface FAQItem {
 const faqData: FAQItem[] = [
   {
     question:
-      "There are so many platforms out there. What makes PrescribeLife.AI different, and how do I know it’s for real?",
+      "There are so many platforms out there. What makes PrescribeLife.AI different?",
     answer:
-      "We get it. In a world full of 'game-changing' tech, skepticism is smart. The difference is, we’re not just another data tracker. We are the only platform that connects your client's real-time biometrics, personalized DNA insights, and their daily behaviors into one adaptive system.",
+      "PrescribeLife.AI is not another habit tracker or coaching dashboard. It connects behavioural patterns, recovery signals, and daily actions into a single performance intelligence layer. It gives you clear visibility into what is changing between sessions so you can guide coaching with precision.",
+  },
+  {
+    question: "What kind of coaches can benefit?",
+    answer:
+      "PrescribeLife.AI is designed for leadership, performance, and resilience focused coaches working with founders, executives, and high performing professionals. It supports 1 to 1, group, and team coaching environments where sustained performance and decision making matter.",
   },
   {
     question:
       "My clients are incredibly busy executives. Will they actually use this?",
     answer:
-      "That’s why we designed PrescribeLife.AI to deliver value even with minimal effort. Passive data from their phone gives you insights into sleep, readiness, and activity levels — no extra work for them.",
-  },
-  {
-    question: "What if my client doesn’t have an Apple Watch or Oura ring?",
-    answer:
-      "No device? No problem. The platform gathers essential data via smartphones and facial scan tech — no hardware required.",
-  },
-  {
-    question:
-      "I’m a performance coach, not a data scientist. Will I be able to understand this?",
-    answer:
-      "Absolutely. Preslie™ (our AI co-pilot) translates data into simple, coach-ready insights so you can focus on guiding clients — not crunching numbers.",
-  },
-  {
-    question: "Is this just for resilience or wellness?",
-    answer:
-      "No. This is about performance under pressure, recovery strategy, and decision-making capacity — far beyond basic wellbeing.",
-  },
-  {
-    question: "Will this replace my coaching framework?",
-    answer:
-      "Not at all. PrescribeLife.AI amplifies your framework, providing real-time data to tailor your methods — not replace them.",
-  },
-  {
-    question: "What kind of coaches can benefit?",
-    answer:
-      "Performance coaches to founders, executives, and leaders — anyone coaching high-performers benefits from PrescribeLife.AI.",
+      "Preslie interprets behavioural signals generated through everyday activity patterns and wearable devices. Most leaders engage briefly, while you retain clear visibility between sessions.",
   },
   {
     question: "Can I use this for group coaching programs?",
     answer:
-      'Yes, it’s powerful for group coaching — spot collective trends (e.g., "readiness dipped after review") while supporting individuals personally.',
+      "Yes. PrescribeLife.AI allows you to view collective resilience and engagement trends while still supporting individuals privately. This helps you adjust program direction without adding manual reporting or additional admin.",
+  },
+  {
+    question: "What if my client doesn't have an Apple Watch or Oura ring?",
+    answer:
+      "No additional hardware is required. PrescribeLife.AI works with commonly used devices, allowing you to gather meaningful insights without changing your client's routine.",
   },
   {
     question: "How does Preslie™ actually work?",
     answer:
-      "Preslie™ acts like your assistant coach — tracking and surfacing key coachable moments, suggesting topics, and flagging burnout early.",
+      "Preslie supports coaching between sessions by interpreting behavioural patterns and surfacing relevant coaching insight. It does not replace the coach. It strengthens your ability to respond with clarity and timing.",
+  },
+  {
+    question:
+      "I'm a performance coach, not a data scientist. Will I be able to understand this?",
+    answer:
+      "PrescribeLife.AI translates complex signals into clear, coach-ready insight. You focus on conversations and outcomes, while the platform brings structure and clarity to what is changing between sessions.",
   },
   {
     question: "Is my client's data secure?",
     answer:
-      "Absolutely. All client data is encrypted and private — only you and your client have access.",
+      "Client data is encrypted, private, and controlled. Only you and your client can access individual information, and insights are presented within a secure coaching environment designed with privacy and ethical practice in mind.",
+  },
+  {
+    question: "Is this just for resilience or wellness?",
+    answer:
+      "While wellbeing and recovery are important signals, PrescribeLife.AI focuses on performance intelligence. It helps you understand capacity, engagement, and resilience so coaching moves beyond surface-level habits into sustained performance.",
+  },
+  {
+    question: "Will this replace my coaching framework?",
+    answer:
+      "PrescribeLife.AI amplifies your existing methodology rather than replacing it. You remain the strategist and decision maker. The platform simply gives you deeper visibility into evolving client patterns.",
   },
   {
     question: "What kind of data do you track?",
     answer:
-      "We track validated wellness scores across wellbeing, sleep, activity, and readiness — no new hardware needed.",
+      "PrescribeLife.AI interprets behavioural patterns, recovery signals, and engagement trends to surface coaching insight. The focus is not on tracking everything, but on highlighting what is influencing performance and decision-making.",
   },
 ];
 

@@ -29,18 +29,18 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://prescribelife.ai"),
   title: "PrescribeLife.AI - Set the new standard in performance coaching",
   description:
-    "PrescribeLife provides real-time data and behavioral analysis tools for performance coaches. Scale your unique method for deeper, more lasting client transformations with evidence-based coaching intelligence.",
+    "PrescribeLife.AI helps leadership and performance coaches interpret behavioural patterns between sessions and translate them into coaching insight — so you can scale your method with clearer, coach-ready context.",
   keywords: [
     "performance coaching",
-    "data-driven coaching",
-    "behavioral analysis",
+    "data-informed coaching",
+    "behavioural insight",
     "coaching tools",
     "client transformation",
-    "real-time biometric data",
-    "AI coaching platform",
     "coaching intelligence",
+    "AI coaching platform",
     "coaching dashboard",
     "PrescribeLife.AI",
+    "resilience coaching",
   ],
   authors: [{ name: "PrescribeLife.AI" }],
   creator: "PrescribeLife.AI",
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "PrescribeLife.AI - Set the new standard in performance coaching",
     description:
-      "Real-time data and behavioral analysis tools for performance coaches. Scale your unique method for deeper, more lasting client transformations.",
+      "Coaching intelligence that interprets behavioural patterns between sessions. Scale your method with clearer insight for leadership and performance coaches.",
     url: "https://prescribelife.ai",
     siteName: "PrescribeLife.AI",
     images: [
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
         url: "https://prescribe-life-home.vercel.app/og.png", // fallback if original filename exists
         width: 1200,
         height: 630,
-        alt: "PrescribeLife.AI - Data-Driven Coaching Platform",
+        alt: "PrescribeLife.AI — coaching intelligence for performance coaches",
       },
     ],
     locale: "en_US",
@@ -66,7 +66,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "PrescribeLife.AI - Set the new standard in performance coaching",
     description:
-      "Real-time data and behavioral analysis tools for performance coaches. Scale your unique method for deeper, more lasting client transformations.",
+      "Coaching intelligence that interprets behavioural patterns between sessions. Scale your method with clearer insight for leadership and performance coaches.",
     images: ["https://prescribe-life-home.vercel.app/og.png"],
     creator: "@prescribelifeai",
   },

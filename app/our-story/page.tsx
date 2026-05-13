@@ -40,27 +40,28 @@ export default function BookingPage() {
       id: "01",
       title: "Habit Builder",
       description:
-        "Personalized behavioral change system to help clients build habits that stick.",
+        "Behavioural patterns over time to help clients build habits that stick.",
       icon: User,
     },
     {
       id: "02",
-      title: "Bio Insights",
+      title: "Behavioural insight",
       description:
-        "Real-time biometric insights into stress, recovery, and resilience.",
+        "Behavioural signals and patterns that shape stress, recovery, and performance capacity over time.",
       icon: Eye,
     },
     {
       id: "03",
-      title: "DNA Data",
+      title: "Signals & patterns",
       description:
-        "Personalized behavioral change system to help clients build habits that stick.",
+        "Movement, rest, and recovery viewed together to highlight what shapes performance capacity.",
       icon: Dna,
     },
     {
       id: "04",
       title: "Adaptive AI",
-      description: "Adaptive AI that evolves with your client’s needs.",
+      description:
+        "Coaching insight that evolves with your client’s journey between sessions.",
       icon: Sparkles,
     },
   ];
@@ -168,9 +169,9 @@ export default function BookingPage() {
                 <span className="text-theme">Oli Johnson</span>, our Co-founder
                 & CEO, was a high-performing entrepreneur who hit a wall. Even
                 with a business coach and a therapist, burnout took him down. He
-                realised the missing ingredient was clear, real-time data about
-                his body — a signal that could have made the danger impossible
-                to ignore.
+                realised the missing ingredient was clear visibility into
+                behavioural patterns — a signal that could have made the danger
+                impossible to ignore.
               </p>
             </div>
 

@@ -14,7 +14,8 @@ export default function HolisticGrid() {
               Extend impact beyond sessions
             </h2>
             <p className="text-white text-base md:text-lg tracking-wide mt-2 font-section-desc">
-              with always-on support.
+              with insight into behavioural patterns that influence performance
+              between conversations.
             </p>
           </div>
         </HoverGlowContainer>
@@ -27,8 +28,8 @@ export default function HolisticGrid() {
               Adopt a holistic lens
             </h2>
             <p className="text-white text-base md:text-lg tracking-wide leading-relaxed mt-2 font-section-desc">
-              integrating cognitive, emotional, behavioral, and physiological
-              factors to unlock sustained performance.
+              Connect behavioural, emotional, and recovery patterns to
+              understand what shapes performance capacity.
             </p>
           </div>
         </HoverGlowContainer>
@@ -42,10 +43,11 @@ export default function HolisticGrid() {
           />
           <div className="mt-x">
             <h2 className="text-theme text-lg tracking-wide md:text-2xl font-semibold leading-tight font-card-title">
-              Adapt in real time
+              Adapt over time
             </h2>
             <p className="text-white text-base md:text-lg tracking-wide leading-relaxed mt-2 font-section-desc">
-              each client's evolving needs and resilience stage.
+              as behavioural patterns and resilience evolve across the coaching
+              journey.
             </p>
           </div>
         </HoverGlowContainer>
@@ -62,7 +64,8 @@ export default function HolisticGrid() {
               Personalize every strategy
             </h2>
             <p className="text-white text-base md:text-lg tracking-wide mt-2 font-section-desc">
-              because no two people thrive the same way.
+              using behavioural patterns to guide coaching decisions that support
+              performance capacity.
             </p>
           </div>
         </HoverGlowContainer>

@@ -7,21 +7,22 @@ import { Title } from "@/components/Title";
 import { FadeRise } from "@/components/FadeRise";
 import CTA from "@/components/CTA";
 import { Dna, Sparkle, Handshake, Users, Heart } from "lucide-react";
+import HoverGlowContainer from "@/components/HoverGlowContainer";
 
 const steps = [
   {
     id: "01",
-    title: "Personalized Behavioral Change System",
+    title: "Behavioural Patterns Over Time",
     description:
-      "Facilitates self-awareness, better decision-making, and adaptive strategies to help your clients drive measurable resilience and performance gains — aligned with your unique coaching style.",
+      "Highlights behavioural patterns across sleep, activity, and recovery, helping coaches identify shifts that influence performance capacity over time.",
     icon: null,
     image: "/behaviours.png",
   },
   {
     id: "02",
-    title: "Biometric Data + Habitual Insights",
+    title: "Behavioural Signals & Patterns",
     description:
-      "Captures real-time physiological and emotional resilience markers, tracking trends across sleep, readiness, activity, and wellbeing—without requiring new hardware. Every small choice adds up. With Habitual Insights, coaches and clients see the hidden patterns driving performance and burnout.",
+      "Brings together behavioural signals across movement, rest, and recovery to highlight patterns that shape performance capacity.",
     icon: Dna,
     image: null,
   },
@@ -101,7 +102,7 @@ export default function NewStandard() {
                   outcomes.
                 </p>
                 <p className="text-theme font-semibold text-lg max-md:text-sm">
-                  The new standard brings resilience science, biometric data,
+                  The new standard brings resilience science, behavioural signals,
                   and adaptive support into every client journey.
                 </p>
               </div>
@@ -212,7 +213,7 @@ export default function NewStandard() {
               <p className="text-lg max-md:text-base text-white/80 text-center">
                 The PrescribeLife.AI platform integrates three layers,{" "}
                 <span className="text-theme">
-                  behavioral change, biometric insights, and adaptive AI support
+                  behavioural change, coaching insight, and adaptive support
                 </span>
                 , to help coaches deliver the new standard in performance
                 coaching.
@@ -292,25 +293,24 @@ export default function NewStandard() {
                     </div>
                   </div>
                   <h3 className="text-2xl max-md:text-xl font-semibold text-white mb-6 relative z-10">
-                    24/7 Adaptive Coaching Support (Preslie.AI™)
+                    Coaching Insight Between Sessions (Preslie)
                   </h3>
 
                   <div className="bg-[#FFFFFF1A] border border-white/10 rounded-xl p-6 mb-6 relative z-10">
                     <h4 className="text-theme font-semibold mb-3">
-                      Who is Preslie.AI™?
+                      Who is Preslie?
                     </h4>
                     <p className="text-zinc-300 text-sm leading-relaxed">
-                      Preslie™ is our mobile app & your AI co-pilot—making
-                      complex data simple and actionable. It quietly tracks
-                      resilience patterns, flags early warning signs, and
-                      suggests micro-strategies between sessions.
+                      Preslie interprets behavioural patterns and surfaces
+                      coaching insight between sessions, helping coaches identify
+                      emerging shifts that influence performance capacity.
                     </p>
                   </div>
 
                   <p className="text-white font-medium mb-6 leading-relaxed relative z-10">
-                    This evidence-based system gives you continuous visibility
-                    into a client's mental, physical, and emotional resilience
-                    profile.
+                    Provides a clear view of evolving behavioural patterns to
+                    support more informed coaching decisions and performance
+                    capacity over time.
                   </p>
 
                   <div className="space-y-6 max-w-xl">
@@ -319,8 +319,8 @@ export default function NewStandard() {
                     </h4>
                     <div className="space-y-4">
                       {[
-                        "Spot stress and recovery patterns before they escalate.",
-                        "Adapt strategies to each client's current resilience stage.",
+                        "Identify shifts in stress and recovery patterns that influence performance capacity over time.",
+                        "Adjust coaching strategies based on behavioural patterns to support performance capacity over time.",
                         "Scale personalization without adding manual workload.",
                       ].map((text, idx) => (
                         <div key={idx} className="flex items-start gap-4">
@@ -373,8 +373,8 @@ export default function NewStandard() {
           </FadeRise>
           <FadeRise delay={0.1} className="max-w-5xl mx-auto w-full">
             <p className="text-lg max-md:text-base text-white/80 leading-relaxed">
-              By integrating resilience science, biometric data, habitual
-              insights, and consistent AI-adapted support, you aren't just
+              By integrating resilience science, behavioural signals, habitual
+              insights, and consistent coaching support, you aren&apos;t just
               helping individual clients — you're setting the new standard for
               what high-performance coaching can truly be.
             </p>

@@ -7,6 +7,7 @@ import Image from "next/image";
 //@ts-expect-error: JS CONFIG
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
+import HoverGlowContainer from "@/components/HoverGlowContainer";
 
 const testimonials = [
   {

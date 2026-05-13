@@ -34,17 +34,17 @@ import HoverGlowContainer from "@/components/HoverGlowContainer";
 const steps = [
   {
     id: "01",
-    title: "Personalized Behavioral Change System",
+    title: "Behavioural Patterns Over Time",
     description:
-      "Facilitates self-awareness, better decision-making, and adaptive strategies to help your clients drive measurable resilience and performance gains — aligned with your unique coaching style.",
+      "Highlights behavioural patterns across sleep, activity, and recovery, helping coaches identify shifts that influence performance capacity over time.",
     icon: null,
     image: "/behaviours.png",
   },
   {
     id: "02",
-    title: "Biometric Data + Habitual Insights",
+    title: "Behavioural Signals & Patterns",
     description:
-      "Captures real-time physiological and emotional resilience markers, tracking trends across sleep, readiness, activity, and wellbeing—without requiring new hardware. Every small choice adds up. With Habitual Insights, coaches and clients see the hidden patterns driving performance and burnout.",
+      "Brings together behavioural signals across movement, rest, and recovery to highlight patterns that shape performance capacity.",
     icon: Dna,
     image: null,
   },
@@ -54,24 +54,24 @@ const steps2 = [
     id: "01",
     title: "Invite Your Client",
     description:
-      "They download the PrescribeLife.AI app and connect their existing wearables in minutes.",
-    subtitle: "No extra hardware, no tech headaches.",
+      "Clients connect the devices they already use and begin engaging with behavioural insights within minutes, without changing their routine.",
+    subtitle: "No extra hardware required.",
     icon: User,
   },
   {
     id: "02",
     title: "Coach with Confidence",
-    description: "Walk into every session already knowing where to focus.",
+    description:
+      "Walk into every session knowing where to focus, with insight from behavioural patterns.",
     subtitle:
-      "Use data-informed topics to guide powerful conversations, prevent burnout, and create breakthroughs.",
+      "Guide more intentional coaching conversations that support performance capacity over time.",
     icon: Eye,
   },
   {
     id: "03",
-    title: "Uncover Hidden Patterns",
+    title: "Identify Patterns That Influence Performance",
     description:
-      "We translate real-time biometric and behavioral data into simple, actionable insights.",
-    subtitle: "See readiness, recovery, and resilience patterns instantly.",
+      "PrescribeLife.AI highlights behavioural patterns across recovery, activity, and energy patterns, helping coaches identify shifts that influence performance capacity over time.",
     icon: Crown,
   },
 ];
@@ -204,11 +204,11 @@ export default function UpdatedHome() {
                 transition={{ duration: 0.8, ease: "easeOut" }}
               >
                 <span className="block">
-                  The Performance Intelligence Platform
+                  Performance Intelligence for Coaching
                 </span>
                 <span className="block">Built for Leadership Coaches</span>
                 <p className="text-base sm:text-xl md:text-2xl mt-3 mb-0 font-normal">
-                  Powered by Resilience Data and Behavioral Change
+                  Guided by Long-Term Resilience Trends and Behavioural Insight.
                 </p>
               </motion.h1>
 
@@ -218,9 +218,9 @@ export default function UpdatedHome() {
                 animate={{ y: 0, filter: "blur(0px)", opacity: 1 }}
                 transition={{ duration: 0.75, delay: 0.15, ease: "easeOut" }}
               >
-                Help clients adopt foundational Resilience Habits and Gain a
-                360° view of their wellbeing and behavior With personalized,
-                AI-adapted support between sessions
+                Help clients adopt foundational resilience habits and gain a
+                connected view of wellbeing and behaviour with personalised,
+                coaching-aligned support between sessions
               </motion.p> */}
               <motion.p
                 className="font-hero-desc text-muted-foreground max-w-xl lg:max-w-full px-2 sm:px-0"
@@ -228,11 +228,10 @@ export default function UpdatedHome() {
                 animate={{ y: 0, filter: "blur(0px)", opacity: 1 }}
                 transition={{ duration: 0.75, delay: 0.15, ease: "easeOut" }}
               >
-                PrescribeLife.AI gives leadership coaches clear visibility into
-                what’s driving performance between sessions, turning recovery,
-                capacity, and resilience signals into performance intelligence -
-                so you can deliver better client outcomes and clearly
-                demonstrate the value of your coaching.
+                PrescribeLife.AI helps coaches identify behavioural patterns that
+                influence performance capacity between sessions, translating
+                long-term trends into actionable coaching insight. This supports
+                more intentional, high-impact coaching conversations.
               </motion.p>
 
               <motion.div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto justify-center lg:justify-start mt-2 max-lg:hidden px-2 sm:px-0">
@@ -270,10 +269,10 @@ export default function UpdatedHome() {
         {/* Burnout */}
         <section className="flex flex-col gap-8 lg:gap-10 justify-center items-center">
           <h1 className=" text-center px-4 text-xl font-semibold max-w-4xl">
-            Leadership performance doesn’t break overnight - it declines long
-            before it becomes visible. PrescribeLife.AI makes these changes
-            visible early, turning recovery, capacity, and resilience signals
-            into clear performance intelligence for coaches.
+            Leadership performance rarely shifts overnight. Changes in behaviour,
+            recovery, and capacity evolve over time. PrescribeLife.AI helps
+            coaches identify these patterns early, translating them into
+            coaching insight that supports performance capacity.
           </h1>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 text-base sm:text-lg lg:text-xl xl:text-2xl align-start gap-4 lg:gap-6 font-semibold w-full">
@@ -285,7 +284,7 @@ export default function UpdatedHome() {
                   </span>{" "}
                   <p className="text-base sm:text-base lg:text-lg xl:text-xl font-normal mt-2 font-section-desc">
                     report growing demand for support around sustaining
-                    performance and resilience
+                    performance and resilience.
                   </p>
                 </p>
                 <p>
@@ -293,7 +292,7 @@ export default function UpdatedHome() {
                     80% of professionals <br />
                   </span>{" "}
                   <p className="text-base sm:text-base lg:text-lg xl:text-xl font-normal mt-2 font-section-desc">
-                    are at risk of burnout.
+                    report experiencing rising pressure linked to burnout.
                   </p>
                 </p>
               </div>
@@ -305,7 +304,8 @@ export default function UpdatedHome() {
                   PrescribeLife.AI
                 </div>
                 <div className="text-center  font-section-desc">
-                  was built to help you meet this urgent need head-on
+                  helps coaches identify how behavioural patterns influence
+                  performance capacity between sessions.
                 </div>
               </div>
             </div>
@@ -326,10 +326,11 @@ export default function UpdatedHome() {
               <p className="font-section-desc w-full max-w-[95%] lg:max-w-full">
                 Built by a team of doctors, neuroscientists, and ICF-accredited
                 <br className="hidden lg:block" />
-                resilience coaches, we believe the future of coaching is
-                adaptive,
-                <br className="hidden lg:block" />
-                personalized, and always-on.
+                resilience coaches, PrescribeLife.AI is designed to support more
+                adaptive and personalised coaching. By translating long-term
+                behavioural patterns into actionable insight, coaches can guide
+                change with greater clarity and support performance capacity
+                between sessions.
               </p>
             </div>
           </div>
@@ -368,16 +369,14 @@ export default function UpdatedHome() {
             <br />
             Platform
           </h1>
-          <p className="font-section-desc max-w-[95%] lg:max-w-full">
-            Resilience coaching that adapts in real time to evolving
-            <br className="hidden lg:block" />
-            client needs, powered by{" "}
-            <span className="text-theme">
-              behavioral science and
-              <br className="hidden lg:block" /> biometric precision,&nbsp;
-            </span>
-            because burnout should not be the
-            <br className="hidden lg:block" /> cost of performance.
+          <p className="font-section-desc text-theme/90 max-w-[95%] lg:max-w-full mt-2">
+            Built on behavioural science to support long-term coaching insight.
+          </p>
+          <p className="font-section-desc max-w-[95%] lg:max-w-full mt-4">
+            PrescribeLife.AI interprets behavioural patterns and translates them
+            into coaching insight, enabling resilience-focused coaching that
+            evolves alongside each client&apos;s journey. It supports performance
+            capacity across recovery, decision-making, and sustained output.
           </p>
         </div>
         <div className="flex justify-center lg:justify-between items-center">
@@ -470,25 +469,24 @@ export default function UpdatedHome() {
                 </div>
 
                 <h3 className="font-card-title text-white mb-4 lg:mb-6 relative z-10">
-                  24/7 Adaptive Coaching Support (Preslie.AI™)
+                  Coaching Insight Between Sessions (Preslie)
                 </h3>
 
                 <div className="bg-[#FFFFFF1A] border border-white/10 rounded-xl p-4 sm:p-6 mb-4 lg:mb-6 relative z-10">
                   <h4 className="font-card-title text-theme mb-2 lg:mb-3">
-                    Who is Preslie.AI™?
+                    Who is Preslie?
                   </h4>
                   <p className="font-card-desc text-zinc-300">
-                    Preslie™ is our mobile app & your AI co-pilot—making complex
-                    data simple and actionable. It quietly tracks resilience
-                    patterns, flags early warning signs, and suggests
-                    micro-strategies between sessions.
+                    Preslie interprets behavioural patterns and surfaces coaching
+                    insight between sessions, helping coaches identify emerging
+                    shifts that influence performance capacity.
                   </p>
                 </div>
 
                 <p className="font-card-desc text-white font-medium mb-4 lg:mb-6 relative z-10">
-                  This evidence-based system gives you continuous visibility
-                  into a client's mental, physical, and emotional resilience
-                  profile.
+                  Provides a clear view of evolving behavioural patterns to
+                  support more informed coaching decisions and performance
+                  capacity over time.
                 </p>
               </div>
             </HoverGlowContainer>
@@ -501,8 +499,8 @@ export default function UpdatedHome() {
             <FadeRise delay={0.2}>
               <div className="space-y-3 lg:space-y-4 relative grid grid-rows-3 gap-3 lg:gap-4 xl:gap-6">
                 {[
-                  "Spot stress and recovery patterns before they escalate.",
-                  "Adapt strategies to each client's current resilience stage.",
+                  "Identify shifts in stress and recovery patterns that influence performance capacity over time.",
+                  "Adjust coaching strategies based on behavioural patterns to support performance capacity over time.",
                   "Scale personalization without adding manual workload.",
                 ].map((text, idx) => (
                   <div
@@ -553,11 +551,15 @@ export default function UpdatedHome() {
         viewport={{ once: true, margin: "-100px" }}
         className="flex flex-col space-y-8 lg:space-y-10 px-3 px-4-lg:px-6-xl:px-8 max-w-[85rem] //  mx-auto w-full relative"
       >
-        <div className="font-section-title max-w-6xl mx-auto text-center px-2">
-          <span className="text-white text-gradient">
-            Personalized daily support{" "}
+        <div className="font-section-title max-w-6xl mx-auto text-center px-2 flex flex-col gap-4">
+          <span>
+            Daily support that reinforces coaching priorities between sessions.
           </span>
-          that keeps clients engaged and making progress.
+          <p className="text-base sm:text-lg md:text-xl font-section-desc font-normal text-muted-foreground max-w-4xl mx-auto">
+            Preslie supports reflection and habit awareness, helping clients
+            recognise behavioural patterns and stay aligned with coaching
+            priorities that support performance capacity.
+          </p>
         </div>
         <div className="w-full h-96 bg-gradient-to-b from-transparent via-black to-black absolute left-0 bottom-0 z-[999] max-xl:hidden"></div>
         {/* Mobile Marquee View */}
@@ -566,19 +568,21 @@ export default function UpdatedHome() {
             {[
               {
                 image: "/phone4.png",
-                title: "Build awareness",
-                description: "Self-Assess Resillience Drivers",
+                title: "Build Awareness",
+                description:
+                  "Recognise behavioural patterns that shape resilience and performance capacity.",
               },
               {
                 image: "/phone5.png",
                 title: "Commit to action",
-                description: "Track & unblock follow through",
+                description:
+                  "Strengthen habits through guided behavioural insight.",
               },
               {
                 image: "/phone4.png",
                 title: "Stay Engaged",
                 description:
-                  "Share reflections & get personalized performance tips",
+                  "Reflect on behavioural patterns and receive coaching insight that supports performance capacity between sessions.",
               },
             ].map((item, i) => (
               <div
@@ -623,10 +627,11 @@ export default function UpdatedHome() {
             </div>
             <div className="flex flex-col text-center min-h-24 lg:min-h-36 justify-start items-center gap-3 lg:gap-4 z-[9999] px-2">
               <div className="text-base sm:text-lg lg:text-xl font-semibold font-card-title">
-                Build awareness
+                Build Awareness
               </div>
               <div className="text-base sm:text-base font-card-desc">
-                Self-Assess Resillience Drivers
+                Recognise behavioural patterns that shape resilience and
+                performance capacity.
               </div>
             </div>
           </div>
@@ -646,7 +651,7 @@ export default function UpdatedHome() {
                 Commit to action
               </div>
               <div className="text-base sm:text-base font-card-desc">
-                Track & unblock follow through
+                Strengthen habits through guided behavioural insight.
               </div>
             </div>
           </div>
@@ -666,7 +671,8 @@ export default function UpdatedHome() {
                 Stay Engaged
               </div>
               <div className="text-base sm:text-base font-card-desc">
-                Share reflections & get personalized performance tips
+                Reflect on behavioural patterns and receive coaching insight that
+                supports performance capacity between sessions.
               </div>
             </div>
           </div>
@@ -682,26 +688,22 @@ export default function UpdatedHome() {
         className="flex flex-col items-center justify-start gap-8 lg:gap-10 px-3 px-4-lg:px-6-xl:px-8 max-w-[85rem] //  mx-auto w-full"
       >
         <div className="font-section-title max-w-6xl text-center px-2">
-          Mobile App captures <br />
-          <span className="relative text-gradient">Biometric Insights</span>
-          <p>&</p>
-          <span className="relative text-gradient">
-            Key Resilience Indicators
-          </span>
+          Behavioural Patterns &amp; Resilience Trends Shaping Performance
         </div>
         <div className="flex items-center justify-center gap-6 lg:gap-8 xl:gap-10 max-lg:flex-col">
           <section className="flex-1 tracking-wide flex flex-col gap-4 sm:gap-6 lg:gap-10 xl:gap-16 items-center lg:items-start mb-6 lg:mb-0 text-center lg:text-left w-full lg:w-1/2">
             <div className="font-section-desc lg:max-w-xl px-2">
-              No extra hardware needed-
+              No extra hardware needed —
               <br />
               <p className="relative after:left-0 after:content-[] after:absolute after:bottom-0 after:w-full after:bg-theme after:h-[3px] after:rounded-lg">
-                integrates with major wearables
+                integrates seamlessly with the devices your clients already use.
               </p>
             </div>
             <div className="font-section-desc text-white/80 px-2">
-              Resilience coaching that adapts in real time to evolving client
-              needs, powered by behavioral science and biometric
-              precision—because burnout should not be the cost of performance.
+              Resilience-focused coaching that evolves alongside each client&apos;s
+              journey. PrescribeLife.AI translates behavioural patterns into
+              actionable insight, helping coaches understand what shapes performance
+              capacity across recovery, movement, and daily habits.
             </div>
             <CTA classname="text-sm sm:text-base" />
           </section>
@@ -746,8 +748,9 @@ export default function UpdatedHome() {
               <span>Coaching Portal</span>
             </h1>
             <p className="font-section-desc">
-              A 360° view of every client's resilience and communication in one
-              place.
+              A connected view of behavioural patterns, resilience trends, and
+              communication to support more informed coaching decisions and
+              performance capacity.
             </p>
           </div>
 
@@ -756,9 +759,9 @@ export default function UpdatedHome() {
             {/* Left side - Text content with animated cards */}
             <div className="space-y-3 lg:space-y-4 relative">
               {[
-                "AI-powered insights help you spark deeper coaching conversations.",
+                "Preslie surfaces behavioural patterns to support more informed coaching conversations that influence performance capacity.",
                 "Send client updates, assignments, and messages directly inside the portal.",
-                "Walk into every session with real-time insights on your client's goals, habitual insights, and biometric data",
+                "Walk into every session with insight from behavioural patterns, client reflections, and coaching priorities that support performance capacity.",
               ].map((text, idx) => (
                 <div
                   key={idx}
@@ -805,9 +808,9 @@ export default function UpdatedHome() {
       >
         <div className="flex items-center justify-center px-2">
           <div className="font-section-title text-center max-w-5xl">
-            Trusted by Performance Coaches Behind Today's{" "}
+            Trusted by Performance Coaches Supporting High-Performing{" "}
             <span className="text-white text-gradient">
-              Most Influential Leaders{" "}
+              Leaders and Teams
             </span>
           </div>
         </div>
@@ -863,14 +866,16 @@ export default function UpdatedHome() {
                   {step.title}
                 </h3>
                 <p className="font-card-desc">{step.description}</p>
-                <p className="font-card-desc font-medium">{step.subtitle}</p>
+                {"subtitle" in step && step.subtitle ? (
+                  <p className="font-card-desc font-medium">{step.subtitle}</p>
+                ) : null}
               </HoverGlowContainer>
             </FadeRise>
           ))}
         </div>
       </motion.section>
 
-      {/* Build on 8M+/ metrics section */}
+      {/* Credibility metrics (behavioural data scale) */}
       <motion.section
         initial={{ opacity: 0, y: 40, filter: "blur(10px)" }}
         whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
@@ -881,18 +886,19 @@ export default function UpdatedHome() {
         <FadeRise>
           <div className="max-w-5xl space-y-6 lg:space-y-8 xl:space-y-10 px-2">
             <div className="font-section-title text-center">
-              Built on <span className="text-white text-gradient"> 8M+ </span>
-              days of behavioral data and
-              <span className="text-white relative after:left-0 after:content-[] after:absolute after:bottom-0 after:w-full after:bg-theme after:h-[3px] after:rounded-lg">
-                {" "}
-                50K+{" "}
+              Built on{" "}
+              <span className="text-white text-gradient">
+                <NumberTicker value={20} />
+                M+{" "}
               </span>
-              validated assessment models.
+              days of behavioural data and hundreds of validated assessment
+              models.
             </div>
             <div className="font-section-desc text-center">
-              We combine behavioral science and biometric data to measure what
-              truly drives resilience and performance — powered by trusted
-              integrations like Garmin, Apple Health, Google Fit, and more.
+              We combine behavioural science with behavioural signals to
+              understand the patterns that shape resilience and performance
+              capacity over time — powered by trusted integrations like Garmin,
+              Apple Health, Google Fit, and more.
             </div>
             <h1 className="font-card-title text-center">Powered by</h1>
           </div>
@@ -900,11 +906,15 @@ export default function UpdatedHome() {
         {/* Desktop Grid View */}
         <div className="hidden lg:flex flex-row justify-center items-stretch w-full max-w-6xl divide-x divide-white/20">
           {[
-            { v: 8, label: "Days of real-world behavioral data", suffix: "M+" },
-            { v: 500, label: "User profiles analyzed", suffix: "K+" },
             {
-              v: 50,
-              label: "Clinical assessments training models",
+              v: 20,
+              label: "Days of behavioural data",
+              suffix: "M+",
+            },
+            { v: 500, label: "Insights & metrics available", suffix: "+" },
+            {
+              v: 100,
+              label: "Data points analysed per user per month",
               suffix: "K+",
             },
           ].map((m, i) => (
@@ -933,14 +943,14 @@ export default function UpdatedHome() {
           >
             {[
               {
-                v: 8,
-                label: "Days of real-world behavioral data",
+                v: 20,
+                label: "Days of behavioural data",
                 suffix: "M+",
               },
-              { v: 500, label: "User profiles analyzed", suffix: "K+" },
+              { v: 500, label: "Insights & metrics available", suffix: "+" },
               {
-                v: 50,
-                label: "Clinical assessments training models",
+                v: 100,
+                label: "Data points analysed per user per month",
                 suffix: "K+",
               },
             ].map((m, i) => (
@@ -1030,7 +1040,7 @@ export default function UpdatedHome() {
         {/* White Curve Card */}
         <FadeRise className="bg-white text-black rounded-full p-6 sm:p-8 flex flex-col items-center justify-center relative overflow-hidden w-[280px] h-[280px] sm:w-[350px] sm:h-[350px] lg:w-[400px] lg:h-[400px] xl:w-[500px] xl:h-[500px] shrink-0">
           <h2 className="font-card-title text-center mb-3 sm:mb-4 px-2">
-            Amplify your Impact & Grow Your Practice.
+            Amplify your impact and grow your practice.
           </h2>
           <a
             href="/booking"
@@ -1041,15 +1051,16 @@ export default function UpdatedHome() {
             Book a Personalized Demo Call
           </a>
           <p className="font-card-desc text-zinc-600 text-center px-2">
-            Projected potential ROI of 5x to 10x minimum
+            Scale your coaching with clearer insight and increased client
+            retention.
           </p>
         </FadeRise>
 
         {/* Right-side column */}
         <div className="flex flex-col gap-4 lg:gap-5 items-center lg:items-start w-full lg:w-auto">
           {[
-            "Instantly add high-value, data-driven programs.",
-            "Confidently introduce premium revenue streams.",
+            "Introduce high-value coaching programs with data-informed insight.",
+            "Expand your offering with scalable services that support performance capacity and client outcomes.",
           ].map((t, i) => (
             <FadeRise
               delay={0.15 + i * 0.1}

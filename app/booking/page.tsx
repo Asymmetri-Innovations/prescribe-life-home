@@ -169,7 +169,7 @@ export default function BookingPage() {
             {[
               {
                 title: "The Irreplaceable Coach Setup",
-                body: "See how to combine your human insight with real-time biometric data to create a coaching experience AI can never replicate.",
+                body: "See how to combine your human insight with behavioural patterns and coaching insight to create a coaching experience AI can never replicate.",
               },
               {
                 title: "How to Scale Without Diluting Impact",
